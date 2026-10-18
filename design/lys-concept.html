@@ -1,0 +1,920 @@
+<title>Aletheia Lys</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Literata:opsz,wght@7..72,400;7..72,600&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  /* Layout: 12-column grid on chalk with wide outer margins; big grotesk headings, mono labels, one cobalt accent; indexes instead of card grids. */
+  --chalk:#F4F5F6;
+  --sheet:#FFFFFF;
+  --frost:#E9ECEF;
+  --line:#D8DCE1;
+  --graphite:#59606A;
+  --ink:#101216;
+  --cobalt:#2340C0;
+  --on-cobalt:#FFFFFF;
+  --wash:#E5E9FA;
+  --display:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
+  --read:"Literata",Charter,"Sitka Text",Georgia,serif;
+  --mono:"DM Mono",ui-monospace,"Cascadia Mono",Menlo,Consolas,monospace;
+  --ease:cubic-bezier(.2,.7,.1,1);
+  --gutter:clamp(16px,4vw,48px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --chalk:#0E1013;--sheet:#171A1E;--frost:#1E2227;--line:#2B3037;--graphite:#9AA1AA;
+    --ink:#ECEEF0;--cobalt:#8DA2FF;--on-cobalt:#0B1030;--wash:#1B2242;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --chalk:#0E1013;--sheet:#171A1E;--frost:#1E2227;--line:#2B3037;--graphite:#9AA1AA;
+  --ink:#ECEEF0;--cobalt:#8DA2FF;--on-cobalt:#0B1030;--wash:#1B2242;color-scheme:dark;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+body{background:var(--chalk);color:var(--ink);font:400 17px/1.55 var(--display);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:1px}
+a:hover{color:var(--cobalt)}
+:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
+h1,h2,h3,h4{margin:0;font-weight:600;text-wrap:balance}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+
+.wrap{max-width:1280px;margin-inline:auto;padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px))}
+.band{background:var(--sheet);border-block:1px solid var(--line)}
+.lbl{font:400 12px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--graphite)}
+.mono{font-family:var(--mono)}
+.num{font-variant-numeric:tabular-nums}
+
+/* top bar */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:20px}
+.wm{font:600 20px/1 var(--display);letter-spacing:-.02em;text-decoration:none}
+.top-mid{flex:1;min-width:0}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:2px;overflow:hidden}
+.seg button{font:400 12px/1 var(--mono);letter-spacing:.04em;color:var(--graphite);background:transparent;border:0;padding:9px 12px;cursor:pointer}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--chalk)}
+.seg button:hover:not([aria-pressed="true"]){color:var(--ink);background:var(--frost)}
+
+/* hero */
+.hero{padding-block:clamp(48px,9vw,120px) clamp(40px,6vw,80px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:end}
+.lys{font:700 clamp(104px,24vw,320px)/.78 var(--display);letter-spacing:-.06em;margin-left:-.05em}
+.lys span{color:var(--cobalt)}
+.gloss{display:grid;gap:20px;margin:0;padding-bottom:12px}
+.gloss div{display:grid;grid-template-columns:7.5em minmax(0,1fr);gap:16px;border-top:1px solid var(--ink);padding-top:10px}
+.gloss dt{font:500 14px/1.5 var(--mono)}
+.gloss dd{margin:0;font-size:16px;color:var(--graphite)}
+.thesis{max-width:30ch;font:500 clamp(26px,3.4vw,44px)/1.12 var(--display);letter-spacing:-.02em;margin-top:clamp(40px,6vw,88px);text-wrap:balance}
+.hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-top:40px}
+.hero-meta{max-width:62ch}
+.jump{display:flex;gap:6px 20px;flex-wrap:wrap;font-size:15px}
+.jump a{text-decoration:none;border-bottom:1px solid var(--line)}
+.jump a:hover{border-color:var(--cobalt)}
+
+/* sections */
+.sec{padding-block:clamp(64px,9vw,128px)}
+.sec-head{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:16px 24px;margin-bottom:clamp(40px,5vw,64px)}
+.sec-head h2{font-size:clamp(34px,4.6vw,64px);line-height:1;letter-spacing:-.03em}
+.sec-head p.intro{grid-column:2;max-width:60ch;color:var(--graphite);font-size:18px}
+.sub{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:16px 24px;padding-top:28px;border-top:1px solid var(--line)}
+.sub + .sub{margin-top:clamp(48px,6vw,80px)}
+.sub > h3{font-size:22px;line-height:1.25;letter-spacing:-.01em}
+.sub > h3 small{display:block;margin-top:8px;font:400 14px/1.5 var(--display);color:var(--graphite);letter-spacing:0;max-width:28ch}
+.sub > div{min-width:0}
+
+/* direction */
+.refs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.ref{display:grid;gap:14px;align-content:start}
+.ref-name{font:600 clamp(28px,3vw,40px)/1 var(--display);letter-spacing:-.025em}
+.ref-name a{text-decoration:none}
+.ref p{max-width:44ch}
+.ref .goes{color:var(--graphite);font-size:15px}
+.ref .goes b{color:var(--ink);font-weight:500}
+.leave{margin-top:40px;padding:24px;border:1px dashed var(--line);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:12px 24px}
+.leave p{max-width:60ch}
+.principles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.principles li{border-top:1px solid var(--ink);padding-top:14px;display:grid;gap:10px;align-content:start}
+.principles b{font-weight:600;font-size:19px;letter-spacing:-.01em}
+.principles p{color:var(--graphite);font-size:15.5px}
+
+/* color */
+.swatches{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 20px}
+.sw{display:grid;gap:10px;align-content:start}
+.chip{height:104px;border:1px solid var(--line);background:var(--c)}
+.sw-name{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.sw-name b{font-weight:600}
+.sw-name code{font:400 12px/1 var(--mono);color:var(--graphite)}
+.sw-hex{font:400 12px/1.6 var(--mono);color:var(--graphite)}
+.sw p{font-size:14px;color:var(--graphite)}
+
+/* type */
+.specimen li{display:grid;grid-template-columns:minmax(0,13em) minmax(0,1fr);gap:8px 24px;padding-block:22px;border-top:1px solid var(--line);align-items:baseline}
+.specimen li:first-child{border-top:0;padding-top:0}
+.specimen .meta{display:grid;gap:2px}
+.specimen .meta b{font-weight:600;font-size:15px}
+.specimen .meta span{font:400 12px/1.5 var(--mono);color:var(--graphite)}
+.s-display{font:600 clamp(48px,8vw,128px)/.92 var(--display);letter-spacing:-.04em}
+.s-h1{font:600 clamp(36px,5vw,72px)/1 var(--display);letter-spacing:-.03em}
+.s-h2{font:600 clamp(26px,3vw,40px)/1.1 var(--display);letter-spacing:-.02em}
+.s-h3{font:500 22px/1.25 var(--display);letter-spacing:-.01em}
+.s-body{font:400 17px/1.55 var(--display);max-width:62ch}
+.s-read{font:400 19px/1.65 var(--read);max-width:62ch}
+.faces{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:40px}
+.face{display:grid;gap:6px;align-content:start;padding-top:14px;border-top:1px solid var(--ink)}
+.face .big{font-size:56px;line-height:1;letter-spacing:-.03em}
+.face p{font-size:14.5px;color:var(--graphite)}
+
+/* space, grid, shape, motion */
+.space{display:grid;gap:10px}
+.space li{display:grid;grid-template-columns:3.5em minmax(0,1fr);gap:16px;align-items:center;font:400 12px/1 var(--mono);color:var(--graphite)}
+.space i{display:block;height:12px;width:var(--w);max-width:100%;background:var(--ink)}
+.cols{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(6px,1.6vw,24px);height:120px;margin-top:8px}
+.cols i{background:var(--wash);border-inline:1px solid color-mix(in srgb,var(--cobalt) 30%,transparent)}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 24px;margin-top:24px}
+.facts div{display:grid;gap:4px}
+.facts dt{font-weight:600;font-size:15px}
+.facts dd{margin:0;color:var(--graphite);font-size:15px}
+.motion{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.mo{display:grid;gap:10px;align-content:start;border-top:1px solid var(--ink);padding-top:14px}
+.mo b{font-weight:600}
+.mo p{color:var(--graphite);font-size:15px}
+.mo .track{height:28px;background:var(--frost);position:relative;overflow:hidden}
+.mo .dot{position:absolute;top:0;bottom:0;left:0;width:28%;background:var(--ink)}
+.motion:hover .dot{left:72%}
+.mo:nth-child(1) .dot{transition:left .16s var(--ease)}
+.mo:nth-child(2) .dot{transition:left .32s var(--ease)}
+.mo:nth-child(3) .dot{transition:left .48s var(--ease);background:var(--cobalt)}
+
+/* shared components */
+.btn{display:inline-flex;align-items:center;gap:10px;font:500 15px/1 var(--display);padding:14px 20px;border-radius:2px;border:1px solid var(--ink);background:transparent;color:var(--ink);text-decoration:none;cursor:pointer;white-space:nowrap}
+.btn:hover{background:var(--ink);color:var(--chalk)}
+.btn-p{background:var(--cobalt);border-color:var(--cobalt);color:var(--on-cobalt)}
+.btn-p:hover{background:var(--ink);border-color:var(--ink);color:var(--chalk)}
+.btn-t{display:inline-flex;align-items:center;gap:8px;font:500 15px/1 var(--display);text-decoration:none;padding-block:14px;color:var(--ink);white-space:nowrap}
+.btn-t span{transition:transform .16s var(--ease)}
+.btn-t:hover{color:var(--cobalt)}
+.btn-t:hover span{transform:translateX(4px)}
+
+.g{display:inline-block;width:12px;height:12px;border-radius:50%;border:1.5px solid currentColor;flex:none;vertical-align:-1px}
+.g-adapt{background:currentColor}
+.g-nc{background:linear-gradient(90deg,currentColor 50%,transparent 50%)}
+.g-link{border-style:dashed}
+
+.board{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.cell{background:var(--sheet);border:1px solid var(--line);padding:24px;display:grid;gap:18px;align-content:start;min-width:0}
+.cell.wide{grid-column:1/-1}
+.row-gap{display:flex;gap:12px 20px;flex-wrap:wrap;align-items:center}
+.tiers{display:grid;gap:0}
+.tiers li{display:grid;grid-template-columns:20px minmax(0,11em) minmax(0,1fr);gap:4px 14px;align-items:baseline;padding-block:12px;border-top:1px solid var(--line)}
+.tiers li:first-child{border-top:0;padding-top:0}
+.tiers b{font-weight:600}
+.tiers span.d{color:var(--graphite);font-size:15px}
+.tiers span.d code{font:400 12px/1 var(--mono)}
+.filter{display:flex;gap:8px 18px;flex-wrap:wrap;align-items:baseline;font-size:15px}
+.filter .k{font:400 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--graphite)}
+.filter button{font:inherit;background:none;border:0;padding:0;color:var(--graphite);cursor:pointer;border-bottom:1px solid transparent}
+.filter button:hover{color:var(--ink)}
+.filter button[aria-pressed="true"]{color:var(--ink);border-bottom-color:var(--cobalt)}
+.filter .sep{width:1px;height:14px;background:var(--line);align-self:center}
+.search{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--ink);padding-block:10px;max-width:440px}
+.search input{flex:1;min-width:0;font:400 17px/1.3 var(--display);color:var(--ink);background:transparent;border:0;outline:0}
+.search input::placeholder{color:var(--graphite)}
+.search:focus-within{border-bottom-color:var(--cobalt);box-shadow:0 1px 0 var(--cobalt)}
+
+/* index rows (catalog, focus, outcomes) */
+.idx{border-top:1px solid var(--ink)}
+.idx-row{display:grid;grid-template-columns:20px minmax(0,1fr) auto 7em 32px;gap:6px 20px;align-items:baseline;padding-block:18px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.idx-row .g{align-self:center}
+.idx-row .t{display:block;font:500 19px/1.3 var(--display);letter-spacing:-.01em;transition:transform .16s var(--ease)}
+.idx-row .by{display:block;color:var(--graphite);font-size:14px;margin-top:4px}
+.idx-row .lic,.idx-row .len{font:400 12px/1.4 var(--mono);color:var(--graphite);white-space:nowrap}
+.idx-row .len{text-align:right}
+.add{width:32px;height:32px;display:grid;place-items:center;border:1px solid var(--line);border-radius:2px;font:400 18px/1 var(--display);color:var(--ink);align-self:center;background:transparent;cursor:pointer}
+.add[aria-pressed="true"]{background:var(--cobalt);border-color:var(--cobalt);color:var(--on-cobalt)}
+.idx-row:hover{background:linear-gradient(90deg,var(--frost),transparent 70%)}
+.idx-row:hover .t{transform:translateX(6px)}
+
+/* accordion */
+.acc{border-top:1px solid var(--ink)}
+.acc details{border-bottom:1px solid var(--line)}
+.acc summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:minmax(0,1fr) auto 20px;gap:4px 16px;align-items:baseline;padding-block:16px}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary .t{font:500 19px/1.3 var(--display);letter-spacing:-.01em}
+.acc summary .w{font:400 12px/1.4 var(--mono);color:var(--graphite);white-space:nowrap}
+.acc summary::after{content:"+";font:300 22px/1 var(--display);text-align:right;transition:transform .32s var(--ease)}
+.acc details[open] > summary::after{transform:rotate(45deg)}
+.acc .body{padding:0 0 22px;display:grid;gap:16px}
+
+/* screens */
+.screens{display:grid;gap:clamp(64px,8vw,112px)}
+.screen{display:grid;gap:20px}
+.screen-head{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:8px 24px;align-items:baseline}
+.screen-head h3{font-size:clamp(24px,2.4vw,32px);letter-spacing:-.02em}
+.screen-head p{max-width:62ch;color:var(--graphite)}
+.frame{border:1px solid var(--line);background:var(--chalk);container-type:inline-size;overflow:hidden;min-width:0}
+.frame-bar{display:flex;align-items:center;gap:14px;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--sheet);font:400 12px/1 var(--mono);color:var(--graphite);min-width:0}
+.frame-bar .dots{display:flex;gap:6px;flex:none}
+.frame-bar .dots i{width:8px;height:8px;border-radius:50%;background:var(--line)}
+.frame-bar .url{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.m{padding:clamp(16px,4.5cqi,48px)}
+.m-nav{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-bottom:clamp(28px,6cqi,72px)}
+.m-word{font:600 18px/1 var(--display);letter-spacing:-.02em}
+.m-nav ul{display:flex;gap:clamp(14px,2.6cqi,30px);font-size:14px}
+.m-nav li.on::before{content:"";display:inline-block;width:6px;height:6px;background:var(--cobalt);margin-right:8px;vertical-align:2px}
+.m-menu{display:none;font:400 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.m-display{font:600 clamp(36px,8.4cqi,108px)/.94 var(--display);letter-spacing:-.04em;max-width:13ch;margin-top:14px}
+.m-split{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px 40px;align-items:end;margin-top:clamp(24px,4cqi,48px)}
+.m-lead{max-width:52ch;color:var(--graphite)}
+.m-actions{display:flex;gap:8px 20px;flex-wrap:wrap;align-items:center}
+.m-counts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:clamp(40px,6cqi,72px) 0 0;padding-top:16px;border-top:1px solid var(--line)}
+.m-counts div{display:grid;gap:6px}
+.m-counts dt{font:400 12px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--graphite)}
+.m-counts dd{margin:0;font:500 clamp(22px,3.4cqi,36px)/1 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.m-h2{font:600 clamp(24px,3.6cqi,40px)/1.1 var(--display);letter-spacing:-.025em;margin:clamp(56px,8cqi,104px) 0 20px}
+.m-index{border-top:1px solid var(--ink)}
+.m-index a{display:grid;grid-template-columns:minmax(0,1fr) auto 24px;gap:16px;align-items:baseline;padding-block:clamp(14px,2.2cqi,22px);border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.m-index .t{font:500 clamp(22px,4cqi,44px)/1.1 var(--display);letter-spacing:-.025em;transition:transform .16s var(--ease)}
+.m-index .n{font:400 12px/1.4 var(--mono);color:var(--graphite);white-space:nowrap}
+.m-index .arrow{opacity:0;transform:translateX(-8px);transition:opacity .16s var(--ease),transform .16s var(--ease);text-align:right}
+.m-index a:hover .t{transform:translateX(8px)}
+.m-index a:hover .arrow{opacity:1;transform:none;color:var(--cobalt)}
+.m-index .quiet .t{color:var(--graphite)}
+
+.m-title{font:600 clamp(40px,8cqi,96px)/.95 var(--display);letter-spacing:-.04em}
+.m-cat-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,auto);gap:20px 40px;align-items:end;margin-bottom:clamp(24px,4cqi,40px)}
+.m-cat-tools{display:grid;gap:18px;margin-bottom:24px}
+.m-count{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:10px}
+
+.m-build-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.m-build-head .m-title{font-size:clamp(32px,5.6cqi,64px)}
+.m-build{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:clamp(24px,4cqi,48px);align-items:start}
+.ruler{margin-bottom:32px}
+.ticks{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));font:400 10px/1 var(--mono);color:var(--graphite);margin-bottom:6px;font-variant-numeric:tabular-nums}
+.ticks span{border-left:1px solid var(--line);padding:0 0 6px 4px}
+.track{position:relative;height:48px;background:var(--sheet);border:1px solid var(--line)}
+.span{position:absolute;top:0;bottom:0;left:calc(var(--s) * 1%);width:calc(var(--w) * 1%);display:flex;align-items:center;padding-inline:8px;background:var(--frost);border-right:2px solid var(--sheet);font:400 11px/1.2 var(--mono);color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:left .48s var(--ease),width .48s var(--ease),opacity .32s var(--ease)}
+.span.on{background:var(--cobalt);color:var(--on-cobalt)}
+.span.open{background:transparent;color:var(--graphite)}
+.span.gone{opacity:0}
+.ruler-note{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:10px}
+.unit-goals{display:grid;gap:6px;color:var(--graphite);font-size:15px;max-width:60ch}
+.unit-goals li{padding-left:18px;position:relative}
+.unit-goals li::before{content:"";position:absolute;left:0;top:.7em;width:8px;height:1px;background:var(--graphite)}
+.picks{display:grid;border-top:1px solid var(--line)}
+.picks label{display:grid;grid-template-columns:18px 14px minmax(0,1fr) auto;gap:4px 12px;align-items:baseline;padding-block:11px;border-bottom:1px solid var(--line);cursor:pointer}
+.picks input{accent-color:var(--cobalt);margin:0;align-self:center;width:16px;height:16px}
+.picks .g{align-self:center}
+.picks .t{font-weight:500}
+.picks .by{display:block;color:var(--graphite);font-size:13.5px}
+.picks .len{font:400 12px/1.4 var(--mono);color:var(--graphite);white-space:nowrap}
+.merged{font:400 13px/1.5 var(--mono);color:var(--graphite)}
+.panel{background:var(--sheet);border:1px solid var(--line);padding:22px;display:grid;gap:18px}
+.panel h4{font-size:20px;letter-spacing:-.01em}
+.exp{display:grid;gap:4px;padding-top:14px;border-top:1px solid var(--line)}
+.exp b{font-weight:600}
+.exp span{font:400 12px/1.5 var(--mono);color:var(--graphite)}
+.panel .btn{justify-content:center}
+.tally{display:grid;grid-template-columns:1fr auto;gap:6px 12px;font:400 12px/1.4 var(--mono);color:var(--graphite)}
+.tally b{color:var(--ink);font-weight:500;text-align:right;font-variant-numeric:tabular-nums}
+
+.m-reader{display:grid;grid-template-columns:240px minmax(0,1fr);gap:clamp(24px,4cqi,48px);align-items:start}
+.rtoc{display:grid;gap:14px;font-size:14.5px}
+.rtoc .acc summary{padding-block:12px;grid-template-columns:minmax(0,1fr) 16px}
+.rtoc .acc summary .t{font-size:15px}
+.rtoc ol{display:grid;gap:8px;padding:0 0 14px;color:var(--graphite);counter-reset:r}
+.rtoc ol li{display:grid;grid-template-columns:1.6em minmax(0,1fr);counter-increment:r}
+.rtoc ol li::before{content:counter(r);font:400 11px/1.9 var(--mono)}
+.rtoc ol li.on{color:var(--ink)}
+.rtoc ol li.on::before{color:var(--cobalt)}
+.sheet{background:var(--sheet);border:1px solid var(--line);padding:clamp(20px,6cqi,72px) clamp(20px,7cqi,88px);display:grid;gap:22px;min-width:0}
+.sheet .r-h{font:600 clamp(30px,5.4cqi,56px)/1 var(--display);letter-spacing:-.035em}
+.sheet .r-body{font:400 19px/1.65 var(--read);max-width:62ch}
+.sheet .unit-goals{font-family:var(--read);font-size:17px;color:var(--ink)}
+.credits{display:grid;border-top:1px solid var(--ink)}
+.credits li{display:grid;grid-template-columns:20px minmax(0,1fr);gap:14px;padding-block:16px;border-bottom:1px solid var(--line)}
+.credits .g{margin-top:6px}
+.credits .ct{font:500 18px/1.3 var(--display);letter-spacing:-.01em}
+.credits .cm{color:var(--graphite);font-size:14.5px;margin-top:3px}
+.credits .cl{font:400 12px/1.5 var(--mono);color:var(--graphite);margin-top:6px}
+.credits .cl a{color:var(--cobalt)}
+
+@container (max-width:860px){
+  .m-build{grid-template-columns:minmax(0,1fr)}
+  .m-reader{grid-template-columns:minmax(0,1fr)}
+}
+@container (max-width:640px){
+  .m-nav ul{display:none}
+  .m-menu{display:inline}
+  .m-split{grid-template-columns:minmax(0,1fr)}
+  .m-counts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .m-cat-head{grid-template-columns:minmax(0,1fr)}
+  .idx-row{grid-template-columns:20px minmax(0,1fr) 32px}
+  .idx-row .lic,.idx-row .len{grid-column:2;text-align:left;white-space:normal}
+  .idx-row .add{grid-row:1;grid-column:3}
+  .picks label{grid-template-columns:18px 14px minmax(0,1fr)}
+  .picks .len{grid-column:3}
+}
+
+/* rollout */
+.steps{counter-reset:s;display:grid}
+.steps li{counter-increment:s;display:grid;grid-template-columns:3.2em minmax(0,1fr);gap:16px;padding-block:20px;border-top:1px solid var(--line)}
+.steps li:first-child{border-top:1px solid var(--ink)}
+.steps li::before{content:counter(s,decimal-leading-zero);font:400 13px/1.7 var(--mono);color:var(--cobalt)}
+.steps b{display:block;font-weight:600;font-size:18px;margin-bottom:4px}
+.steps p{color:var(--graphite);max-width:64ch}
+.steps code,.map code{font:400 13px/1.4 var(--mono);color:var(--ink)}
+.table-wrap{overflow-x:auto;border-top:1px solid var(--ink)}
+.map{width:100%;border-collapse:collapse;font-size:15px;min-width:620px}
+.map th{font:400 12px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--graphite);text-align:left;padding:12px 16px 12px 0;border-bottom:1px solid var(--line)}
+.map td{padding:12px 16px 12px 0;border-bottom:1px solid var(--line);vertical-align:baseline}
+.map td:nth-child(2){font:400 13px/1.4 var(--mono);color:var(--graphite)}
+.mini{display:inline-block;width:12px;height:12px;border:1px solid var(--line);vertical-align:-1px;margin-right:8px;background:var(--c)}
+.note{margin-top:28px;padding:20px 24px;background:var(--wash);color:var(--ink);max-width:76ch}
+.note b{font-weight:600}
+
+footer{padding-block:48px 64px;border-top:1px solid var(--line)}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
+.foot .wm{font-size:clamp(40px,8vw,96px);letter-spacing:-.05em}
+
+@media (max-width:980px){
+  .principles{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .swatches{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .motion{grid-template-columns:minmax(0,1fr)}
+  .faces{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:820px){
+  .hero-grid{grid-template-columns:minmax(0,1fr)}
+  .sec-head,.sub,.screen-head{grid-template-columns:minmax(0,1fr)}
+  .sec-head p.intro{grid-column:1}
+  .refs,.board{grid-template-columns:minmax(0,1fr)}
+  .leave{grid-template-columns:minmax(0,1fr)}
+  .specimen li{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:520px){
+  .principles,.facts{grid-template-columns:minmax(0,1fr)}
+  .gloss div{grid-template-columns:minmax(0,1fr);gap:4px}
+  .tiers li{grid-template-columns:20px minmax(0,1fr)}
+  .tiers span.d{grid-column:2}
+  .top-mid{order:3;flex-basis:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+
+<header class="wrap top">
+  <a class="wm" href="#top" id="top">Aletheia</a>
+  <span class="lbl top-mid">Lys · sitewide design concept · v0.1</span>
+  <div class="seg" role="group" aria-label="Preview theme">
+    <button type="button" id="th-system" data-th="system" aria-pressed="true">System</button>
+    <button type="button" id="th-light" data-th="light" aria-pressed="false">Light</button>
+    <button type="button" id="th-dark" data-th="dark" aria-pressed="false">Dark</button>
+  </div>
+</header>
+
+<section class="wrap hero" aria-labelledby="lys-title">
+  <div class="hero-grid">
+    <h1 class="lys" id="lys-title">Lys<span>.</span></h1>
+    <dl class="gloss">
+      <div><dt>lys</dt><dd>Danish and Norwegian for light.</dd></div>
+      <div><dt>alētheia</dt><dd>Greek for truth. Taken literally, unconcealment: whatever is no longer hidden.</dd></div>
+      <div><dt>the idea</dt><dd>Put the readings and their licenses in plain light, and keep everything else quiet.</dd></div>
+    </dl>
+  </div>
+  <p class="thesis">Chalk-white pages, one cobalt blue, large grotesk type, and plain indexes where the site now uses cards.</p>
+  <div class="hero-foot">
+    <p class="hero-meta lbl">Drawn from Hello Monday (Copenhagen, Aarhus) and MBRS (Helsinki, Berlin) · 18 Oct 2026 · A proposal only: nothing in the app has changed</p>
+    <nav class="jump" aria-label="Sections">
+      <a href="#direction">Direction</a><a href="#tokens">Tokens</a><a href="#components">Components</a><a href="#screens">Screens</a><a href="#rollout">Rollout</a>
+    </nav>
+  </div>
+</section>
+
+<section class="band" id="direction" aria-labelledby="dir-title">
+  <div class="wrap sec">
+    <div class="sec-head">
+      <p class="lbl">Direction</p>
+      <h2 id="dir-title">Two studios, one library</h2>
+      <p class="intro">Both reference sites are portfolios, and Aletheia is a working tool with about 2,200 readings in it. What carries over is their restraint: a strict grid, very few colors, type doing the work that boxes and shadows usually do, and motion reserved for the moment it explains something.</p>
+    </div>
+
+    <div class="refs">
+      <article class="ref">
+        <p class="lbl">Copenhagen · Aarhus</p>
+        <p class="ref-name"><a href="https://www.hellomonday.com/work">Hello Monday</a></p>
+        <p>The work index: big titles in a single column, a one-line text filter above them (Products, Experiences, Branding), plenty of air between rows, and hover effects only on the row under the pointer.</p>
+        <p class="goes"><b>In Aletheia:</b> the catalog, focus pages, and outcome pages become indexes of readings in place of card grids. The filter bar is words, not dropdowns.</p>
+      </article>
+      <article class="ref">
+        <p class="lbl">Helsinki · Berlin</p>
+        <p class="ref-name"><a href="https://mb.studio/">MBRS</a></p>
+        <p>Two colors, black and one blue (#1D47BF). Accordions that open in place so you never lose your spot. Wide margins and a grid you can feel even when nothing marks it.</p>
+        <p class="goes"><b>In Aletheia:</b> course units in the builder and the reader's table of contents open in place. Cobalt marks only what you can act on and where you are.</p>
+      </article>
+    </div>
+
+    <div class="leave">
+      <p class="lbl">Left behind</p>
+      <p>Preloaders, custom cursors, WebGL scenes, and scroll-jacked parallax. Instructors open Aletheia on lab computers, older laptops, and classroom projectors, and some use a keyboard or screen reader. Every page loads straight to its content and works with motion turned off.</p>
+    </div>
+
+    <div class="sub" style="margin-top:clamp(56px,7vw,96px)">
+      <h3>Four rules<small>Every later decision should trace back to one of these.</small></h3>
+      <ul class="principles">
+        <li><b>Paper and sheet</b><p>The site sits on chalk. White sheets appear only where something is a document: a reading, an export, the reader itself.</p></li>
+        <li><b>One blue</b><p>Cobalt marks the next action and your current place. Links in running text stay ink with an underline and turn cobalt on hover.</p></li>
+        <li><b>Type over boxes</b><p>Size, weight, and space carry the hierarchy. No shadows and almost no borders; hairlines separate rows in an index and little else.</p></li>
+        <li><b>Licenses in plain sight</b><p>Every reading shows its reuse glyph and license string in the same spot on every page, from catalog row to printed reader.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="wrap sec" id="tokens" aria-labelledby="tok-title">
+  <div class="sec-head">
+    <p class="lbl">Tokens</p>
+    <h2 id="tok-title">Chalk, ink, cobalt</h2>
+    <p class="intro">Eight colors, three typefaces, one spacing scale. The neutrals lean slightly blue so they sit with the accent instead of against it. The cream ground and Charter serif the app uses now go; a serif stays only inside the reader.</p>
+  </div>
+
+  <div class="sub">
+    <h3>Color<small>Light and dark values. Use the toggle at the top of the page to see both.</small></h3>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="--c:var(--chalk)"></div><div class="sw-name"><b>Chalk</b><code>--chalk</code></div><p class="sw-hex">#F4F5F6 / #0E1013</p><p>Page ground everywhere.</p></div>
+      <div class="sw"><div class="chip" style="--c:var(--sheet)"></div><div class="sw-name"><b>Sheet</b><code>--sheet</code></div><p class="sw-hex">#FFFFFF / #171A1E</p><p>Documents: the reader, export panels, specimen cells.</p></div>
+      <div class="sw"><div class="chip" style="--c:var(--frost)"></div><div class="sw-name"><b>Frost</b><code>--frost</code></div><p class="sw-hex">#E9ECEF / #1E2227</p><p>Quiet fills: unit blocks on the ruler, row hover.</p></div>
+      <div class="sw"><div class="chip" style="--c:var(--line)"></div><div class="sw-name"><b>Line</b><code>--line</code></div><p class="sw-hex">#D8DCE1 / #2B3037</p><p>Index hairlines and input underlines.</p></div>
+      <div class="sw"><div class="chip" style="--c:var(--graphite)"></div><div class="sw-name"><b>Graphite</b><code>--graphite</code></div><p class="sw-hex">#59606A / #9AA1AA</p><p>Authors, years, licenses. 5.8:1 and 7.3:1 on chalk.</p></div>
+      <div class="sw"><div class="chip" style="--c:var(--ink)"></div><div class="sw-name"><b>Ink</b><code>--ink</code></div><p class="sw-hex">#101216 / #ECEEF0</p><p>Text, glyphs, the wordmark. 17:1 and 16:1.</p></div>
+      <div class="sw"><div class="chip" style="--c:var(--cobalt)"></div><div class="sw-name"><b>Cobalt</b><code>--cobalt</code></div><p class="sw-hex">#2340C0 / #8DA2FF</p><p>Actions and current place only. 7.5:1 and 7.9:1.</p></div>
+      <div class="sw"><div class="chip" style="--c:var(--wash)"></div><div class="sw-name"><b>Wash</b><code>--wash</code></div><p class="sw-hex">#E5E9FA / #1B2242</p><p>A selected filter, a callout, the grid overlay.</p></div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <h3>Type<small>Grotesk for the interface, a reading serif for the reader, mono for anything a librarian would cite.</small></h3>
+    <div>
+      <ul class="specimen">
+        <li><div class="meta"><b>Display</b><span>Grotesk 600 · 48–128 px · −4%</span></div><p class="s-display">Writing about Writing</p></li>
+        <li><div class="meta"><b>Heading 1</b><span>Grotesk 600 · 36–72 px · −3%</span></div><p class="s-h1">Discourse Community Study</p></li>
+        <li><div class="meta"><b>Heading 2</b><span>Grotesk 600 · 26–40 px · −2%</span></div><p class="s-h2">Start from a sample course</p></li>
+        <li><div class="meta"><b>Heading 3</b><span>Grotesk 500 · 22 px · −1%</span></div><p class="s-h3">Understanding Discourse Communities</p></li>
+        <li><div class="meta"><b>Body</b><span>Grotesk 400 · 17/26 px</span></div><p class="s-body">Pick a focus and a sample course, fit it to your term, and check off the readings and assignments you want.</p></li>
+        <li><div class="meta"><b>Reading</b><span>Literata 400 · 19/31 px · reader only</span></div><p class="s-read">Students pick a discourse community they belong to or want to join, interview a member, and analyze the community's goals, vocabulary, and genres.</p></li>
+        <li><div class="meta"><b>Label</b><span>DM Mono 400 · 12 px · caps +6%</span></div><p class="lbl">CC BY-NC-ND 4.0 · 17 pp · Writing Spaces, Vol. 3</p></li>
+      </ul>
+      <div class="faces">
+        <div class="face"><span class="big" style="font-family:var(--display);font-weight:600">Aa</span><b>Schibsted Grotesk</b><p>Made for the Norwegian media group Schibsted, so it already does headlines and interface text at the same time.</p></div>
+        <div class="face"><span class="big" style="font-family:var(--read)">Aa</span><b>Literata</b><p>Drawn for long reading on screens. Used only in the reader and its PDF, where students spend the most time.</p></div>
+        <div class="face"><span class="big" style="font-family:var(--mono)">Aa</span><b>DM Mono</b><p>License strings, page counts, week numbers, file types. Anything a student might copy into a citation.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <h3>Space and grid<small>An 8 px base. Twelve columns, 24 px gutters, 1280 px wide at most, reading text held near 66 characters.</small></h3>
+    <div>
+      <ul class="space">
+        <li><span>4</span><i style="--w:4px"></i></li>
+        <li><span>8</span><i style="--w:8px"></i></li>
+        <li><span>16</span><i style="--w:16px"></i></li>
+        <li><span>24</span><i style="--w:24px"></i></li>
+        <li><span>40</span><i style="--w:40px"></i></li>
+        <li><span>64</span><i style="--w:64px"></i></li>
+        <li><span>104</span><i style="--w:104px"></i></li>
+        <li><span>168</span><i style="--w:168px"></i></li>
+      </ul>
+      <div class="cols" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <dl class="facts">
+        <div><dt>Corners</dt><dd>0 on surfaces, 2 px on buttons and inputs. Only the reuse glyphs are round.</dd></div>
+        <div><dt>Elevation</dt><dd>None. A sheet on chalk is the only layer the site has.</dd></div>
+        <div><dt>Section rhythm</dt><dd>64–128 px between page sections; 18–22 px row padding inside an index.</dd></div>
+        <div><dt>Focus</dt><dd>2 px cobalt outline, 3 px offset, on every control.</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <div class="sub">
+    <h3>Motion<small>One moving moment per page. Hover over this row to compare the three speeds.</small></h3>
+    <div class="motion">
+      <div class="mo"><div class="track"><span class="dot"></span></div><b>160 ms · hover</b><p>Index rows nudge right, arrows slide in. Feedback only.</p></div>
+      <div class="mo"><div class="track"><span class="dot"></span></div><b>320 ms · open and close</b><p>Accordions, drawers, filter results settling.</p></div>
+      <div class="mo"><div class="track"><span class="dot"></span></div><b>480 ms · the term ruler</b><p>Units resize when the term changes. The builder's one big moment.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="components" aria-labelledby="comp-title">
+  <div class="wrap sec">
+    <div class="sec-head">
+      <p class="lbl">Components</p>
+      <h2 id="comp-title">The parts</h2>
+      <p class="intro">Most of the site is built from six pieces. The reuse glyph is the one new idea: fill shows how much you may change a reading, so the license reads at a glance in a long list, in either theme, and in a black-and-white printout.</p>
+    </div>
+
+    <div class="board">
+      <div class="cell wide">
+        <p class="lbl">Reuse glyphs</p>
+        <ul class="tiers">
+          <li><span class="g g-adapt" aria-hidden="true"></span><b>Adapt</b><span class="d">Edit, remix, and redistribute. <code>CC BY · CC BY-SA</code></span></li>
+          <li><span class="g g-nc" aria-hidden="true"></span><b>Adapt, noncommercial</b><span class="d">Same, outside commercial use. <code>CC BY-NC · CC BY-NC-SA</code></span></li>
+          <li><span class="g" aria-hidden="true"></span><b>Whole and unchanged</b><span class="d">Reprint as published, nothing added or cut. <code>CC BY-ND · CC BY-NC-ND</code></span></li>
+          <li><span class="g g-link" aria-hidden="true"></span><b>Link only</b><span class="d">Free to read, not ours to copy, or license not yet verified. <code>All rights reserved</code></span></li>
+        </ul>
+      </div>
+
+      <div class="cell">
+        <p class="lbl">Actions</p>
+        <div class="row-gap">
+          <a class="btn btn-p" href="#components">Start a course</a>
+          <a class="btn" href="#components">Export reader</a>
+          <a class="btn-t" href="#components">Browse the catalog <span aria-hidden="true">→</span></a>
+        </div>
+        <p style="color:var(--graphite);font-size:15px">One filled cobalt button per view at most. Everything else is an outline or a text link with an arrow.</p>
+      </div>
+
+      <div class="cell">
+        <p class="lbl">Search</p>
+        <label class="search" for="demo-search"><span aria-hidden="true" style="color:var(--graphite)">⌕</span><input id="demo-search" type="search" placeholder="Titles, authors, topics"></label>
+        <p style="color:var(--graphite);font-size:15px">An underline, no box. It turns cobalt while you type.</p>
+      </div>
+
+      <div class="cell wide">
+        <p class="lbl">Filter bar</p>
+        <div class="filter" id="demo-filter">
+          <span class="k">Show</span>
+          <button type="button" aria-pressed="true">Readings</button>
+          <button type="button" aria-pressed="false">Assignments</button>
+          <span class="sep" aria-hidden="true"></span>
+          <span class="k">Reuse</span>
+          <button type="button" aria-pressed="true">Any</button>
+          <button type="button" aria-pressed="false"><span class="g g-adapt" aria-hidden="true"></span> Adapt</button>
+          <button type="button" aria-pressed="false"><span class="g g-nc" aria-hidden="true"></span> Noncommercial</button>
+          <button type="button" aria-pressed="false"><span class="g" aria-hidden="true"></span> Whole</button>
+          <button type="button" aria-pressed="false"><span class="g g-link" aria-hidden="true"></span> Link</button>
+        </div>
+      </div>
+
+      <div class="cell wide">
+        <p class="lbl">Index row</p>
+        <div class="idx">
+          <a class="idx-row" href="#components">
+            <span class="g g-adapt" aria-label="Adapt"></span>
+            <span><span class="t">Situating Arguments</span><span class="by">Kristy Kelly · A Dam Good Argument · 2022</span></span>
+            <span class="lic">CC BY 4.0</span>
+            <span class="len num">~2,904 words</span>
+            <span class="add" aria-hidden="true">+</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="cell wide">
+        <p class="lbl">Accordion</p>
+        <div class="acc">
+          <details>
+            <summary><span class="t">Genre Analysis</span><span class="w">Weeks 8–11</span></summary>
+            <div class="body"><p style="color:var(--graphite)">Opens in place. The + turns to × and the page below moves down; nothing jumps to the top.</p></div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap sec" id="screens" aria-labelledby="scr-title">
+  <div class="sec-head">
+    <p class="lbl">Screens</p>
+    <h2 id="scr-title">Four pages in Lys</h2>
+    <p class="intro">The home page, the catalog, the course builder, and the exported reader, with real records from the corpus pack. The builder's term switch works: try 10, 8, and 5 weeks.</p>
+  </div>
+
+  <div class="screens">
+    <article class="screen">
+      <div class="screen-head"><p class="lbl">Home</p><div><h3>One sentence, then the way in</h3><p>The headline is the current lead line, set large. Catalog counts move into a quiet row, and the focus cards become an index you can scan in one look.</p></div></div>
+      <div class="frame">
+        <div class="frame-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="url">aletheia-oer.fly.dev</span></div>
+        <div class="m">
+          <div class="m-nav"><span class="m-word">Aletheia</span><ul><li>Catalog</li><li>By outcome</li><li>New course</li><li>For programs</li><li>About</li></ul><span class="m-menu">Menu</span></div>
+          <p class="lbl">Open course readers for writing classes</p>
+          <p class="m-display">Build an open course reader for your writing class.</p>
+          <div class="m-split">
+            <p class="m-lead">Pick a focus and a sample course, fit it to your term, and check off the readings and assignments you want. You get a course reader (HTML or PDF) and a package that imports into Canvas or another LMS.</p>
+            <div class="m-actions"><a class="btn btn-p" href="#screens">Start a course</a><a class="btn-t" href="#screens">Browse the catalog <span aria-hidden="true">→</span></a></div>
+          </div>
+          <dl class="m-counts">
+            <div><dt>Readings</dt><dd>2,188</dd></div>
+            <div><dt>Assignments</dt><dd>623</dd></div>
+            <div><dt>Sample courses</dt><dd>9</dd></div>
+            <div><dt>Term lengths</dt><dd>16 · 10 · 8 · 5</dd></div>
+          </dl>
+          <p class="m-h2">Start from a sample course</p>
+          <ul class="m-index">
+            <li><a href="#screens"><span class="t">First-Year Composition</span><span class="n">5 sample courses</span><span class="arrow" aria-hidden="true">→</span></a></li>
+            <li><a href="#screens"><span class="t">Technical Communication</span><span class="n">4 sample courses</span><span class="arrow" aria-hidden="true">→</span></a></li>
+            <li class="quiet"><a href="#screens"><span class="t">Professional Writing</span><span class="n">Readings only</span><span class="arrow" aria-hidden="true">→</span></a></li>
+            <li class="quiet"><a href="#screens"><span class="t">Academic Writing and WAC</span><span class="n">Readings only</span><span class="arrow" aria-hidden="true">→</span></a></li>
+            <li class="quiet"><a href="#screens"><span class="t">Science Writing</span><span class="n">Readings only</span><span class="arrow" aria-hidden="true">→</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="screen">
+      <div class="screen-head"><p class="lbl">Catalog</p><div><h3>An index, not a wall of cards</h3><p>Hello Monday's work list, applied to readings. Title first, then who and where from, then the license in mono, always in the same column. One click adds a reading to the open course.</p></div></div>
+      <div class="frame">
+        <div class="frame-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="url">aletheia-oer.fly.dev/catalog?focus=FYC</span></div>
+        <div class="m">
+          <div class="m-nav"><span class="m-word">Aletheia</span><ul><li class="on">Catalog</li><li>By outcome</li><li>New course</li><li>For programs</li><li>About</li></ul><span class="m-menu">Menu</span></div>
+          <div class="m-cat-head">
+            <p class="m-title">Catalog</p>
+            <label class="search" for="cat-search"><span aria-hidden="true" style="color:var(--graphite)">⌕</span><input id="cat-search" type="search" placeholder="Titles, authors, topics"></label>
+          </div>
+          <div class="m-cat-tools">
+            <div class="filter">
+              <span class="k">Focus</span>
+              <button type="button" aria-pressed="true">First-Year Composition</button>
+              <button type="button" aria-pressed="false">Technical Communication</button>
+              <button type="button" aria-pressed="false">All</button>
+              <span class="sep" aria-hidden="true"></span>
+              <span class="k">Reuse</span>
+              <button type="button" aria-pressed="true">Any</button>
+              <button type="button" aria-pressed="false"><span class="g g-adapt" aria-hidden="true"></span> Adapt</button>
+              <button type="button" aria-pressed="false"><span class="g g-nc" aria-hidden="true"></span> NC</button>
+              <button type="button" aria-pressed="false"><span class="g" aria-hidden="true"></span> Whole</button>
+              <button type="button" aria-pressed="false"><span class="g g-link" aria-hidden="true"></span> Link</button>
+            </div>
+          </div>
+          <div class="m-count"><span class="lbl">Readings · sample rows</span><span class="lbl">Adding to: ENG 101</span></div>
+          <div class="idx">
+            <a class="idx-row" href="#screens"><span class="g g-adapt" aria-label="Adapt"></span><span><span class="t">Situating Arguments</span><span class="by">Kristy Kelly · A Dam Good Argument · 2022</span></span><span class="lic">CC BY 4.0</span><span class="len num">~2,904 words</span><span class="add" aria-hidden="true">+</span></a>
+            <a class="idx-row" href="#screens"><span class="g" aria-label="Whole and unchanged"></span><span><span class="t">Understanding Discourse Communities</span><span class="by">Dan Melzer · Writing Spaces, Vol. 3 · 2020</span></span><span class="lic">CC BY-NC-ND 4.0</span><span class="len num">17 pp</span><span class="add" aria-hidden="true">+</span></a>
+            <a class="idx-row" href="#screens"><span class="g" aria-label="Whole and unchanged"></span><span><span class="t">Read the Room! Navigating Social Contexts and Written Texts</span><span class="by">Sarah Seeley, Kelly Xu, Matthew Chen · Writing Spaces, Vol. 4 · 2022</span></span><span class="lic">CC BY-NC-ND 4.0</span><span class="len num">20 pp</span><span class="add" aria-hidden="true">+</span></a>
+            <a class="idx-row" href="#screens"><span class="g g-adapt" aria-label="Adapt"></span><span><span class="t">6. Developing Your Research Question</span><span class="by">Teaching &amp; Learning, University Libraries · 2016</span></span><span class="lic">CC BY 4.0</span><span class="len num">~774 words</span><span class="add" aria-hidden="true">+</span></a>
+            <a class="idx-row" href="#screens"><span class="g g-nc" aria-label="Adapt, noncommercial"></span><span><span class="t">Professional Opportunities</span><span class="by">Monique Babin, Carol Burnell, and others · 2017</span></span><span class="lic">CC BY-NC 4.0</span><span class="len num">~182 words</span><span class="add" aria-hidden="true">+</span></a>
+            <a class="idx-row" href="#screens"><span class="g g-link" aria-label="Link only"></span><span><span class="t">The Successful Rhetoric of the TikTok Paleontology Community</span><span class="by">Emiliano Ramirez Munoz · Stylus · 2026</span></span><span class="lic">All rights reserved</span><span class="len">Link only</span><span class="add" aria-hidden="true">+</span></a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="screen">
+      <div class="screen-head"><p class="lbl">Course builder</p><div><h3>The term as a ruler</h3><p>Weeks run across the top as a measured strip; each unit is a block on it. Change the term and the blocks slide to their new widths. Units open in place below, MBRS style. Spans here are illustrative; the planner sets the real ones.</p></div></div>
+      <div class="frame">
+        <div class="frame-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="url">aletheia-oer.fly.dev/build/eng-101-writing-about-writing</span></div>
+        <div class="m">
+          <div class="m-nav"><span class="m-word">Aletheia</span><ul><li>Catalog</li><li>By outcome</li><li class="on">New course</li><li>For programs</li><li>About</li></ul><span class="m-menu">Menu</span></div>
+          <div class="m-build-head">
+            <div>
+              <p class="lbl">Sample course · First-Year Composition</p>
+              <p class="m-title">ENG 101 · Writing about Writing</p>
+            </div>
+            <div class="seg" role="group" aria-label="Term length in weeks" id="term">
+              <button type="button" id="t16" data-n="16" aria-pressed="true">16 wk</button>
+              <button type="button" id="t10" data-n="10" aria-pressed="false">10 wk</button>
+              <button type="button" id="t8" data-n="8" aria-pressed="false">8 wk</button>
+              <button type="button" id="t5" data-n="5" aria-pressed="false">5 wk</button>
+            </div>
+          </div>
+
+          <div class="ruler">
+            <div class="ticks" id="ticks" style="--n:16"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span></div>
+            <div class="track">
+              <span class="span" data-u="0" title="Literacy Narrative" style="--s:0;--w:18.75">Literacy</span>
+              <span class="span on" data-u="1" title="Discourse Community Study" style="--s:18.75;--w:25">Community</span>
+              <span class="span" data-u="2" title="Genre Analysis" style="--s:43.75;--w:25">Genre</span>
+              <span class="span" data-u="3" title="Reflection, Transfer, and Portfolio" style="--s:68.75;--w:18.75">Reflection</span>
+              <span class="span open" data-u="4" title="Open weeks" style="--s:87.5;--w:12.5">Open</span>
+            </div>
+            <div class="ruler-note"><span class="lbl" id="term-name">16-week semester</span><span class="lbl" id="term-left">2 weeks open</span></div>
+          </div>
+
+          <div class="m-build">
+            <div class="acc">
+              <details>
+                <summary><span class="t">Literacy Narrative</span><span class="w" id="w0">Weeks 1–3</span></summary>
+                <div class="body"><p style="color:var(--graphite)">Core readings, a major assignment, and activities.</p></div>
+              </details>
+              <details open>
+                <summary><span class="t">Discourse Community Study</span><span class="w" id="w1">Weeks 4–7</span></summary>
+                <div class="body">
+                  <p class="merged" id="merge-note" hidden>In this term the unit folds into Genre Analysis. Keep Melzer's chapter.</p>
+                  <ul class="unit-goals">
+                    <li>Students will define a discourse community using the criteria Melzer presents.</li>
+                    <li>Students will plan and conduct an interview with a community member.</li>
+                  </ul>
+                  <p class="lbl">Core readings · 4 of 4 included</p>
+                  <div class="picks">
+                    <label for="pk1"><input type="checkbox" id="pk1" checked><span class="g" aria-hidden="true"></span><span><span class="t">Understanding Discourse Communities</span><span class="by">Dan Melzer · Writing Spaces, Vol. 3</span></span><span class="len">17 pp</span></label>
+                    <label for="pk2"><input type="checkbox" id="pk2" checked><span class="g" aria-hidden="true"></span><span><span class="t">Read the Room! Navigating Social Contexts and Written Texts</span><span class="by">Seeley, Xu, and Chen · Writing Spaces, Vol. 4</span></span><span class="len">20 pp</span></label>
+                    <label for="pk3"><input type="checkbox" id="pk3" checked><span class="g" aria-hidden="true"></span><span><span class="t">What Can I Add to Discourse Communities?</span><span class="by">Lisa Tremain · Writing Spaces, Vol. 5</span></span><span class="len">15 pp</span></label>
+                    <label for="pk4"><input type="checkbox" id="pk4" checked><span class="g" aria-hidden="true"></span><span><span class="t">Working With People</span><span class="by">Clary-Lemon, Mueller, and Pantelides · Try This</span></span><span class="len">Chapter</span></label>
+                  </div>
+                  <a class="btn-t" href="#screens">Show 8 optional readings <span aria-hidden="true">→</span></a>
+                </div>
+              </details>
+              <details>
+                <summary><span class="t">Genre Analysis</span><span class="w" id="w2">Weeks 8–11</span></summary>
+                <div class="body"><p style="color:var(--graphite)">Core readings, a major assignment, and two activities.</p></div>
+              </details>
+              <details>
+                <summary><span class="t">Reflection, Transfer, and Portfolio</span><span class="w" id="w3">Weeks 12–14</span></summary>
+                <div class="body"><p style="color:var(--graphite)">Core readings and the portfolio.</p></div>
+              </details>
+            </div>
+
+            <aside class="panel" aria-label="Export">
+              <h4>Export</h4>
+              <p class="lbl">This unit</p>
+              <div class="tally"><span>Full text, whole</span><b>4</b><span>Full text, adaptable</span><b>0</b><span>Linked</span><b>0</b></div>
+              <div class="exp"><b>Course reader</b><span>HTML · PDF · credit line for every item</span></div>
+              <div class="exp"><b>Common Cartridge</b><span>.imscc · Canvas, Moodle, D2L, Blackboard, Sakai</span></div>
+              <a class="btn btn-p" href="#screens">Export course</a>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="screen">
+      <div class="screen-head"><p class="lbl">Reader</p><div><h3>The one white sheet</h3><p>The exported reader is the only place the site turns fully white and switches to the reading serif. Credits sit under every title in mono, and link-only items say so plainly with a dashed glyph.</p></div></div>
+      <div class="frame">
+        <div class="frame-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="url">eng-101-reader.html · unit 2</span></div>
+        <div class="m">
+          <div class="m-reader">
+            <nav class="rtoc" aria-label="Reader contents">
+              <p class="lbl">ENG 101 · Course reader</p>
+              <div class="acc">
+                <details><summary><span class="t">1 · Literacy Narrative</span></summary><ol><li>Unit introduction</li><li>Readings</li></ol></details>
+                <details open><summary><span class="t">2 · Discourse Community Study</span></summary>
+                  <ol><li class="on">Unit introduction</li><li>Understanding Discourse Communities</li><li>Read the Room!</li><li>What Can I Add to Discourse Communities?</li><li>Working With People</li></ol>
+                </details>
+                <details><summary><span class="t">3 · Genre Analysis</span></summary><ol><li>Unit introduction</li><li>Readings</li></ol></details>
+                <details><summary><span class="t">4 · Reflection and Portfolio</span></summary><ol><li>Unit introduction</li><li>Readings</li></ol></details>
+              </div>
+            </nav>
+            <article class="sheet">
+              <p class="lbl">Unit 2 · Weeks 4–7</p>
+              <p class="r-h">Discourse Community Study</p>
+              <p class="r-body">Students pick a discourse community they belong to or want to join, interview a member, and analyze the community's goals, vocabulary, and genres. This is the first unit with primary research, so it also introduces interviewing and research ethics.</p>
+              <ul class="unit-goals">
+                <li>Define a discourse community using the criteria Melzer presents.</li>
+                <li>Plan and conduct an interview with a community member.</li>
+                <li>Analyze how a community's genres and specialized language serve its goals.</li>
+              </ul>
+              <ol class="credits">
+                <li><span class="g" aria-hidden="true"></span><div><p class="ct">Understanding Discourse Communities</p><p class="cm">Dan Melzer · Writing Spaces: Readings on Writing, Volume 3 · 2020</p><p class="cl">CC BY-NC-ND 4.0 · Reprinted whole and unchanged</p></div></li>
+                <li><span class="g" aria-hidden="true"></span><div><p class="ct">Read the Room! Navigating Social Contexts and Written Texts</p><p class="cm">Sarah Seeley, Kelly Xu, Matthew Chen · Writing Spaces, Volume 4 · 2022</p><p class="cl">CC BY-NC-ND 4.0 · Reprinted whole and unchanged</p></div></li>
+                <li><span class="g g-link" aria-hidden="true"></span><div><p class="ct">The Successful Rhetoric of the TikTok Paleontology Community</p><p class="cm">Emiliano Ramirez Munoz · Stylus: A Journal of First-Year Writing · 2026</p><p class="cl">All rights reserved (free access) · Link only · <a href="#screens">Read it at Stylus ↗</a></p></div></li>
+              </ol>
+            </article>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="band" id="rollout" aria-labelledby="roll-title">
+  <div class="wrap sec">
+    <div class="sec-head">
+      <p class="lbl">Rollout</p>
+      <h2 id="roll-title">Getting it into the app</h2>
+      <p class="intro">The current stylesheet already runs on tokens, so most of Lys is a change of values. Five steps, each its own pull request, in this order.</p>
+    </div>
+
+    <div class="sub">
+      <h3>Steps</h3>
+      <div>
+        <ol class="steps">
+          <li><div><b>Tokens and fonts</b><p>Swap the values in the <code>:root</code> and dark blocks of <code>frontend/src/styles.css</code>, and add the three families through <code>@fontsource</code> packages so no request goes to Google. This step alone changes most of the look.</p></div></li>
+          <li><div><b>Header, navigation, and type scale</b><p>Wordmark left, text nav right, a cobalt square on the current page. Replace the heading sizes with the scale above; drop the card shadows.</p></div></li>
+          <li><div><b>Indexes and reuse glyphs</b><p>Catalog, focus, arc, and outcome pages move from card grids to index rows. <code>TierBadge</code> becomes the glyph plus the license string.</p></div></li>
+          <li><div><b>Builder ruler and unit accordions</b><p><code>TermBar</code> becomes the ruler; <code>UnitCard</code> becomes an accordion row. The six pastel segment colors go: frost for units, cobalt for the open one.</p></div></li>
+          <li><div><b>Reader and print</b><p><code>reader.css</code> and <code>reader_print.html</code> take Literata, the white sheet, and the mono credit lines. Glyphs print correctly in black and white.</p></div></li>
+        </ol>
+        <p class="note"><b>Timing.</b> Other sessions are editing the app right now. Land step 1 after their branches merge, since it rewrites the top of <code>styles.css</code> that every page depends on.</p>
+      </div>
+    </div>
+
+    <div class="sub">
+      <h3>Token map<small>Current names stay, so components keep working. Only values change.</small></h3>
+      <div class="table-wrap">
+        <table class="map">
+          <thead><tr><th>Token in styles.css</th><th>Now</th><th>Lys</th></tr></thead>
+          <tbody>
+            <tr><td><code>--bg</code></td><td>#f8f6f1 cream</td><td><span class="mini" style="--c:var(--chalk)"></span>Chalk #F4F5F6</td></tr>
+            <tr><td><code>--surface</code></td><td>#ffffff</td><td><span class="mini" style="--c:var(--sheet)"></span>Sheet #FFFFFF</td></tr>
+            <tr><td><code>--surface-2</code></td><td>#f2efe8</td><td><span class="mini" style="--c:var(--frost)"></span>Frost #E9ECEF</td></tr>
+            <tr><td><code>--text</code></td><td>#1d2125</td><td><span class="mini" style="--c:var(--ink)"></span>Ink #101216</td></tr>
+            <tr><td><code>--muted</code></td><td>#535a63</td><td><span class="mini" style="--c:var(--graphite)"></span>Graphite #59606A</td></tr>
+            <tr><td><code>--border</code></td><td>#dad5c9</td><td><span class="mini" style="--c:var(--line)"></span>Line #D8DCE1</td></tr>
+            <tr><td><code>--accent</code></td><td>#1f4e6e</td><td><span class="mini" style="--c:var(--cobalt)"></span>Cobalt #2340C0</td></tr>
+            <tr><td><code>--accent-soft</code></td><td>#e3ecf2</td><td><span class="mini" style="--c:var(--wash)"></span>Wash #E5E9FA</td></tr>
+            <tr><td><code>--link</code></td><td>#1d4f7a</td><td>Ink, underlined; cobalt on hover</td></tr>
+            <tr><td><code>--focus</code></td><td>#b04f00 orange</td><td>Cobalt, 2 px, 3 px offset</td></tr>
+            <tr><td><code>--sans</code></td><td>Segoe UI stack</td><td>Schibsted Grotesk</td></tr>
+            <tr><td><code>--serif</code></td><td>Charter stack</td><td>Literata, reader only</td></tr>
+            <tr><td><code>--radius</code></td><td>6px</td><td>2px</td></tr>
+            <tr><td><code>--shadow</code></td><td>two soft layers</td><td>none</td></tr>
+            <tr><td><code>--t-*</code> (12 tokens)</td><td>tinted tier badges</td><td>Reuse glyph in ink, no tint</td></tr>
+            <tr><td><code>--seg-0</code> to <code>--seg-5</code></td><td>six pastels</td><td>Frost; cobalt for the open unit</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <div class="foot">
+    <span class="wm">Aletheia</span>
+    <span class="lbl">Lys concept v0.1 · catalog records CC BY 4.0 · code MIT</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Theme preview
+  var root=document.documentElement;
+  var themeBtns=document.querySelectorAll('[data-th]');
+  themeBtns.forEach(function(b){
+    b.addEventListener('click',function(){
+      var v=b.getAttribute('data-th');
+      if(v==='system'){root.removeAttribute('data-theme')}else{root.setAttribute('data-theme',v)}
+      themeBtns.forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+    });
+  });
+
+  // Toggle groups in filter bars
+  document.querySelectorAll('.filter').forEach(function(bar){
+    var groups=[],cur=[];
+    Array.prototype.forEach.call(bar.children,function(el){
+      if(el.tagName==='BUTTON'){cur.push(el)}else if(cur.length){groups.push(cur);cur=[]}
+    });
+    if(cur.length)groups.push(cur);
+    groups.forEach(function(g){
+      g.forEach(function(b){b.addEventListener('click',function(){g.forEach(function(x){x.setAttribute('aria-pressed',String(x===b))})})});
+    });
+  });
+
+  // Term ruler: [start week, length] per unit; null means folded into the next unit
+  var plans={
+    16:{name:'16-week semester',units:[[1,3],[4,4],[8,4],[12,3]],open:[15,2]},
+    10:{name:'10-week quarter',units:[[1,2],[3,3],[6,3],[9,2]],open:null},
+    8:{name:'8-week session',units:[[1,2],null,[3,4],[7,2]],open:null},
+    5:{name:'5-week summer term',units:[[1,1],null,[2,2],[4,2]],open:null}
+  };
+  var spans=document.querySelectorAll('.track .span');
+  var ticks=document.getElementById('ticks');
+  function weeks(r){return r[1]===1?'Week '+r[0]:'Weeks '+r[0]+'–'+(r[0]+r[1]-1)}
+  function setTerm(n){
+    var p=plans[n];
+    ticks.style.setProperty('--n',n);
+    var h='';for(var i=1;i<=n;i++){h+='<span>'+i+'</span>'}ticks.innerHTML=h;
+    p.units.forEach(function(r,i){
+      var el=spans[i];
+      if(r){
+        el.classList.remove('gone');
+        el.style.setProperty('--s',((r[0]-1)/n*100).toFixed(3));
+        el.style.setProperty('--w',(r[1]/n*100).toFixed(3));
+        document.getElementById('w'+i).textContent=weeks(r);
+      }else{
+        var next=p.units[i+1];
+        el.classList.add('gone');
+        el.style.setProperty('--s',((next[0]-1)/n*100).toFixed(3));
+        el.style.setProperty('--w','0');
+        document.getElementById('w'+i).textContent='In Genre Analysis';
+      }
+    });
+    var open=spans[4];
+    if(p.open){
+      open.classList.remove('gone');
+      open.style.setProperty('--s',((p.open[0]-1)/n*100).toFixed(3));
+      open.style.setProperty('--w',(p.open[1]/n*100).toFixed(3));
+    }else{
+      open.classList.add('gone');
+      open.style.setProperty('--s','100');
+      open.style.setProperty('--w','0');
+    }
+    document.getElementById('merge-note').hidden=!!p.units[1];
+    document.getElementById('term-name').textContent=p.name;
+    document.getElementById('term-left').textContent=p.open?p.open[1]+' weeks open':(p.units[1]?'Every week planned':'Community folds into Genre');
+    document.querySelectorAll('#term button').forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-n')===String(n)))});
+  }
+  document.querySelectorAll('#term button').forEach(function(b){
+    b.addEventListener('click',function(){setTerm(Number(b.getAttribute('data-n')))});
+  });
+
+  // Add buttons in the catalog rows act as toggles in the mock
+  document.querySelectorAll('.idx-row').forEach(function(row){
+    row.addEventListener('click',function(e){
+      e.preventDefault();
+      var a=row.querySelector('.add');
+      a.setAttribute('aria-pressed',String(a.getAttribute('aria-pressed')!=='true'));
+      a.textContent=a.getAttribute('aria-pressed')==='true'?'✓':'+';
+    });
+  });
+})();
+</script>

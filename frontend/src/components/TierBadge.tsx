@@ -1,4 +1,5 @@
 import type { Tier } from "../api";
+import { Icon, tierIcon } from "./Icon";
 
 export const TIER_LABELS: Record<Tier, string> = {
   adapt: "Adapt",
@@ -18,12 +19,13 @@ export function tierLabel(t: string): string {
   return TIER_LABELS[t as Tier] ?? t;
 }
 
-/** Reuse-tier badge. The text label carries the meaning; color and border style only reinforce it. */
+/** Reuse-tier badge: a fill glyph plus the text label. The label carries the meaning; the glyph only reinforces it. */
 export function TierBadge({ tier, verified = true }: { tier: Tier | string; verified?: boolean }) {
   const t = (tier in TIER_LABELS ? tier : "link-only") as Tier;
   const help = verified || t !== "link-only" ? TIER_HELP[t] : "License not yet verified, so it's treated as link only.";
   return (
     <span className={`tier tier-${t}`} title={help}>
+      <Icon name={tierIcon(t)} size={16} />
       <span className="visually-hidden">Reuse: </span>
       {TIER_LABELS[t]}
     </span>
