@@ -59,6 +59,9 @@ export default function App() {
                 <NavLink to="/build/new">New course</NavLink>
               </li>
               <li>
+                <NavLink to="/programs/new">For programs</NavLink>
+              </li>
+              <li>
                 <NavLink to="/about">About</NavLink>
               </li>
             </ul>
