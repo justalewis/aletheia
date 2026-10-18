@@ -1,0 +1,97 @@
+# Written by tools/mirror_pdfs.py. Only files listed in manifest.json can be committed.
+*
+!*/
+!.gitignore
+!manifest.json
+!_attributions.csv
+!/ANU Press/Communicating Science A Global Perspective.pdf
+!/ASCCC Open Educational Resources Initiative/Advanced Community College ESL Composition An Integrated Skills Approach.pdf
+!/ASCCC Open Educational Resources Initiative/Introduction to College Research.pdf
+!/Auburn University at Montgomery/Composing Ourselves and Our World A Guide to First-Year Writing.pdf
+!/Bad Ideas About Writing/Bad Ideas About Writing.pdf
+!/Bloomsbury Academic (CC edition); Internet Archive copy/Remix Making Art and Commerce Thrive in the Hybrid Economy.pdf
+!/CDC (U.S. Department of Health and Human Services)/The CDC Clear Communication Index.pdf
+!/Communicating Science A Global Perspective/Introduction A global trend, an emerging field, a multiplicity of understandings Science communication in 39 countries.pdf
+!/Communicating Science A Global Perspective/United States of America Science communication in the USA It's complicated.pdf
+!/Crisis & Emergency Risk Communication (CERC) Manual/Messages and Audiences.pdf
+!/Crisis & Emergency Risk Communication (CERC) Manual/The Psychology of a Crisis.pdf
+!/Duke Center for the Study of the Public Domain/Bound by Law Tales from the Public Domain.pdf
+!/Journal of Multimodal Rhetorics/Musical Listening Addressing the Rhetoric of Music in Sonic and Multimodal Composition.pdf
+!/Journal of Multimodal Rhetorics/Slow Looking Sitting with the Black Lives Matter Murals of Downtown Raleigh.pdf
+!/Journal of Multimodal Rhetorics/Writing as Designing Integrating Infographics in Composition.pdf
+!/Journal of Multimodal Rhetorics/artifact a comic essay about a revision of a revision assessment rubric for student writing.pdf
+!/Literacy in Composition Studies/LiteracyLiteracies Studies and the Still-Dominant White Center.pdf
+!/MSL Academic Endeavors (Cleveland State University)/A Guide to Rhetoric, Genre, and Success in First-Year Writing (1st Edition, No Longer Updated).pdf
+!/OpenStax (Rice University)/Writing Guide with Handbook.pdf
+!/PALNI Open Press/Leveraging Data Visualization to Communicate Effectively.pdf
+!/PALNI Open Press/Writing for Digital Media.pdf
+!/PLOS Computational Biology/Ten Simple (Empirical) Rules for Writing Science.pdf
+!/PLOS Computational Biology/Ten Simple Rules for Better Figures.pdf
+!/PLOS Computational Biology/Ten Simple Rules for Effective Online Outreach.pdf
+!/PLOS Computational Biology/Ten Simple Rules for Getting Grants.pdf
+!/PLOS Computational Biology/Ten Simple Rules for Getting Published.pdf
+!/PLOS Computational Biology/Ten Simple Rules for Making Good Oral Presentations.pdf
+!/PLOS Computational Biology/Ten Simple Rules for Reviewers.pdf
+!/PLOS Computational Biology/Ten Simple Rules for Writing Research Papers.pdf
+!/PLOS Computational Biology/Ten Simple Rules for Writing a Literature Review.pdf
+!/PLOS Computational Biology/Ten Simple Rules for a Good Poster Presentation.pdf
+!/PLOS Computational Biology/Ten simple rules for collaboratively writing a multi-authored paper.pdf
+!/PLOS Computational Biology/Ten simple rules for drawing scientific comics.pdf
+!/PLOS Computational Biology/Ten simple rules for effective presentation slides.pdf
+!/PLOS Computational Biology/Ten simple rules for getting started on Twitter as a scientist.pdf
+!/PLOS Computational Biology/Ten simple rules for scientists engaging in science communication.pdf
+!/PLOS Computational Biology/Ten simple rules for structuring papers.pdf
+!/PLOS Computational Biology/Ten simple rules for writing a peer review.pdf
+!/PLOS Computational Biology/Ten simple rules for writing a popular science book.pdf
+!/PLOS Computational Biology/Ten simple rules for writing a response to reviewers.pdf
+!/PLOS Computational Biology/Ten simple rules to colorize biological data visualization.pdf
+!/Pennsylvania Alliance for Design of Open Textbooks (PA-ADOPT)/Introduction to Technical Writing A Rhetorical Approach.pdf
+!/Pennsylvania Alliance for Design of Open Textbooks (PA-ADOPT)/Web Writing.pdf
+!/Present Tense A Journal of Rhetoric in Society/Building Dark Patterns into Platforms How GamerGate Perturbed Twitter's User Experience.pdf
+!/Present Tense A Journal of Rhetoric in Society/Constructing Research, Constructing the Platform Algorithms and the Rhetoricity of Social Media Research.pdf
+!/Present Tense A Journal of Rhetoric in Society/Corporate Kairos and the Impossibility of the Anonymous, Ephemeral Messaging Dream.pdf
+!/Present Tense A Journal of Rhetoric in Society/I'll Google It! How Collective Wisdom in Search Engines Alters the Rhetorical Canons.pdf
+!/Present Tense A Journal of Rhetoric in Society/Representation, Resistance, and Rhetoric Bananas Catalyze Campus Activism.pdf
+!/Programmatic Perspectives/Artificial Intelligence, Large Language Models, and Design Thinking in TPC Classrooms.pdf
+!/Programmatic Perspectives/Audience Personas Audience Analysis Documentation for Rhetorical Technical Communications.pdf
+!/Programmatic Perspectives/Experience Architecture Developing an Interdisciplinary UX Undergraduate Degree.pdf
+!/Programmatic Perspectives/Leveraging Design Thinking and Generative AI to Transform TPC Pedagogy.pdf
+!/Programmatic Perspectives/Online Design Thinking and Community-Based Learning Co-Designing an Indigenous Curriculum to Help Redress Language Margi.pdf
+!/Technical Communication and Social Justice/A Digital-Decolonial Approach to Writing Pedagogy.pdf
+!/Technical Communication and Social Justice/Interest-Driven Public Networks and Writing Pedagogy Reframing and Harnessing Digital Spaces as Activism Playgrounds.pdf
+!/Technical Communication and Social Justice/Looking Under the Hood of SEO Conversion Paradoxical Goals and Moral Dilemmas Faced by the Digital Age Rhetorician.pdf
+!/Technical Communication and Social Justice/Teaching Editing for Social Justice.pdf
+!/Technical Communication and Social Justice/The Invisible Work of Iterative Design in Addressing Design Injustices.pdf
+!/The Process of Research Writing/Chapter Eight The Antithesis Exercise.pdf
+!/The Process of Research Writing/Chapter Eleven Alternative Ways to Present Your Research.pdf
+!/The Process of Research Writing/Chapter Five The Working Thesis Exercise.pdf
+!/The Process of Research Writing/Chapter Four How to Collaborate and Write With Others.pdf
+!/The Process of Research Writing/Chapter Nine The Categorization and Evaluation Exercise.pdf
+!/The Process of Research Writing/Chapter One Thinking Critically About Research.pdf
+!/The Process of Research Writing/Chapter Seven The Critique Exercise.pdf
+!/The Process of Research Writing/Chapter Six The Annotated Bibliography Exercise.pdf
+!/The Process of Research Writing/Chapter Ten The Research Essay.pdf
+!/The Process of Research Writing/Chapter Three Quoting, Paraphrasing, and Avoiding Plagiarism.pdf
+!/The Process of Research Writing/Chapter Twelve Citing Your Research Using MLA or APA Style.pdf
+!/The Process of Research Writing/Chapter Two Understanding and Using the Library and the Internet for Research.pdf
+!/The Process of Research Writing/Introduction Why Write Research Projects.pdf
+!/Toronto Metropolitan University Pressbooks/Digital Accessibility as a Business Practice Essential Skills for Business Leaders.pdf
+!/Toronto Metropolitan University Pressbooks/Professional Web Accessibility Auditing Made Easy Essential Skills for Web Developers, Content Creators, and Designers.pdf
+!/Toronto Metropolitan University Pressbooks/Understanding Document Accessibility A Reference for Creating Accessible Office Documents.pdf
+!/Toronto Metropolitan University Pressbooks/Web Accessibility for Developers Essential Skills for Web Developers.pdf
+!/Writers Craft & Context/A Counterstory On Eating and Belonging.pdf
+!/Writers Craft & Context/For the Love of Writing Writing as a Form of (Self-) Love.pdf
+!/Writers Craft & Context/On Becoming a Research Geek.pdf
+!/Writers Craft & Context/Refusing to Kill My Darlings.pdf
+!/Writers Craft & Context/Teaching ChatGPT for Grant Writing An English Department Senior Capstone.pdf
+!/Writers Craft & Context/Writing While Black.pdf
+!/Writing Spaces Readings on Writing, Volume 7 (in progress)/Reflecting on Literacy Identities Through Writing Personal Narratives.pdf
+!/Writing Spaces Readings on Writing, Volume 7 (in progress)/Writing Counterstories Ways to Challenge Dominant Narratives in FYC.pdf
+!/Writing Spaces Readings on Writing, Volume 7 (in progress)/Writing as the World Falls Apart A Filipino Perspective on Academic Writing.pdf
+!/WritingSpaces.org; Parlor Press; The WAC Clearinghouse/Technical Writing Spaces Readings on Writing, Volume 6.pdf
+!/WritingSpaces.org; Parlor Press; The WAC Clearinghouse/Writing Spaces Readings on Writing, Volume 1.pdf
+!/WritingSpaces.org; Parlor Press; The WAC Clearinghouse/Writing Spaces Readings on Writing, Volume 2.pdf
+!/WritingSpaces.org; Parlor Press; The WAC Clearinghouse/Writing Spaces Readings on Writing, Volume 3.pdf
+!/WritingSpaces.org; Parlor Press; The WAC Clearinghouse/Writing Spaces Readings on Writing, Volume 4.pdf
+!/WritingSpaces.org; Parlor Press; The WAC Clearinghouse/Writing Spaces Readings on Writing, Volume 5.pdf
+!/Yale University Press (free CC edition at thepublicdomain.org)/The Public Domain Enclosing the Commons of the Mind.pdf

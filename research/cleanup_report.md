@@ -51,7 +51,9 @@ Other conflicts found along the way and handled the same way:
 
 **Totals:** license strings changed on 140 records (136 readings, 4 assignments). Reuse-tier moves among readings: adapt → verbatim 68, adapt-nc → verbatim 35, adapt → adapt-nc 3. Unknown/link-only items newly licensed: 5 readings. No record moved to a looser tier except those 5, which went from unknown to a verified license. Readings by tier are now adapt 541, adapt-nc 804, verbatim 674, link-only 169.
 
-**Judgment calls for Justin to confirm:**
+**Update after review (2026-10-17):** Justin says he cleared every CC-licensed reading beforehand, so all of them can be used. None of the 1,878 CC readings or 567 CC assignments is link-only now; each one can already go into a reader. The `license` fields still record what the sources say, because attributions depend on them and other instructors won't share Justin's clearance. Nobody needs to ask WVU or Writing Spaces now. Justin confirmed the clearance covers using the CC readings as published, not editing them, so the reuse tiers stay as they are: ND works go in whole and unmodified, and NC terms still apply.
+
+**Judgment calls (written before that clearance; still matter for other instructors):**
 
 - *Writing Spaces 1–2.* Writing Spaces' Terms of Use say the license on a chapter's first page governs. If that footnote is accepted as controlling, the 33 chapters can go back to CC BY-NC-SA 3.0 US (adapt-nc). The rule as written forced NC-ND.
 - *Bad Ideas.* Only WVU says NC-ND, and WVU is the publisher. One email to WVU's Digital Publishing Institute would settle it.

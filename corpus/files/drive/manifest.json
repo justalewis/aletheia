@@ -1,0 +1,3702 @@
+{
+ "generated": "2026-10-18T04:10:55+00:00",
+ "about": "Openly licensed files from the maintainer's reading collection, redistributed unchanged under their own licenses (each PDF carries its license notice). Commercial, free-access and personal files are not included. Written by tools/import_corpus.py.",
+ "count": 213,
+ "bytes": 235208408,
+ "files": [
+  {
+   "path": "Bad Ideas about Writing.pdf",
+   "bytes": 2425678,
+   "sha256": "dd825e5e8975ff148908a5d4b6c04e8ef9425bc60e5e3a49a25b9d4a6bfd7a89",
+   "title": "Bad Ideas About Writing",
+   "book": "Bad Ideas About Writing",
+   "authors": [
+    "Cheryl E. Ball (ed.)",
+    "Drew M. Loewe (ed.)"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "bad-ideas-about-writing"
+   ],
+   "source_url": "https://human.libretexts.org/Bookshelves/Composition/Specialized_Composition/Bad_Ideas_About_Writing_(Ball_and_Loewe)"
+  },
+  {
+   "path": "informedwriter/chapter1.pdf",
+   "bytes": 286305,
+   "sha256": "c814d80827fd1180e31fe181b9986218c545be32f68c5e28b6d93eec5a29de0c",
+   "title": "Chapter 1: Writing",
+   "book": "The Informed Writer: Using Sources in the Disciplines",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://wacclearinghouse.org/books/practice/informedwriter/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "chapter-1-writing"
+   ],
+   "source_url": ""
+  },
+  {
+   "path": "informedwriter/chapter10.pdf",
+   "bytes": 923676,
+   "sha256": "8ae44e6effb345e88f650662c385ca92f21d70f16a496d1ea8d8684dfa073e48",
+   "title": "Chapter 10: Writing the Research Paper",
+   "book": "The Informed Writer: Using Sources in the Disciplines",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-informed-writer-chapter-10-writing-the-research-paper"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/informedwriter/"
+  },
+  {
+   "path": "informedwriter/chapter11.pdf",
+   "bytes": 488918,
+   "sha256": "7fea00a2ac590999103ba900b9f4cd025d3baf2d040f9f62e01a0bb20decd83d",
+   "title": "Chapter 11: A Guide to Reference and Documentation",
+   "book": "The Informed Writer: Using Sources in the Disciplines",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-informed-writer-chapter-11-a-guide-to-reference-and-documentation"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/informedwriter/"
+  },
+  {
+   "path": "informedwriter/chapter12.pdf",
+   "bytes": 194800,
+   "sha256": "c453334285274eb4b84bb0a300ecdd069f4227a4b1564529a219670726107bcd",
+   "title": "Chapter 12: Creating Knowledge",
+   "book": "The Informed Writer: Using Sources in the Disciplines",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-informed-writer-chapter-12-creating-knowledge"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/informedwriter/"
+  },
+  {
+   "path": "informedwriter/chapter13.pdf",
+   "bytes": 373579,
+   "sha256": "23e0f620e623cbf14c04eafb9726e8044301355e2ebb9428acdac501e9d1da2b",
+   "title": "Chapter 13: Reading and Writing about Past Events: The Humanities and Historical Sciences",
+   "book": "The Informed Writer: Using Sources in the Disciplines",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-informed-writer-chapter-13-reading-and-writing-about-past-events-the-humanities-and"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/informedwriter/"
+  },
+  {
+   "path": "informedwriter/chapter14.pdf",
+   "bytes": 409551,
+   "sha256": "ce013a3dd3cdbc9e563fe88286a5fea5a094003c0a2f199d9b2cc9e6b30abaa7",
+   "title": "Chapter 14: Reading and Writing about Events as They Happen: Observation in the Social and Natural Sciences",
+   "book": "The Informed Writer: Using Sources in the Disciplines",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-informed-writer-chapter-14-reading-and-writing-about-events-as-they-happen"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/informedwriter/"
+  },
+  {
+   "path": "informedwriter/chapter15.pdf",
+   "bytes": 576259,
+   "sha256": "e19c25e3a24fd1af33dbe820740ba01aafef2dbb7739443aef3a65f885bf2dba",
+   "title": "Chapter 15: Reading and Writing about Designed Events: The Experimental Sciences",
+   "book": "The Informed Writer: Using Sources in the Disciplines",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-informed-writer-chapter-15-reading-and-writing-about-designed-events-the-experimental"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/informedwriter/"
+  },
+  {
+   "path": "informedwriter/chapter16.pdf",
+   "bytes": 493173,
+   "sha256": "79725b8dfe6d02210ec817fb3014837e6eb0bb1714f60b55c9ba070d47be130b",
+   "title": "Chapter 16: Reading and Writing about Generalizations: Theoretical Disciplines",
+   "book": "The Informed Writer: Using Sources in the Disciplines",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-informed-writer-chapter-16-reading-and-writing-about-generalizations-theoretical"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/informedwriter/"
+  },
+  {
+   "path": "informedwriter/chapter2.pdf",
+   "bytes": 460950,
+   "sha256": "9fb987873e1ef52545c6514a0c334ed799fb3a694a3fe17f9c41e4630ffd9d8a",
+   "title": "Chapter 2: Reacting to Reading: Annotations and Journals",
+   "book": "The Informed Writer: Using Sources in the Disciplines",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-informed-writer-chapter-2-reacting-to-reading-annotations-and-journals"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/informedwriter/"
+  },
+  {
+   "path": "informedwriter/chapter3.pdf",
+   "bytes": 527058,
+   "sha256": "9a4e9503a6403a4f0fc3416407544378f701477d40bd90e1dd066410fd4ef045",
+   "title": "Chapter 3: Paraphrasing: The Author's Thoughts in Your Words",
+   "book": "The Informed Writer: Using Sources in the Disciplines",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-informed-writer-chapter-3-paraphrasing-the-authors-thoughts-in-your-words"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/informedwriter/"
+  },
+  {
+   "path": "informedwriter/chapter4.pdf",
+   "bytes": 411153,
+   "sha256": "759bbe586c533f54e449e00f3c3366eb40e8baf7095e751c847bfb0deca81f0c",
+   "title": "Chapter 4: Summarizing: The Author's Main Ideas",
+   "book": "The Informed Writer: Using Sources in the Disciplines",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-informed-writer-chapter-4-summarizing-the-authors-main-ideas"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/informedwriter/"
+  },
+  {
+   "path": "informedwriter/chapter5.pdf",
+   "bytes": 469178,
+   "sha256": "18e0bb483d56e075a9cb51904ef3886ba8e29f6e1c3e2ed171f4bd2d95fa08b3",
+   "title": "Chapter 5: Developing Responses to Readings: Essays",
+   "book": "The Informed Writer: Using Sources in the Disciplines",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-informed-writer-chapter-5-developing-responses-to-readings-essays"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/informedwriter/"
+  },
+  {
+   "path": "informedwriter/chapter6.pdf",
+   "bytes": 484986,
+   "sha256": "4b8ac7c86e6fe8f56e1e489aa5fbd8c1aafcfd48d567110e44afc82669450cc7",
+   "title": "Chapter 6: Recognizing the Many Voices in a Text",
+   "book": "The Informed Writer: Using Sources in the Disciplines",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-informed-writer-chapter-6-recognizing-the-many-voices-in-a-text"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/informedwriter/"
+  },
+  {
+   "path": "informedwriter/chapter7.pdf",
+   "bytes": 559539,
+   "sha256": "7dd2ef1cdb835a75863a1f6217a664d10f0fefb0b95f62c9fa5052eed6b4592c",
+   "title": "Chapter 7: Analyzing the Author's Purpose and Technique",
+   "book": "The Informed Writer: Using Sources in the Disciplines",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-informed-writer-chapter-7-analyzing-the-authors-purpose-and-technique"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/informedwriter/"
+  },
+  {
+   "path": "informedwriter/chapter8.pdf",
+   "bytes": 354074,
+   "sha256": "37dbdc5e929c7498c20f2a28177cc4fad5d21ad9b7cce1de51fae644513767b7",
+   "title": "Chapter 8: Evaluating the Book as a Whole: The Book Review",
+   "book": "The Informed Writer: Using Sources in the Disciplines",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-informed-writer-chapter-8-evaluating-the-book-as-a-whole-the-book-review"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/informedwriter/"
+  },
+  {
+   "path": "informedwriter/chapter9.pdf",
+   "bytes": 423938,
+   "sha256": "9dc0640fb7d247d1c380a844338948ed36318843100f81da35bc51a050a00890",
+   "title": "Chapter 9: Comparing and Synthesizing Sources",
+   "book": "The Informed Writer: Using Sources in the Disciplines",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-informed-writer-chapter-9-comparing-and-synthesizing-sources"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/informedwriter/"
+  },
+  {
+   "path": "informedwriter/informedwriter.pdf",
+   "bytes": 6157863,
+   "sha256": "96b8d554a1a7046edd23beb4926b01d2598bdbb439136c2665073e1ff56c76c5",
+   "title": "Complete book (full PDF)",
+   "book": "The Informed Writer: Using Sources in the Disciplines",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog (book record)",
+   "catalog_ids": [
+    "wac-informed-writer"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/informedwriter/"
+  },
+  {
+   "path": "involved/chapter1.pdf",
+   "bytes": 2022315,
+   "sha256": "cd383bf4b5012a9fcf77b19b92c7bf99ef73c31a15f2b6ed56706d4bc7aa7b53",
+   "title": "Chapter 1: Strategic Writing",
+   "book": "Involved: Writing for College, Writing for Your Self",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-involved-chapter-1-strategic-writing"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/involved/"
+  },
+  {
+   "path": "involved/chapter10.pdf",
+   "bytes": 481780,
+   "sha256": "febbbc175b6638aef17f85fcb04a88ba985174cee23cb315a3e36cbb7c7891cd",
+   "title": "Chapter 10: The Investigative Process",
+   "book": "Involved: Writing for College, Writing for Your Self",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-involved-chapter-10-the-investigative-process"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/involved/"
+  },
+  {
+   "path": "involved/chapter11.pdf",
+   "bytes": 2556029,
+   "sha256": "4820a8ed3de54be8f1e931debb6fbf31ee8a40fdb788877fb62233fdc2a18a5a",
+   "title": "Chapter 11: Investigating the Archive: Library Research Writing",
+   "book": "Involved: Writing for College, Writing for Your Self",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-involved-chapter-11-investigating-the-archive-library-research-writing"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/involved/"
+  },
+  {
+   "path": "involved/chapter12.pdf",
+   "bytes": 2423825,
+   "sha256": "f23b1fbde879d323c999d130acc22e0214bdf7d9cacaaa18aaace9c27057854c",
+   "title": "Chapter 12: New Investigations: Fieldwork and Laboratories",
+   "book": "Involved: Writing for College, Writing for Your Self",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-involved-chapter-12-new-investigations-fieldwork-and-laboratories"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/involved/"
+  },
+  {
+   "path": "involved/chapter13.pdf",
+   "bytes": 3780808,
+   "sha256": "71a46516fccd17ef107e6e3733f6d1968e28897db76ceb2797f90af604a83382",
+   "title": "Chapter 13: Writing About Complex Worlds",
+   "book": "Involved: Writing for College, Writing for Your Self",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-involved-chapter-13-writing-about-complex-worlds"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/involved/"
+  },
+  {
+   "path": "involved/chapter14.pdf",
+   "bytes": 1447616,
+   "sha256": "66cbaa2a1f068c21f96083efdffa9ef7b6ab4674647a6944cebefc6e209893dd",
+   "title": "Chapter 14: Writing About Problem Cases",
+   "book": "Involved: Writing for College, Writing for Your Self",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-involved-chapter-14-writing-about-problem-cases"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/involved/"
+  },
+  {
+   "path": "involved/chapter15.pdf",
+   "bytes": 2484919,
+   "sha256": "bc2e7ef10aa571ea3d280cbc0e2b2e3bb492a6d824cc7de1b2838da060507800",
+   "title": "Chapter 15: Arguing Your Case",
+   "book": "Involved: Writing for College, Writing for Your Self",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-involved-chapter-15-arguing-your-case"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/involved/"
+  },
+  {
+   "path": "involved/chapter2.pdf",
+   "bytes": 3602372,
+   "sha256": "a6ba330321e5af4f0efb594e00472960f99e97d6be404f92c236a258187f7ecb",
+   "title": "Chapter 2: The Classroom Situation",
+   "book": "Involved: Writing for College, Writing for Your Self",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-involved-chapter-2-the-classroom-situation"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/involved/"
+  },
+  {
+   "path": "involved/chapter3.pdf",
+   "bytes": 1917509,
+   "sha256": "f62059f2638ceb645412badce8a7f44f27d8b85fdb000a5679a09918abe8ee3b",
+   "title": "Chapter 3: Writing Processes",
+   "book": "Involved: Writing for College, Writing for Your Self",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-involved-chapter-3-writing-processes"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/involved/"
+  },
+  {
+   "path": "involved/chapter4.pdf",
+   "bytes": 2093151,
+   "sha256": "925b4a7cf1a74210b2aa16a9a129fa7631953796f910aeb51939d093e0c7e7f4",
+   "title": "Chapter 4: Journals and Reflective Writing",
+   "book": "Involved: Writing for College, Writing for Your Self",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-involved-chapter-4-journals-and-reflective-writing"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/involved/"
+  },
+  {
+   "path": "involved/chapter5.pdf",
+   "bytes": 3572843,
+   "sha256": "eca1506b35858aa788991f07ccd3300b13bee3dc4ebaa0915f483846eab5c17b",
+   "title": "Chapter 5: Notes and Summaries: Writing to Remember",
+   "book": "Involved: Writing for College, Writing for Your Self",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-involved-chapter-5-notes-and-summaries-writing-to-remember"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/involved/"
+  },
+  {
+   "path": "involved/chapter6.pdf",
+   "bytes": 4311450,
+   "sha256": "8a897fbbd5fe1d24f15eb41b08353d5c7fdd1af4dd609d56f1d2b38e2806475a",
+   "title": "Chapter 6: Exam Writing: Displaying Knowledge",
+   "book": "Involved: Writing for College, Writing for Your Self",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-involved-chapter-6-exam-writing-displaying-knowledge"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/involved/"
+  },
+  {
+   "path": "involved/chapter7.pdf",
+   "bytes": 1766803,
+   "sha256": "7d58bfc240bb2ea70d4ec2f8a0642ce2b3e63ec7368e44e1360c18a9456a686d",
+   "title": "Chapter 7: Illustrative Writing: Connecting Concepts and Real Examples",
+   "book": "Involved: Writing for College, Writing for Your Self",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-involved-chapter-7-illustrative-writing-connecting-concepts-and-real-examples"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/involved/"
+  },
+  {
+   "path": "involved/chapter8.pdf",
+   "bytes": 3302681,
+   "sha256": "447f8117692d222c62d0e08e95df0e10dc5ae7cd7d14ce62207fa3e046828d20",
+   "title": "Chapter 8: Autobiographical Writing: Connecting Concepts and Experience",
+   "book": "Involved: Writing for College, Writing for Your Self",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-involved-chapter-8-autobiographical-writing-connecting-concepts-and-experience"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/involved/"
+  },
+  {
+   "path": "involved/chapter9.pdf",
+   "bytes": 4539946,
+   "sha256": "637d9b6470c58cc7e5b8410126308e7fba72d28b99c8c72816f8de1c04f6aa01",
+   "title": "Chapter 9: Analytical Writing: Looking Closely",
+   "book": "Involved: Writing for College, Writing for Your Self",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-involved-chapter-9-analytical-writing-looking-closely"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/involved/"
+  },
+  {
+   "path": "involved/index-readings.pdf",
+   "bytes": 100152,
+   "sha256": "02b1b37d6f90936e1c6af518d8c6bfbdb8a974388c0a0497ac2244001b558214",
+   "title": "Readings Index",
+   "book": "Involved: Writing for College, Writing for Your Self",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog (book record)",
+   "catalog_ids": [
+    "wac-involved"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/involved/"
+  },
+  {
+   "path": "involved/index-subjects.pdf",
+   "bytes": 243292,
+   "sha256": "abfd2b200fb41c6430516dae2c1f8a216abf670db492cda436882e33c6d1b954",
+   "title": "Subject Index",
+   "book": "Involved: Writing for College, Writing for Your Self",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog (book record)",
+   "catalog_ids": [
+    "wac-involved"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/involved/"
+  },
+  {
+   "path": "involved/involved.pdf",
+   "bytes": 44381528,
+   "sha256": "c0ea66304dc93e423eb380bccb8fed4c1828bfbaa82e3676f215b6182a0bbae6",
+   "title": "Complete book (full PDF)",
+   "book": "Involved: Writing for College, Writing for Your Self",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog (book record)",
+   "catalog_ids": [
+    "wac-involved"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/involved/"
+  },
+  {
+   "path": "involved/preface.pdf",
+   "bytes": 149619,
+   "sha256": "5e19dc5e776e50a0fa717e28b32b614b5a53d95b34fcd916bef5cc47a532ba67",
+   "title": "Preface and Acknowledgments",
+   "book": "Involved: Writing for College, Writing for Your Self",
+   "authors": [
+    "Charles Bazerman"
+   ],
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "license_from": "catalog (book record)",
+   "catalog_ids": [
+    "wac-involved"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/involved/"
+  },
+  {
+   "path": "mindful/chapter1.pdf",
+   "bytes": 397013,
+   "sha256": "b36cb52bb7d1bb52c883d37f578cfef515aa3a66c6f86ddfeab92261d6e5df32",
+   "title": "Chapter 1: Annotating Your Way into Academic Discourse",
+   "book": "A Writer's Guide to Mindful Reading",
+   "authors": [
+    "Ellen C. Carillo"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-mindful-reading-chapter-1-annotating-your-way-into-academic-discourse"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/mindful/"
+  },
+  {
+   "path": "mindful/chapter10.pdf",
+   "bytes": 966364,
+   "sha256": "e988d9822bdeafdc041093101416be95353016a28b64a0b38c6918be76513809",
+   "title": "Chapter 10: The Environment and Technology",
+   "book": "A Writer's Guide to Mindful Reading",
+   "authors": [
+    "Ellen C. Carillo"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-mindful-reading-chapter-10-the-environment-and-technology"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/mindful/"
+  },
+  {
+   "path": "mindful/chapter2.pdf",
+   "bytes": 269383,
+   "sha256": "ada0b22c83d922bb1bc47edd86e277bcbf574025d29a2c8e2968f0dd919289d8",
+   "title": "Chapter 2: Developing a Repertoire of Reading Strategies",
+   "book": "A Writer's Guide to Mindful Reading",
+   "authors": [
+    "Ellen C. Carillo"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-mindful-reading-chapter-2-developing-a-repertoire-of-reading-strategies"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/mindful/"
+  },
+  {
+   "path": "mindful/chapter3.pdf",
+   "bytes": 129730,
+   "sha256": "045bcb0a8530742cd5ef1d7d771f5a16622f92d5c0eae7d8416aa788350d97d1",
+   "title": "Chapter 3: Further Strategies That Make Reading Visible",
+   "book": "A Writer's Guide to Mindful Reading",
+   "authors": [
+    "Ellen C. Carillo"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-mindful-reading-chapter-3-further-strategies-that-make-reading-visible"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/mindful/"
+  },
+  {
+   "path": "mindful/chapter4.pdf",
+   "bytes": 143796,
+   "sha256": "9a170364f0cd20770ecd46554fa69167972b87b51074a506082634e557b2d3b6",
+   "title": "Chapter 4: Writing and Revising Academic Projects",
+   "book": "A Writer's Guide to Mindful Reading",
+   "authors": [
+    "Ellen C. Carillo"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-mindful-reading-chapter-4-writing-and-revising-academic-projects"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/mindful/"
+  },
+  {
+   "path": "mindful/chapter5.pdf",
+   "bytes": 87999,
+   "sha256": "8999f63e7707d357ac93117ce0d16245807df8809e768d44c80db6a29f163299",
+   "title": "Chapter 5: Working with Sources",
+   "book": "A Writer's Guide to Mindful Reading",
+   "authors": [
+    "Ellen C. Carillo"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-mindful-reading-chapter-5-working-with-sources"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/mindful/"
+  },
+  {
+   "path": "mindful/chapter6.pdf",
+   "bytes": 890245,
+   "sha256": "1d97f26e84f30949bda05195bade3487c0e75ab48b7459d414115a944578035b",
+   "title": "Chapter 6: Readings on Reading",
+   "book": "A Writer's Guide to Mindful Reading",
+   "authors": [
+    "Ellen C. Carillo"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-mindful-reading-chapter-6-readings-on-reading"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/mindful/"
+  },
+  {
+   "path": "mindful/chapter7.pdf",
+   "bytes": 5533011,
+   "sha256": "03b58bd1bd465e16f5548c237c9060f14caa26b47ff8d963e9395c67687c67db",
+   "title": "Chapter 7: Reading, Writing, and Technology",
+   "book": "A Writer's Guide to Mindful Reading",
+   "authors": [
+    "Ellen C. Carillo"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-mindful-reading-chapter-7-reading-writing-and-technology"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/mindful/"
+  },
+  {
+   "path": "mindful/chapter8.pdf",
+   "bytes": 362730,
+   "sha256": "7dc3231303869ef36842e6ce162bf714355aadbd867f7be720b2017da2668b7e",
+   "title": "Chapter 8: Expertise and Technology",
+   "book": "A Writer's Guide to Mindful Reading",
+   "authors": [
+    "Ellen C. Carillo"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-mindful-reading-chapter-8-expertise-and-technology"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/mindful/"
+  },
+  {
+   "path": "mindful/chapter9.pdf",
+   "bytes": 1042647,
+   "sha256": "965764f5f573634f6cb2d1bf2a4656beb4e57c7dcfe0afafe15a8d6552ff67ee",
+   "title": "Chapter 9: Gender and Technology",
+   "book": "A Writer's Guide to Mindful Reading",
+   "authors": [
+    "Ellen C. Carillo"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-mindful-reading-chapter-9-gender-and-technology"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/mindful/"
+  },
+  {
+   "path": "mindful/front.pdf",
+   "bytes": 475240,
+   "sha256": "8a0ecdc379567a31371892307a93a3453bcb05ec8ea84f249ba5e19ca9f52bc4",
+   "title": "Front Matter",
+   "book": "A Writer's Guide to Mindful Reading",
+   "authors": [
+    "Ellen C. Carillo"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog (book record)",
+   "catalog_ids": [
+    "wac-mindful-reading"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/mindful/"
+  },
+  {
+   "path": "mindful/glossary.pdf",
+   "bytes": 54915,
+   "sha256": "3875b3a8883a2e0f7b9fa87158dc9f4d9b01cbd67b2c7f582db64ad0c8d7ab33",
+   "title": "Glossary",
+   "book": "A Writer's Guide to Mindful Reading",
+   "authors": [
+    "Ellen C. Carillo"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog (book record)",
+   "catalog_ids": [
+    "wac-mindful-reading"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/mindful/"
+  },
+  {
+   "path": "mindful/intro.pdf",
+   "bytes": 128587,
+   "sha256": "53a156d06d1afde688a32edcd88fc97c9bc3cdf416b3769e4574e51f2f3b6dfb",
+   "title": "Introduction",
+   "book": "A Writer's Guide to Mindful Reading",
+   "authors": [
+    "Ellen C. Carillo"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-mindful-reading-introduction-introduction"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/mindful/"
+  },
+  {
+   "path": "mindful/reading.pdf",
+   "bytes": 9462088,
+   "sha256": "43199cf05d83ca6d4259d5b6f282c3354da3dd8a26ebf38fa7238519ff77213e",
+   "title": "Complete book (full PDF)",
+   "book": "A Writer's Guide to Mindful Reading",
+   "authors": [
+    "Ellen C. Carillo"
+   ],
+   "license": "Mixed (volume default CC BY-NC-ND 3.0 US; essays CC BY-NC-SA 3.0 US or CC BY-NC-ND 3.0 US)",
+   "license_url": "https://wacclearinghouse.org/books/writingspaces/writingspaces1/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "complete-book-full-pdf"
+   ],
+   "source_url": ""
+  },
+  {
+   "path": "rethinking/acknowledgments.pdf",
+   "bytes": 78360,
+   "sha256": "e4dd54d0f7f254f329d1ddaf2b3d2ff9b227e8352bababfed9c13322871b4342",
+   "title": "Acknowledgments",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog (book record)",
+   "catalog_ids": [
+    "wac-rethinking-your-writing"
+   ],
+   "source_url": "https://wacclearinghouse.org/docs/books/rethinking/web/index.xhtml"
+  },
+  {
+   "path": "rethinking/chapter1.pdf",
+   "bytes": 230662,
+   "sha256": "1a6344de9edb7116d107555e1e76eedafde844d2d4925d78ed4cc87d93637f94",
+   "title": "Chapter 1: Reframing Your Story About Writing",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-1-reframing-your-story-about-writing"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter10.pdf",
+   "bytes": 295377,
+   "sha256": "a6f1012539c0a9d9e44e73eb7775f5ae87b0dc8f217aff95b60186b5510e5430",
+   "title": "Chapter 10: Revising From Feedback and Reflection",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-10-revising-from-feedback-and-reflection"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter11.pdf",
+   "bytes": 337366,
+   "sha256": "6643a53b3e7afe199ce6466deb5bafac6d4aff4f9059971270ff9d2e01cac507",
+   "title": "Chapter 11: Editing in Context",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-11-editing-in-context"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter12.pdf",
+   "bytes": 223647,
+   "sha256": "2d73a1fc7c86327caf966e2480c0d01c3687db497dcdbb6b2278f27ea65ebd2b",
+   "title": "Chapter 12: Creating Your Writing Theory",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-12-creating-your-writing-theory"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter13.pdf",
+   "bytes": 243662,
+   "sha256": "2ffe8ca859137289cf381685b091b3a270097ba2ebb4f573ab58b3adf7874aaa",
+   "title": "Chapter 13: Applying and Adapting Genres",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-13-applying-and-adapting-genres"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter14.pdf",
+   "bytes": 312447,
+   "sha256": "187aa2995cc18fc6ad389c67166b7c685c242b56dfcc95d7a48193a4835ab8c8",
+   "title": "Chapter 14: Selecting and Combining Composing Moves",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-14-selecting-and-combining-composing-moves"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter15.pdf",
+   "bytes": 315673,
+   "sha256": "0fc81d9f3adce4ddc8bdeadf4d0898a323b97622b2c0b3925d2699e53ea25db6",
+   "title": "Chapter 15: Developing Projects that Explain",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-15-developing-projects-that-explain"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter16.pdf",
+   "bytes": 313485,
+   "sha256": "46adba266a4ffd1636c67ba46459f7da94ef9e7160ea199c605795841daebb91",
+   "title": "Chapter 16: Developing Projects that Analyze",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-16-developing-projects-that-analyze"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter17.pdf",
+   "bytes": 341646,
+   "sha256": "505b0044a2c22e683663dd76e6664782021df18c070c2a4a9755b275b425adca",
+   "title": "Chapter 17: Developing Projects that Argue",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-17-developing-projects-that-argue"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter18.pdf",
+   "bytes": 358305,
+   "sha256": "8c6505cedd2f301ec05f139b555f0f3844e5b46ac6914fe997e44bce0cb09f59",
+   "title": "Chapter 18: Developing Projects that Propose Change",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-18-developing-projects-that-propose-change"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter19.pdf",
+   "bytes": 326973,
+   "sha256": "eb0d076e321a934c99fcb7d7dab4cdb895829b7de51820e524f942d665cd5903",
+   "title": "Chapter 19: Early Inquiry: Exploring Research Questions",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-19-early-inquiry-exploring-research-questions"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter2.pdf",
+   "bytes": 240324,
+   "sha256": "da7f6466c20bcba66baf797e10d06e90ce7b2a45921dffeff8fd28126f7bbf17",
+   "title": "Chapter 2: Adopting Productive Writers' Habits",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-2-adopting-productive-writers-habits"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter20.pdf",
+   "bytes": 284060,
+   "sha256": "e374910a8b998950f2408382a75078f14480f1dd8cdd61f1706518bc5b753028",
+   "title": "Chapter 20: Middle Inquiry: Finding, Evaluating, and Integrating Information",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-20-middle-inquiry-finding-evaluating-and-integrating"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter21.pdf",
+   "bytes": 208077,
+   "sha256": "fa2aba40ec94d83fdf6ec65bf5bdd99ed1f698c3606ff0d0015c8d559e6105cc",
+   "title": "Chapter 21: Late Inquiry: Addressing Gaps and Complications",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-21-late-inquiry-addressing-gaps-and-complications"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter22.pdf",
+   "bytes": 283387,
+   "sha256": "a5a671ee5e2911de76415dabb4fbbd1050064ce2cd18c27eab8d147e33a76e52",
+   "title": "Chapter 22: Integrating and Acknowledging Sources",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog (book record)",
+   "catalog_ids": [
+    "wac-rethinking-your-writing"
+   ],
+   "source_url": "https://wacclearinghouse.org/docs/books/rethinking/web/index.xhtml"
+  },
+  {
+   "path": "rethinking/chapter23.pdf",
+   "bytes": 198403,
+   "sha256": "e2483316d8101541ed92d0a8f5d71d1009ebd3f418e1fe582fc955992ed62bd1",
+   "title": "Chapter 23: Exercises for Analyzing Audience and Genre",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-23-exercises-for-analyzing-audience-and-genre"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter24.pdf",
+   "bytes": 250477,
+   "sha256": "2fe84d199574d7fe4dfdee60f493fa8e5bb257f4fd17afe717a58578fe8fe0e2",
+   "title": "Chapter 24: Exercises for Identifying Writers' Goals",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-24-exercises-for-identifying-writers-goals"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter25.pdf",
+   "bytes": 245496,
+   "sha256": "21da8874f8a3b7e3ecb06cef3f8acdbb9a7bdb07cdd061075691cf9da04c1613",
+   "title": "Chapter 25: Exercises for Starting and Deepening Inquiry",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-25-exercises-for-starting-and-deepening-inquiry"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter26.pdf",
+   "bytes": 227971,
+   "sha256": "f245c8a0690b0a06a8504a02f96794a23a12cb66353a57b87c7a4d7a1d7fbba5",
+   "title": "Chapter 26: Exercises for Critical Thinking and Assumption Checking",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-26-exercises-for-critical-thinking-and-assumption-checking"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter27.pdf",
+   "bytes": 338828,
+   "sha256": "9c9bbab91c9126dd05adf85f5099a4f7f32dcc471f7e3969663339668a40f74e",
+   "title": "Chapter 27: Exercises for Generating and Organizing",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-27-exercises-for-generating-and-organizing"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter28.pdf",
+   "bytes": 373258,
+   "sha256": "3c3d9ab67dbec13f90229eb245e0ccd297f418eb4550aa67e4b6a3effeed36d0",
+   "title": "Chapter 28: Exercises for Revising",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-28-exercises-for-revising"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter29.pdf",
+   "bytes": 206824,
+   "sha256": "19577d8327a86545af76e335e2fbe4b2ab6524c6cee38e1410ad38efaaee4045",
+   "title": "Chapter 29: Exercises for Improving Writing Dispositions",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-29-exercises-for-improving-writing-dispositions"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter3.pdf",
+   "bytes": 237270,
+   "sha256": "dbe55e35f6489c6d68a8c785f8ec34f90d0a8a7fd1e47e48e7cf6b5fd62c9acc",
+   "title": "Chapter 3: Responding to Readers' Needs",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-3-responding-to-readers-needs"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter4.pdf",
+   "bytes": 532888,
+   "sha256": "311c4927e31ba76cfe137174c743145987f22484754c5bc8f5dddb94e1c7bfaa",
+   "title": "Chapter 4: Reflecting Throughout Your Writing Process",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-4-reflecting-throughout-your-writing-process"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter5.pdf",
+   "bytes": 443635,
+   "sha256": "52e6e0e7d49c17232a0d0a03d1e90035c3848199af62779d0ece8dae919382d2",
+   "title": "Chapter 5: Planning a Writing Project",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-5-planning-a-writing-project"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter6.pdf",
+   "bytes": 345364,
+   "sha256": "c4b64d893d61a7418404201aa79fd43ca125156493b1cf710321664fe76851e8",
+   "title": "Chapter 6: Reading as a Writer",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-6-reading-as-a-writer"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter7.pdf",
+   "bytes": 994802,
+   "sha256": "ef301c2134127e1ede789b649f18f535e981054d574360613e3d4dc3b2a9f2ab",
+   "title": "Chapter 7: Generating and Organizing an Early Draft",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-7-generating-and-organizing-an-early-draft"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter8.pdf",
+   "bytes": 270980,
+   "sha256": "21377807e8f098d1a91869cbb9a979419190b67e260bcd8828eba1e02946e7f2",
+   "title": "Chapter 8: Designing Across Modalities",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-8-designing-across-modalities"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/chapter9.pdf",
+   "bytes": 213420,
+   "sha256": "a2a57d6e4c34ba012e623e925f814919bf9602da50fe4dfe6b8249f5222a4d9b",
+   "title": "Chapter 9: Reviewing a Written Draft",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-rethinking-your-writing-chapter-9-reviewing-a-written-draft"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/rethinking/"
+  },
+  {
+   "path": "rethinking/exercises.pdf",
+   "bytes": 69392,
+   "sha256": "2cc3ab9c4f627208265eb6de7e7d07e00871220e8f4d4675d0a10a8829b2d11b",
+   "title": "Exercises in Alphabetical Order",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://wacclearinghouse.org/books/practice/rethinking/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "exercises-in-alphabetical-order"
+   ],
+   "source_url": ""
+  },
+  {
+   "path": "rethinking/front.pdf",
+   "bytes": 322881,
+   "sha256": "c4a069042934bc627f288fa7a0889117aed30b62c80484d0365eec6e6830bad4",
+   "title": "Front Matter",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog (book record)",
+   "catalog_ids": [
+    "wac-rethinking-your-writing"
+   ],
+   "source_url": "https://wacclearinghouse.org/docs/books/rethinking/web/index.xhtml"
+  },
+  {
+   "path": "rethinking/writing.pdf",
+   "bytes": 5744179,
+   "sha256": "27ca44639a8bfe3c4aaac0c43ebb8fe4a65f98e02eea453753a2cd974225f767",
+   "title": "Complete book (full PDF)",
+   "book": "Rethinking Your Writing: Rhetoric for Reflective Writers",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog (book record)",
+   "catalog_ids": [
+    "wac-rethinking-your-writing"
+   ],
+   "source_url": "https://wacclearinghouse.org/docs/books/rethinking/web/index.xhtml"
+  },
+  {
+   "path": "try/acknowledgments.pdf",
+   "bytes": 55309,
+   "sha256": "9864cd5c0e0759f6c35f98c16a2cc92d610190191456390c80efbf625e12992e",
+   "title": "Acknowledgments",
+   "book": "Try This: Research Methods for Writers",
+   "authors": [
+    "Jennifer Clary-Lemon",
+    "Derek Mueller",
+    "Kate Pantelides"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog (book record)",
+   "catalog_ids": [
+    "wac-try-this"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/try/"
+  },
+  {
+   "path": "try/chapter1.pdf",
+   "bytes": 471391,
+   "sha256": "21d3b0c80ec503f77704a37a9858b9293999086ffe613b7660b944f240f9d421",
+   "title": "Chapter 1: What are Research Methods?",
+   "book": "Try This: Research Methods for Writers",
+   "authors": [
+    "Jennifer Clary-Lemon",
+    "Derek Mueller",
+    "Kate Pantelides"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-try-this-chapter-1-what-are-research-methods"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/try/"
+  },
+  {
+   "path": "try/chapter2.pdf",
+   "bytes": 1110777,
+   "sha256": "be7004cca15a0e7f2b2a2c04afed0e5731fa3f12661896f620f577755f87df5c",
+   "title": "Chapter 2: Making Research Ethical",
+   "book": "Try This: Research Methods for Writers",
+   "authors": [
+    "Jennifer Clary-Lemon",
+    "Derek Mueller",
+    "Kate Pantelides"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-try-this-chapter-2-making-research-ethical"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/try/"
+  },
+  {
+   "path": "try/chapter3.pdf",
+   "bytes": 2432283,
+   "sha256": "7d24b53ced046628a50eb00482a7ba092a95a0fe5440cd6b885da13f385c610c",
+   "title": "Chapter 3: Working with Sources: Worknets and Invention",
+   "book": "Try This: Research Methods for Writers",
+   "authors": [
+    "Jennifer Clary-Lemon",
+    "Derek Mueller",
+    "Kate Pantelides"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-try-this-chapter-3-working-with-sources-worknets-and-invention"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/try/"
+  },
+  {
+   "path": "try/chapter4.pdf",
+   "bytes": 415768,
+   "sha256": "20ca67f81a6ef1ab865eebf55e9814eb10a722b28102728cf2ef9e744ccb0bc0",
+   "title": "Chapter 4: Working With Words",
+   "book": "Try This: Research Methods for Writers",
+   "authors": [
+    "Jennifer Clary-Lemon",
+    "Derek Mueller",
+    "Kate Pantelides"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-try-this-chapter-4-working-with-words"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/try/"
+  },
+  {
+   "path": "try/chapter5.pdf",
+   "bytes": 227317,
+   "sha256": "bc908502b08177733f3d0afc0048e81b484794589f9cf85c74b1e757b9d1ffdb",
+   "title": "Chapter 5: Working With People",
+   "book": "Try This: Research Methods for Writers",
+   "authors": [
+    "Jennifer Clary-Lemon",
+    "Derek Mueller",
+    "Kate Pantelides"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-try-this-chapter-5-working-with-people"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/try/"
+  },
+  {
+   "path": "try/chapter6.pdf",
+   "bytes": 637279,
+   "sha256": "e9e9778aed3241110f2b3a325169788d5984e41722a351c88360d03a8f30194f",
+   "title": "Chapter 6: Working With Places and Things",
+   "book": "Try This: Research Methods for Writers",
+   "authors": [
+    "Jennifer Clary-Lemon",
+    "Derek Mueller",
+    "Kate Pantelides"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-try-this-chapter-6-working-with-places-and-things"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/try/"
+  },
+  {
+   "path": "try/chapter7.pdf",
+   "bytes": 6932131,
+   "sha256": "ee91d1cde54dbd2280510e0a4bd434a5837ff9113a69ffb05ad51c2bc849df80",
+   "title": "Chapter 7: Working with Visuals",
+   "book": "Try This: Research Methods for Writers",
+   "authors": [
+    "Jennifer Clary-Lemon",
+    "Derek Mueller",
+    "Kate Pantelides"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-try-this-chapter-7-working-with-visuals"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/try/"
+  },
+  {
+   "path": "try/chapter8.pdf",
+   "bytes": 202483,
+   "sha256": "49ed3a85722405540d8847709eaa3721782578cf79c35ab039abe9a453bb6152",
+   "title": "Chapter 8: Research and the Rhetorical Forms It Takes",
+   "book": "Try This: Research Methods for Writers",
+   "authors": [
+    "Jennifer Clary-Lemon",
+    "Derek Mueller",
+    "Kate Pantelides"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "wac-try-this-chapter-8-research-and-the-rhetorical-forms-it-takes"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/try/"
+  },
+  {
+   "path": "try/front.pdf",
+   "bytes": 525508,
+   "sha256": "0898d467a2313c968effaeb7fba5bc179ca1c9fef090e1399f90b317513f10d3",
+   "title": "Front Matter",
+   "book": "Try This: Research Methods for Writers",
+   "authors": [
+    "Jennifer Clary-Lemon",
+    "Derek Mueller",
+    "Kate Pantelides"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog (book record)",
+   "catalog_ids": [
+    "wac-try-this"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/try/"
+  },
+  {
+   "path": "try/preface.pdf",
+   "bytes": 62360,
+   "sha256": "a1efcf868749c2bd31f679023a76ce32756f6270c5193173ac5d852a4bee5572",
+   "title": "Preface",
+   "book": "Try This: Research Methods for Writers",
+   "authors": [
+    "Jennifer Clary-Lemon",
+    "Derek Mueller",
+    "Kate Pantelides"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://wacclearinghouse.org/books/practice/try/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "preface"
+   ],
+   "source_url": ""
+  },
+  {
+   "path": "try/this.pdf",
+   "bytes": 12131011,
+   "sha256": "82fa30c17cbc0cc4e4af8df209b89c9d80852183d0bc2082841a3d2d3668ea86",
+   "title": "Complete book (full PDF)",
+   "book": "Try This: Research Methods for Writers",
+   "authors": [
+    "Jennifer Clary-Lemon",
+    "Derek Mueller",
+    "Kate Pantelides"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog (book record)",
+   "catalog_ids": [
+    "wac-try-this"
+   ],
+   "source_url": "https://wacclearinghouse.org/books/practice/try/"
+  },
+  {
+   "path": "writingspaces1/allen--the-inspired-writing-vs-the-real-writer.pdf",
+   "bytes": 139589,
+   "sha256": "b879985e971614acc718bec604fa8265a3914332ca6bc71b92a4e0231cb0a118",
+   "title": "The Inspired Writer vs. the Real Writer",
+   "book": "Writing Spaces: Readings on Writing, Volume 1",
+   "authors": [
+    "Sarah Allen"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws1-inspired-writer-vs-real-writer"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/the-inspired-writer-vs-the-real-writer/"
+  },
+  {
+   "path": "writingspaces1/antlitz--taking-flight.pdf",
+   "bytes": 346793,
+   "sha256": "83f26d3d94b63fd26c68c95c0e1715fb6844033a3ed5064afffc059c27b7d4f8",
+   "title": "Taking Flight: Connecting Inner and Outer Realities during Invention",
+   "book": "Writing Spaces: Readings on Writing, Volume 1",
+   "authors": [
+    "Susan E. Antlitz"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws1-taking-flight-connecting-inner-outer-realities-during"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/taking-flight-connecting-inner-and-outer-realities-during-invention/"
+  },
+  {
+   "path": "writingspaces1/atkins--collaborating-online.pdf",
+   "bytes": 383100,
+   "sha256": "78cf165a41daba9b272e1e736ab9f619e71cb3dd82521669708ac18b670265fa",
+   "title": "Collaborating Online: Digital Strategies for Group Work",
+   "book": "Writing Spaces: Readings on Writing, Volume 1",
+   "authors": [
+    "Anthony T. Atkins"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws1-collaborating-online-digital-strategies-group-work"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/collaborating-online-digital-strategies-for-group-work/"
+  },
+  {
+   "path": "writingspaces1/carroll--backpacks-vs-briefcases.pdf",
+   "bytes": 150378,
+   "sha256": "3ea1af4d7a3add4c83c82f1be0e1b4a60dce9dd641287f481800176805816930",
+   "title": "Backpacks vs. Briefcases: Steps toward Rhetorical Analysis",
+   "book": "Writing Spaces: Readings on Writing, Volume 1",
+   "authors": [
+    "Laura Bolin Carroll"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws1-backpacks-vs-briefcases-steps-toward-rhetorical-analysis"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/backpacks-vs-briefcases-steps-toward-rhetorical-analysis/"
+  },
+  {
+   "path": "writingspaces1/cummings--introduction-open-source-composition-texts.pdf",
+   "bytes": 125223,
+   "sha256": "2d218c2297bdbe930ffb4ad65448e1f6bc9760fd416d4358003caeed8e7962cf",
+   "title": "Introduction: Open Source Composition Texts Arrive for College Writers",
+   "book": "Writing Spaces: Readings on Writing, Volume 1",
+   "authors": [
+    "Robert E. Cummings"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws1-introduction-open-source-composition-texts-arrive-college"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/introduction-open-source-composition-texts-arrive-for-college-writers/"
+  },
+  {
+   "path": "writingspaces1/dirk--navigating-genres.pdf",
+   "bytes": 149086,
+   "sha256": "7da4c5896d42dfccc00c1dcaabb14555152851c22ff975b41d1720373c6b9b90",
+   "title": "Navigating Genres",
+   "book": "Writing Spaces: Readings on Writing, Volume 1",
+   "authors": [
+    "Kerry Dirk"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws1-navigating-genres"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/navigating-genres/"
+  },
+  {
+   "path": "writingspaces1/giles--reflective-writing-and-the-revision-process.pdf",
+   "bytes": 154053,
+   "sha256": "492f9f05f8643e771059ca794b95d9adcb06f6fbdde0c1f7418df47459ae743e",
+   "title": "Reflective Writing and the Revision Process: What Were You Thinking?",
+   "book": "Writing Spaces: Readings on Writing, Volume 1",
+   "authors": [
+    "Sandra Giles"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws1-reflective-writing-revision-process-were-you-thinking"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/reflective-writing-and-the-revision-process-what-were-you-thinking/"
+  },
+  {
+   "path": "writingspaces1/hewett--from-topic-to-presentation.pdf",
+   "bytes": 372867,
+   "sha256": "cc63236f22d95cd2bbfb6ee60dee0054c56cc480ab57a4e219fd3e864025da10",
+   "title": "From Topic to Presentation: Making Choices to Develop Your Writing",
+   "book": "Writing Spaces: Readings on Writing, Volume 1",
+   "authors": [
+    "Beth L. Hewett"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws1-from-topic-presentation-making-choices-develop-writing"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/from-topic-to-presentation-making-choices-to-develop-your-writing/"
+  },
+  {
+   "path": "writingspaces1/hinton--so-youve-got-a-writing-assignment.pdf",
+   "bytes": 169153,
+   "sha256": "fcfbb2beef0c8a772babf5bbc03d940dd5be89e5f57a92875961dc5951a54be0",
+   "title": "So You've Got a Writing Assignment. Now What?",
+   "book": "Writing Spaces: Readings on Writing, Volume 1",
+   "authors": [
+    "Corrine E. Hinton"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws1-so-youve-got-writing-assignment-now"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/so-youve-got-a-writing-assignment-now-what/"
+  },
+  {
+   "path": "writingspaces1/irvin--what-is-academic-writing.pdf",
+   "bytes": 354228,
+   "sha256": "ff9ab3e8e4055105c4eb8d67c53197753ba203c0992587916d8f81edf9946b02",
+   "title": "What Is \"Academic\" Writing?",
+   "book": "Writing Spaces: Readings on Writing, Volume 1",
+   "authors": [
+    "L. Lennie Irvin"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws1-academic-writing"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/?page_id=204"
+  },
+  {
+   "path": "writingspaces1/jones--finding-the-good-argument.pdf",
+   "bytes": 388334,
+   "sha256": "19f72e148aaa0e06ebdda4ea3e1dcfd2c3d7a3048017c7556ab5d43d3a118267",
+   "title": "Finding the Good Argument OR Why Bother With Logic?",
+   "book": "Writing Spaces: Readings on Writing, Volume 1",
+   "authors": [
+    "Rebecca Jones"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws1-finding-good-argument-why-bother-logic"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/finding-the-good-argument-or-why-bother-with-logic/"
+  },
+  {
+   "path": "writingspaces1/leary--composing-the-anthology.pdf",
+   "bytes": 153549,
+   "sha256": "be08b8d9cd13df1b9077d40582323b7a46c584ed2645e3bb0d5b66e81a3bd88f",
+   "title": "Composing the Anthology: An Exercise in Patchwriting",
+   "book": "Writing Spaces: Readings on Writing, Volume 1",
+   "authors": [
+    "Christopher Leary"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws1-composing-anthology-exercise-patchwriting"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/composing-the-anthology-an-exercise-in-patchwriting/"
+  },
+  {
+   "path": "writingspaces1/lessner-and-craig--finding-your-way-in.pdf",
+   "bytes": 223597,
+   "sha256": "325cf2cc3d55c5591cd50ea1b4e53501a27460ec90127bdd2228fd8aba9e2894",
+   "title": "\"Finding Your Way In\": Invention as Inquiry Based Learning in First Year Writing",
+   "book": "Writing Spaces: Readings on Writing, Volume 1",
+   "authors": [
+    "Steven Lessner",
+    "Collin Craig"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws1-finding-way-invention-as-inquiry-based-learning"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/finding-your-way-in-invention-as-inquiry-based-learning-in-first-year-writing/"
+  },
+  {
+   "path": "writingspaces1/mckinney-maddalena--i-need-you-to-say-i.pdf",
+   "bytes": 140354,
+   "sha256": "8acce4f4169b9bac992eefc356750659017ea9a3fe7caa6a6f160f5ed9f927da",
+   "title": "I Need You to Say \"I\": Why First Person Is Important in College Writing",
+   "book": "Writing Spaces: Readings on Writing, Volume 1",
+   "authors": [
+    "Kate McKinney Maddalena"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws1-i-need-you-say-i-why-first"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/i-need-you-to-say-i-why-first-person-is-important-in-college-writing/"
+  },
+  {
+   "path": "writingspaces1/purdy--wikipedia-is-good-for-you.pdf",
+   "bytes": 455654,
+   "sha256": "23664bc10c63abb3e064eec5ac0dc33228bab36f7bb32c8a060fe68d6bd7d3ca",
+   "title": "Wikipedia Is Good for You!?",
+   "book": "Writing Spaces: Readings on Writing, Volume 1",
+   "authors": [
+    "James P. Purdy"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws1-wikipedia-good-you"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/wikipedia-is-good-for-you/"
+  },
+  {
+   "path": "writingspaces1/rafoth--why-visit-your-campus-writing-center.pdf",
+   "bytes": 138412,
+   "sha256": "c823fa15a271e6d97a2ff7931eb25393dc194d1a9883b536c5daf3e384c1ac2c",
+   "title": "Why Visit Your Campus Writing Center?",
+   "book": "Writing Spaces: Readings on Writing, Volume 1",
+   "authors": [
+    "Ben Rafoth"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws1-why-visit-campus-writing-center"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/why-visit-your-campus-writing-center/"
+  },
+  {
+   "path": "writingspaces1/trim-and-isaac--reinventing-invention.pdf",
+   "bytes": 180581,
+   "sha256": "53fd7aa591b50c38efcaeef634d0e5ce3b31356ed2c7d0cf5ee9d55bdfaf5a9d",
+   "title": "Reinventing Invention: Discovery and Investment in Writing",
+   "book": "Writing Spaces: Readings on Writing, Volume 1",
+   "authors": [
+    "Michelle D. Trim",
+    "Megan Lynn Isaac"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws1-reinventing-invention-discovery-investment-writing"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/reinventing-invention-discovery-and-investment-in-writing/"
+  },
+  {
+   "path": "writingspaces1/writing-spaces-readings-on-writing-vol-1.pdf",
+   "bytes": 2491877,
+   "sha256": "6f9cde20abce41bb2621fa187af63836ad5dc9f8ad012b71fed837647ea5225a",
+   "title": "Complete book (full PDF)",
+   "book": "Writing Spaces: Readings on Writing, Volume 1",
+   "authors": [
+    "Charles Lowe (ed.)",
+    "Pavel Zemliansky (ed.)"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog (book record)",
+   "catalog_ids": [
+    "writing-spaces-vol-1"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/writing-spaces-volume-1/"
+  },
+  {
+   "path": "writingspaces2/barton-and-klint--a-students-guide.pdf",
+   "bytes": 390913,
+   "sha256": "afb31851dde0f9e89c38e4763f99caee8d31efe558b1e3bd39c4903b8bc6f1a0",
+   "title": "A Student's Guide to Collaborative Writing Technologies",
+   "book": "Writing Spaces: Readings on Writing, Volume 2",
+   "authors": [
+    "Matt Barton",
+    "Karl Klint"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws2-students-guide-collaborative-writing-technologies"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/a-students-guide-to-collaborative-writing-technologies-2/"
+  },
+  {
+   "path": "writingspaces2/boyd--murder-rhetorically-speaking.pdf",
+   "bytes": 167438,
+   "sha256": "c80794086013086ad7dbf1509ec18082ef69a0c724c9808a2dfe28dce0534e5c",
+   "title": "Murder! (Rhetorically Speaking)",
+   "book": "Writing Spaces: Readings on Writing, Volume 2",
+   "authors": [
+    "Janet Boyd"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws2-murder-rhetorically-speaking"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/murder-rhetorically-speaking/"
+  },
+  {
+   "path": "writingspaces2/bunn--how-to-read.pdf",
+   "bytes": 164621,
+   "sha256": "7cddff7f4eaa6b11acb8306655702bbcf82e3c8a248418ff24f0a50d7ce336a7",
+   "title": "How to Read Like a Writer",
+   "book": "Writing Spaces: Readings on Writing, Volume 2",
+   "authors": [
+    "Mike Bunn"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws2-read-like-writer"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/how-to-read-like-a-writer/"
+  },
+  {
+   "path": "writingspaces2/charlton--complexity-of-simplicity.pdf",
+   "bytes": 398241,
+   "sha256": "d1b045bab5e3d93d23aef4b9295eb9db180b902afb615832e8a2cac2085eabb0",
+   "title": "The Complexity of Simplicity: Invention Potentials for Writing Students",
+   "book": "Writing Spaces: Readings on Writing, Volume 2",
+   "authors": [
+    "Colin Charlton"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws2-complexity-simplicity-invention-potentials-writing-students"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/the-complexity-of-simplicity-invention-potentials-for-writing-students/"
+  },
+  {
+   "path": "writingspaces2/dasbender--critical-thinking.pdf",
+   "bytes": 299806,
+   "sha256": "f68401990d25b5a8ce77a69aaad957a3a10f6d6f021316e81bfdebe9aa9269f4",
+   "title": "Critical Thinking in College Writing: From the Personal to the Academic",
+   "book": "Writing Spaces: Readings on Writing, Volume 2",
+   "authors": [
+    "Gita DasBender"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws2-critical-thinking-college-writing-from-personal-academic"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/critical-thinking-in-college-writing-from-the-personal-to-the-academic/"
+  },
+  {
+   "path": "writingspaces2/driscoll--introduction-to-primary-research.pdf",
+   "bytes": 361890,
+   "sha256": "e28716ffa989c248496e2c63c398a434e2d543b21e5cfec321f5b922e742203e",
+   "title": "Introduction to Primary Research: Observations, Surveys, and Interviews",
+   "book": "Writing Spaces: Readings on Writing, Volume 2",
+   "authors": [
+    "Dana Lynn Driscoll"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws2-introduction-primary-research-observations-surveys-interviews"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/introduction-to-primary-research-observations-surveys-and-interviews/"
+  },
+  {
+   "path": "writingspaces2/haller--walk-talk-cook-eat.pdf",
+   "bytes": 197975,
+   "sha256": "99a0c79d3d1dea9ba31016847fa5eb7d5c8473c403b9af701caf64005da81d4d",
+   "title": "Walk, Talk, Cook, Eat: A Guide to Using Sources",
+   "book": "Writing Spaces: Readings on Writing, Volume 2",
+   "authors": [
+    "Cynthia R. Haller"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws2-walk-talk-cook-eat-guide-using-sources"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/walk-talk-cook-eat-a-guide-to-using-sources/"
+  },
+  {
+   "path": "writingspaces2/ingalls--writing-eyeball-to-eyeball.pdf",
+   "bytes": 236521,
+   "sha256": "612b02f03852313becee5379aa57484f4a25a3bc2c678ddb9bb6a654c68c5d94",
+   "title": "Writing \"Eyeball to Eyeball\": Building a Successful Collaboration",
+   "book": "Writing Spaces: Readings on Writing, Volume 2",
+   "authors": [
+    "Rebecca Ingalls"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws2-writing-eyeball-eyeball-building-successful-collaboration"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/writing-eyeball-to-eyeball-building-a-successful-collaboration/"
+  },
+  {
+   "path": "writingspaces2/kahn--putting-ethnographic-writing.pdf",
+   "bytes": 179392,
+   "sha256": "43a1716766b1f7979d89b0b97225b46349779e99279fb7a3a7a5e80712affd49",
+   "title": "Putting Ethnographic Writing in Context",
+   "book": "Writing Spaces: Readings on Writing, Volume 2",
+   "authors": [
+    "Seth Kahn"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws2-putting-ethnographic-writing-context"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/putting-ethnographic-writing-in-context/"
+  },
+  {
+   "path": "writingspaces2/klein-and-shackelford--beyond-black-on-white.pdf",
+   "bytes": 397242,
+   "sha256": "06db543e46cc01b6a24a43b2d0f602d2b8975bcbabf78269b2dd189c3408cce0",
+   "title": "Beyond Black on White: Document Design and Formatting in the Writing Classroom",
+   "book": "Writing Spaces: Readings on Writing, Volume 2",
+   "authors": [
+    "Michael J. Klein",
+    "Kristi L. Shackelford"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws2-beyond-black-white-document-design-formatting-writing"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/beyond-black-on-white-document-design-and-formatting-in-the-writing-classroom/"
+  },
+  {
+   "path": "writingspaces2/krause--on-the-other-hand.pdf",
+   "bytes": 167682,
+   "sha256": "5a6bddd8e19d493d3fdfbb046eb1e8a3288a0d2bcabbf2631c32abedc442ed27",
+   "title": "On the Other Hand: The Role of Antithetical Writing in First Year Composition Courses",
+   "book": "Writing Spaces: Readings on Writing, Volume 2",
+   "authors": [
+    "Steven D. Krause"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws2-other-hand-role-antithetical-writing-first-year"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/on-the-other-hand-the-role-of-antithetical-writing-in-first-year-composition-courses/"
+  },
+  {
+   "path": "writingspaces2/lynch--the-sixth-paragraph.pdf",
+   "bytes": 183120,
+   "sha256": "68a74fd6364d975a9bdcba76712597c2cbd524bc93ea7d84ba6a38f0de45d7ac",
+   "title": "The Sixth Paragraph: A Re-Vision of the Essay",
+   "book": "Writing Spaces: Readings on Writing, Volume 2",
+   "authors": [
+    "Paul Lynch"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws2-sixth-paragraph-re-vision-essay"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/the-sixth-paragraph-a-re-vision-of-the-essay/"
+  },
+  {
+   "path": "writingspaces2/mcclure--googlepedia.pdf",
+   "bytes": 275378,
+   "sha256": "fc78d576efb5726d29479a3c6d0071adb9049e533adeade529a05c1c43cf17d9",
+   "title": "Googlepedia: Turning Information Behaviors into Research Skills",
+   "book": "Writing Spaces: Readings on Writing, Volume 2",
+   "authors": [
+    "Randall McClure"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws2-googlepedia-turning-information-behaviors-into-research-skills"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/googlepedia-turning-information-behaviors-into-research-skills/"
+  },
+  {
+   "path": "writingspaces2/ramsdell--storytelling-narration.pdf",
+   "bytes": 182969,
+   "sha256": "008ffa8473e6ec3a052d40728f6d9776702e7482d97f9623dbc1cf8d3082de59",
+   "title": "Storytelling, Narration, and the \"Who I Am\" Story",
+   "book": "Writing Spaces: Readings on Writing, Volume 2",
+   "authors": [
+    "Catherine Ramsdell"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws2-storytelling-narration-who-i-am-story"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/storytelling-narration-and-the-who-i-am-story/"
+  },
+  {
+   "path": "writingspaces2/reid--ten-ways-to-think.pdf",
+   "bytes": 190187,
+   "sha256": "e1ff07b2e17c29eccff6a0d6173772cd77cc25dc3cf7c783d905aced08500e8a",
+   "title": "Ten Ways to Think About Writing: Metaphoric Musings for College Writing Students",
+   "book": "Writing Spaces: Readings on Writing, Volume 2",
+   "authors": [
+    "E. Shelley Reid"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws2-ten-ways-think-about-writing-metaphoric-musings"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/?page_id=6"
+  },
+  {
+   "path": "writingspaces2/reid--why-blog.pdf",
+   "bytes": 386491,
+   "sha256": "ff04fb0c1758269fa3f025874c04f2b84c4df9a14a662a670975ffe705f0e068",
+   "title": "Why Blog? Searching for Writing on the Web",
+   "book": "Writing Spaces: Readings on Writing, Volume 2",
+   "authors": [
+    "Alex Reid"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws2-why-blog-searching-writing-web"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/why-blog-searching-for-writing-on-the-web/"
+  },
+  {
+   "path": "writingspaces2/rosenberg--reading-games.pdf",
+   "bytes": 160976,
+   "sha256": "f71a03fd10b9734e37ce78188ae9ce33ccfb362c702817328142cd09f96847dd",
+   "title": "Reading Games: Strategies for Reading Scholarly Sources",
+   "book": "Writing Spaces: Readings on Writing, Volume 2",
+   "authors": [
+    "Karen Rosenberg"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws2-reading-games-strategies-reading-scholarly-sources"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/reading-games-strategies-for-reading-scholarly-sources/"
+  },
+  {
+   "path": "writingspaces2/savini--looking-for-trouble.pdf",
+   "bytes": 242295,
+   "sha256": "5fa393cdedc48377542ad36a544fdde19beaca9bbf8a6cd9b6f15bea3ec91ca5",
+   "title": "Looking for Trouble: Finding Your Way into a Writing Assignment",
+   "book": "Writing Spaces: Readings on Writing, Volume 2",
+   "authors": [
+    "Catherine Savini"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws2-looking-trouble-finding-way-into-writing-assignment"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/looking-for-trouble-finding-your-way-into-a-writing-assignment/"
+  },
+  {
+   "path": "writingspaces2/singh-corcoran--composition-as-a-write.pdf",
+   "bytes": 170037,
+   "sha256": "19e9de63dc4ff95e75011f9d743b2d4643157908b5c90f1f8a314d7060164b68",
+   "title": "Composition as a Write of Passage",
+   "book": "Writing Spaces: Readings on Writing, Volume 2",
+   "authors": [
+    "Nathalie Singh-Corcoran"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws2-composition-as-write-passage"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/composition-as-a-write-of-passage/"
+  },
+  {
+   "path": "writingspaces2/stedman--annoying-ways.pdf",
+   "bytes": 190512,
+   "sha256": "ac43dcbd377831413954e7066e4b552c99558daa73eff0aa037eda1de2f1ecdf",
+   "title": "Annoying Ways People Use Sources",
+   "book": "Writing Spaces: Readings on Writing, Volume 2",
+   "authors": [
+    "Kyle D. Stedman"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws2-annoying-ways-people-use-sources"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/annoying-ways-people-use-sources/"
+  },
+  {
+   "path": "writingspaces2/walker--everything-changes.pdf",
+   "bytes": 164816,
+   "sha256": "cf968e9ace2e680473105f197496e58a3e4b71739997fbb2243b1303d2b3946c",
+   "title": "Everything Changes, or Why MLA Isn't (Always) Right",
+   "book": "Writing Spaces: Readings on Writing, Volume 2",
+   "authors": [
+    "Janice R. Walker"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws2-everything-changes-why-mla-isnt-always-right"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/everything-changes-or-why-mla-isnt-always-right/"
+  },
+  {
+   "path": "writingspaces2/writing-spaces-readings-on-writing-vol-2.pdf",
+   "bytes": 3001684,
+   "sha256": "b1021f5e77ba09d3ee0be72aae58a47e347317b1419296cdb2a06c4099ccc43f",
+   "title": "Complete book (full PDF)",
+   "book": "Writing Spaces: Readings on Writing, Volume 2",
+   "authors": [
+    "Charles Lowe (ed.)",
+    "Pavel Zemliansky (ed.)"
+   ],
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "license_from": "catalog (book record)",
+   "catalog_ids": [
+    "writing-spaces-vol-2"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/writing-spaces-volume-2/"
+  },
+  {
+   "path": "writingspaces3/cassell.pdf",
+   "bytes": 249977,
+   "sha256": "55001f56beaea562558491f3c2fd1ff0269cc3dd9eaba1977657c9401f4a0fc3",
+   "title": "Punctuation's Rhetorical Effects",
+   "book": "Writing Spaces: Readings on Writing, Volume 3",
+   "authors": [
+    "Kevin Cassell"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws3-punctuations-rhetorical-effects"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/punctuations-rhetorical-effects-2/"
+  },
+  {
+   "path": "writingspaces3/cohn.pdf",
+   "bytes": 577775,
+   "sha256": "b945a18f6518c76a1d763de0687d88e4382de467771fe58f8ee5b1ae17a74113",
+   "title": "Understanding Visual Rhetoric",
+   "book": "Writing Spaces: Readings on Writing, Volume 3",
+   "authors": [
+    "Jenae Cohn"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws3-understanding-visual-rhetoric"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/understanding-visual-rhetoric/"
+  },
+  {
+   "path": "writingspaces3/depeter.pdf",
+   "bytes": 220461,
+   "sha256": "532dd0d3b0385334f2a708954f0ed05796cb6fa0dd0f8a44b8a2fc05ce521de3",
+   "title": "How to Write Meaningful Peer Response Praise",
+   "book": "Writing Spaces: Readings on Writing, Volume 3",
+   "authors": [
+    "Ron DePeter"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws3-write-meaningful-peer-response-praise"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/how-to-write-meaningful-peer-response-praise/"
+  },
+  {
+   "path": "writingspaces3/fitzgerald.pdf",
+   "bytes": 242645,
+   "sha256": "5918c1f2ecd91e67ec7b94a5d224241f8c8aeea6cc0a0360d7df015c9212e1b1",
+   "title": "Writing with Force and Flair",
+   "book": "Writing Spaces: Readings on Writing, Volume 3",
+   "authors": [
+    "William T. FitzGerald"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws3-writing-force-flair"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/writing-with-force-and-flair/"
+  },
+  {
+   "path": "writingspaces3/gagich.pdf",
+   "bytes": 697677,
+   "sha256": "cd2e5b14564ba5844465f7a04eb77b41198c1833a723b786125a63287514e780",
+   "title": "An Introduction to and Strategies for Multimodal Composing",
+   "book": "Writing Spaces: Readings on Writing, Volume 3",
+   "authors": [
+    "Melanie Gagich"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws3-introduction-strategies-multimodal-composing"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/an-introduction-to-and-strategies-for-multimodal-composing/"
+  },
+  {
+   "path": "writingspaces3/hulst.pdf",
+   "bytes": 236461,
+   "sha256": "d275e8731950805a62886cdea5cd7cf171362cb74fb7054699fb5dacf63d7ae9",
+   "title": "Grammar, Rhetoric, and Style",
+   "book": "Writing Spaces: Readings on Writing, Volume 3",
+   "authors": [
+    "Craig Hulst"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws3-grammar-rhetoric-style"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/grammar-rhetoric-and-style-2/"
+  },
+  {
+   "path": "writingspaces3/melzer.pdf",
+   "bytes": 354577,
+   "sha256": "b50db99e4d1d3583864bc741c24113f98b1a23b63b8f25eac6650b0d2f18d162",
+   "title": "Understanding Discourse Communities",
+   "book": "Writing Spaces: Readings on Writing, Volume 3",
+   "authors": [
+    "Dan Melzer"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws3-understanding-discourse-communities"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/?page_id=387"
+  },
+  {
+   "path": "writingspaces3/meyer.pdf",
+   "bytes": 283079,
+   "sha256": "e96fc378ba48674cf80fb66ecd159ce091f18abfc73192b9a84afae0ec91dea8",
+   "title": "The Evolution of Imitation: Building Your Style",
+   "book": "Writing Spaces: Readings on Writing, Volume 3",
+   "authors": [
+    "Craig A. Meyer"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws3-evolution-imitation-building-style"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/the-evolution-of-imitation-building-your-style/"
+  },
+  {
+   "path": "writingspaces3/ryan.pdf",
+   "bytes": 214841,
+   "sha256": "8bfd83036052249f5097e67667d63006073f369202b293a19490be118ab4beab",
+   "title": "Constructing Scholarly Ethos in the Writing Classroom",
+   "book": "Writing Spaces: Readings on Writing, Volume 3",
+   "authors": [
+    "Kathleen J. Ryan"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws3-constructing-scholarly-ethos-writing-classroom"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/constructing-scholarly-ethos-in-the-writing-classroom/"
+  },
+  {
+   "path": "writingspaces3/stamant.pdf",
+   "bytes": 220576,
+   "sha256": "81c4e18498259d11a916a4e2c0122c18a572a1c13309b630a19ff6a2e5ce049e",
+   "title": "Writing in Global Contexts: Composing Usable Texts for Audiences from Different Cultures",
+   "book": "Writing Spaces: Readings on Writing, Volume 3",
+   "authors": [
+    "Kirk St.Amant"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws3-writing-global-contexts-composing-usable-texts-audiences"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/writing-in-global-contexts-composing-usable-texts-for-audiences-from-different-cultures/"
+  },
+  {
+   "path": "writingspaces3/stewart.pdf",
+   "bytes": 230107,
+   "sha256": "9e1127a32cf496cfe4ece2706a3d130094768e84a72332631463cb27fcce20d2",
+   "title": "Weaving Personal Experience into Academic Writing",
+   "book": "Writing Spaces: Readings on Writing, Volume 3",
+   "authors": [
+    "Marjorie Stewart"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws3-weaving-personal-experience-into-academic-writing"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/weaving-personal-experience-into-academic-writing/"
+  },
+  {
+   "path": "writingspaces3/vieregge.pdf",
+   "bytes": 268423,
+   "sha256": "dbf23e650e5e96431f08c14a5770c680a2865612fcf427f4f29b258390080402",
+   "title": "Exigency: What Makes My Message Indispensable to My Reader",
+   "book": "Writing Spaces: Readings on Writing, Volume 3",
+   "authors": [
+    "Quentin Vieregge"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws3-exigency-makes-my-message-indispensable-my-reader"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/exigency-what-makes-my-message-indispensable-to-my-reader/"
+  },
+  {
+   "path": "writingspaces3/warrington.pdf",
+   "bytes": 396050,
+   "sha256": "c0115a79c4ee6fdcde708647196878c4ae1a50d98d8e1279ee648757c272a692",
+   "title": "Assessing Source Credibility for Crafting a Well-Informed Argument",
+   "book": "Writing Spaces: Readings on Writing, Volume 3",
+   "authors": [
+    "Kate Warrington",
+    "Natasha Kovalyova",
+    "Cindy King"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws3-assessing-source-credibility-crafting-well-informed-argument"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/assessing-source-credibility-for-crafting-a-well-informed-argument/"
+  },
+  {
+   "path": "writingspaces3/writingspaces3.pdf",
+   "bytes": 2826370,
+   "sha256": "901fdfda088a368e623b450004a12e325c939a025fd8312dde21f92c226322d1",
+   "title": "Complete book (full PDF)",
+   "book": "Writing Spaces: Readings on Writing, Volume 3",
+   "authors": [
+    "Dana Driscoll (ed.)",
+    "Mary Stewart (ed.)",
+    "Matthew Vetter (ed.)"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog (book record)",
+   "catalog_ids": [
+    "writing-spaces-vol-3"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/volume-3/"
+  },
+  {
+   "path": "writingspaces4/alvarez.pdf",
+   "bytes": 188941,
+   "sha256": "255b1c6aadffd78c6e3c8acd6b15558eb4b6bf33e32af35523968b4eb3325441",
+   "title": "Workin' Languages: Who We Are Matters in Our Writing",
+   "book": "Writing Spaces: Readings on Writing, Volume 4",
+   "authors": [
+    "Sara P. Alvarez",
+    "Amy J. Wan",
+    "Eunjeong Lee"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws4-workin-languages-who-we-are-matters-our"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/workin-languages-who-we-are-matters-in-our-writing/"
+  },
+  {
+   "path": "writingspaces4/amicucci.pdf",
+   "bytes": 376572,
+   "sha256": "2636a82a007628ceb71d39cbc34752e33efe6194d30176351f876eb43d222aef",
+   "title": "Four Things Social Media Can Teach You about College Writing—and One Thing It Can't",
+   "book": "Writing Spaces: Readings on Writing, Volume 4",
+   "authors": [
+    "Ann N. Amicucci"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws4-four-things-social-media-can-teach-you"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/four-things-social-media-can-teach-you-about-college-writing-and-one-thing-it-cant/"
+  },
+  {
+   "path": "writingspaces4/carillo.pdf",
+   "bytes": 178538,
+   "sha256": "e1609ab3cb4a0335ce80b2483262f8d4256c05ca2ca860286e1e74e3ad4b681f",
+   "title": "Effectively and Efficiently Reading the Credibility of Online Sources",
+   "book": "Writing Spaces: Readings on Writing, Volume 4",
+   "authors": [
+    "Ellen C. Carillo",
+    "Alice Horning"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws4-effectively-efficiently-reading-credibility-online-sources"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/effectively-and-efficiently-reading-the-credibility-of-online-sources/"
+  },
+  {
+   "path": "writingspaces4/contributors.pdf",
+   "bytes": 121443,
+   "sha256": "f5d94c347b423c18ec34fb15d8c2cbe3ee23d8b5aa1dd101a6bc9d646a1f9597",
+   "title": "Contributors",
+   "book": "Writing Spaces: Readings on Writing, Volume 4",
+   "authors": [
+    "Dana Lynn Driscoll (ed.)",
+    "Megan Heise (ed.)",
+    "Mary K. Stewart (ed.)",
+    "Matthew Vetter (ed.)"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog (book record)",
+   "catalog_ids": [
+    "writing-spaces-vol-4"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/writing-spaces-volume-4/"
+  },
+  {
+   "path": "writingspaces4/corona.pdf",
+   "bytes": 202421,
+   "sha256": "0039d34ca2556ddeb5c6a5df8833065fa9e8836fffd39de6ddcbb86094105ed4",
+   "title": "Writing with Your Peers",
+   "book": "Writing Spaces: Readings on Writing, Volume 4",
+   "authors": [
+    "Raquel Corona",
+    "Kami Day",
+    "Michele Eodice"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws4-writing-peers"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/writing-with-your-peers/"
+  },
+  {
+   "path": "writingspaces4/cummings.pdf",
+   "bytes": 267008,
+   "sha256": "f524f20f4c792759fa6382c3532d3e19c922a1db51d6c62c8d5fd904db670ae5",
+   "title": "Technologies of Trust: Creating Networks of Goodwill for Collaboration",
+   "book": "Writing Spaces: Readings on Writing, Volume 4",
+   "authors": [
+    "Lance Cummings",
+    "Rin Jackson",
+    "Moriah Yancey"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws4-technologies-trust-creating-networks-goodwill-collaboration"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/technologies-of-trust-creating-networks-of-goodwill-for-collaboration/"
+  },
+  {
+   "path": "writingspaces4/denny.pdf",
+   "bytes": 345074,
+   "sha256": "80a295fc6dbf99eece208ce8e573019e199234afa162b8b0e669a583e4654a71",
+   "title": "How to Analyze Data in a Primary Research Study",
+   "book": "Writing Spaces: Readings on Writing, Volume 4",
+   "authors": [
+    "Melody Denny",
+    "Lindsay Clark"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws4-analyze-data-primary-research-study"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/how-to-analyze-data-in-a-primary-research-study/"
+  },
+  {
+   "path": "writingspaces4/donegan.pdf",
+   "bytes": 244280,
+   "sha256": "b6606c011569acffdaeea93f182e718cc78ce5d1fe30dba3abe40deb67b932b4",
+   "title": "The Rhetorical Possibilities of Accessibility",
+   "book": "Writing Spaces: Readings on Writing, Volume 4",
+   "authors": [
+    "Rachel Donegan"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws4-rhetorical-possibilities-accessibility"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/the-rhetorical-possibilities-of-accessibility/"
+  },
+  {
+   "path": "writingspaces4/gaillet.pdf",
+   "bytes": 244342,
+   "sha256": "fe5bf8c007ad650ceaa008737c5a7778924741f01e30b06ae5944fcd7f6ad59c",
+   "title": "At Work in the Archives: Place-Based Research and Writing",
+   "book": "Writing Spaces: Readings on Writing, Volume 4",
+   "authors": [
+    "Lynée Lewis Gaillet",
+    "Jessica Rose"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws4-at-work-archives-place-based-research-writing"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/at-work-in-the-archives-place-based-research-and-writing/"
+  },
+  {
+   "path": "writingspaces4/grauman.pdf",
+   "bytes": 501632,
+   "sha256": "5cf2b279e035ac91ea90e2a71b10ac5f5db9a4861bdd808554a8fc34e2b75cd5",
+   "title": "What's That Supposed to Mean? Using Feedback on Your Writing",
+   "book": "Writing Spaces: Readings on Writing, Volume 4",
+   "authors": [
+    "Jillian Grauman"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws4-whats-that-supposed-mean-using-feedback-writing"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/whats-that-supposed-to-mean-using-feedback-on-your-writing/"
+  },
+  {
+   "path": "writingspaces4/grayson.pdf",
+   "bytes": 186434,
+   "sha256": "c6bd3ccb352290ddbf4637e95ddc149c1e6fb805a6c7fc789656198898d5384e",
+   "title": "Writing toward Racial Literacy",
+   "book": "Writing Spaces: Readings on Writing, Volume 4",
+   "authors": [
+    "Mara Lee Grayson"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws4-writing-toward-racial-literacy"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/writing-toward-racial-literacy/"
+  },
+  {
+   "path": "writingspaces4/hemstrom.pdf",
+   "bytes": 197055,
+   "sha256": "28bd40fce19cc4f2bbe21de34265fe3d8729805c797bd057b54df5da0db07efa",
+   "title": "Creating, Using and Sharing Information in Research Communities",
+   "book": "Writing Spaces: Readings on Writing, Volume 4",
+   "authors": [
+    "Cassie Hemstrom",
+    "Kathy Anders"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws4-creating-using-sharing-information-research-communities"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/creating-using-and-sharing-information-in-research-communities/"
+  },
+  {
+   "path": "writingspaces4/holmes.pdf",
+   "bytes": 202560,
+   "sha256": "47b23d7e37618187f6f8a4189c70905c4673130f189337a862a37d962df94213",
+   "title": "Public Writing for Social Change",
+   "book": "Writing Spaces: Readings on Writing, Volume 4",
+   "authors": [
+    "Ashley J. Holmes"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws4-public-writing-social-change"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/public-writing-for-social-change/"
+  },
+  {
+   "path": "writingspaces4/ittersum.pdf",
+   "bytes": 176430,
+   "sha256": "b16e2e58a5766c48a6a9a188496dd451286838f5752ffa1d4d8b6cadcb9f46cb",
+   "title": "Find the Best Tools for the Job: Experimenting with Writing Workflows",
+   "book": "Writing Spaces: Readings on Writing, Volume 4",
+   "authors": [
+    "Derek Van Ittersum",
+    "Tim Lockridge"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws4-find-best-tools-job-experimenting-writing-workflows"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/find-the-best-tools-for-the-job-experimenting-with-writing-workflows/"
+  },
+  {
+   "path": "writingspaces4/jacobson.pdf",
+   "bytes": 417109,
+   "sha256": "7808d99a1f1d556c78e0cf4b680f9848bfe0087651ebf83ff933288a5b16adad",
+   "title": "Make Your \"Move\": Writing in Genres",
+   "book": "Writing Spaces: Readings on Writing, Volume 4",
+   "authors": [
+    "Brad Jacobson",
+    "Madelyn Pawlowski",
+    "Christine M. Tardy"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws4-make-move-writing-genres"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/make-your-move-writing-in-genres/"
+  },
+  {
+   "path": "writingspaces4/kim.pdf",
+   "bytes": 165197,
+   "sha256": "6961170df3f389d6dd22f93736380e545754051a583d225bedf06b038a057156",
+   "title": "Understanding and Maintaining Your Privacy When Writing with Digital Technologies",
+   "book": "Writing Spaces: Readings on Writing, Volume 4",
+   "authors": [
+    "Lindsey C. Kim"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws4-understanding-maintaining-privacy-when-writing-digital-technologies"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/understanding-and-maintaining-your-privacy-when-writing-with-digital-technologies/"
+  },
+  {
+   "path": "writingspaces4/levine.pdf",
+   "bytes": 173385,
+   "sha256": "479843f3107d83a6dac64968f1b632a1acbcc52233ea9078d99417a011d6070b",
+   "title": "What Are We Being Graded On?",
+   "book": "Writing Spaces: Readings on Writing, Volume 4",
+   "authors": [
+    "Jeremy Levine"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws4-are-we-being-graded"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/what-are-we-being-graded-on/"
+  },
+  {
+   "path": "writingspaces4/sanchez-martin.pdf",
+   "bytes": 157144,
+   "sha256": "46d26c4d43ce4020c4fa9a89e189dae9426196adcf79c8fae38f8dc24dce765a",
+   "title": "Beyond Language Difference in Writing: Investigating Complex and Equitable Language Practices",
+   "book": "Writing Spaces: Readings on Writing, Volume 4",
+   "authors": [
+    "Cristina Sánchez-Martín"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws4-beyond-language-difference-writing-investigating-complex-equitable"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/beyond-language-difference-in-writing-investigating-complex-and-equitable-language-practices/"
+  },
+  {
+   "path": "writingspaces4/seeley.pdf",
+   "bytes": 298578,
+   "sha256": "5ac766114bbc28491c71393da38124a1a5c71d0f3d71c8e7b63d45b1fe81f531",
+   "title": "Read the Room! Navigating Social Contexts and Written Texts",
+   "book": "Writing Spaces: Readings on Writing, Volume 4",
+   "authors": [
+    "Sarah Seeley",
+    "Kelly Xu",
+    "Matthew Chen"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws4-read-room-navigating-social-contexts-written-texts"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/read-the-room-navigating-social-contexts-and-written-texts/"
+  },
+  {
+   "path": "writingspaces4/taczak.pdf",
+   "bytes": 185076,
+   "sha256": "1b5856b3f601e51742960a410e50eb96219b081ea83007da11b0d8015d6d520a",
+   "title": "The Importance of Transfer in Your First Year Writing Course",
+   "book": "Writing Spaces: Readings on Writing, Volume 4",
+   "authors": [
+    "Kara Taczak"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws4-importance-transfer-first-year-writing-course"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/the-importance-of-transfer-in-your-first-year-writing-course/"
+  },
+  {
+   "path": "writingspaces4/writingspaces4.pdf",
+   "bytes": 3823835,
+   "sha256": "56680ed764f60d932c8e75a352a448c9702427b4479cbefcab38e9fd7e74927d",
+   "title": "Complete book (full PDF)",
+   "book": "Writing Spaces: Readings on Writing, Volume 4",
+   "authors": [
+    "Dana Lynn Driscoll (ed.)",
+    "Megan Heise (ed.)",
+    "Mary K. Stewart (ed.)",
+    "Matthew Vetter (ed.)"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog (book record)",
+   "catalog_ids": [
+    "writing-spaces-vol-4"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/writing-spaces-volume-4/"
+  },
+  {
+   "path": "writingspaces5/10Sprouse.pdf",
+   "bytes": 428172,
+   "sha256": "9e8bb8578c11ec80ef9321f1812220e3822fdd00f5b258ef0b3de220e5af5eb5",
+   "title": "Reading in Conversation: A Writing Student's Guide to Social Annotation",
+   "book": "Writing Spaces: Readings on Writing, Volume 5",
+   "authors": [
+    "Michelle Sprouse"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws5-reading-conversation-writing-students-guide-social-annotation"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/reading-in-conversation-a-students-guide-to-social-annotation/"
+  },
+  {
+   "path": "writingspaces5/11Cicchino.pdf",
+   "bytes": 618628,
+   "sha256": "a7f7ee8ec3128695999f15f99821509667f98a8f985f3f7a1ff97a8fa52f0800",
+   "title": "\"I Passed First-Year Writing—What Now?\": Adapting Strategies from First-Year Writing to Writing in the Disciplines",
+   "book": "Writing Spaces: Readings on Writing, Volume 5",
+   "authors": [
+    "Amy Cicchino"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws5-i-passed-first-year-writingwhat-now-adapting"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/i-passed-first-year-writing-what-now-adapting-strategies-from-first-year-writing-to-writing-in-the-disciplines/"
+  },
+  {
+   "path": "writingspaces5/12Laflen.pdf",
+   "bytes": 3812419,
+   "sha256": "fbf2e1c1af3fdcaa30dc0af4143267b649499dab34bafaf5d83523b25f352614",
+   "title": "Strategies for Analyzing and Composing Data Stories",
+   "book": "Writing Spaces: Readings on Writing, Volume 5",
+   "authors": [
+    "Angela M. Laflen"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws5-strategies-analyzing-composing-data-stories"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/strategies-for-composing-and-analyzing-data-stories/"
+  },
+  {
+   "path": "writingspaces5/13Hall-Buck-Vaccino-Salvadore.pdf",
+   "bytes": 138991,
+   "sha256": "064df2bf0ed010fddf30010706470b29918519b2d46e0b12461e7d6f5fdf090e",
+   "title": "\"Doing Research Is Fun; Citing Sources Is Not\": Understanding the Fuzzy Definition of Plagiarism",
+   "book": "Writing Spaces: Readings on Writing, Volume 5",
+   "authors": [
+    "Rachel Hall Buck",
+    "Silvia Vaccino-Salvadore"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws5-doing-research-fun-citing-sources-not-understanding"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/doing-research-is-fun-citing-sources-is-not-understanding-the-fuzzy-definition-of-plagiarism/"
+  },
+  {
+   "path": "writingspaces5/14Blakesley.pdf",
+   "bytes": 1779946,
+   "sha256": "74bb3dce0ce405cb6f56b808b1a0c06a82ae08fbae10056752f8748e311d2972",
+   "title": "Elaborate Rhetorics",
+   "book": "Writing Spaces: Readings on Writing, Volume 5",
+   "authors": [
+    "David Blakesley"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws5-elaborate-rhetorics"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/elaborate-rhetorics/"
+  },
+  {
+   "path": "writingspaces5/15Duffy.pdf",
+   "bytes": 197415,
+   "sha256": "1b490445b8092fafd409bf95840477f7f3a325da8f16eb95d65b6f1b93604231",
+   "title": "What Is Rhetoric? A \"Choose Your Own Adventure\" Primer",
+   "book": "Writing Spaces: Readings on Writing, Volume 5",
+   "authors": [
+    "William Duffy"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws5-rhetoric-choose-own-adventure-primer"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/what-is-rhetoric-a-choose-your-own-adventure-primer/"
+  },
+  {
+   "path": "writingspaces5/16VanKooten.pdf",
+   "bytes": 419246,
+   "sha256": "fd07dfa47c897d7451f78904a6034e819c5bb3bc9ac20ac111ff3e78265cd745",
+   "title": "Thinking across Modes and Media (and Baking Cake): Two Techniques for Writing with Video, Audio, and Images",
+   "book": "Writing Spaces: Readings on Writing, Volume 5",
+   "authors": [
+    "Crystal VanKooten"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws5-thinking-across-modes-media-baking-cake-two"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/thinking-across-modes-and-media-and-baking-cake-two-techniques-for-writing-with-video-audio-and-images/"
+  },
+  {
+   "path": "writingspaces5/17Vetter-Moroz.pdf",
+   "bytes": 351311,
+   "sha256": "9c49ee507fbf05def3b607e2f61140e118400de5587cdb7ea7874b1f7f57f260",
+   "title": "You Are Good for Wikipedia",
+   "book": "Writing Spaces: Readings on Writing, Volume 5",
+   "authors": [
+    "Matthew A. Vetter",
+    "Oksana Moroz"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws5-you-are-good-wikipedia"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/you-are-good-for-wikipedia/"
+  },
+  {
+   "path": "writingspaces5/18Kelly.pdf",
+   "bytes": 192815,
+   "sha256": "df6753b611d80c553844acc58c244e27fc2b1f4d63be050b953f89144ab7c6d1",
+   "title": "The Good, the Bad, and the Ugly of Peer Review",
+   "book": "Writing Spaces: Readings on Writing, Volume 5",
+   "authors": [
+    "Erin E. Kelly"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws5-good-bad-ugly-peer-review"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/the-good-the-bad-and-the-ugly-of-peer-review/"
+  },
+  {
+   "path": "writingspaces5/19Irvin.pdf",
+   "bytes": 193962,
+   "sha256": "991693fd04520dc36973ab6ad00315e501d22479ac777b1503ec040899721b9b",
+   "title": "Changing Your Mindset About Revision",
+   "book": "Writing Spaces: Readings on Writing, Volume 5",
+   "authors": [
+    "L. Lennie Irvin"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws5-changing-mindset-about-revision"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/changing-your-mindset-about-revision/"
+  },
+  {
+   "path": "writingspaces5/1Lester-Lucas-Doyle-Overcash.pdf",
+   "bytes": 175841,
+   "sha256": "0b90713ad37a976d4e7e2e1712c2801534963ea07c76ea279e500699f86ffdf5",
+   "title": "We Write Because We Care: Developing Your Writerly Identity",
+   "book": "Writing Spaces: Readings on Writing, Volume 5",
+   "authors": [
+    "Glenn Lester",
+    "Taylor Lucas",
+    "Sydney Doyle",
+    "Alison Overcash"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws5-we-write-because-we-care-developing-writerly"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/we-write-because-we-care-developing-your-writerly-identity/"
+  },
+  {
+   "path": "writingspaces5/20Miller.pdf",
+   "bytes": 310344,
+   "sha256": "c977de789c2aff93bb5cc9cb6e1ae5d91cdd7c86d8084a78164a54759df474a9",
+   "title": "What's the Diff? Version History and Revision Reflections",
+   "book": "Writing Spaces: Readings on Writing, Volume 5",
+   "authors": [
+    "Benjamin Miller"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws5-whats-diff-version-history-revision-reflections"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/whats-the-diff-version-history-and-revision-reflections/"
+  },
+  {
+   "path": "writingspaces5/21Cecil-Lemkin-Gluck.pdf",
+   "bytes": 192309,
+   "sha256": "c34334ab1cf913496dfea7ee69cc624953f71199a283287f698db60e8f562462",
+   "title": "Navigating Your Collaborative Project",
+   "book": "Writing Spaces: Readings on Writing, Volume 5",
+   "authors": [
+    "Ellen Cecil-Lemkin",
+    "Tamara Gluck"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws5-navigating-collaborative-project"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/navigating-your-collaborative-project/"
+  },
+  {
+   "path": "writingspaces5/22Thaiss-Wade.pdf",
+   "bytes": 208654,
+   "sha256": "fc4d948568245b58138b5386238dcb819e770177c9e598e8eca96f61e3e18206",
+   "title": "Writing Science in the First Year of College: Why It Matters to STEM Students and How STEM Students Benefit from It",
+   "book": "Writing Spaces: Readings on Writing, Volume 5",
+   "authors": [
+    "Chris Thaiss",
+    "Stephanie Wade"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws5-writing-science-first-year-college-why-it"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/writing-science-in-the-first-year-of-college-why-it-matters-to-stem-students-and-how-stem-students-benefit-from-it/"
+  },
+  {
+   "path": "writingspaces5/2Wells.pdf",
+   "bytes": 145105,
+   "sha256": "22c3c9cc08cc90dfe89f479cc37e46b1d3daefbedbfa8850a8110c9e3e081e7b",
+   "title": "Dispositions Toward Learning",
+   "book": "Writing Spaces: Readings on Writing, Volume 5",
+   "authors": [
+    "Jennifer Wells"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws5-dispositions-toward-learning"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/dispositions-towards-learning/"
+  },
+  {
+   "path": "writingspaces5/3McIntosh.pdf",
+   "bytes": 165874,
+   "sha256": "ab9e56c3321d3e3ef3379ad062526edf0440e44a20f239ed9accee4a2090b9aa",
+   "title": "\"Is This for a Grade?\" Understanding Assessment, Evaluation, and Low-Stakes Writing Assignments",
+   "book": "Writing Spaces: Readings on Writing, Volume 5",
+   "authors": [
+    "Jason McIntosh"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws5-this-grade-understanding-assessment-evaluation-low-stakes"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/is-this-for-a-grade-understanding-assessment-evaluation-and-low-stakes-writing-assignments/"
+  },
+  {
+   "path": "writingspaces5/4DePiero-Dippre.pdf",
+   "bytes": 366109,
+   "sha256": "e0350f0bc938ead4e02dd4a40adf2c506617f188a24f91d1b089726856baf697",
+   "title": "How Writing Happens",
+   "book": "Writing Spaces: Readings on Writing, Volume 5",
+   "authors": [
+    "Zack DePiero",
+    "Ryan Dippre"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws5-writing-happens"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/how-writing-happens/"
+  },
+  {
+   "path": "writingspaces5/5DeMint-Bailey-Ha-Outlar.pdf",
+   "bytes": 225802,
+   "sha256": "53d87b0876367dc7acb95c22acb41530f3237a8e30ec52b07d7726bd4deaa22a",
+   "title": "What Color Is My Voice? Academic Writing and the Myth of Standard English",
+   "book": "Writing Spaces: Readings on Writing, Volume 5",
+   "authors": [
+    "Kristin DeMint Bailey",
+    "An Ha",
+    "AJ Outlar"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws5-color-my-voice-academic-writing-myth-standard"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/what-color-is-my-voice-academic-writing-and-the-myth-of-standard-english/"
+  },
+  {
+   "path": "writingspaces5/6Tremain.pdf",
+   "bytes": 192540,
+   "sha256": "a6c476fb4728c6c0071a8703ba23d0b1ace1038355affbd107a430d9f8308ca8",
+   "title": "What Can I Add to Discourse Communities? How Writers Use Code-Meshing and Translanguaging to Negotiate Discourse",
+   "book": "Writing Spaces: Readings on Writing, Volume 5",
+   "authors": [
+    "Lisa Tremain"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws5-can-i-add-discourse-communities-writers-use"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/what-can-i-add-to-the-disourse-community-how-writers-use-code-meshing-and-translanguaging-to-negotiate-discourse/"
+  },
+  {
+   "path": "writingspaces5/7Rischard.pdf",
+   "bytes": 338306,
+   "sha256": "85c4ca40456adf26fe6c045f3d7dddeffc3244a477a1696ee122dbc06e581389",
+   "title": "Environmental Justice: Writing Urban Spaces",
+   "book": "Writing Spaces: Readings on Writing, Volume 5",
+   "authors": [
+    "Mattius Rischard"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws5-environmental-justice-writing-urban-spaces"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/environmental-justice-writing-urban-spaces/"
+  },
+  {
+   "path": "writingspaces5/8Diab.pdf",
+   "bytes": 270927,
+   "sha256": "90f6ab7ada87f94bc8247f576ee75e5c8bfbcbb5032381fe87cd19dfd14702b3",
+   "title": "Enabling the Reader",
+   "book": "Writing Spaces: Readings on Writing, Volume 5",
+   "authors": [
+    "Kefaya Diab"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws5-enabling-reader"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/enabling-the-reader/"
+  },
+  {
+   "path": "writingspaces5/9DeRise.pdf",
+   "bytes": 154270,
+   "sha256": "e86641b17273393f19831b68d5e19bd2e813c2c7895d10956b6f70e174f5bda9",
+   "title": "Everything's Biased: A Guide to Determining When Bias Matters",
+   "book": "Writing Spaces: Readings on Writing, Volume 5",
+   "authors": [
+    "Danielle DeRise"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws5-everythings-biased-guide-determining-when-bias-matters"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/everythings-biased-a-guide-to-determining-when-bias-matters/"
+  },
+  {
+   "path": "writingspaces5/writingspaces5.pdf",
+   "bytes": 9871375,
+   "sha256": "f476dc388563d943392d678c6f71b595ba49bbe44f8a62fcd5c9c172d493d17f",
+   "title": "Complete book (full PDF)",
+   "book": "Writing Spaces: Readings on Writing, Volume 5",
+   "authors": [
+    "Trace Daniels-Lerberg (ed.)",
+    "Dana Driscoll (ed.)",
+    "Mary K. Stewart (ed.)",
+    "Matthew Vetter (ed.)"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog (book record)",
+   "catalog_ids": [
+    "writing-spaces-vol-5"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/writing-spaces-volume-5/"
+  },
+  {
+   "path": "writingspaces6/10Lanier.pdf",
+   "bytes": 153589,
+   "sha256": "ce1e0d26a357131532e4661e851e13c4b900328e5a8a76d2f235aecd9de06379",
+   "title": "Social Media as a Space for Today's Technical Communication Work",
+   "book": "Technical Writing Spaces: Readings on Writing, Volume 6",
+   "authors": [
+    "Clinton R. Lanier"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws6-social-media-as-space-todays-technical-communication"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/social-media-as-a-space-for-todays-technical-communication-work/"
+  },
+  {
+   "path": "writingspaces6/11Chong-Rice-Bailey.pdf",
+   "bytes": 2272520,
+   "sha256": "b7da74c7306b9713fdd44c25c1ce07bc697ca2c813eac79190a1e5ffd301690a",
+   "title": "Introduction to Usability and Usability Testing",
+   "book": "Technical Writing Spaces: Readings on Writing, Volume 6",
+   "authors": [
+    "Felicia Chong",
+    "Tammy Rice-Bailey"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws6-introduction-usability-usability-testing"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/introduction-to-usability-and-usability-testing/"
+  },
+  {
+   "path": "writingspaces6/12Schreiber.pdf",
+   "bytes": 160911,
+   "sha256": "894436d7054e900924761ddae7c81a4c3108a1a8181a3ffaf1c585b48328572f",
+   "title": "Beyond Audience Analysis: Three Stages of User Experience Research for Technical Writers",
+   "book": "Technical Writing Spaces: Readings on Writing, Volume 6",
+   "authors": [
+    "Joanna Schreiber"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws6-beyond-audience-analysis-three-stages-user-experience"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/beyond-audience-analysis-three-stages-of-user-experience-research-for-technical-writers/"
+  },
+  {
+   "path": "writingspaces6/13Lanius-Weber.pdf",
+   "bytes": 376157,
+   "sha256": "711f3f5f4bb9b5fba78bbd72870a4ffc512e77590e33ae8620c5b4dc677ba8e8",
+   "title": "\"Not So Fast\": Centering Your Users to Design the Right Solution",
+   "book": "Technical Writing Spaces: Readings on Writing, Volume 6",
+   "authors": [
+    "Candice Lanius",
+    "Ryan Weber"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws6-not-so-fast-centering-users-design-right"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/not-so-fast-centering-your-users-to-design-the-right-solution/"
+  },
+  {
+   "path": "writingspaces6/14Molloy.pdf",
+   "bytes": 794052,
+   "sha256": "5123ff5ef71af5a0ad7662a8fe873b6fe5646be65640ababdc804cf5205311ff",
+   "title": "Basic Approaches to Creating Accessible Documentation Projects: What Is Accessibility, and What Does It Have to do with Documentation Projects?",
+   "book": "Technical Writing Spaces: Readings on Writing, Volume 6",
+   "authors": [
+    "Cathryn Molloy"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws6-basic-approaches-creating-accessible-documentation-projects-accessibility"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/basic-approaches-to-creating-accessible-documentation-projects-what-is-accessibility-and-what-does-it-have-to-do-with-documentation-projects/"
+  },
+  {
+   "path": "writingspaces6/15Bennett.pdf",
+   "bytes": 635848,
+   "sha256": "86e9c4aa47147dc85ad24868ed5b73ebf851343a68239a3814bd90dc7c001bfb",
+   "title": "Designing Multimodal Technical Instructions for Cross-Cultural Resonance Using a Culturally Inclusive Approach",
+   "book": "Technical Writing Spaces: Readings on Writing, Volume 6",
+   "authors": [
+    "Audrey G. Bennett"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws6-designing-multimodal-technical-instructions-cross-cultural-resonance"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/designing-multimodal-technical-instructions-for-cross-cultural-resonance-using-a-culturally-inclusive-approach/"
+  },
+  {
+   "path": "writingspaces6/16Meex.pdf",
+   "bytes": 236324,
+   "sha256": "67d2b6a8c41c93bd690c10fa4f2dbc32f38127d5fe7905275380cc84996dee06",
+   "title": "How to Write for Global Audiences",
+   "book": "Technical Writing Spaces: Readings on Writing, Volume 6",
+   "authors": [
+    "Birgitta Meex"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws6-write-global-audiences"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/how-to-write-for-global-audiences/"
+  },
+  {
+   "path": "writingspaces6/17Acharya.pdf",
+   "bytes": 313357,
+   "sha256": "7d92394ab9ca59837d5d13741647b4479743996cee29f0b6f4e09cdf08ccc3ea",
+   "title": "Composing Technical Documents for Localized Usability in the International Context",
+   "book": "Technical Writing Spaces: Readings on Writing, Volume 6",
+   "authors": [
+    "Keshab Raj Acharya"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws6-composing-technical-documents-localized-usability-international-context"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/composing-technical-documents-for-localized-usability-in-the-international-context/"
+  },
+  {
+   "path": "writingspaces6/1Rose.pdf",
+   "bytes": 210450,
+   "sha256": "9aae632183a35a85471fedee7879defa6fe8487dfee1e50069d05754be767f85",
+   "title": "Who Is the User? Researching Audiences for Technical Documents",
+   "book": "Technical Writing Spaces: Readings on Writing, Volume 6",
+   "authors": [
+    "Emma J. Rose"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws6-who-user-researching-audiences-technical-documents"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/who-is-the-user-researching-audiences-for-technical-documents/"
+  },
+  {
+   "path": "writingspaces6/2Pennell.pdf",
+   "bytes": 178157,
+   "sha256": "dce3fc2a8ae761dde109cdfde406c3341a43724bd545bae0b96042b4ea799ac3",
+   "title": "Assessing Sources for Technical Communication Research",
+   "book": "Technical Writing Spaces: Readings on Writing, Volume 6",
+   "authors": [
+    "Therese I. Pennell"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws6-assessing-sources-technical-communication-research"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/assessing-sources-for-technical-communication-research/"
+  },
+  {
+   "path": "writingspaces6/3Ilyasova.pdf",
+   "bytes": 671310,
+   "sha256": "2e9b3a557429a8466896b25188e3d63436dfed7c7a951a25037eea394026ab0c",
+   "title": "Last to Be Written, First to Be Read: Writing Memos, Abstracts and Executive Summaries",
+   "book": "Technical Writing Spaces: Readings on Writing, Volume 6",
+   "authors": [
+    "K. Alex Ilyasova"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws6-last-be-written-first-be-read-writing"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/last-to-be-written-first-to-be-read-writing-memos-abstracts-and-executive-summaries/"
+  },
+  {
+   "path": "writingspaces6/4Zhou.pdf",
+   "bytes": 1203472,
+   "sha256": "a44c91507a59387fdcd83ed3e21ce5d96f59d81676d393a23bd35479b9ff46e6",
+   "title": "Drafting Technical Definitions and Descriptions",
+   "book": "Technical Writing Spaces: Readings on Writing, Volume 6",
+   "authors": [
+    "Quan Zhou"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws6-drafting-technical-definitions-descriptions"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/drafting-technical-definitions-and-descriptions/"
+  },
+  {
+   "path": "writingspaces6/5Richards.pdf",
+   "bytes": 178772,
+   "sha256": "21a733f6e21cd2148f203d283bd36c6cdf71827ea5ff4c5684355a6f92299758",
+   "title": "Let's Party: Composing a Review of the Literature on a Technical Topic",
+   "book": "Technical Writing Spaces: Readings on Writing, Volume 6",
+   "authors": [
+    "Daniel P. Richards"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws6-lets-party-composing-review-literature-technical-topic"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/lets-party-composing-a-review-of-the-literature-on-a-technical-topic/"
+  },
+  {
+   "path": "writingspaces6/6Jose.pdf",
+   "bytes": 494502,
+   "sha256": "71848eafca35b897471479c2d6d3f0c4900cedaaee3f446001998fe5a82491d5",
+   "title": "Stronger Together: Collaborative Work in the Technical Writing Classroom",
+   "book": "Technical Writing Spaces: Readings on Writing, Volume 6",
+   "authors": [
+    "Laurence José"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws6-stronger-together-collaborative-work-technical-writing-classroom"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/stronger-together-collaborative-work-in-the-technical-writing-classroom/"
+  },
+  {
+   "path": "writingspaces6/7Welhausen.pdf",
+   "bytes": 2319419,
+   "sha256": "83d9532137fd235f1b2d7b9c21e4749c389a802c8e033a6f263fa90476444bcd",
+   "title": "Worth a Thousand Words: Constructing Visual Arguments in Technical Communication",
+   "book": "Technical Writing Spaces: Readings on Writing, Volume 6",
+   "authors": [
+    "Candice A. Welhausen"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws6-worth-thousand-words-constructing-visual-arguments-technical"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/past-volumes/worth-a-thousand-words-constructing-visual-arguments-in-technical-communication/"
+  },
+  {
+   "path": "writingspaces6/8Slattery.pdf",
+   "bytes": 407750,
+   "sha256": "7b6c1b209edc58c6014d84d29e2c1db2755159d0f53119a65078602ae30da91c",
+   "title": "Technical, Scientific, and Business Presentations: Strategies for Success",
+   "book": "Technical Writing Spaces: Readings on Writing, Volume 6",
+   "authors": [
+    "Darina M. Slattery"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws6-technical-scientific-business-presentations-strategies-success"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/technical-scientific-and-business-presentations-strategies-for-success/"
+  },
+  {
+   "path": "writingspaces6/9Cleary.pdf",
+   "bytes": 855628,
+   "sha256": "4f8f59fbab3a589309149c362e2bc4651c83dcdabb359b61dccef7c0070d80d2",
+   "title": "Writing Technical Content for Online Spaces",
+   "book": "Technical Writing Spaces: Readings on Writing, Volume 6",
+   "authors": [
+    "Yvonne Cleary"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog",
+   "catalog_ids": [
+    "ws6-writing-technical-content-online-spaces"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/writing-technical-content-for-online-spaces/"
+  },
+  {
+   "path": "writingspaces6/Contributors.pdf",
+   "bytes": 92162,
+   "sha256": "f9a38394c3170b28343dbc35993552105f6f1d2d27d06b238928d6d08afa9c75",
+   "title": "Contributors",
+   "book": "Technical Writing Spaces: Readings on Writing, Volume 6",
+   "authors": [
+    "Kirk St.Amant (ed.)",
+    "Pavel Zemliansky (ed.)"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog (book record)",
+   "catalog_ids": [
+    "writing-spaces-vol-6"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/writing-spaces-volume-6/"
+  },
+  {
+   "path": "writingspaces6/technical.pdf",
+   "bytes": 10848380,
+   "sha256": "df3d51e4fdd31d2ffefd22dd724b127166505ea62e7b7203988e99020e98999c",
+   "title": "Complete book (full PDF)",
+   "book": "Technical Writing Spaces: Readings on Writing, Volume 6",
+   "authors": [
+    "Kirk St.Amant (ed.)",
+    "Pavel Zemliansky (ed.)"
+   ],
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "license_from": "catalog (book record)",
+   "catalog_ids": [
+    "writing-spaces-vol-6"
+   ],
+   "source_url": "https://parlormultimedia.com/writingspaces/writing-spaces-volume-6/"
+  }
+ ]
+}

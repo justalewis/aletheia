@@ -1,0 +1,1342 @@
+{
+ "generated": "2026-10-17",
+ "source": "web",
+ "files": [
+  {
+   "path": "ANU Press/Communicating Science A Global Perspective.pdf",
+   "sha256": "06d93ec496849b96bc7f6b83583e98502614b058d2f9b92164a8187cedd7f545",
+   "bytes": 24049960,
+   "title": "Communicating Science: A Global Perspective",
+   "authors": "Gascoigne, Toss; Schiele, Bernard; Leach, Joan; Riedlinger, Michelle; Lewenstein, Bruce V.; Massarani, Luisa; Broks, Peter",
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "source_url": "https://press.anu.edu.au/publications/communicating-science",
+   "file_url": "http://press-files.anu.edu.au/downloads/press/n6484/pdf/book.pdf",
+   "catalog_ids": [
+    "gascoigne-et-al-communicating-science-global-perspective"
+   ]
+  },
+  {
+   "path": "ASCCC Open Educational Resources Initiative/Advanced Community College ESL Composition An Integrated Skills Approach.pdf",
+   "sha256": "e85a5358e647671c49ca4a1502f86825421ea36fd5d3cbe211d8583d5ad55da7",
+   "bytes": 2851889,
+   "title": "Advanced Community College ESL Composition: An Integrated Skills Approach",
+   "authors": "Perez, Edgar; Behseta, Sara; Rae, Jenell",
+   "license": "CC BY-NC-SA",
+   "license_url": "https://creativecommons.org/licenses/by-nc-sa/",
+   "source_url": "https://human.libretexts.org/Bookshelves/Languages/English_as_a_Second_Language/Advanced_Community_College_ESL_Composition_-_An_Integrated_Skills_Approach_(Perez_et_al.)",
+   "file_url": "https://asccc-oeri.org/wp-content/uploads/2020/06/Advanced-Community-College-ESL-Composition-An-Integrated-Skills-Approach.pdf",
+   "catalog_ids": [
+    "advanced-cc-esl-composition"
+   ]
+  },
+  {
+   "path": "ASCCC Open Educational Resources Initiative/Introduction to College Research.pdf",
+   "sha256": "91fbe7aaac74289ae910a75ffe095720fb41f1dece69baca6561afbbfe1a102b",
+   "bytes": 7096556,
+   "title": "Introduction to College Research",
+   "authors": "Butler, Walter D.; Sargent, Aloha; Smith, Kelsey",
+   "license": "CC BY",
+   "license_url": "https://creativecommons.org/licenses/by/",
+   "source_url": "https://pressbooks.pub/introtocollegeresearch/",
+   "file_url": "https://pressbooks.pub/app/uploads/sites/1163/2023/03/Introduction-to-College-Research-1677596378.pdf",
+   "catalog_ids": [
+    "introduction-to-college-research"
+   ]
+  },
+  {
+   "path": "Auburn University at Montgomery/Composing Ourselves and Our World A Guide to First-Year Writing.pdf",
+   "sha256": "8f0e1bda87f329232b72411082c96e1310c8ecd7d3b2e3cedc013732735ac455",
+   "bytes": 14420919,
+   "title": "Composing Ourselves and Our World: A Guide to First-Year Writing",
+   "authors": "Burrows, Elizabeth; Fowler, Angela; Fowler, Heath; Locklear, Amy",
+   "license": "CC BY-NC-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+   "source_url": "https://human.libretexts.org/Bookshelves/Composition/Introductory_Composition/Book%3A_Composing_Ourselves_and_our_World_(Burrows_Fowler_and_Locklear)",
+   "file_url": "https://pressbooks.pub/app/uploads/sites/4305/2022/09/Composing-Ourselves-and-Our-World_Digital.pdf",
+   "catalog_ids": [
+    "composing-ourselves-and-our-world"
+   ]
+  },
+  {
+   "path": "Bad Ideas About Writing/Bad Ideas About Writing.pdf",
+   "sha256": "dd825e5e8975ff148908a5d4b6c04e8ef9425bc60e5e3a49a25b9d4a6bfd7a89",
+   "bytes": 2425678,
+   "title": "Bad Ideas About Writing",
+   "authors": "Cunningham, Jennifer M.",
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "source_url": "https://textbooks.lib.wvu.edu/badideas/",
+   "file_url": "https://textbooks.lib.wvu.edu/badideas/badideasaboutwriting-book.pdf",
+   "catalog_ids": [
+    "bad-ideas-aal-not-good-english",
+    "bad-ideas-leave-yourself-out",
+    "bad-ideas-logical-fallacies",
+    "bad-ideas-logos-logic",
+    "bad-ideas-official-american-english",
+    "bad-ideas-one-correct-way",
+    "bad-ideas-rhetoric-empty-speech",
+    "wvu-bad-ideas-about-writing-america-is-facing-a-literacy-crisis",
+    "wvu-bad-ideas-about-writing-anyone-can-teach-an-online-writing-course",
+    "wvu-bad-ideas-about-writing-anyone-can-teach-writing",
+    "wvu-bad-ideas-about-writing-citing-sources-is-a-basic-skill-learned-early-on",
+    "wvu-bad-ideas-about-writing-creative-writing-is-a-unique-category",
+    "wvu-bad-ideas-about-writing-digital-natives-and-digital-immigrants",
+    "wvu-bad-ideas-about-writing-dual-enrollment-writing-classes-should-always-be-pursued",
+    "wvu-bad-ideas-about-writing-excellent-academic-writing-must-be-serious",
+    "wvu-bad-ideas-about-writing-face-to-face-courses-are-superior-to-online-courses",
+    "wvu-bad-ideas-about-writing-failure-is-not-an-option",
+    "wvu-bad-ideas-about-writing-first-year-composition-prepares-students-for-academic",
+    "wvu-bad-ideas-about-writing-first-year-composition-should-be-skipped",
+    "wvu-bad-ideas-about-writing-formal-outlines-are-always-useful",
+    "wvu-bad-ideas-about-writing-gamification-makes-writing-fun",
+    "wvu-bad-ideas-about-writing-good-writers-always-follow-my-rules",
+    "wvu-bad-ideas-about-writing-good-writers-must-know-grammatical-terminology",
+    "wvu-bad-ideas-about-writing-grading-has-always-made-writing-better",
+    "wvu-bad-ideas-about-writing-grammar-should-be-taught-separately-as-rules-to-learn",
+    "wvu-bad-ideas-about-writing-introduction",
+    "wvu-bad-ideas-about-writing-machines-can-evaluate-writing-well",
+    "wvu-bad-ideas-about-writing-only-geniuses-can-be-writers",
+    "wvu-bad-ideas-about-writing-plagiarism-deserves-to-be-punished",
+    "wvu-bad-ideas-about-writing-plagiarism-detection-services-are-money-well-spent",
+    "wvu-bad-ideas-about-writing-popular-culture-is-killing-writing",
+    "wvu-bad-ideas-about-writing-popular-culture-is-only-useful-as-a-text-for-criticism",
+    "wvu-bad-ideas-about-writing-reading-and-writing-are-not-connected",
+    "wvu-bad-ideas-about-writing-reading-is-not-essential-to-writing-instruction",
+    "wvu-bad-ideas-about-writing-research-starts-with-a-thesis-statement",
+    "wvu-bad-ideas-about-writing-research-starts-with-answers",
+    "wvu-bad-ideas-about-writing-response-never-use-i",
+    "wvu-bad-ideas-about-writing-rubrics-oversimplify-the-writing-process",
+    "wvu-bad-ideas-about-writing-rubrics-save-time-and-make-grading-criteria-visible",
+    "wvu-bad-ideas-about-writing-sat-scores-are-useful-for-placing-students-in-writing",
+    "wvu-bad-ideas-about-writing-secondary-school-english-teachers-should-only-be-taught",
+    "wvu-bad-ideas-about-writing-some-people-are-just-born-good-writers",
+    "wvu-bad-ideas-about-writing-strong-writing-and-writers-dont-need-revision",
+    "wvu-bad-ideas-about-writing-strunk-and-white-set-the-standard",
+    "wvu-bad-ideas-about-writing-student-writing-must-be-graded-by-the-teacher",
+    "wvu-bad-ideas-about-writing-teaching-grammar-improves-writing",
+    "wvu-bad-ideas-about-writing-texting-ruins-literacy-skills",
+    "wvu-bad-ideas-about-writing-texting-ruins-students-grammar-skills",
+    "wvu-bad-ideas-about-writing-the-five-paragraph-essay-is-rhetorically-sound",
+    "wvu-bad-ideas-about-writing-the-five-paragraph-essay-transmits-knowledge",
+    "wvu-bad-ideas-about-writing-the-five-paragraph-theme-teaches-beyond-the-test",
+    "wvu-bad-ideas-about-writing-the-more-digital-technology-the-better",
+    "wvu-bad-ideas-about-writing-the-more-writing-process-the-better",
+    "wvu-bad-ideas-about-writing-the-passive-voice-should-be-avoided",
+    "wvu-bad-ideas-about-writing-the-traditional-research-paper-is-best",
+    "wvu-bad-ideas-about-writing-when-responding-to-student-writing-more-is-better",
+    "wvu-bad-ideas-about-writing-writers-are-mythical-magical-and-damaged",
+    "wvu-bad-ideas-about-writing-writers-block-just-happens-to-people",
+    "wvu-bad-ideas-about-writing-writers-must-develop-a-strong-original-voice",
+    "wvu-bad-ideas-about-writing-writing-knowledge-transfers-easily",
+    "wvu-bad-ideas-about-writing-you-can-learn-to-write-in-general",
+    "wvu-bad-ideas-about-writing-you-need-my-credentials-to-be-a-writer",
+    "wvu-bad-ideas-about-writing-youre-going-to-need-this-for-college"
+   ]
+  },
+  {
+   "path": "Bloomsbury Academic (CC edition); Internet Archive copy/Remix Making Art and Commerce Thrive in the Hybrid Economy.pdf",
+   "sha256": "e8aab2e919cd9f1e1db2b0c501cf43ca9f77946270aee0c63f8d348d780800ab",
+   "bytes": 1519970,
+   "title": "Remix: Making Art and Commerce Thrive in the Hybrid Economy",
+   "authors": "Lessig, Lawrence",
+   "license": "CC BY-NC (version not stated in book)",
+   "license_url": "https://creativecommons.org/licenses/by-nc/3.0/",
+   "source_url": "https://archive.org/details/LawrenceLessigRemix",
+   "file_url": "https://archive.org/download/LawrenceLessigRemix/Remix-o.pdf",
+   "catalog_ids": [
+    "lessig-remix"
+   ]
+  },
+  {
+   "path": "CDC (U.S. Department of Health and Human Services)/The CDC Clear Communication Index.pdf",
+   "sha256": "07b92b2a6a8e03bab003a5f27893959266307be9840f8edec3dd16d3995ca303",
+   "bytes": 1173347,
+   "title": "The CDC Clear Communication Index",
+   "authors": "Centers for Disease Control and Prevention",
+   "license": "Public domain (U.S. government work)",
+   "license_url": "",
+   "source_url": "https://www.cdc.gov/ccindex/index.html",
+   "file_url": "https://www.cdc.gov/ccindex/pdf/clear-communication-user-guide.pdf",
+   "catalog_ids": [
+    "cdc-clear-communication-index"
+   ]
+  },
+  {
+   "path": "Communicating Science A Global Perspective/Introduction A global trend, an emerging field, a multiplicity of understandings Science communication in 39 countries.pdf",
+   "sha256": "b907961be1dbfe52688045ac0e0f7798426fcabb4587cc5ce7f76048322841ec",
+   "bytes": 176292,
+   "title": "Introduction: A global trend, an emerging field, a multiplicity of understandings: Science communication in 39 countries",
+   "authors": "",
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "source_url": "https://press.anu.edu.au/publications/communicating-science",
+   "file_url": "http://press-files.anu.edu.au/downloads/press/n6484/pdf/ch01.pdf",
+   "catalog_ids": [
+    "gascoigne-et-al-communicating-science-introduction"
+   ]
+  },
+  {
+   "path": "Communicating Science A Global Perspective/United States of America Science communication in the USA It's complicated.pdf",
+   "sha256": "ec0781761912c866a0c2687da6f3ff777b416ca7ca0cea1096788fd0ffbf355d",
+   "bytes": 1169579,
+   "title": "United States of America: Science communication in the USA: It's complicated",
+   "authors": "Bevan, Bronwyn; Smith, Brooke",
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "source_url": "https://openresearch-repository.anu.edu.au/items/98cb3e42-9f43-47b6-a874-6f169af73e72",
+   "file_url": "http://press-files.anu.edu.au/downloads/press/n6484/pdf/ch40.pdf",
+   "catalog_ids": [
+    "bevan-smith-science-communication-in-the-usa"
+   ]
+  },
+  {
+   "path": "Crisis & Emergency Risk Communication (CERC) Manual/Messages and Audiences.pdf",
+   "sha256": "76cd19820b18463c8ee4c6d00d70ab6ca89e486e28a3937f816ecb99df7c9c10",
+   "bytes": 2585213,
+   "title": "Messages and Audiences",
+   "authors": "Centers for Disease Control and Prevention",
+   "license": "Public domain (U.S. government work)",
+   "license_url": "",
+   "source_url": "https://www.cdc.gov/cerc/php/cerc-manual/index.html",
+   "file_url": "https://www.cdc.gov/cerc/media/pdfs/CERC_Messages_and_Audiences.pdf",
+   "catalog_ids": [
+    "cdc-cerc-messages-and-audiences"
+   ]
+  },
+  {
+   "path": "Crisis & Emergency Risk Communication (CERC) Manual/The Psychology of a Crisis.pdf",
+   "sha256": "4a128bf3b23108949005b4e71abf6dbc4a94421d812559ab58420ee4526abbd9",
+   "bytes": 1684132,
+   "title": "The Psychology of a Crisis",
+   "authors": "Centers for Disease Control and Prevention",
+   "license": "Public domain (U.S. government work)",
+   "license_url": "",
+   "source_url": "https://www.cdc.gov/cerc/php/cerc-manual/index.html",
+   "file_url": "https://www.cdc.gov/cerc/media/pdfs/CERC_Psychology_of_a_Crisis.pdf",
+   "catalog_ids": [
+    "cdc-cerc-psychology-of-a-crisis"
+   ]
+  },
+  {
+   "path": "Duke Center for the Study of the Public Domain/Bound by Law Tales from the Public Domain.pdf",
+   "sha256": "6db5bce6ba99fd05c28775e8fecfcb0d763b88f01f733f7418cd5b11c5272fa9",
+   "bytes": 8489197,
+   "title": "Bound by Law? Tales from the Public Domain",
+   "authors": "Aoki, Keith; Boyle, James; Jenkins, Jennifer",
+   "license": "CC BY-NC-SA 2.5",
+   "license_url": "https://creativecommons.org/licenses/by-nc-sa/2.5/",
+   "source_url": "https://cspd.law.duke.edu/comics/",
+   "file_url": "https://law.duke.edu/centers/cspd/comics/pdf/cspdcomicscreen.pdf",
+   "catalog_ids": [
+    "aoki-boyle-jenkins-bound-by-law"
+   ]
+  },
+  {
+   "path": "Journal of Multimodal Rhetorics/Musical Listening Addressing the Rhetoric of Music in Sonic and Multimodal Composition.pdf",
+   "sha256": "d144fe1e1a12199940e550d2123ded08aedc38fc2f434364f93e82c7d9931911",
+   "bytes": 764383,
+   "title": "Musical Listening: Addressing the Rhetoric of Music in Sonic and Multimodal Composition",
+   "authors": "Measel, Michael David",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "source_url": "https://journalofmultimodalrhetorics.com/5-2-issue-measel",
+   "file_url": "https://journalofmultimodalrhetorics.com/files/documents/4f7f739f-7e4a-452a-a58b-ff517a4dcd68.pdf",
+   "catalog_ids": [
+    "jomr-2021-measel-musical-listening"
+   ]
+  },
+  {
+   "path": "Journal of Multimodal Rhetorics/Slow Looking Sitting with the Black Lives Matter Murals of Downtown Raleigh.pdf",
+   "sha256": "f3df7319015be5dec3f356e4dc7214e5fc109e0c8ab6c89f6596c758b793352f",
+   "bytes": 1892109,
+   "title": "Slow Looking: Sitting with the Black Lives Matter Murals of Downtown Raleigh",
+   "authors": "Dufresne, Kelsey Virginia",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "source_url": "https://journalofmultimodalrhetorics.com/5-2-issue-dufresne",
+   "file_url": "https://journalofmultimodalrhetorics.com/files/documents/18043f64-7fa6-407c-9327-38ffd5b8917b.pdf",
+   "catalog_ids": [
+    "jomr-2021-dufresne-slow-looking-blm-murals"
+   ]
+  },
+  {
+   "path": "Journal of Multimodal Rhetorics/Writing as Designing Integrating Infographics in Composition.pdf",
+   "sha256": "77b893d4df103e9812d7c2b5f56e8e9abbcd5012f446698cd505e17aebe31b70",
+   "bytes": 995056,
+   "title": "Writing as Designing: Integrating Infographics in Composition",
+   "authors": "Smothers, Eric Cody",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "source_url": "https://journalofmultimodalrhetorics.com/5-2-issue-smothers",
+   "file_url": "https://journalofmultimodalrhetorics.com/files/documents/92e9ae9e-541d-4fdf-b800-ae4e426dd9c2.pdf",
+   "catalog_ids": [
+    "jomr-2021-smothers-writing-as-designing-infographics"
+   ]
+  },
+  {
+   "path": "Journal of Multimodal Rhetorics/artifact a comic essay about a revision of a revision assessment rubric for student writing.pdf",
+   "sha256": "a391ba0c2abb406903c2d37e99696a3294ae24d18bbf38b0aee20bd6d52da637",
+   "bytes": 2848566,
+   "title": "artifact: a comic essay about a revision of a revision assessment rubric for student writing",
+   "authors": "Parks, Karah",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "source_url": "https://journalofmultimodalrhetorics.com/5-2-issue-parks",
+   "file_url": "https://journalofmultimodalrhetorics.com/files/documents/a0b5753d-9380-49d5-ad3c-6643235e4f17.pdf",
+   "catalog_ids": [
+    "jomr-2021-parks-comic-essay-revision-rubric"
+   ]
+  },
+  {
+   "path": "Literacy in Composition Studies/LiteracyLiteracies Studies and the Still-Dominant White Center.pdf",
+   "sha256": "95273d85a487ffb0e43b463d3c79d909b8af379e0c3f77a4d2ec6e64bef11734",
+   "bytes": 93141,
+   "title": "Literacy/Literacies Studies and the Still-Dominant White Center",
+   "authors": "Kynard, Carmen",
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "source_url": "https://licsjournal.org/index.php/LiCS/article/view/805",
+   "file_url": "https://licsjournal.org/index.php/LiCS/article/download/805/629",
+   "catalog_ids": [
+    "lics-2013-kynard-still-dominant-white-center"
+   ]
+  },
+  {
+   "path": "MSL Academic Endeavors (Cleveland State University)/A Guide to Rhetoric, Genre, and Success in First-Year Writing (1st Edition, No Longer Updated).pdf",
+   "sha256": "f61c8f701ebeaf3d796792e0f731400c5ddd7c21d2751dc5ae0036e76da1d85a",
+   "bytes": 5036875,
+   "title": "A Guide to Rhetoric, Genre, and Success in First-Year Writing (1st Edition, No Longer Updated)",
+   "authors": "Gagich, Melanie; Zickel, Emilie",
+   "license": "CC BY-NC-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+   "source_url": "https://pressbooks.ulib.csuohio.edu/csu-fyw-rhetoric/",
+   "file_url": "https://pressbooks.ulib.csuohio.edu/csu-fyw-rhetoric/open/download?type=mpdf",
+   "catalog_ids": [
+    "gagich-zickel-guide-rhetoric-genre-success-1e"
+   ]
+  },
+  {
+   "path": "OpenStax (Rice University)/Writing Guide with Handbook.pdf",
+   "sha256": "86ef566965110032b651122c8e466a607157613302a5a283bd1f221727e590ab",
+   "bytes": 63546834,
+   "title": "Writing Guide with Handbook",
+   "authors": "Robinson, Michelle Bachelor; Jerskey, Maria; Fulwiler, Toby",
+   "license": "CC BY-NC-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+   "source_url": "https://openstax.org/details/books/writing-guide",
+   "file_url": "https://assets.openstax.org/oscms-prodcms/media/documents/WritingGuide-WEB.pdf",
+   "catalog_ids": [
+    "openstax-writing-guide-with-handbook"
+   ]
+  },
+  {
+   "path": "PALNI Open Press/Leveraging Data Visualization to Communicate Effectively.pdf",
+   "sha256": "a201dda57387f063338e2fcf87e4e917984cf22aafcbc9c8bd966b7ceffde64d",
+   "bytes": 35612027,
+   "title": "Leveraging Data Visualization to Communicate Effectively",
+   "authors": "Mitchell, Jennie; Deckard, Trent",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "source_url": "https://pressbooks.palni.org/leveragingdatavisualizationtocommunicateeffectively/",
+   "file_url": "https://pressbooks.palni.org/leveragingdatavisualizationtocommunicateeffectively/open/download?type=pdf",
+   "catalog_ids": [
+    "leveraging-data-visualization"
+   ]
+  },
+  {
+   "path": "PALNI Open Press/Writing for Digital Media.pdf",
+   "sha256": "0a924b9c461ad64046dedba7d2a52cc85950db6a47edfebc7a9f036737977ae5",
+   "bytes": 19244170,
+   "title": "Writing for Digital Media",
+   "authors": "Miller, Cara",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "source_url": "https://pressbooks.palni.org/writingfordigitalmedia/",
+   "file_url": "https://pressbooks.palni.org/writingfordigitalmedia/open/download?type=pdf",
+   "catalog_ids": [
+    "writing-for-digital-media-palni"
+   ]
+  },
+  {
+   "path": "PLOS Computational Biology/Ten Simple (Empirical) Rules for Writing Science.pdf",
+   "sha256": "3cad32ae3872f923d098d66a5f4fc7a37f52af02cac14fa5c4e2a964484eef02",
+   "bytes": 297165,
+   "title": "Ten Simple (Empirical) Rules for Writing Science",
+   "authors": "Weinberger, Cody J.; Evans, James A.; Allesina, Stefano",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "source_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004205",
+   "file_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1004205&type=printable",
+   "catalog_ids": [
+    "plos-tsr-2015-empirical-rules-writing-science"
+   ]
+  },
+  {
+   "path": "PLOS Computational Biology/Ten Simple Rules for Better Figures.pdf",
+   "sha256": "95b6714aa1ce1e058475c9a807fa85e058bdaa5c3261e792dc5e8dfd9ae83ad6",
+   "bytes": 3889332,
+   "title": "Ten Simple Rules for Better Figures",
+   "authors": "Rougier, Nicolas P.; Droettboom, Michael; Bourne, Philip E.",
+   "license": "CC0 (Creative Commons CC0 public domain dedication)",
+   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "source_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003833",
+   "file_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1003833&type=printable",
+   "catalog_ids": [
+    "plos-tsr-2014-better-figures"
+   ]
+  },
+  {
+   "path": "PLOS Computational Biology/Ten Simple Rules for Effective Online Outreach.pdf",
+   "sha256": "69491659a28b15c7a29487ad55ff99221e98fa0053c81e73da9d7b99a64a4c63",
+   "bytes": 114978,
+   "title": "Ten Simple Rules for Effective Online Outreach",
+   "authors": "Bik, Holly M.; Dove, Alistair D. M.; Goldstein, Miriam C.; et al.",
+   "license": "CC0 (Creative Commons CC0 public domain dedication)",
+   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "source_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003906",
+   "file_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1003906&type=printable",
+   "catalog_ids": [
+    "plos-tsr-2015-online-outreach"
+   ]
+  },
+  {
+   "path": "PLOS Computational Biology/Ten Simple Rules for Getting Grants.pdf",
+   "sha256": "167cf91a7d994971c1f4876dfb49a314dfa7f850f5d1005ecaf1470baa30477c",
+   "bytes": 91723,
+   "title": "Ten Simple Rules for Getting Grants",
+   "authors": "Bourne, Philip E.; Chalupa, Leo M.",
+   "license": "CC BY (Creative Commons Attribution License)",
+   "license_url": "",
+   "source_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.0020012",
+   "file_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.0020012&type=printable",
+   "catalog_ids": [
+    "plos-tsr-2006-getting-grants"
+   ]
+  },
+  {
+   "path": "PLOS Computational Biology/Ten Simple Rules for Getting Published.pdf",
+   "sha256": "2e59f988f388e04eea06273ce51615e40a6a9df8df588702ba9726255c6706a1",
+   "bytes": 105178,
+   "title": "Ten Simple Rules for Getting Published",
+   "authors": "Bourne, Philip E.",
+   "license": "CC BY (Creative Commons Attribution License)",
+   "license_url": "",
+   "source_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.0010057",
+   "file_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.0010057&type=printable",
+   "catalog_ids": [
+    "plos-tsr-2005-getting-published"
+   ]
+  },
+  {
+   "path": "PLOS Computational Biology/Ten Simple Rules for Making Good Oral Presentations.pdf",
+   "sha256": "6362ef644270ba0b0e2f28042dbd143a05300751d14b7349c2e932ce16ea22cd",
+   "bytes": 109936,
+   "title": "Ten Simple Rules for Making Good Oral Presentations",
+   "authors": "Bourne, Philip E.",
+   "license": "CC BY (Creative Commons Attribution License)",
+   "license_url": "",
+   "source_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.0030077",
+   "file_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.0030077&type=printable",
+   "catalog_ids": [
+    "plos-tsr-2007-oral-presentations"
+   ]
+  },
+  {
+   "path": "PLOS Computational Biology/Ten Simple Rules for Reviewers.pdf",
+   "sha256": "95c8274242875b530f49e1911dc2def433d1951326569cf69b39542051a1d0ab",
+   "bytes": 63102,
+   "title": "Ten Simple Rules for Reviewers",
+   "authors": "Bourne, Philip E.; Korngreen, Alon",
+   "license": "CC BY (Creative Commons Attribution License)",
+   "license_url": "",
+   "source_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.0020110",
+   "file_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.0020110&type=printable",
+   "catalog_ids": [
+    "plos-tsr-2006-reviewers"
+   ]
+  },
+  {
+   "path": "PLOS Computational Biology/Ten Simple Rules for Writing Research Papers.pdf",
+   "sha256": "a2ed9f27147179cb086396e54f191300dc28318e2952b3cc9e9f5ee4475d735b",
+   "bytes": 125027,
+   "title": "Ten Simple Rules for Writing Research Papers",
+   "authors": "Zhang, Weixiong",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "source_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003453",
+   "file_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1003453&type=printable",
+   "catalog_ids": [
+    "plos-tsr-2014-writing-research-papers"
+   ]
+  },
+  {
+   "path": "PLOS Computational Biology/Ten Simple Rules for Writing a Literature Review.pdf",
+   "sha256": "c8b15037bfc77e25368ee210837f321eceb4869f12c1774ed139215167746b59",
+   "bytes": 184027,
+   "title": "Ten Simple Rules for Writing a Literature Review",
+   "authors": "Pautasso, Marco",
+   "license": "CC BY (Creative Commons Attribution License)",
+   "license_url": "",
+   "source_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003149",
+   "file_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1003149&type=printable",
+   "catalog_ids": [
+    "plos-tsr-2013-literature-review"
+   ]
+  },
+  {
+   "path": "PLOS Computational Biology/Ten Simple Rules for a Good Poster Presentation.pdf",
+   "sha256": "68869f2dd799b6571040b3b440534b9e63d264c546b156ee3355b65b7294996f",
+   "bytes": 58231,
+   "title": "Ten Simple Rules for a Good Poster Presentation",
+   "authors": "Erren, Thomas C.; Bourne, Philip E.",
+   "license": "CC BY (Creative Commons Attribution License)",
+   "license_url": "",
+   "source_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.0030102",
+   "file_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.0030102&type=printable",
+   "catalog_ids": [
+    "plos-tsr-2007-poster-presentation"
+   ]
+  },
+  {
+   "path": "PLOS Computational Biology/Ten simple rules for collaboratively writing a multi-authored paper.pdf",
+   "sha256": "ae64e526caa2ad528ba03e16efc14f0cabddcd5c53e53d51d2986980881bf6f1",
+   "bytes": 595675,
+   "title": "Ten simple rules for collaboratively writing a multi-authored paper",
+   "authors": "Frassl, Marieke A.; Hamilton, David P.; Denfeld, Blaize A.; et al.",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "source_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006508",
+   "file_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1006508&type=printable",
+   "catalog_ids": [
+    "plos-tsr-2018-collaborative-writing"
+   ]
+  },
+  {
+   "path": "PLOS Computational Biology/Ten simple rules for drawing scientific comics.pdf",
+   "sha256": "2ca443d27590f7149b8738e1235a8ba0ca8570b7b9a5076f20f2f6d8e2799af9",
+   "bytes": 22388969,
+   "title": "Ten simple rules for drawing scientific comics",
+   "authors": "McDermott, Jason E.; Partridge, Matthew; Bromberg, Yana",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "source_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005845",
+   "file_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1005845&type=printable",
+   "catalog_ids": [
+    "plos-tsr-2018-scientific-comics"
+   ]
+  },
+  {
+   "path": "PLOS Computational Biology/Ten simple rules for effective presentation slides.pdf",
+   "sha256": "d91d08c0062815ba753175cb8dbd3f9ffe2b3c5c8edd0372cd4c6dae6e4b3e0c",
+   "bytes": 839888,
+   "title": "Ten simple rules for effective presentation slides",
+   "authors": "Naegle, Kristen M.",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "source_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009554",
+   "file_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1009554&type=printable",
+   "catalog_ids": [
+    "plos-tsr-2021-presentation-slides"
+   ]
+  },
+  {
+   "path": "PLOS Computational Biology/Ten simple rules for getting started on Twitter as a scientist.pdf",
+   "sha256": "0b10ae783ce84d0e94fcbe246b7098b164f98a3c668d7b18fce0c4b6f84f0174",
+   "bytes": 1074699,
+   "title": "Ten simple rules for getting started on Twitter as a scientist",
+   "authors": "Cheplygina, Veronika; Hermans, Felienne; Albers, Casper; Bielczyk, Natalia; Smeets, Ionica",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "source_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007513",
+   "file_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1007513&type=printable",
+   "catalog_ids": [
+    "plos-tsr-2020-twitter-scientist"
+   ]
+  },
+  {
+   "path": "PLOS Computational Biology/Ten simple rules for scientists engaging in science communication.pdf",
+   "sha256": "0d2b5a6e2696e2274ee3690f6fd63b9f82c19920d84a9fd39e93674539adfa50",
+   "bytes": 699089,
+   "title": "Ten simple rules for scientists engaging in science communication",
+   "authors": "Borowiec, Brittney G.",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "source_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011251",
+   "file_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1011251&type=printable",
+   "catalog_ids": [
+    "plos-tsr-2023-engaging-science-communication"
+   ]
+  },
+  {
+   "path": "PLOS Computational Biology/Ten simple rules for structuring papers.pdf",
+   "sha256": "f02a2c14c630369f2058403a448f94e7aaeafb3c1cc681c9d6862812590b7b6c",
+   "bytes": 1053975,
+   "title": "Ten simple rules for structuring papers",
+   "authors": "Mensh, Brett; Kording, Konrad",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "source_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005619",
+   "file_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1005619&type=printable",
+   "catalog_ids": [
+    "plos-tsr-2017-structuring-papers"
+   ]
+  },
+  {
+   "path": "PLOS Computational Biology/Ten simple rules for writing a peer review.pdf",
+   "sha256": "a57d76079573bb45f7e69acf065fb79d4b6501fd4ea232c130950850b1e74117",
+   "bytes": 173440,
+   "title": "Ten simple rules for writing a peer review",
+   "authors": "Rahman, Farzana; DeBlasio, Dan",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "source_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1014359",
+   "file_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1014359&type=printable",
+   "catalog_ids": [
+    "plos-tsr-2026-writing-peer-review"
+   ]
+  },
+  {
+   "path": "PLOS Computational Biology/Ten simple rules for writing a popular science book.pdf",
+   "sha256": "49fbbbf879cca3d1592f6f65368b6354e8f256365d4aaec4dba51e5da70f4f74",
+   "bytes": 350689,
+   "title": "Ten simple rules for writing a popular science book",
+   "authors": "Kucharski, Adam J.",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "source_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005808",
+   "file_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1005808&type=printable",
+   "catalog_ids": [
+    "plos-tsr-2018-popular-science-book"
+   ]
+  },
+  {
+   "path": "PLOS Computational Biology/Ten simple rules for writing a response to reviewers.pdf",
+   "sha256": "7a9dca63168f30698b05742a99f61d5b3b87cf33a01e374b702c8fc22dbfbfbf",
+   "bytes": 441429,
+   "title": "Ten simple rules for writing a response to reviewers",
+   "authors": "Noble, William Stafford",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "source_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005730",
+   "file_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1005730&type=printable",
+   "catalog_ids": [
+    "plos-tsr-2017-response-to-reviewers"
+   ]
+  },
+  {
+   "path": "PLOS Computational Biology/Ten simple rules to colorize biological data visualization.pdf",
+   "sha256": "223a8aa622f9e94d4e7f5480b80415dc6cb920804f320888d7212a5cdab28498",
+   "bytes": 2531009,
+   "title": "Ten simple rules to colorize biological data visualization",
+   "authors": "Hattab, Georges; Rhyne, Theresa-Marie; Heider, Dominik",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "source_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008259",
+   "file_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1008259&type=printable",
+   "catalog_ids": [
+    "plos-tsr-2020-colorize-data-visualization"
+   ]
+  },
+  {
+   "path": "Pennsylvania Alliance for Design of Open Textbooks (PA-ADOPT)/Introduction to Technical Writing A Rhetorical Approach.pdf",
+   "sha256": "812b70ada3663b3ba29d4c491818212599445973ebf0635de276a9b4173e79f9",
+   "bytes": 17616271,
+   "title": "Introduction to Technical Writing: A Rhetorical Approach",
+   "authors": "Folk, Moe",
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "source_url": "https://paadopt.org/bookshelf/introduction-to-technical-writing-a-rhetorical-approach/",
+   "file_url": "https://paadopt.org/wp-content/uploads/2025/12/Introduction-to-Technical-Writing-MFolk-20251120-1.pdf",
+   "catalog_ids": [
+    "intro-technical-writing-rhetorical-approach"
+   ]
+  },
+  {
+   "path": "Pennsylvania Alliance for Design of Open Textbooks (PA-ADOPT)/Web Writing.pdf",
+   "sha256": "408c64cf5fd81b5dfa36f1c430249dbee65b4e774572d2b9e56316f44696a8c0",
+   "bytes": 7853734,
+   "title": "Web Writing",
+   "authors": "Pfannenstiel, A. Nicole",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "source_url": "https://paadopt.org/bookshelf/web-writing/",
+   "file_url": "https://paadopt.org/wp-content/uploads/2025/12/Web-Writing-NPfannenstiel-20251202-1.pdf",
+   "catalog_ids": [
+    "web-writing-pfannenstiel"
+   ]
+  },
+  {
+   "path": "Present Tense A Journal of Rhetoric in Society/Building Dark Patterns into Platforms How GamerGate Perturbed Twitter's User Experience.pdf",
+   "sha256": "0bd588901151affd87ff20512347b0228a7214cef67709b2135ce5b3f33b55cc",
+   "bytes": 2225640,
+   "title": "Building Dark Patterns into Platforms: How GamerGate Perturbed Twitter's User Experience",
+   "authors": "Trice, Michael; Potts, Liza",
+   "license": "CC BY-NC-SA 3.0 US",
+   "license_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/us/",
+   "source_url": "https://www.presenttensejournal.org/past-issues/volume-6/building-dark-patterns-into-platforms-how-gamergate-perturbed-twitters-user-experience/",
+   "file_url": "http://www.presenttensejournal.org/wp-content/uploads/2018/06/Trice_Potts.pdf",
+   "catalog_ids": [
+    "present-tense-2018-trice-potts-dark-patterns"
+   ]
+  },
+  {
+   "path": "Present Tense A Journal of Rhetoric in Society/Constructing Research, Constructing the Platform Algorithms and the Rhetoricity of Social Media Research.pdf",
+   "sha256": "a5d654840a9b309277da9050d34415336a1b08b1739a87d965ea0e79d2301fbd",
+   "bytes": 1058100,
+   "title": "Constructing Research, Constructing the Platform: Algorithms and the Rhetoricity of Social Media Research",
+   "authors": "Gruwell, Leigh",
+   "license": "CC BY-NC-SA 3.0 US",
+   "license_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/us/",
+   "source_url": "https://www.presenttensejournal.org/past-issues/volume-6/constructing-research-constructing-the-platform-algorithms-and-the-rhetoricity-of-social-media-research/",
+   "file_url": "http://www.presenttensejournal.org/wp-content/uploads/2018/06/Gruwell.pdf",
+   "catalog_ids": [
+    "present-tense-2018-gruwell-constructing-research-platform"
+   ]
+  },
+  {
+   "path": "Present Tense A Journal of Rhetoric in Society/Corporate Kairos and the Impossibility of the Anonymous, Ephemeral Messaging Dream.pdf",
+   "sha256": "cdbcfef5753f47daafba31e630ea70a7f80d5978aa5abcc27b6f1ef9f74dccee",
+   "bytes": 372398,
+   "title": "Corporate Kairos and the Impossibility of the Anonymous, Ephemeral Messaging Dream",
+   "authors": "West, Sara; Pope, Adam R.",
+   "license": "CC BY-NC-SA 3.0 US",
+   "license_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/us/",
+   "source_url": "https://www.presenttensejournal.org/past-issues/volume-6/corporate-kairos-and-the-impossibility-of-the-anonymous-ephemeral-messaging-dream/",
+   "file_url": "http://www.presenttensejournal.org/wp-content/uploads/2018/06/West_Pope.pdf",
+   "catalog_ids": [
+    "present-tense-2018-west-pope-corporate-kairos"
+   ]
+  },
+  {
+   "path": "Present Tense A Journal of Rhetoric in Society/I'll Google It! How Collective Wisdom in Search Engines Alters the Rhetorical Canons.pdf",
+   "sha256": "7bc1d0dfc0c6a4064420250e84368bcfb0ab449fc63b862ab89d69c54e77e6ed",
+   "bytes": 142234,
+   "title": "I'll Google It!: How Collective Wisdom in Search Engines Alters the Rhetorical Canons",
+   "authors": "Parrott, Jill M.",
+   "license": "CC BY-NC-SA 3.0 US",
+   "license_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/us/",
+   "source_url": "https://www.presenttensejournal.org/past-issues/vol1/ill-google-it-how-collective-wisdom-in-search-engines-alters-the-rhetorical-canons/",
+   "file_url": "http://www.presenttensejournal.org/wp-content/uploads/2010/09/Parrott.pdf",
+   "catalog_ids": [
+    "present-tense-2010-parrott-ill-google-it"
+   ]
+  },
+  {
+   "path": "Present Tense A Journal of Rhetoric in Society/Representation, Resistance, and Rhetoric Bananas Catalyze Campus Activism.pdf",
+   "sha256": "01356f6d0eb77fd35108e050b47a01ef34e6e91dd73f1c522898f92dee416b4c",
+   "bytes": 202449,
+   "title": "Representation, Resistance, and Rhetoric: Bananas Catalyze Campus Activism",
+   "authors": "Dubisar, Abby M.; Roesch-McNally, Gabrielle E.",
+   "license": "CC BY-NC-SA 3.0 US",
+   "license_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/us/",
+   "source_url": "https://www.presenttensejournal.org/past-issues/volume-7/representation-resistance-and-rhetoric-bananas-catalyze-campus-activism/",
+   "file_url": "http://www.presenttensejournal.org/wp-content/uploads/2018/06/Dubisar_Roesch-McNally.pdf",
+   "catalog_ids": [
+    "present-tense-2018-dubisar-roesch-mcnally-bananas"
+   ]
+  },
+  {
+   "path": "Programmatic Perspectives/Artificial Intelligence, Large Language Models, and Design Thinking in TPC Classrooms.pdf",
+   "sha256": "071caacd1187c70547d8daa01929406d81ce61f04185eec1af61f362d140c797",
+   "bytes": 2743256,
+   "title": "Artificial Intelligence, Large Language Models, and Design Thinking in TPC Classrooms",
+   "authors": "Masters-Wheeler, Christine; Bay, Jennifer; Sullivan, Patricia",
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "source_url": "https://programmaticperspectives.cptsc.org/index.php/jpp/article/view/58",
+   "file_url": "https://programmaticperspectives.cptsc.org/index.php/jpp/article/download/58/73",
+   "catalog_ids": [
+    "programmatic-perspectives-2023-masters-wheeler-ai-design-thinking"
+   ]
+  },
+  {
+   "path": "Programmatic Perspectives/Audience Personas Audience Analysis Documentation for Rhetorical Technical Communications.pdf",
+   "sha256": "6adb048fd35acf3f3ba10d7f20b636577204c288b1f47a16b6d927408e4ebe1e",
+   "bytes": 199136,
+   "title": "Audience Personas: Audience Analysis Documentation for Rhetorical Technical Communications",
+   "authors": "Mogull, Scott",
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "source_url": "https://programmaticperspectives.cptsc.org/index.php/jpp/article/view/81",
+   "file_url": "https://programmaticperspectives.cptsc.org/index.php/jpp/article/download/81/91",
+   "catalog_ids": [
+    "programmatic-perspectives-2024-mogull-audience-personas"
+   ]
+  },
+  {
+   "path": "Programmatic Perspectives/Experience Architecture Developing an Interdisciplinary UX Undergraduate Degree.pdf",
+   "sha256": "6d96b563861d70b33672bc3cdbe2f7680e225ed7f1a2ff1086c16c24394d888b",
+   "bytes": 685514,
+   "title": "Experience Architecture: Developing an Interdisciplinary UX Undergraduate Degree",
+   "authors": "McArdle, Casey; Potts, Liza; Tegtmeyer, Rebecca",
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "source_url": "https://programmaticperspectives.cptsc.org/index.php/jpp/article/view/54",
+   "file_url": "https://programmaticperspectives.cptsc.org/index.php/jpp/article/download/54/75",
+   "catalog_ids": [
+    "programmatic-perspectives-2023-mcardle-experience-architecture"
+   ]
+  },
+  {
+   "path": "Programmatic Perspectives/Leveraging Design Thinking and Generative AI to Transform TPC Pedagogy.pdf",
+   "sha256": "41d77c7af66c46ff24f9b922b2f92050cca6a87894b2cc89be977d7b9fa2e86b",
+   "bytes": 261118,
+   "title": "Leveraging Design Thinking and Generative AI to Transform TPC Pedagogy",
+   "authors": "Shalamova, Nadya; Rice-Bailey, Tammy",
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "source_url": "https://programmaticperspectives.cptsc.org/index.php/jpp/article/view/52",
+   "file_url": "https://programmaticperspectives.cptsc.org/index.php/jpp/article/download/52/87",
+   "catalog_ids": [
+    "programmatic-perspectives-2024-shalamova-rice-bailey-design-thinking-genai"
+   ]
+  },
+  {
+   "path": "Programmatic Perspectives/Online Design Thinking and Community-Based Learning Co-Designing an Indigenous Curriculum to Help Redress Language Margi.pdf",
+   "sha256": "df4fbe5bb406408074c4d385fe4485ddb86ace4f6c81ed87860b228b1262e92d",
+   "bytes": 575536,
+   "title": "Online Design Thinking and Community-Based Learning: Co-Designing an Indigenous Curriculum to Help Redress Language Marginalization",
+   "authors": "Rivera, Nora",
+   "license": "CC BY-NC 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+   "source_url": "https://programmaticperspectives.cptsc.org/index.php/jpp/article/view/53",
+   "file_url": "https://programmaticperspectives.cptsc.org/index.php/jpp/article/download/53/76",
+   "catalog_ids": [
+    "programmatic-perspectives-2023-rivera-online-design-thinking-indigenous"
+   ]
+  },
+  {
+   "path": "Technical Communication and Social Justice/A Digital-Decolonial Approach to Writing Pedagogy.pdf",
+   "sha256": "9635528a1df66b17dce428d53104787ede4b45266a0d4647391d0c3a15b64f18",
+   "bytes": 311898,
+   "title": "A Digital-Decolonial Approach to Writing Pedagogy",
+   "authors": "Ramsey, Shelby",
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "source_url": "https://techcommsocialjustice.org/index.php/tcsj/article/view/74",
+   "file_url": "https://techcommsocialjustice.org/index.php/tcsj/article/download/74/46",
+   "catalog_ids": [
+    "tcsj-2025-ramsey-digital-decolonial-writing-pedagogy"
+   ]
+  },
+  {
+   "path": "Technical Communication and Social Justice/Interest-Driven Public Networks and Writing Pedagogy Reframing and Harnessing Digital Spaces as Activism Playgrounds.pdf",
+   "sha256": "51b91bc671cb9a7f8b53da0c85c2522ab9644ff92ff1f0e3135560354dde8fb4",
+   "bytes": 362027,
+   "title": "Interest-Driven Public Networks and Writing Pedagogy: Reframing and Harnessing Digital Spaces as Activism Playgrounds",
+   "authors": "Jin, Eva",
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "source_url": "https://techcommsocialjustice.org/index.php/tcsj/article/view/73",
+   "file_url": "https://techcommsocialjustice.org/index.php/tcsj/article/download/73/45",
+   "catalog_ids": [
+    "tcsj-2025-jin-interest-driven-public-networks"
+   ]
+  },
+  {
+   "path": "Technical Communication and Social Justice/Looking Under the Hood of SEO Conversion Paradoxical Goals and Moral Dilemmas Faced by the Digital Age Rhetorician.pdf",
+   "sha256": "603c209617db4e13c01fa461205f63fedbf1ac904192b88593d7f0d2511b517d",
+   "bytes": 347120,
+   "title": "Looking \"Under the Hood\" of SEO Conversion: Paradoxical Goals and Moral Dilemmas Faced by the Digital Age Rhetorician",
+   "authors": "Mavridou-Hernandez, Katherine; Minks, Anna",
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "source_url": "https://techcommsocialjustice.org/index.php/tcsj/article/view/71",
+   "file_url": "https://techcommsocialjustice.org/index.php/tcsj/article/download/71/43",
+   "catalog_ids": [
+    "tcsj-2025-mavridou-hernandez-minks-seo-conversion"
+   ]
+  },
+  {
+   "path": "Technical Communication and Social Justice/Teaching Editing for Social Justice.pdf",
+   "sha256": "8c1cd65a8be0c3ff94bf88d16375d71808f7fda83dff373ccdc87779abee2763",
+   "bytes": 340813,
+   "title": "Teaching Editing for Social Justice",
+   "authors": "Clem, Sam",
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "source_url": "https://techcommsocialjustice.org/index.php/tcsj/article/view/12",
+   "file_url": "https://techcommsocialjustice.org/index.php/tcsj/article/download/12/17",
+   "catalog_ids": [
+    "tcsj-2023-clem-teaching-editing-social-justice"
+   ]
+  },
+  {
+   "path": "Technical Communication and Social Justice/The Invisible Work of Iterative Design in Addressing Design Injustices.pdf",
+   "sha256": "3aa26a79c0230bfa986a2f383eeaa0ca4d6aece007d261aef377b35019652628",
+   "bytes": 317178,
+   "title": "The Invisible Work of Iterative Design in Addressing Design Injustices",
+   "authors": "Lane, Elizabeth; Moore, Kristen R.",
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "source_url": "https://techcommsocialjustice.org/index.php/tcsj/article/view/11",
+   "file_url": "https://techcommsocialjustice.org/index.php/tcsj/article/download/11/16",
+   "catalog_ids": [
+    "tcsj-2023-lane-moore-iterative-design-injustices"
+   ]
+  },
+  {
+   "path": "The Process of Research Writing/Chapter Eight The Antithesis Exercise.pdf",
+   "sha256": "532348a2a6b72af66da53bb10da73e5beb8581dc53335b2c0388dad7e3096cd6",
+   "bytes": 395373,
+   "title": "Chapter Eight: The Antithesis Exercise",
+   "authors": "Krause, Steven D.",
+   "license": "CC BY-NC-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+   "source_url": "http://www.stevendkrause.com/tprw/chapter8.html",
+   "file_url": "http://www.stevendkrause.com/tprw/Chapter%208.pdf",
+   "catalog_ids": [
+    "krause-tprw-08-the-antithesis-exercise"
+   ]
+  },
+  {
+   "path": "The Process of Research Writing/Chapter Eleven Alternative Ways to Present Your Research.pdf",
+   "sha256": "3ea8f20924e51c7eebfe4fee05e722999eeb7aed33b64c84ef015bb665eae823",
+   "bytes": 520404,
+   "title": "Chapter Eleven: Alternative Ways to Present Your Research",
+   "authors": "Krause, Steven D.",
+   "license": "CC BY-NC-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+   "source_url": "http://www.stevendkrause.com/tprw/chapter11.html",
+   "file_url": "http://www.stevendkrause.com/tprw/Chapter%2011.pdf",
+   "catalog_ids": [
+    "krause-tprw-11-alternative-ways-to-present-your-research"
+   ]
+  },
+  {
+   "path": "The Process of Research Writing/Chapter Five The Working Thesis Exercise.pdf",
+   "sha256": "da34a22ad64f86da6214bfad8146efcb787e9230eda4ecbe362d51e6132571b8",
+   "bytes": 409018,
+   "title": "Chapter Five: The Working Thesis Exercise",
+   "authors": "Krause, Steven D.",
+   "license": "CC BY-NC-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+   "source_url": "http://www.stevendkrause.com/tprw/chapter5.html",
+   "file_url": "http://www.stevendkrause.com/tprw/Chapter%205.pdf",
+   "catalog_ids": [
+    "krause-tprw-05-the-working-thesis-exercise"
+   ]
+  },
+  {
+   "path": "The Process of Research Writing/Chapter Four How to Collaborate and Write With Others.pdf",
+   "sha256": "7a114a18aaedc8072804545687c768326e53bf6d64844283a4756e9f0773ffa3",
+   "bytes": 213502,
+   "title": "Chapter Four: How to Collaborate and Write With Others",
+   "authors": "Krause, Steven D.",
+   "license": "CC BY-NC-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+   "source_url": "http://www.stevendkrause.com/tprw/chapter4.html",
+   "file_url": "http://www.stevendkrause.com/tprw/Chapter%204.pdf",
+   "catalog_ids": [
+    "krause-tprw-04-how-to-collaborate-and-write-with-others"
+   ]
+  },
+  {
+   "path": "The Process of Research Writing/Chapter Nine The Categorization and Evaluation Exercise.pdf",
+   "sha256": "f998e47fb8fe3197a5dc707efdb0053a0fdfc6016d98a94afde02c9615294964",
+   "bytes": 323275,
+   "title": "Chapter Nine: The Categorization and Evaluation Exercise",
+   "authors": "Krause, Steven D.",
+   "license": "CC BY-NC-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+   "source_url": "http://www.stevendkrause.com/tprw/chapter9.html",
+   "file_url": "http://www.stevendkrause.com/tprw/Chapter%209.pdf",
+   "catalog_ids": [
+    "krause-tprw-09-the-categorization-and-evaluation-exercise"
+   ]
+  },
+  {
+   "path": "The Process of Research Writing/Chapter One Thinking Critically About Research.pdf",
+   "sha256": "0172ccd84c83cb4d4c3f4f5785bf8d8826e1c4fb0d62e2d56598c78e611aad51",
+   "bytes": 592422,
+   "title": "Chapter One: Thinking Critically About Research",
+   "authors": "Krause, Steven D.",
+   "license": "CC BY-NC-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+   "source_url": "http://www.stevendkrause.com/tprw/chapter1.html",
+   "file_url": "http://www.stevendkrause.com/tprw/Chapter%201.pdf",
+   "catalog_ids": [
+    "krause-tprw-01-thinking-critically-about-research"
+   ]
+  },
+  {
+   "path": "The Process of Research Writing/Chapter Seven The Critique Exercise.pdf",
+   "sha256": "19dfc86c0a530be991bea6f44a7d8bad5303c83dba46408ab723d1e3a9e7c7eb",
+   "bytes": 307873,
+   "title": "Chapter Seven: The Critique Exercise",
+   "authors": "Krause, Steven D.",
+   "license": "CC BY-NC-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+   "source_url": "http://www.stevendkrause.com/tprw/chapter7.html",
+   "file_url": "http://www.stevendkrause.com/tprw/Chapter%207.pdf",
+   "catalog_ids": [
+    "krause-tprw-07-the-critique-exercise"
+   ]
+  },
+  {
+   "path": "The Process of Research Writing/Chapter Six The Annotated Bibliography Exercise.pdf",
+   "sha256": "20eba0583b2325839615f6968f502f7f42e2718ee3f8a5b4aaf5f3cc2b16fdd6",
+   "bytes": 241547,
+   "title": "Chapter Six: The Annotated Bibliography Exercise",
+   "authors": "Krause, Steven D.",
+   "license": "CC BY-NC-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+   "source_url": "http://www.stevendkrause.com/tprw/chapter6.html",
+   "file_url": "http://www.stevendkrause.com/tprw/Chapter%206.pdf",
+   "catalog_ids": [
+    "krause-tprw-06-the-annotated-bibliography-exercise"
+   ]
+  },
+  {
+   "path": "The Process of Research Writing/Chapter Ten The Research Essay.pdf",
+   "sha256": "2842f7d99611a31e5f2ed0d867af39d2776f4816ef17227cbc78421915e56373",
+   "bytes": 447604,
+   "title": "Chapter Ten: The Research Essay",
+   "authors": "Krause, Steven D.",
+   "license": "CC BY-NC-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+   "source_url": "http://www.stevendkrause.com/tprw/chapter10.html",
+   "file_url": "http://www.stevendkrause.com/tprw/Chapter%2010.pdf",
+   "catalog_ids": [
+    "krause-tprw-10-the-research-essay"
+   ]
+  },
+  {
+   "path": "The Process of Research Writing/Chapter Three Quoting, Paraphrasing, and Avoiding Plagiarism.pdf",
+   "sha256": "8fb9c540af88a4ea83a9bf49b2f588525d702d9921961fc6378fc4f840980ed8",
+   "bytes": 269874,
+   "title": "Chapter Three: Quoting, Paraphrasing, and Avoiding Plagiarism",
+   "authors": "Krause, Steven D.",
+   "license": "CC BY-NC-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+   "source_url": "http://www.stevendkrause.com/tprw/chapter3.html",
+   "file_url": "http://www.stevendkrause.com/tprw/Chapter%203.pdf",
+   "catalog_ids": [
+    "krause-tprw-03-quoting-paraphrasing-and-avoiding-plagiarism"
+   ]
+  },
+  {
+   "path": "The Process of Research Writing/Chapter Twelve Citing Your Research Using MLA or APA Style.pdf",
+   "sha256": "be9d977e4988fe213abdc9b611c58c54b5bbdcb053a254b03e6e5d0c4411c899",
+   "bytes": 448847,
+   "title": "Chapter Twelve: Citing Your Research Using MLA or APA Style",
+   "authors": "Krause, Steven D.",
+   "license": "CC BY-NC-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+   "source_url": "http://www.stevendkrause.com/tprw/chapter12.html",
+   "file_url": "http://www.stevendkrause.com/tprw/Chapter%2012.pdf",
+   "catalog_ids": [
+    "krause-tprw-12-citing-your-research-using-mla-or-apa-style"
+   ]
+  },
+  {
+   "path": "The Process of Research Writing/Chapter Two Understanding and Using the Library and the Internet for Research.pdf",
+   "sha256": "2aac132556db241f252f8ca00aa7aacef70a297fb0201bf440987d6c9f86e829",
+   "bytes": 672049,
+   "title": "Chapter Two: Understanding and Using the Library and the Internet for Research",
+   "authors": "Krause, Steven D.",
+   "license": "CC BY-NC-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+   "source_url": "http://www.stevendkrause.com/tprw/chapter2.html",
+   "file_url": "http://www.stevendkrause.com/tprw/Chapter%202.pdf",
+   "catalog_ids": [
+    "krause-tprw-02-understanding-and-using-the-library-and-the-i"
+   ]
+  },
+  {
+   "path": "The Process of Research Writing/Introduction Why Write Research Projects.pdf",
+   "sha256": "c24ad396d0b9fd74be3acbf573d9f47ef39c61f2b63b1e8c5a9f15aa5cb2db46",
+   "bytes": 232480,
+   "title": "Introduction: Why Write Research Projects?",
+   "authors": "Krause, Steven D.",
+   "license": "CC BY-NC-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+   "source_url": "http://www.stevendkrause.com/tprw/introduction.html",
+   "file_url": "http://www.stevendkrause.com/tprw/Introduction.pdf",
+   "catalog_ids": [
+    "krause-tprw-00-why-write-research-projects"
+   ]
+  },
+  {
+   "path": "Toronto Metropolitan University Pressbooks/Digital Accessibility as a Business Practice Essential Skills for Business Leaders.pdf",
+   "sha256": "2e80534386b72f280792cdb856ab8a81e88d3740d1780de02a3af000d221b1d7",
+   "bytes": 1540758,
+   "title": "Digital Accessibility as a Business Practice: Essential Skills for Business Leaders",
+   "authors": "Digital Education Strategies, The Chang School",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "source_url": "https://pressbooks.library.torontomu.ca/dabp/",
+   "file_url": "https://pressbooks.library.torontomu.ca/dabp/open/download?type=pdf",
+   "catalog_ids": [
+    "digital-accessibility-business-practice"
+   ]
+  },
+  {
+   "path": "Toronto Metropolitan University Pressbooks/Professional Web Accessibility Auditing Made Easy Essential Skills for Web Developers, Content Creators, and Designers.pdf",
+   "sha256": "4d09f56fe73606b46f3fd7506bfdb7b4bc99c060e1f82c03166cb4e3a919f957",
+   "bytes": 3267152,
+   "title": "Professional Web Accessibility Auditing Made Easy: Essential Skills for Web Developers, Content Creators, and Designers",
+   "authors": "Digital Education Strategies, The Chang School",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "source_url": "https://pressbooks.library.torontomu.ca/pwaa/",
+   "file_url": "https://pressbooks.library.torontomu.ca/pwaa/open/download?type=pdf",
+   "catalog_ids": [
+    "professional-web-accessibility-auditing"
+   ]
+  },
+  {
+   "path": "Toronto Metropolitan University Pressbooks/Understanding Document Accessibility A Reference for Creating Accessible Office Documents.pdf",
+   "sha256": "e980cc60b9e9966005df8910836d00c31ece2fe4539c803bee11baaf1f1dd660",
+   "bytes": 28583875,
+   "title": "Understanding Document Accessibility: A Reference for Creating Accessible Office Documents",
+   "authors": "Digital Education Strategies, The Chang School",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "source_url": "https://pressbooks.library.torontomu.ca/docs/",
+   "file_url": "https://pressbooks.library.torontomu.ca/docs/open/download?type=pdf",
+   "catalog_ids": [
+    "understanding-document-accessibility"
+   ]
+  },
+  {
+   "path": "Toronto Metropolitan University Pressbooks/Web Accessibility for Developers Essential Skills for Web Developers.pdf",
+   "sha256": "202712e92b74bed12017bb504d396ce152e27b9b83f7ffc231013f4386609b31",
+   "bytes": 1920587,
+   "title": "Web Accessibility for Developers: Essential Skills for Web Developers",
+   "authors": "Digital Education Strategies, The Chang School",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "source_url": "https://pressbooks.library.torontomu.ca/wafd/",
+   "file_url": "https://pressbooks.library.torontomu.ca/wafd/open/download?type=pdf",
+   "catalog_ids": [
+    "web-accessibility-for-developers"
+   ]
+  },
+  {
+   "path": "Writers Craft & Context/A Counterstory On Eating and Belonging.pdf",
+   "sha256": "53ce8b7e8f5fe34392d594e5a4fc301c99b7ad629542c67b7b169bc35236d7f2",
+   "bytes": 346350,
+   "title": "A Counterstory: On Eating and Belonging",
+   "authors": "Snell, Alaia",
+   "license": "CC BY-NC-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+   "source_url": "https://journals.shareok.org/writersccjournal/article/view/128",
+   "file_url": "https://journals.shareok.org/writersccjournal/article/download/128/73",
+   "catalog_ids": [
+    "wcc-2023-snell-counterstory-eating-belonging"
+   ]
+  },
+  {
+   "path": "Writers Craft & Context/For the Love of Writing Writing as a Form of (Self-) Love.pdf",
+   "sha256": "fe3b2dcf29beb8c3b8f8f01f36a24ceeb3d04008954faccdca631827ac12af9c",
+   "bytes": 372398,
+   "title": "For the Love of Writing: Writing as a Form of (Self-) Love",
+   "authors": "Kelenyi, Gabrielle Isabel",
+   "license": "CC BY-NC",
+   "license_url": "",
+   "source_url": "https://journals.shareok.org/writersccjournal/article/view/28",
+   "file_url": "https://journals.shareok.org/writersccjournal/article/download/28/18",
+   "catalog_ids": [
+    "wcc-2021-kelenyi-for-the-love-of-writing"
+   ]
+  },
+  {
+   "path": "Writers Craft & Context/On Becoming a Research Geek.pdf",
+   "sha256": "1e7523370bcf7cf3f7b8a34857e0f7fbd3f4735c1697173966c87ec5bc76d700",
+   "bytes": 1554982,
+   "title": "On Becoming a Research Geek",
+   "authors": "Schumacher, Paula",
+   "license": "CC BY-NC-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+   "source_url": "https://journals.shareok.org/writersccjournal/article/view/44",
+   "file_url": "https://journals.shareok.org/writersccjournal/article/download/44/25",
+   "catalog_ids": [
+    "wcc-2021-schumacher-becoming-research-geek"
+   ]
+  },
+  {
+   "path": "Writers Craft & Context/Refusing to Kill My Darlings.pdf",
+   "sha256": "c53a9d0938252c3abfc38857139aef6bdee184820ef07c5463fc26c10d943aa7",
+   "bytes": 305724,
+   "title": "Refusing to Kill My Darlings",
+   "authors": "Lebduska, Lisa",
+   "license": "CC BY-NC-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+   "source_url": "https://journals.shareok.org/writersccjournal/article/view/41",
+   "file_url": "https://journals.shareok.org/writersccjournal/article/download/41/24",
+   "catalog_ids": [
+    "wcc-2021-lebduska-refusing-to-kill-my-darlings"
+   ]
+  },
+  {
+   "path": "Writers Craft & Context/Teaching ChatGPT for Grant Writing An English Department Senior Capstone.pdf",
+   "sha256": "b00e8225892baa7e6aa40609db78f5935601f61bb143c3a867fd2b5ffe2641e4",
+   "bytes": 425205,
+   "title": "Teaching ChatGPT for Grant Writing: An English Department Senior Capstone",
+   "authors": "Kurlinkus, Will",
+   "license": "CC BY-NC-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+   "source_url": "https://journals.shareok.org/writersccjournal/article/view/125",
+   "file_url": "https://journals.shareok.org/writersccjournal/article/download/125/70",
+   "catalog_ids": [
+    "wcc-2023-kurlinkus-teaching-chatgpt-grant-writing"
+   ]
+  },
+  {
+   "path": "Writers Craft & Context/Writing While Black.pdf",
+   "sha256": "f2a72e57ce51c76e430d62af82d43f27981b7e7a31bf15ee6093455bb3296cd5",
+   "bytes": 409477,
+   "title": "Writing While Black",
+   "authors": "Keeton, Sarah",
+   "license": "CC BY-NC-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+   "source_url": "https://journals.shareok.org/writersccjournal/article/view/43",
+   "file_url": "https://journals.shareok.org/writersccjournal/article/download/43/26",
+   "catalog_ids": [
+    "wcc-2021-keeton-writing-while-black"
+   ]
+  },
+  {
+   "path": "Writing Spaces Readings on Writing, Volume 7 (in progress)/Reflecting on Literacy Identities Through Writing Personal Narratives.pdf",
+   "sha256": "556b568e7877318a111cdfc657a547b8249208d987c0c72cdc7ead692098b75b",
+   "bytes": 146729,
+   "title": "Reflecting on Literacy Identities Through Writing Personal Narratives",
+   "authors": "Li, Ruth",
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "source_url": "https://parlormultimedia.com/writingspaces/reflecting-on-literacy-identities-through-writing-personal-narratives/",
+   "file_url": "https://parlormultimedia.com/writingspaces/wp-content/uploads/2024/07/Li_Reflecting-on-literacy-identities-through-writing-personal-narratives.pdf",
+   "catalog_ids": [
+    "ws7-reflecting-literacy-identities-through-writing-personal-narratives"
+   ]
+  },
+  {
+   "path": "Writing Spaces Readings on Writing, Volume 7 (in progress)/Writing Counterstories Ways to Challenge Dominant Narratives in FYC.pdf",
+   "sha256": "74ba4e6281ac9852c8a0324152d8c8e2d2302f57809167fb00d7209c664f471a",
+   "bytes": 139395,
+   "title": "Writing Counterstories: Ways to Challenge Dominant Narratives in FYC",
+   "authors": "Sayed, Sana",
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "source_url": "https://parlormultimedia.com/writingspaces/writing-counterstories-ways-to-challenge-dominant-narratives-in-fyc/",
+   "file_url": "https://parlormultimedia.com/writingspaces/wp-content/uploads/2024/07/Sayed_Writing-counterstories.pdf",
+   "catalog_ids": [
+    "ws7-writing-counterstories-ways-challenge-dominant-narratives-fyc"
+   ]
+  },
+  {
+   "path": "Writing Spaces Readings on Writing, Volume 7 (in progress)/Writing as the World Falls Apart A Filipino Perspective on Academic Writing.pdf",
+   "sha256": "13f9d7bc3cf3e30611493758103b463d738c771e21339c4c8ff153534e7a8ccc",
+   "bytes": 223778,
+   "title": "Writing as the World Falls Apart: A Filipino Perspective on Academic Writing",
+   "authors": "Jimenez, Florianne; Salonga, Aileen",
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "source_url": "https://parlormultimedia.com/writingspaces/writing-as-the-world-falls-apart-a-filipino-perspectice-on-academic-writing/",
+   "file_url": "https://parlormultimedia.com/writingspaces/wp-content/uploads/2024/07/Jimenez-and-Salonga_Writing-as-the-world-falls-apart.pdf",
+   "catalog_ids": [
+    "ws7-writing-as-world-falls-apart-filipino-perspective"
+   ]
+  },
+  {
+   "path": "WritingSpaces.org; Parlor Press; The WAC Clearinghouse/Technical Writing Spaces Readings on Writing, Volume 6.pdf",
+   "sha256": "df3d51e4fdd31d2ffefd22dd724b127166505ea62e7b7203988e99020e98999c",
+   "bytes": 10848380,
+   "title": "Technical Writing Spaces: Readings on Writing, Volume 6",
+   "authors": "St.Amant, Kirk; Zemliansky, Pavel (eds.)",
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "source_url": "https://parlormultimedia.com/writingspaces/writing-spaces-volume-6/",
+   "file_url": "https://parlormultimedia.com/writingspaces/wp-content/uploads/2024/07/technical.pdf",
+   "catalog_ids": [
+    "writing-spaces-vol-6"
+   ]
+  },
+  {
+   "path": "WritingSpaces.org; Parlor Press; The WAC Clearinghouse/Writing Spaces Readings on Writing, Volume 1.pdf",
+   "sha256": "6f9cde20abce41bb2621fa187af63836ad5dc9f8ad012b71fed837647ea5225a",
+   "bytes": 2491877,
+   "title": "Writing Spaces: Readings on Writing, Volume 1",
+   "authors": "Lowe, Charles; Zemliansky, Pavel (eds.)",
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "source_url": "https://parlormultimedia.com/writingspaces/writing-spaces-volume-1/",
+   "file_url": "https://parlormultimedia.com/writingspaces/wp-content/uploads/2021/07/writing-spaces-readings-on-writing-vol-1.pdf",
+   "catalog_ids": [
+    "writing-spaces-vol-1"
+   ]
+  },
+  {
+   "path": "WritingSpaces.org; Parlor Press; The WAC Clearinghouse/Writing Spaces Readings on Writing, Volume 2.pdf",
+   "sha256": "b1021f5e77ba09d3ee0be72aae58a47e347317b1419296cdb2a06c4099ccc43f",
+   "bytes": 3001684,
+   "title": "Writing Spaces: Readings on Writing, Volume 2",
+   "authors": "Lowe, Charles; Zemliansky, Pavel (eds.)",
+   "license": "CC BY-NC-ND 3.0 US",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+   "source_url": "https://parlormultimedia.com/writingspaces/writing-spaces-volume-2/",
+   "file_url": "https://parlormultimedia.com/writingspaces/wp-content/uploads/2021/07/writing-spaces-readings-on-writing-vol-2.pdf",
+   "catalog_ids": [
+    "writing-spaces-vol-2"
+   ]
+  },
+  {
+   "path": "WritingSpaces.org; Parlor Press; The WAC Clearinghouse/Writing Spaces Readings on Writing, Volume 3.pdf",
+   "sha256": "901fdfda088a368e623b450004a12e325c939a025fd8312dde21f92c226322d1",
+   "bytes": 2826370,
+   "title": "Writing Spaces: Readings on Writing, Volume 3",
+   "authors": "Driscoll, Dana; Stewart, Mary; Vetter, Matthew (eds.)",
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "source_url": "https://parlormultimedia.com/writingspaces/volume-3/",
+   "file_url": "https://parlormultimedia.com/writingspaces/wp-content/uploads/2021/07/writingspaces3.pdf",
+   "catalog_ids": [
+    "writing-spaces-vol-3"
+   ]
+  },
+  {
+   "path": "WritingSpaces.org; Parlor Press; The WAC Clearinghouse/Writing Spaces Readings on Writing, Volume 4.pdf",
+   "sha256": "605162eed986161a9402b5da23ae1531382740c149d84a28fca0fdb2d50c71a9",
+   "bytes": 3805264,
+   "title": "Writing Spaces: Readings on Writing, Volume 4",
+   "authors": "Driscoll, Dana Lynn; Heise, Megan; Stewart, Mary K.; Vetter, Matthew (eds.)",
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "source_url": "https://parlormultimedia.com/writingspaces/writing-spaces-volume-4/",
+   "file_url": "https://parlormultimedia.com/writingspaces/wp-content/uploads/2021/09/writingspaces4.pdf",
+   "catalog_ids": [
+    "writing-spaces-vol-4"
+   ]
+  },
+  {
+   "path": "WritingSpaces.org; Parlor Press; The WAC Clearinghouse/Writing Spaces Readings on Writing, Volume 5.pdf",
+   "sha256": "8f9594ece0c372f968ff34110d0aa00915450bd438c9bf9cdafebe4b0196178b",
+   "bytes": 9871191,
+   "title": "Writing Spaces: Readings on Writing, Volume 5",
+   "authors": "Daniels-Lerberg, Trace; Driscoll, Dana; Stewart, Mary K.; Vetter, Matthew (eds.)",
+   "license": "CC BY-NC-ND 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "source_url": "https://parlormultimedia.com/writingspaces/writing-spaces-volume-5/",
+   "file_url": "https://parlormultimedia.com/writingspaces/wp-content/uploads/2023/09/WritingSpaces5.pdf",
+   "catalog_ids": [
+    "writing-spaces-vol-5"
+   ]
+  },
+  {
+   "path": "Yale University Press (free CC edition at thepublicdomain.org)/The Public Domain Enclosing the Commons of the Mind.pdf",
+   "sha256": "76d4630b692bb85785c4f4ae8e38b1a14282509a5be47369bbcf76282d20fbce",
+   "bytes": 1694231,
+   "title": "The Public Domain: Enclosing the Commons of the Mind",
+   "authors": "Boyle, James",
+   "license": "CC BY-NC-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+   "source_url": "https://www.thepublicdomain.org/download/",
+   "file_url": "https://thepublicdomain.org/thepublicdomain1.pdf",
+   "catalog_ids": [
+    "boyle-the-public-domain"
+   ]
+  }
+ ]
+}

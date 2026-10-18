@@ -6,12 +6,14 @@ Picks every reading that
   - isn't already in the maintainer's Drive corpus (from the private research/catalog/readings.json),
   - and whose PDF link checked out live (bot-gated, blocked, and dead links are skipped).
 
-Files land in <dest>/<collection>/<title>.pdf, and <dest>/_attributions.csv records title,
-author, source, and license for every file (TASL), which CC licenses require when copies are
-shared. Re-running skips files already downloaded.
+Files land in <dest>/<collection>/<title>.pdf. <dest>/manifest.json records title, author,
+source, license, checksum, and catalog ids for every file (the attribution CC licenses require
+when copies are shared), and <dest>/_attributions.csv repeats the credits for spreadsheet use.
+Re-running skips files already downloaded. Files over 95 MB are skipped (GitHub's limit is 100).
 
 Usage:
   python -I tools/mirror_pdfs.py --dry-run
+  python -I tools/mirror_pdfs.py --dest corpus/files/web
   python -I tools/mirror_pdfs.py --dest "G:/My Drive/Comp Textbook Readings/OA PDFs"
 """
 from __future__ import annotations
@@ -38,7 +40,7 @@ PRIVATE_CATALOG = ROOT / "research" / "catalog" / "readings.json"
 
 OK_TIERS = {"adapt", "adapt-nc", "verbatim"}
 OK_LINK = {"live", "redirected"}
-MAX_BYTES = 200 * 1024 * 1024
+MAX_BYTES = 95 * 1024 * 1024
 HOST_DELAY = 2.0
 USER_AGENT = "Aletheia-mirror/0.1 (open-access course reader project; polite single-threaded fetch)"
 
@@ -152,15 +154,23 @@ def main() -> None:
     if not dest:
         sys.exit("No destination: install Google Drive for Desktop or pass --dest.")
     dest.mkdir(parents=True, exist_ok=True)
-    manifest = json.loads(MANIFEST.read_text(encoding="utf-8")) if MANIFEST.exists() else {}
+    status_all = json.loads(MANIFEST.read_text(encoding="utf-8")) if MANIFEST.exists() else {}
+    manifest = status_all.setdefault(str(dest.resolve()), {})  # download status is per destination
     sess = requests.Session()
     sess.headers["User-Agent"] = USER_AGENT
     last_hit: dict[str, float] = {}
 
+    def save_status():
+        MANIFEST.write_text(json.dumps(status_all, indent=1), encoding="utf-8")
+
     for n, p in enumerate(picks[: args.limit or None], 1):
         folder = dest / safe_name(p["collection"], 80)
         path = folder / (safe_name(p["title"]) + ".pdf")
-        if path.exists() or manifest.get(p["url"], {}).get("status") == "ok":
+        if path.exists():
+            if manifest.get(p["url"], {}).get("status") != "ok":
+                data = path.read_bytes()
+                manifest[p["url"]] = {"status": "ok", "path": str(path.relative_to(dest)), "bytes": len(data),
+                                      "sha256": hashlib.sha256(data).hexdigest(), "ids": p["ids"]}
             continue
         folder.mkdir(parents=True, exist_ok=True)
         host = urlsplit(p["url"]).netloc
@@ -174,20 +184,37 @@ def main() -> None:
         last_hit[host] = time.time()
         manifest[p["url"]] = {"status": status, "path": str(path.relative_to(dest)), "bytes": size,
                               "sha256": digest, "ids": p["ids"]}
-        print(f"[{n}/{len(picks)}] {status:10s} {path.relative_to(dest)}")
+        print(f"[{n}/{len(picks)}] {status:10s} {path.relative_to(dest)}", flush=True)
         if n % 10 == 0:
-            MANIFEST.write_text(json.dumps(manifest, indent=1), encoding="utf-8")
-    MANIFEST.write_text(json.dumps(manifest, indent=1), encoding="utf-8")
+            save_status()
+    save_status()
 
+    entries = []
+    for p in picks:
+        m = manifest.get(p["url"], {})
+        if m.get("status") == "ok" and (dest / m["path"]).exists():
+            entries.append({
+                "path": Path(m["path"]).as_posix(), "sha256": m["sha256"], "bytes": m["bytes"],
+                "title": p["title"], "authors": p["authors"], "license": p["license"],
+                "license_url": p["license_url"], "source_url": p["landing_url"], "file_url": p["url"],
+                "catalog_ids": p["ids"],
+            })
+    entries.sort(key=lambda e: e["path"])
+    (dest / "manifest.json").write_text(json.dumps(
+        {"generated": time.strftime("%Y-%m-%d"), "source": "web", "files": entries}, indent=1, ensure_ascii=False),
+        encoding="utf-8")
     with (dest / "_attributions.csv").open("w", newline="", encoding="utf-8-sig") as fh:
         w = csv.writer(fh)
         w.writerow(["file", "title", "authors", "source", "license", "license_url"])
-        for p in picks:
-            m = manifest.get(p["url"], {})
-            if m.get("status") == "ok":
-                w.writerow([m["path"], p["title"], p["authors"], p["landing_url"], p["license"], p["license_url"]])
-    ok = sum(1 for m in manifest.values() if m.get("status") == "ok")
-    print(f"done: {ok} files in {dest}")
+        for e in entries:
+            w.writerow([e["path"], e["title"], e["authors"], e["source_url"], e["license"], e["license_url"]])
+    if dest.resolve().is_relative_to((ROOT / "corpus").resolve()):
+        # Inside the repo: allow only the files in the manifest (the root .gitignore ignores *.pdf).
+        allow = ["# Written by tools/mirror_pdfs.py. Only files listed in manifest.json can be committed.",
+                 "*", "!*/", "!.gitignore", "!manifest.json", "!_attributions.csv"]
+        allow += [f"!/{e['path']}" for e in entries]
+        (dest / ".gitignore").write_text("\n".join(allow) + "\n", encoding="utf-8")
+    print(f"done: {len(entries)} files in {dest}")
 
 
 if __name__ == "__main__":

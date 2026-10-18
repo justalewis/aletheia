@@ -14,6 +14,7 @@ Aletheia only redistributes what licenses allow. Every item carries one of four 
 | Path | What's there |
 |---|---|
 | `corpus/rhetcomp/` | The rhetoric and composition **corpus pack**: `pack.yaml` (focuses, reuse tiers, term presets), catalog records as JSON Lines, course outcomes, and sample arcs. A new discipline supplies its own pack with the same layout. |
+| `corpus/files/` | About 300 openly licensed PDFs, redistributed unchanged: `drive/` (from the maintainer's collection) and `web/` (mirrored from publishers). Each folder's `manifest.json` lists title, author, source, license, and checksum; `ATTRIBUTIONS.md` is the human-readable credit list. Only files listed in a manifest can be committed. |
 | `backend/` | Django + django-ninja API: catalog, term-scaling planner, builds, reader and cartridge exports. |
 | `frontend/` | React + TypeScript (Vite) app. |
 | `research/` | How the catalog was built: raw research records, link check results, cleanup overrides, infrastructure notes. |

@@ -11,3 +11,6 @@ tools
 .git
 *.md
 !frontend/README.md
+# Openly licensed PDFs (corpus/files/drive, corpus/files/web) live in the repo for the public
+# corpus, not in the app image (Justin, 2026-10-17). The corpus pack in corpus/rhetcomp/ still ships.
+corpus/files

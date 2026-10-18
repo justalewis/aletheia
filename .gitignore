@@ -7,6 +7,9 @@
 *.epub
 *.zip
 *.pptx
+*.xlsx
+# Justin's unzipped Drive download (includes commercial books and the catalog workbook)
+/Readings/
 
 # Python and tool leftovers
 __pycache__/
