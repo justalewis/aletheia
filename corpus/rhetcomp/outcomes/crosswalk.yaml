@@ -1,0 +1,293 @@
+# Crosswalk: catalog topic tags -> outcome framework codes.
+#
+# Aletheia uses this file to estimate which outcomes a reading or assignment can serve. Under each
+# code, catalog topics sit in three tiers:
+#   core     (0.8)   the topic is what the outcome is about
+#   strong   (0.5)   the topic usually serves the outcome
+#   related  (0.25)  the topic touches the outcome some of the time
+# An item's topic score for a code combines its matching topics so that each extra match adds less
+# than the one before: 1 - (1 - w1)(1 - w2)..., which stays below 1. One core topic gives 0.8, two
+# give 0.96, and a lone related topic gives 0.25.
+#
+# Sample arcs count for more than topics. When an arc puts an item in a unit whose `outcomes` list a
+# code, the item gets arc_core (core readings, major projects) or arc_optional (optional readings,
+# short-term versions, activities) on top of its topic score. A unit that lists more than arc_focus
+# codes spreads that weight across them (x arc_focus / number of codes), so a unit claiming five
+# outcomes says less about each one than a unit claiming two. Each further unit that uses the item
+# for the same code adds arc_extra (two at most). Arc weight counts in full once the item's own
+# topics agree (a topic score of at least `strong`); an item with no matching topic for the code
+# gets arc_unconfirmed of it, with a sliding scale in between. An item's stored score for a code is
+# its topic score plus its arc score.
+#
+# The builder's coverage view counts an item toward an outcome once its score reaches
+# map_threshold, so a lone related topic (0.25) is not enough and a lone strong topic (0.5) is.
+#
+# Topics must match the catalog vocabulary exactly, in lowercase. load_pack warns about topics that
+# no reading or assignment uses and about codes that frameworks.yaml doesn't define.
+
+weights:
+  core: 0.8
+  strong: 0.5
+  related: 0.25
+  arc_core: 1.5
+  arc_optional: 1.2
+  arc_focus: 3
+  arc_extra: 0.15
+  arc_unconfirmed: 0.5
+  map_threshold: 0.5
+
+codes:
+
+  # ---------------------------------------------------------------- WPA Outcomes Statement 3.0
+
+  "wpa:rhetorical-knowledge":
+    core: [audience, audience analysis, rhetorical situation, rhetorical analysis, rhetorical appeals,
+      kairos, ethos, pathos, logos, ethos pathos logos, discourse community, purpose, rhetorical canons,
+      stasis theory, rhetorical vocabulary, assignment analysis]
+    strong: [genre, genre analysis, genre awareness, genre conventions, rhetorical genre studies,
+      persuasion, persuasive writing, multimodal argument, proposal argument, op-ed, multimodal,
+      visual rhetoric, digital rhetoric, rhetoric, rhetorical theory, classical rhetoric, sophists,
+      public writing, civic engagement, civic rhetoric, delivery, style, voice, stance,
+      intercultural communication, global audiences, cultural rhetorics, cultural rhetoric, speeches,
+      public speaking, enthymeme, context, audience agency, non-expert audiences,
+      reader-centered writing]
+    related: [argument, digital writing, social media, writing for the web, web writing,
+      document design, podcasting, podcast, video, sound, audio, remix, remediation,
+      science communication, health communication, risk communication, public memory,
+      protest rhetoric, environmental rhetoric, feminist rhetorics, african american rhetorics,
+      african american rhetoric, indigenous rhetorics, chicanx and latinx rhetorics,
+      asian american rhetorics, queer rhetorics, decolonial, relationality, counterstory,
+      storytelling, narrative, personal narrative, literacy narrative, description,
+      informative writing, writing in the disciplines, presentations, presentation,
+      oral presentation, deliberation, listening, spatial rhetoric, procedural rhetoric,
+      visual storytelling, circulation, comics, photo essay, accessibility, community engagement,
+      writing about writing]
+
+  "wpa:critical-thinking-reading-composing":
+    core: [reading strategies, critical thinking, critical reading, close reading, rhetorical reading,
+      reading academic texts, reading scientific literature, reading comprehension,
+      reading-writing connection, reading, annotation, synthesis, source evaluation, evidence,
+      evaluating claims, summary, summary and response, summarization, critical review,
+      textual analysis, critical analysis, analysis, logical fallacies, source integration,
+      writing from sources]
+    strong: [argument, counterargument, thesis, rhetorical analysis, research, primary research,
+      annotated bibliography, literature review, information literacy, research question,
+      misinformation, media literacy, quoting and paraphrasing, paraphrase, quotation,
+      causal analysis, cause and effect, comparison, comparison and contrast, literary analysis,
+      article analysis, film analysis, style analysis, reading response, response papers,
+      lateral reading, fact checking, cognitive bias, confirmation bias, evaluation, visual literacy,
+      data literacy, argument mapping, critical literacy]
+    related: [multimodal, visual rhetoric, rhetorical appeals, interviews, observation,
+      data visualization, research essay, scholarly sources, popular sources, definition, inquiry,
+      exploratory essay, investigative essay, analytical essay, critical ai literacy,
+      proposal argument]
+
+  "wpa:processes":
+    core: [writing process, process, revision, drafting, invention, brainstorming, freewriting,
+      peer review, peer critique, feedback, reflection, metacognition, editing, self-editing,
+      collaboration, collaborative writing, writing habits, reverse outline, outline]
+    strong: [transfer, research process, low-stakes writing, writing to learn, write to learn,
+      portfolio, eportfolio, online portfolio, self-assessment, self-evaluation, response to writing,
+      tutoring, peer tutoring, writing centers, writing center, iteration, mind mapping,
+      concept mapping, topic development, research log, labor logs, productive failure, failure,
+      sentence-level editing, writing advice, self-regulated learning]
+    related: [writing identity, literacy narrative, ai and writing, design thinking,
+      project management, technical editing, team project, threshold concepts,
+      writing about writing, research question, prompt iteration, dispositions, self-efficacy,
+      writing life]
+
+  "wpa:knowledge-of-conventions":
+    core: [genre, genre conventions, genre analysis, genre guide, citation, citation practices, grammar,
+      punctuation, style, paragraphs, paragraphing, organization, introductions and conclusions,
+      mla, apa, chicago, plagiarism, academic integrity, quoting and paraphrasing, copyright,
+      copyright and fair use, fair use, intellectual property, academic style, style guides,
+      document design, clear sentences, active voice]
+    strong: [language diversity, translingualism, translanguaging,
+      "students' right to their own language", code meshing, multilingual writers, world englishes,
+      linguistic justice, academic writing, academic genres, disciplinary genres,
+      writing in the disciplines, imrad, lab reports, research articles, scientific writing,
+      technical editing, editing, thesis, annotated bibliography, abstracts, abstract,
+      creative commons, citation generators, citation management, bibliography, attribution,
+      paraphrase, quotation, source integration, memos, email, letters, reports, resumes,
+      cover letters, encyclopedic style]
+    related: [literature review, proposals, instructions, presentations, posters, infographics,
+      writing for the web, visual design, typography, readability, remix, sentence-level editing,
+      inclusive language, language ideology, critical language awareness, plain language,
+      narrative, description, informative writing, definition, op-ed, thesis writing, multimodal]
+
+  # ---------------------------------------------------------------- ACRL Framework
+
+  "acrl:authority":
+    core: [source evaluation, source credibility, authority, lateral reading, fact checking,
+      evaluating claims, news evaluation, news literacy, media literacy, misinformation, fake news,
+      post-truth, pseudoscience, craap, four moves, source tracing, source investigation, bias,
+      expertise, scholarly sources, popular sources]
+    strong: [information literacy, critical information literacy, cognitive bias, confirmation bias,
+      propaganda, wikipedia, wikipedia editing, neutral point of view, critical ai literacy,
+      ai literacy, hallucination, news, journalistic standards, positionality,
+      peer review (scientific), algorithmic bias, health information, online information,
+      source types, media coverage, multiple perspectives]
+    related: [evidence, ethos, science communication, popular science, health communication,
+      critical thinking, research, social media, ai and writing, digital literacy,
+      digital media literacy, perspective]
+
+  "acrl:creation-process":
+    core: [information creation, source types, peer review (scientific), scientific publishing,
+      scholarly publishing, scholarly publication, writing for publication, manuscript review,
+      research articles, research article, primary research articles, scholarly article,
+      scholarly articles, popular science, popular science writing, science journalism,
+      digital publishing, publishing tools]
+    strong: [information literacy, scholarly sources, popular sources, news, journalism,
+      remediation, science communication, wikipedia editing, wikipedia, edit-a-thon, imrad,
+      abstracts, lay summary, primary sources, text generation, text generators, image generation,
+      how llms work, llm mechanics, language models, undergraduate research]
+    related: [ai and writing, genre, multimodal, podcasting, video, data visualization, infographics,
+      open educational resources, digital preservation, digital archives, misinformation,
+      social media, chatgpt, chatbots]
+
+  "acrl:information-value":
+    core: [copyright, copyright and fair use, fair use, copyleft, intellectual property, plagiarism,
+      creative commons, privacy, open educational resources, zero textbook cost, open textbook,
+      open pedagogy, open web, academic integrity, ai disclosure, information has value,
+      attribution, citational justice, knowledge equity, terms of service, attention economy,
+      information appropriation]
+    strong: [citation, citation practices, remix, quoting and paraphrasing, mla, apa, chicago,
+      paraphrase, quotation, propaganda, algorithms, filter bubbles, surveillance,
+      digital surveillance, advertising, data literacy, wikipedia, content gaps, authorship,
+      text recycling, digital capital]
+    related: [ai and writing, image generation, text generation, information literacy,
+      digital publishing, social media, misinformation, platforms, dark patterns, gatekeeping,
+      critical information literacy, algorithmic accountability]
+
+  "acrl:research-inquiry":
+    core: [research question, research questions, inquiry, research as inquiry, primary research,
+      research methods, research process, research proposal, prospectus, research plan,
+      background research, research topic selection, research project, research essay,
+      research paper, researched essay, research writing, undergraduate research,
+      topic development, interviews, interview, surveys, survey research, survey design,
+      observation, archival research, archives, ethnography, autoethnography, empirical research,
+      qualitative research, action research, research]
+    strong: [invention, case study, research ethics, informed consent, irb, primary sources,
+      place-based, place-based writing, local research, informational interview,
+      writing about writing, discourse community, user research, data analysis, literature review,
+      exploratory essay, investigative essay, disciplinary inquiry, group research,
+      collaborative research]
+    related: [synthesis, information literacy, critical thinking, annotated bibliography, science,
+      research report, research matrix, wicked problems, controversy, current events]
+
+  "acrl:scholarship-conversation":
+    core: [scholarly conversation, synthesis, literature review, annotated bibliography,
+      source integration, source use, writing from sources, beam, research matrix,
+      citation chasing, citation chaining, citation mapping, scholarly discourse,
+      academic discourse, intertextuality, counterargument, multiple perspectives]
+    strong: [citation, citation practices, citational justice, quoting and paraphrasing, paraphrase,
+      quotation, summary, academic writing, writing in the disciplines, discourse community,
+      scholarly sources, scholarly articles, scholarly article, research articles,
+      peer review (scientific), argument, deliberation, evidence, abstracts, wikipedia editing,
+      wikipedia, conference paper]
+    related: [research, academic style, disciplinary genres, writing about writing,
+      response to writing, stance, positionality, manuscript review, writing for publication,
+      thesis writing, graduate writing, debate]
+
+  "acrl:searching-strategic":
+    core: [search strategies, keywords, databases, search engines, search tools, library research,
+      library resources, finding sources, information needs, reference interview,
+      reference sources, research process, research log]
+    strong: [information literacy, research, research question, research questions, research matrix,
+      archival research, primary sources, algorithms, filter bubbles, search engine optimization,
+      google, wikipedia, scholarly sources, popular sources, source types, curation,
+      lateral reading, fact checking, research methods, background research, citation chasing,
+      citation chaining, digital archives, critical cataloging, knowledge organization]
+    related: [annotated bibliography, topic development, ai and writing, notebooklm, data literacy,
+      citation management, zotero]
+
+  # ---------------------------------------------------------------- Aletheia tech comm categories
+
+  "tc:audience-purpose":
+    core: [audience, audience analysis, rhetorical situation, purpose, personas, non-expert audiences,
+      reader-centered writing, global audiences, intercultural communication]
+    strong: [plain language, technical communication, localization, translation, user research,
+      rhetorical analysis, persuasion, professional correspondence, workplace writing,
+      workplace communication, science communication, health communication, risk communication,
+      crisis communication, lay summary, context, audience agency]
+    related: [genre, ux, user experience, presentations, email, memos, proposals, technical writing,
+      content strategy]
+
+  "tc:genres-documents":
+    core: [reports, report, memos, memo, email, technical email, letters, proposals, proposal,
+      instructions, procedures, procedural writing, documentation, software documentation,
+      process documentation, api documentation, tutorials, manuals, resumes, resume,
+      cover letters, cover letter, job search, employment writing, recommendation reports,
+      feasibility reports, feasibility report, progress reports, progress report, grant writing,
+      grant, business correspondence, professional correspondence, workplace correspondence,
+      business writing, definitions and descriptions, technical definitions, expanded definition,
+      lab reports, white paper, policy brief, meeting minutes, professional bio, bio,
+      analytical report, research report, team report, technical writing, workplace writing]
+    strong: [genre, genre analysis, structured authoring, elevator pitch, pitch, case study,
+      presentations, presentation, oral presentation, posters, poster, legal writing, tax memo,
+      nonprofit writing, mission statements, linkedin, job interview, test script, definition,
+      description, classification, technical communication]
+    related: [abstracts, infographics, slide design, imrad, scientific writing,
+      engineering communication, engineering writing, medical writing]
+
+  "tc:design-visual":
+    core: [document design, visual rhetoric, data visualization, graphics, infographics, infographic,
+      information design, visual design, typography, posters, poster, technical illustration,
+      illustration, slide design, charts, figures, color, color contrast, accessible visuals,
+      alt text, lists and tables, misleading graphs, visuals and text, visual storytelling]
+    strong: [information architecture, design, readability, presentations, web design,
+      interaction design, multimodal, visual literacy, organizing large documents, maps, prototype,
+      prototyping]
+    related: [design thinking, video, comics, writing for the web, ux, user experience,
+      digital writing, universal design]
+
+  "tc:research-usability":
+    core: [usability, usability testing, user research, ux, user experience, ux and usability,
+      personas, interaction design, prototyping, prototype, participatory design,
+      interface analysis]
+    strong: [interviews, surveys, survey design, design thinking, observation,
+      information architecture, research methods, informational interview, audit, metrics,
+      writing analytics, test script]
+    related: [audience analysis, content strategy, research, primary research, data analysis,
+      qualitative research, empirical research, accessibility, research ethics, universal design]
+
+  "tc:collaboration":
+    core: [collaboration, collaborative writing, team project, teamwork, project management,
+      team report, team presentation, group research, collaborative research]
+    strong: [peer review, peer critique, community engagement, service learning, client project,
+      participatory design, leadership communication, organizational communication,
+      meeting minutes, community writing]
+    related: [feedback, peer tutoring, tutoring, writing centers, wiki, edit-a-thon,
+      wikipedia editing, progress reports]
+
+  "tc:ethics-accessibility":
+    core: [ethics, accessibility, disability, disability studies, social justice, inclusion,
+      inclusive language, inclusive communication, universal design, universal design for learning,
+      accessible visuals, alt text, color contrast, neurodiversity, research ethics,
+      business ethics, responsible ai, algorithmic bias, privacy, dark patterns]
+    strong: [plain language, informed consent, irb, intercultural communication, health equity,
+      social bias, gender bias, linguistic bias, linguistic justice, algorithmic accountability,
+      algorithmic auditing, surveillance, digital surveillance, risk communication,
+      environmental justice, antiracism, language diversity]
+    related: [localization, health communication, crisis communication, ai and writing,
+      social change, activism, advocacy, copyright, intellectual property, workplace policy,
+      governance]
+
+  "tc:technology-tools":
+    core: [docs-as-code, docs as code, structured authoring, markdown, openapi, rest apis,
+      api documentation, sample code, computer code, publishing tools, technology,
+      writing technologies, text technology, prompt engineering, prompting, prompt design]
+    strong: [ai and writing, text generation, image generation, chatgpt, notebooklm, language models,
+      how llms work, llm mechanics, chatbots, bots, tool evaluation, writing for the web,
+      web writing, web design, digital writing, digital publishing, content strategy,
+      information architecture, search engine optimization, digital literacy, google colab]
+    related: [social media, video, podcasting, sound, data visualization, digital rhetoric,
+      virtual reality, makerspace, digital fabrication, critical making, platforms, transcription,
+      localization, zotero, citation management]
+
+  "tc:editing-style":
+    core: [technical editing, editing, self-editing, sentence-level editing, style, plain language,
+      grammar, punctuation, readability, clear sentences, active voice, style guides]
+    strong: [inclusive language, encyclopedic style, lists and tables, translation, localization,
+      style analysis, voice, paragraphs, organization, content strategy]
+    related: [academic style, revision, feedback, peer review]
