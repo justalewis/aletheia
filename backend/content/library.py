@@ -34,6 +34,31 @@ def url_tail(url: str, segments: int) -> str:
     return "/".join(parts[-segments:]) if len(parts) >= segments else ""
 
 
+@dataclass(frozen=True)
+class ManifestRow:
+    path: str            # relative to the manifest's folder
+    ids: tuple           # catalog ids; more than one means a whole-book PDF
+    source_url: str = ""
+    sha256: str = ""
+    size: int | None = None
+
+
+def manifest_rows(root: Path) -> list[ManifestRow]:
+    """The files a folder's manifest.json lists, whichever shape it has (see the module docstring)."""
+    mf = Path(root) / "manifest.json"
+    if not mf.exists():
+        return []
+    data = json.loads(mf.read_text(encoding="utf-8"))
+    if isinstance(data, dict) and isinstance(data.get("files"), list):
+        return [ManifestRow(f.get("path", ""), tuple(f.get("catalog_ids") or []),
+                            f.get("source_url") or f.get("file_url") or "", f.get("sha256", ""), f.get("bytes"))
+                for f in data["files"] if isinstance(f, dict)]
+    if isinstance(data, dict):
+        return [ManifestRow(v.get("path", ""), tuple(v.get("ids") or []), url, v.get("sha256", ""), v.get("bytes"))
+                for url, v in data.items() if isinstance(v, dict) and v.get("status", "ok") == "ok"]
+    return []
+
+
 class PdfLibrary:
     def __init__(self, folders: list[Path]):
         self.folders = [Path(f) for f in folders if Path(f).is_dir()]
@@ -56,28 +81,16 @@ class PdfLibrary:
                 self.by_name.setdefault(rel.name, []).append(pdf)
 
     def _load_manifest(self, root: Path) -> None:
-        mf = root / "manifest.json"
-        if not mf.exists():
-            return
-        data = json.loads(mf.read_text(encoding="utf-8"))
-        if isinstance(data, dict) and isinstance(data.get("files"), list):
-            rows = [(f.get("path", ""), f.get("catalog_ids") or [], f.get("source_url") or f.get("file_url") or "")
-                    for f in data["files"]]
-        elif isinstance(data, dict):
-            rows = [(v.get("path", ""), v.get("ids") or [], url) for url, v in data.items()
-                    if isinstance(v, dict) and v.get("status", "ok") == "ok"]
-        else:
-            return
-        for path, ids, source in rows:
-            p = root / path
-            if not path or not p.is_file():
+        for row in manifest_rows(root):
+            p = root / row.path
+            if not row.path or not p.is_file():
                 continue
-            if len(ids) == 1:
-                self.by_id[ids[0]] = LocalPdf(p, root, source, "manifest")
+            if len(row.ids) == 1:
+                self.by_id[row.ids[0]] = LocalPdf(p, root, row.source_url, "manifest")
             else:
                 self.shared_paths.add(p)
-                for i in ids:
-                    self.shared.setdefault(i, path)
+                for i in row.ids:
+                    self.shared.setdefault(i, row.path)
 
     def find(self, reading_id: str, pdf_url: str = "", ambiguous_names: frozenset = frozenset()) -> LocalPdf | None:
         if reading_id in self.by_id:

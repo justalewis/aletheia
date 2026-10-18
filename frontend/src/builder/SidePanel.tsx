@@ -4,11 +4,20 @@ import { ErrorMessage, Loading } from "../components/Status";
 import { TierBadge } from "../components/TierBadge";
 import { selectedIds, unitBudget, unitPages } from "./model";
 
-type ExportKind = "html" | "pdf" | "imscc-canvas" | "imscc-standard" | "ics" | "docx";
+type ExportKind = "html" | "pdf" | "pdf-print" | "imscc-canvas" | "imscc-standard" | "ics" | "docx";
 
 const EXPORTS: { kind: ExportKind; label: string; help: string }[] = [
   { kind: "html", label: "Reader (HTML)", help: "One web page with every reading and its credit line." },
-  { kind: "pdf", label: "Reader (PDF)", help: "The same reader as a PDF for printing or posting." },
+  {
+    kind: "pdf",
+    label: "Reader PDF (accessible)",
+    help: "Tagged for screen readers. Readings that exist only as PDFs are linked.",
+  },
+  {
+    kind: "pdf-print",
+    label: "Reader PDF (print, original page images)",
+    help: "Publisher PDFs inserted page for page, as published. Not tagged for screen readers.",
+  },
   {
     kind: "imscc-canvas",
     label: "Canvas package (.imscc)",
@@ -102,7 +111,7 @@ export function SidePanel({ state, briefVersion }: { state: BuildState; briefVer
     } catch (e) {
       const err = e as ApiError;
       const msg =
-        kind === "pdf" && err.status === 501
+        (kind === "pdf" || kind === "pdf-print") && err.status === 501
           ? {
               text: "PDF export isn't set up on this server yet. Download the HTML reader and use your browser's Print to PDF instead.",
               tone: "warn" as const,

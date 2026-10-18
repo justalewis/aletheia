@@ -6,13 +6,24 @@ primary_region = "sjc"
   dockerfile = "Dockerfile"
 
 [deploy]
-  # Runs once per deploy in a temporary machine: apply migrations, then reload the corpus pack.
-  release_command = "sh -c 'python manage.py migrate --noinput && python manage.py load_pack rhetcomp'"
+  # Runs once per deploy in a temporary machine (no volume attached): apply migrations, make the
+  # cache table the rate limits use, then reload the corpus pack.
+  release_command = "sh -c 'python manage.py migrate --noinput && python manage.py createcachetable && python manage.py load_pack rhetcomp'"
 
 [env]
   DJANGO_DEBUG = "0"
   DJANGO_ALLOWED_HOSTS = "aletheia-oer.fly.dev"
   DJANGO_CSRF_ORIGINS = "https://aletheia-oer.fly.dev"
+  # Full text of readings lives on the volume below, so it survives deploys and restarts.
+  ALETHEIA_CONTENT_CACHE = "/data/content_cache"
+  # warm_content fetches corpus/files PDFs (left out of the image) from the public repo.
+  ALETHEIA_PDF_BASE_URL = "https://raw.githubusercontent.com/justalewis/aletheia/main/corpus/files/"
+
+# One volume per machine. Create it before the first deploy with this section:
+#   flyctl volumes create aletheia_cache --region sjc --size 1 -a aletheia-oer
+[mounts]
+  source = "aletheia_cache"
+  destination = "/data"
 
 [http_service]
   internal_port = 8000

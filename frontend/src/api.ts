@@ -480,11 +480,16 @@ export const api = {
     }),
 
   /** POST the state to an export endpoint and return the file. */
-  exportFile: async (kind: "html" | "pdf" | "imscc-canvas" | "imscc-standard" | "ics" | "docx", state: BuildState) => {
+  exportFile: async (
+    kind: "html" | "pdf" | "pdf-print" | "imscc-canvas" | "imscc-standard" | "ics" | "docx",
+    state: BuildState,
+  ) => {
     const path =
-      kind === "html" || kind === "pdf" || kind === "ics" || kind === "docx"
+      kind === "html" || kind === "ics" || kind === "docx"
         ? `/export/${kind}`
-        : `/export/imscc?flavor=${kind === "imscc-standard" ? "standard" : "canvas"}`;
+        : kind === "pdf" || kind === "pdf-print"
+          ? `/export/pdf?variant=${kind === "pdf" ? "accessible" : "print"}`
+          : `/export/imscc?flavor=${kind === "imscc-standard" ? "standard" : "canvas"}`;
     const res = await send(path, { method: "POST", body: { state }, headers: { Accept: "*/*" } });
     const blob = await res.blob();
     return { blob, filename: filenameFrom(res.headers.get("Content-Disposition")) ?? fallbackName(kind) };
@@ -504,6 +509,7 @@ function fallbackName(kind: string): string {
   if (kind === "pdf") return "course-reader.pdf";
   if (kind === "ics") return "course-calendar.ics";
   if (kind === "docx") return "course-syllabus.docx";
+  if (kind === "pdf-print") return "course-reader-print.pdf";
   return kind === "imscc-standard" ? "course-reader-standard.imscc" : "course-reader.imscc";
 }
 

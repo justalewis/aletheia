@@ -176,7 +176,7 @@ def test_pdf_export_with_weasyprint(cached):
         import weasyprint  # noqa: F401
     except (ImportError, OSError):
         pytest.skip("WeasyPrint and Pango aren't installed here; run in the Docker image")
-    resp = Client().post("/api/export/pdf", {"state": state(*ALL, units=2)}, content_type="application/json")
+    resp = Client().post("/api/export/pdf?variant=print", {"state": state(*ALL, units=2)}, content_type="application/json")
     assert resp.status_code == 200 and resp.content.startswith(b"%PDF-")
     pdf = PdfReader(io.BytesIO(resp.content))
     text = "\n".join(p.extract_text() for p in pdf.pages)

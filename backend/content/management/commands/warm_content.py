@@ -6,6 +6,7 @@
     python manage.py warm_content --pdf-dir "D:/WAC PDFs"   # extra folder of PDFs (repeatable)
     python manage.py warm_content --offline            # local PDFs only, no network
     python manage.py warm_content --refresh            # re-fetch readings already cached
+    python manage.py warm_content --pdf-base-url ""    # don't fetch missing corpus PDFs from the repo
 
 Readings already cached are kept unless --refresh. The run writes _report.json in the cache
 and, for PDFs behind a bot check, needs_pdf.csv: download those in a browser, save each as
@@ -22,6 +23,7 @@ from django.core.management.base import BaseCommand, CommandError
 from catalog.models import Reading
 from content.fetch import Client
 from content.library import PdfLibrary
+from content.repo_pdfs import RepoPdfs
 from content.store import ContentStore
 from content.warm import Warmer, reading_ids_in_arcs, summarize
 
@@ -41,8 +43,11 @@ class Command(BaseCommand):
         parser.add_argument("--refresh", action="store_true", help="re-fetch readings already cached")
         parser.add_argument("--no-images", action="store_true", help="don't download images for HTML readings")
         parser.add_argument("--delay", type=float, default=2.0, help="seconds between requests to one host")
+        parser.add_argument("--pdf-base-url", default=None,
+                            help="where to fetch corpus/files PDFs the disk doesn't have "
+                                 "(default: settings.CONTENT_PDF_BASE_URL; empty turns it off)")
 
-    def handle(self, *args, pack, arc, ids, pdf_dir, offline, refresh, no_images, delay, **opts):
+    def handle(self, *args, pack, arc, ids, pdf_dir, offline, refresh, no_images, delay, pdf_base_url, **opts):
         if ids:
             wanted = list(dict.fromkeys(ids))
         else:
@@ -61,10 +66,14 @@ class Command(BaseCommand):
 
         store = ContentStore()
         library = PdfLibrary(list(pdf_dir) + list(settings.CONTENT_PDF_DIRS))
+        base_url = settings.CONTENT_PDF_BASE_URL if pdf_base_url is None else pdf_base_url
+        repo = RepoPdfs(base_url, list(settings.CONTENT_PDF_DIRS), Path(settings.CORPUS_DIR) / "files")
         warmer = Warmer(store, Client(delay=delay), library, offline=offline, images=not no_images,
-                        log=lambda m: self.stdout.write(m))
+                        log=lambda m: self.stdout.write(m), repo=repo)
         warmer.prepare(readings, list(Reading.objects.exclude(pdf_url="").values_list("pdf_url", flat=True)))
         self.stdout.write(f"{len(readings)} readings; PDF folders: {[str(f) for f in library.folders] or 'none'}")
+        if len(repo) and not offline:
+            self.stdout.write(f"{len(repo)} corpus PDFs aren't on disk; fetching any needed from {repo.base_url}")
 
         outcomes = []
         for n, r in enumerate(_by_host(readings), 1):

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{ title }}</title>
+{% if instructor %}<meta name="author" content="{{ instructor }}">{% endif %}
+<meta name="description" content="Course reader: {{ readings|length }} reading{{ readings|length|pluralize }}, {{ assignments|length }} assignment{{ assignments|length|pluralize }}">
+<meta name="generator" content="Aletheia">
+<style>
+{% include "builder/reader.css" %}
+  body { font-size: 10.5pt; }
+  main { max-width: none; padding: 0; }
+  h1, h3, h5, h6 { bookmark-level: none; }
+  h2 { bookmark-level: 1; break-before: page; border-top: 0; margin-top: 0; padding-top: 0; }
+  h4 { bookmark-level: none; }
+  article.reading > h4 { bookmark-level: 2; }
+  .item { break-inside: avoid; }
+  .item.full { break-inside: auto; }
+  .fulltext img, .fulltext figure, .fulltext tr { break-inside: avoid; }
+  .links a::after { content: " <" attr(href) ">"; font-size: 8pt; word-break: break-all; }
+  .cover { border: 0; padding-top: 2.5in; }
+  .cover h1 { font-size: 2.6rem; }
+  ol.toc { list-style: none; padding: 0; }
+  ol.toc > li { margin: .7rem 0 .2rem; font-weight: bold; }
+  ol.toc ol { list-style: none; padding-left: 1.2rem; margin: .2rem 0; font-weight: normal; }
+  ol.toc a { color: var(--ink); text-decoration: none; }
+  ol.toc a::after { content: leader(".") target-counter(attr(href), page); }
+  @page { size: letter; margin: 0.9in 0.85in;
+          @bottom-center { content: counter(page); font: 9pt system-ui, sans-serif; color: #5b5b66; } }
+  @page :first { @bottom-center { content: none; } }
+</style>
+</head>
+<body>
+<main>
+  <section class="cover">
+    <h1>{{ title }}</h1>
+    {% if instructor %}<p>{{ instructor }}</p>{% endif %}
+    {% if institution or term_label %}<p>{{ institution }}{% if institution and term_label %} · {% endif %}{{ term_label }}</p>{% endif %}
+    <p>Course reader · {{ readings|length }} reading{{ readings|length|pluralize }}, {{ assignments|length }} assignment{{ assignments|length|pluralize }}</p>
+  </section>
+
+  <nav aria-labelledby="contents">
+    <h2 id="contents">Contents</h2>
+    <ol class="toc">
+      {% for t in toc %}
+      <li><a href="#{{ t.anchor }}">{{ t.title }}{% if t.weeks %} ({{ t.weeks }}){% endif %}</a>
+        {% if t.items %}<ol>{% for it in t.items %}<li><a href="#{{ it.anchor }}">{{ it.title }}</a></li>{% endfor %}</ol>{% endif %}
+      </li>
+      {% endfor %}
+      <li><a href="#licenses">Licenses and credits</a></li>
+    </ol>
+  </nav>
+
+  {% for u in units %}
+  <section class="unit">
+    <h2 id="unit-{{ forloop.counter }}">{{ u.title }}</h2>
+    {% if u.weeks_label %}<p class="weeks">{{ u.weeks_label }}</p>{% endif %}
+    {% if u.goals %}<ul class="goals">{% for g in u.goals %}<li>{{ g }}</li>{% endfor %}</ul>{% endif %}
+
+    {% if u.readings %}
+    <h3>Readings</h3>
+    {% for r in u.readings %}
+    <article class="item reading{% if r.fulltext.mode == 'html' %} full{% endif %}" id="u{{ forloop.parentloop.counter }}-r{{ forloop.counter }}">
+      <h4 class="t">{{ r.title }}</h4>
+      <div class="meta">{% if r.authors %}{{ r.authors }}{% endif %}{% if r.parent_title %} · {{ r.parent_title }}{% endif %}{% if r.pages %} · {{ r.pages }} pp.{% endif %}</div>
+      {% if r.summary %}<p class="summary">{{ r.summary }}</p>{% endif %}
+      <p class="credit"><span class="chip">{{ r.get_reuse_tier_display }}</span>{{ r.credit }}{% if r.license_url %} License: <a href="{{ r.license_url }}">{{ r.license_url }}</a>{% endif %}</p>
+      {% if r.fulltext.mode == "html" %}
+      <div class="fulltext">
+{{ r.fulltext.html|safe }}
+      </div>
+      <p class="source">Text from <a href="{{ r.fulltext.source_page }}">{{ r.fulltext.source_host }}</a>, copied {{ r.fulltext.fetched }}.{% if r.fulltext.note %} {{ r.fulltext.note }}{% endif %}</p>
+      {% else %}
+      <div class="links">
+        {% if r.html_url %}<a href="{{ r.html_url }}">Read online</a>{% elif r.landing_url %}<a href="{{ r.landing_url }}">Read online</a>{% endif %}
+        {% if r.pdf_url and r.redistributable %}<a href="{{ r.pdf_url }}">PDF</a>{% endif %}
+      </div>
+      {% if r.fulltext.mode == "pdf" %}<p class="note">{{ pdf_only_note }}</p>{% endif %}
+      {% endif %}
+    </article>
+    {% endfor %}
+    {% endif %}
+
+    {% if u.assignments %}
+    <h3>Assignments and activities</h3>
+    {% for a in u.assignments %}
+    <div class="item">
+      <h4 class="t">{{ a.title }}</h4>
+      <div class="meta">{{ a.kind|capfirst }}{% if a.assignment_type %} · {{ a.assignment_type }}{% endif %}{% if a.source_repository %} · {{ a.source_repository }}{% endif %}</div>
+      {% if a.summary %}<p class="summary">{{ a.summary }}</p>{% endif %}
+      <div class="links">{% if a.best_url %}<a href="{{ a.best_url }}">Assignment</a>{% endif %}</div>
+      <p class="credit">{{ a.credit }}</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+  </section>
+  {% endfor %}
+
+  <section>
+    <h2 id="licenses">Licenses and credits</h2>
+    {% for s in report.statements %}<p>{{ s }}</p>{% endfor %}
+    <h3>Credits</h3>
+    <ol>
+      {% for r in readings %}<li class="credit">{{ r.credit }}{% if r.license_url %} {{ r.license_url }}{% endif %}</li>{% endfor %}
+      {% for a in assignments %}<li class="credit">{{ a.credit }}{% if a.license_url %} {{ a.license_url }}{% endif %}</li>{% endfor %}
+    </ol>
+    <footer>Built with Aletheia on {{ generated }}. This is the accessible version of the PDF reader: one tagged document, with no publisher pages inserted. The selection and arrangement of this reader may be shared under CC BY 4.0; each item keeps its own license, listed above. Readings reproduced in full were copied from their publishers on the dates shown and changed only as needed to fit this format, unless a note under the reading says otherwise.</footer>
+  </section>
+</main>
+</body>
+</html>

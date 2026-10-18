@@ -13,5 +13,7 @@ tools
 *.md
 !frontend/README.md
 # Openly licensed PDFs (corpus/files/drive, corpus/files/web) live in the repo for the public
-# corpus, not in the app image (Justin, 2026-10-17). The corpus pack in corpus/rhetcomp/ still ships.
-corpus/files
+# corpus, not in the app image (Justin, 2026-10-17). The corpus pack in corpus/rhetcomp/ still ships,
+# and so do the corpus/files manifests: warm_content uses them to fetch each PDF from the repo
+# (content/repo_pdfs.py) into the content cache on the Fly volume.
+corpus/files/**/*.pdf
