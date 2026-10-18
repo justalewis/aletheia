@@ -6,12 +6,14 @@ from ninja import NinjaAPI
 
 from builder.api import router as builder_router
 from catalog.api import router as catalog_router
+from feedback.api import router as feedback_router
 from programs.api import router as programs_router
 
 api = NinjaAPI(title="Aletheia API", version="0.1.0")
 api.add_router("/", catalog_router)
 api.add_router("/", builder_router)
 api.add_router("/", programs_router)
+api.add_router("/", feedback_router)
 api.add_router("/", "catalog.outcomes_api.router")
 
 

@@ -11,6 +11,7 @@ import Outcomes from "./pages/Outcomes";
 import NotFound from "./pages/NotFound";
 import Builder from "./builder/Builder";
 import StartCourse from "./pages/StartCourse";
+import Feedback from "./pages/Feedback";
 import NewProgram from "./programs/NewProgram";
 import ProgramPage from "./programs/ProgramPage";
 import ProgramAdmin from "./programs/ProgramAdmin";
@@ -65,6 +66,11 @@ export default function App() {
               <li>
                 <NavLink to="/about">About</NavLink>
               </li>
+              <li>
+                <NavLink to="/feedback" state={{ from: location.pathname }}>
+                  Provide feedback
+                </NavLink>
+              </li>
             </ul>
           </nav>
         </div>
@@ -76,6 +82,7 @@ export default function App() {
           <Route path="/arcs/:id" element={<ArcDetail />} />
           <Route path="/build/:id" element={<Builder />} />
           <Route path="/start" element={<StartCourse />} />
+          <Route path="/feedback" element={<Feedback />} />
           <Route path="/programs/new" element={<NewProgram />} />
           <Route path="/programs/:id" element={<ProgramPage />} />
           <Route path="/programs/:id/admin" element={<ProgramAdmin />} />

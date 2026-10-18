@@ -30,6 +30,7 @@ RULES = [
     ("export", {"POST"}, re.compile(r"^/api/export/")),
     ("plan", {"POST"}, re.compile(r"^/api/plan/?$")),
     ("auto-build", {"POST"}, re.compile(r"^/api/auto-build/?$")),
+    ("feedback", {"POST"}, re.compile(r"^/api/feedback/?$")),
     ("programs", WRITE_METHODS, re.compile(r"^/api/programs(/|$)")),
     ("write", WRITE_METHODS, re.compile(r"^/api/")),
     ("read", READ_METHODS, re.compile(r"^/api/")),

@@ -52,6 +52,7 @@ def test_client_ip_prefers_fly_header_then_forwarded_for_then_remote_addr():
     ("POST", "/api/export/imscc", "export"),
     ("POST", "/api/plan", "plan"),
     ("POST", "/api/auto-build", "auto-build"),
+    ("POST", "/api/feedback", "feedback"),
     ("POST", "/api/programs", "programs"),
     ("PUT", "/api/programs/wwu-eng-101", "programs"),
     ("DELETE", "/api/programs/wwu-eng-101/members/3", "programs"),

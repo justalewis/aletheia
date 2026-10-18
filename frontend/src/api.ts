@@ -576,6 +576,9 @@ export const api = {
     return plan;
   },
 
+  sendFeedback: (body: { name: string; email: string; message: string; page: string; website: string }) =>
+    json<{ ok: boolean }>("/feedback", { method: "POST", body }),
+
   autoBuild: (body: AutoBuildQuery, signal?: AbortSignal) =>
     json<AutoBuildResult>("/auto-build", { method: "POST", body, signal }),
 

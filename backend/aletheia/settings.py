@@ -43,7 +43,19 @@ INSTALLED_APPS = [
     "builder",
     "content",
     "programs",
+    "feedback",
 ]
+
+# Feedback is always saved. It is also emailed when ALETHEIA_EMAIL_HOST is set (an SMTP server or
+# a transactional-mail service's SMTP relay); the credentials are Fly secrets, never in the repo.
+FEEDBACK_TO = os.environ.get("ALETHEIA_FEEDBACK_TO", "jlewis2@olympic.edu")
+EMAIL_HOST = os.environ.get("ALETHEIA_EMAIL_HOST", "")
+EMAIL_PORT = int(os.environ.get("ALETHEIA_EMAIL_PORT", 587))
+EMAIL_HOST_USER = os.environ.get("ALETHEIA_EMAIL_USER", "")
+EMAIL_HOST_PASSWORD = os.environ.get("ALETHEIA_EMAIL_PASSWORD", "")
+EMAIL_USE_TLS = os.environ.get("ALETHEIA_EMAIL_TLS", "1") == "1"
+EMAIL_TIMEOUT = 10
+DEFAULT_FROM_EMAIL = os.environ.get("ALETHEIA_EMAIL_FROM", EMAIL_HOST_USER or "noreply@aletheia-oer.fly.dev")
 
 MIDDLEWARE = [
     "aletheia.middleware.HealthCheckMiddleware",
@@ -131,6 +143,7 @@ RATE_LIMITS = {rule: int(os.environ.get("ALETHEIA_RATE_" + rule.upper().replace(
     "export": 60,          # other POST /api/export/*
     "plan": 300,           # POST /api/plan
     "auto-build": 60,      # POST /api/auto-build (scores the whole catalog; heavier than a plan)
+    "feedback": 5,         # POST /api/feedback
     "programs": 20,        # writes under /api/programs
     "write": 600,          # every other POST/PUT/PATCH/DELETE under /api/
     "read": 2000,          # GET/HEAD under /api/
