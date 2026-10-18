@@ -191,7 +191,8 @@ def report_csv(report: dict, link_for=lambda build_id: "") -> str:
                     f"{money(r['savings']):.2f}", _cell(r["title"]), link_for(r["build_id"])])
     t = report["totals"]
     w.writerow([])
-    w.writerow(["Total", f"{t['sections']} sections", _cell(report["term"]), "", t["students"], "", "",
+    w.writerow(["Total", f"{t['sections']} section{'' if t['sections'] == 1 else 's'}", _cell(report["term"]), "",
+                t["students"], "", "",
                 f"{t['zero_cost_sections']} of {t['sections']} at zero cost", "", "", "",
                 f"{money(t['savings']):.2f}", "", ""])
     w.writerow(["Textbook cost per student used for savings", f"{money(report['textbook_cost_per_student']):.2f}", cur])

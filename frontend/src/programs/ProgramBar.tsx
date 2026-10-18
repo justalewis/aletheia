@@ -186,7 +186,7 @@ function TemplateBar({ state, name, readOnly, onEdit }: { state: BuildState; nam
       </h2>
       <p className="hint">
         {link.course
-          ? "You're editing a program course. Save to the program to change what instructors start from. The Save button above keeps a separate copy for you."
+          ? "You're editing a program course. Save to the program to change what instructors start from. The Save course button below keeps a separate copy for you."
           : "You're drafting a course for the program. Instructors see it once you add it to the program and publish it."}
       </p>
       {!readOnly && token && (
