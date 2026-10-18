@@ -1,7 +1,15 @@
 <p><strong>{{ r.title }}</strong>{% if r.authors %}<br>{{ r.authors }}{% endif %}{% if r.parent_title %}<br><em>{{ r.parent_title }}</em>{% endif %}</p>
 {% if r.summary %}<p>{{ r.summary }}</p>{% endif %}
-<p>
+{% if not text %}<p>
 {% if r.html_url %}<a href="{{ r.html_url }}" target="_blank" rel="noopener">Read online</a>{% elif r.landing_url %}<a href="{{ r.landing_url }}" target="_blank" rel="noopener">Read online</a>{% endif %}
-{% if r.pdf_url and r.redistributable %} | <a href="{{ r.pdf_url }}" target="_blank" rel="noopener">PDF</a>{% endif %}
-</p>
+{% if pdf_href %}{% if r.html_url or r.landing_url %} | {% endif %}<a href="{{ pdf_href }}">PDF</a>{% elif r.pdf_url and r.redistributable %} | <a href="{{ r.pdf_url }}" target="_blank" rel="noopener">PDF</a>{% endif %}
+</p>{% endif %}
 <p style="font-size: 0.85em; color: #555;">{{ r.credit }}{% if r.license_url %} <a href="{{ r.license_url }}" target="_blank" rel="noopener">License</a>{% endif %}</p>
+{% if text %}
+<div class="fulltext">
+{{ text|safe }}
+</div>
+<p style="font-size: 0.85em; color: #555;">Text from <a href="{{ r.fulltext.source_page }}" target="_blank" rel="noopener">{{ r.fulltext.source_host }}</a>, copied {{ r.fulltext.fetched }}.{% if r.fulltext.note %} {{ r.fulltext.note }}{% endif %}</p>
+{% elif pdf_href %}
+<p style="font-size: 0.85em; color: #555;">The PDF{% if r.fulltext.pages %} ({{ r.fulltext.pages }} page{{ r.fulltext.pages|pluralize }}){% endif %} is reproduced as published{% if r.fulltext.source_host %} from <a href="{{ r.fulltext.source_page }}" target="_blank" rel="noopener">{{ r.fulltext.source_host }}</a>{% endif %}, copied {{ r.fulltext.fetched }}.</p>
+{% endif %}
