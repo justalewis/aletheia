@@ -1,0 +1,255 @@
+id: acad-writing-as-a-scholar
+focus: ACADEMIC
+title: Writing as a Scholar
+tagline: >-
+  An upper-division course that takes a paper students have already written and moves it toward
+  publication: a target venue, an abstract and conference proposal, peer review, revision with a
+  response to reviewers, and a talk or poster.
+rationale: >-
+  This arc treats undergraduates as people who can publish and present research, and it teaches
+  the genres that surround a finished paper. Each student brings a paper from another course in
+  their major (a strong seminar paper or research report works best), and the term moves that
+  paper toward readers outside the class. Students learn how scholarly publishing works and choose
+  a venue, write an abstract and a conference proposal, review classmates' manuscripts and a
+  recent scholarly book, revise with a response-to-reviewers memo, and present the work as a short
+  talk or a poster. The PLOS "Ten Simple Rules" series, the UNC Writing Center handouts, Preparing
+  to Publish, MIT's CommKit, and Dana Lynn Driscoll's Becoming an Expert Writer supply most of the
+  reading, and Writing Spaces covers peer review and scholarly ethos. Pieces from Young Scholars in
+  Writing and Queen City Writers show students what published undergraduate work looks like. The catalog is thin on assignments for this kind of course: it
+  has nothing openly licensed for a venue analysis, a conference proposal, or a poster, so plan to
+  write those yourself. If your campus holds an undergraduate research symposium, time the
+  proposal unit to its deadline.
+course_level: "300-400"
+fits_courses: []
+frameworks: [wpa, acrl]
+units:
+  - id: how-scholarship-gets-made
+    title: How Scholarship Gets Made
+    summary: >-
+      Students learn how a paper becomes a publication: peer review, publication formats, who pays
+      for access, and what editors look for. Each student picks a target venue for their paper, such
+      as an undergraduate journal, a campus symposium, or a conference with undergraduate sessions.
+    goals:
+      - Students will describe how scholarly work moves from draft through peer review to publication.
+      - Students will explain how cost and access shape who gets to read and publish research.
+      - Students will analyze a venue's scope, audience, and submission guidelines and choose one for their paper.
+    outcomes: [acrl:creation-process, acrl:information-value, acrl:authority, wpa:rhetorical-knowledge]
+    topics: [undergraduate research, writing for publication, peer review, information literacy]
+    weeks: {min: 1, ideal: 2}
+    priority: optional
+    merge_with: next
+    readings:
+      core:
+        - plos-tsr-2005-getting-published
+        - cus-6-publication-formats-and-the-information-lifecycle
+        - wac-becoming-expert-writer-chapter-1-tacit-knowledge-threshold-concepts-and-writing-for
+      optional:
+        - wac-becoming-expert-writer-chapter-6-expressing-yourself-and-your-message-motivations-and
+        - gz2e-10-4-a-deeper-look-at-scholarly-sources
+        - ysw-2024-truman-pen-mightier-than-laptop
+        - qcw-2024-hodges-dissecting-desires
+        - plos-tsr-2018-collaborative-writing
+        - wac-academic-publishing-fast-changing-world
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - acrl-peer-review
+        - wsaaa-playing-paywalls-information-literacy-theory-practice
+    notes: >-
+      The catalog has no venue analysis assignment, so write a short one: students read a venue's
+      aims and scope, two or three recent pieces, and its submission guidelines, then explain why
+      their paper fits or what would have to change. Your librarian or undergraduate research
+      office can usually point students to undergraduate journals in their fields. Driscoll's
+      Becoming an Expert Writer is a guide to writing for publication, not an undergraduate
+      textbook, but the first chapter, on tacit knowledge, is readable for juniors and seniors. The
+      UMKC peer review lesson and the paywall activity are both CC BY-NC-ND, so use them as
+      published. The Young Scholars in Writing article, in which a Utah State History of Writing
+      class surveyed college-age writers about digital and analog writing tools, is link-only. In a
+      short term this unit folds into the next one, but students still need a venue, so keep the
+      venue analysis as a one-page memo.
+
+  - id: abstracts-and-proposals
+    title: Abstracts and Conference Proposals
+    summary: >-
+      Students study abstracts from their field, write one for their own paper, and then turn it
+      into a conference proposal that answers a real call. The word limit makes them state the
+      paper's argument in a sentence or two.
+    goals:
+      - Students will identify the moves of abstracts in their field and tell descriptive abstracts from informative ones.
+      - Students will write an abstract that states their paper's problem, approach, findings, and significance.
+      - Students will adapt the abstract into a conference proposal that responds to a specific call.
+    outcomes: [wpa:knowledge-of-conventions, wpa:rhetorical-knowledge, wpa:processes, acrl:scholarship-conversation]
+    topics: [abstracts, genre, research articles, undergraduate research]
+    weeks: {min: 2, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - unc-handout-abstracts
+        - huffman-ptp-defining-abstracts
+        - mit-commkit-journal-article-abstract
+        - unc-handout-conference-papers
+      optional:
+        - plos-tsr-2015-empirical-rules-writing-science
+        - plos-tsr-2017-structuring-papers
+        - online-technical-writing-mcmurrey-abstracts
+        - ws6-last-be-written-first-be-read-writing
+        - wac-becoming-expert-writer-chapter-2-fostering-invention-and-creative-idea-generation-for
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - wsaaa-unpacking-abstracts-conventions-empirical-abstracts-social-science-papers
+        - prompt-abstract-analysis-and-revision-assignment-using-ms-word-read
+        - prompt-in-the-realm-of-the-possible-writing-abstracts-to-refine-res
+    notes: >-
+      There's no openly licensed conference proposal assignment in the catalog, so build one around
+      a real call: your campus symposium, a regional conference with undergraduate sessions, or a
+      journal's call for a special issue. Ab Latif's color-coded chart covers empirical social
+      science abstracts, and Ford's readability assignment was written for STEM abstracts.
+      Humanities students can use Kotch's activity, in which students critique sample abstracts
+      before writing their own. Kotch wrote it for first-year students, so push juniors and seniors
+      further, for example by having them compare abstracts from two journals in their field. Ab
+      Latif's activity is CC BY-NC-ND. The PLOS "empirical rules" article tests common style advice
+      against more than a million abstracts and opens a discussion of which advice holds up. The UNC
+      conference papers handout also covers delivery, so students will come back to it in the last
+      unit.
+
+  - id: reviewing-scholarship
+    title: Peer Review and the Book Review
+    summary: >-
+      Students review scholarship the way journals do. They write reviewer reports on classmates'
+      manuscripts using a set of reviewer guidelines, and they review a recent scholarly book in their
+      field, a genre some journals accept from student writers.
+    goals:
+      - Students will write a reviewer report that summarizes a manuscript, judges its contribution, and recommends specific revisions.
+      - Students will give feedback that is specific, respectful, and usable.
+      - Students will write a book review that places a recent scholarly book in its field's conversation.
+    outcomes: [wpa:critical-thinking-reading-composing, wpa:processes, acrl:authority, acrl:scholarship-conversation]
+    topics: [peer review, peer review (scientific), feedback, evaluation]
+    weeks: {min: 2, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - plos-tsr-2026-writing-peer-review
+        - ws5-good-bad-ugly-peer-review
+        - wac-informed-writer-chapter-8-evaluating-the-book-as-a-whole-the-book-review
+        - ws3-write-meaningful-peer-response-praise
+      optional:
+        - plos-tsr-2006-reviewers
+        - atd-2025-kramer-writing-circles-stem
+        - wac-becoming-expert-writer-chapter-9-involving-others-in-writing-for-publication-mentoring
+        - ysw-2023-leow-peer-feedback-training
+        - wacj-2024-bryan-practicing-peer-feedback
+        - wac-bad-ideas-ai-writing-chapter-43-now-that-we-have-ai-we-can-ditch-human-feedback-ai
+        - wvu-bad-ideas-about-writing-student-writing-must-be-graded-by-the-teacher
+    assignments:
+      major: [prompt-breaking-into-print-the-book-review-genre-in-an-introductory]
+      short_term_variant: null
+      activities:
+        - wsaaa-peer-review-writers-worksheet
+        - textgened-peer-review-as-a-conversation-evaluating-human-and-generativ
+    notes: >-
+      Kinney's book review assignment comes from a graduate seminar in rhetoric and composition,
+      where students reviewed a recent monograph after structured peer review. It's CC BY-NC, so
+      rewrite it for your students' fields and ask for a shorter review of a book from the last
+      few years. Check that a journal in each student's field takes reviews before anyone promises
+      publication. The catalog has nothing for the reviewer report itself. PLOS's "Ten simple
+      rules for writing a peer review" can serve as the guidelines, or use the reviewer
+      instructions from the venues students chose in the first unit. Kramer and colleagues studied
+      weekly peer review groups in kinesiology, and their article makes a good case for running
+      review in small groups that meet regularly. Leow's and Bryan's studies of peer feedback
+      training are link-only. In a short term, drop the book review and keep the
+      reviewer reports, since the revision unit depends on them.
+
+  - id: revision-and-response
+    title: Revision and Response to Reviewers
+    summary: >-
+      Students revise their papers using the reviews from the last unit, write a response to
+      reviewers that answers each comment, and put together a submission with a cover letter for
+      their chosen venue.
+    goals:
+      - Students will plan and carry out a substantial revision based on reviewer feedback.
+      - Students will write a response to reviewers that explains how they handled each comment, including the ones they declined.
+      - Students will revise their introduction and prose for the expectations of their chosen venue.
+      - Students will prepare a submission that meets the venue's guidelines.
+    outcomes: [wpa:processes, wpa:knowledge-of-conventions, wpa:rhetorical-knowledge, acrl:scholarship-conversation]
+    topics: [revision, writing for publication, academic style, peer review (scientific)]
+    weeks: {min: 2, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - plos-tsr-2017-response-to-reviewers
+        - wac-becoming-expert-writer-chapter-5-revision-refinement-resubmission-and-writing-for
+        - huffman-ptp-goals-effective-introduction
+        - ws3-constructing-scholarly-ethos-writing-classroom
+      optional:
+        - duke-swr-lesson-2-cohesion-coherence-emphasis
+        - cf-2025-dejeu-style-and-substance
+        - wcc-2021-lebduska-refusing-to-kill-my-darlings
+        - ws4-whats-that-supposed-mean-using-feedback-writing
+        - plos-tsr-2014-writing-research-papers
+        - guptill-clarity-and-concision
+        - wac-becoming-expert-writer-chapter-7-cultivating-generative-dispositions-mindsets-and-emotions
+    assignments:
+      major: [kcworks-revision-portfolio-rodak]
+      short_term_variant: wsaaa-reflective-cover-letter
+      activities:
+        - kcworks-active-learning-revision-clinics
+    notes: >-
+      Rodak's portfolio asks students to show how a piece changed and explain why. A response to
+      reviewers does the same job, so build the response memo into the portfolio and have students
+      format it the way the PLOS article recommends: quote each comment, then give the response and
+      the change. The portfolio is CC BY-NC-SA, so you can adapt it. In a short term, a reflective
+      cover letter attached to the revised paper stands in for the portfolio. Driscoll's fifth
+      chapter covers revision, resubmission, and the paths manuscripts take toward publication; it
+      prepares students for a paper that comes back with conditions attached. Submitting is the
+      student's choice. Grade the submission package, not whether a journal accepts it.
+
+  - id: presenting-research
+    title: Presenting Research
+    summary: >-
+      Students turn the paper into a ten-minute conference talk or a research poster and present it
+      to the class or at a campus symposium. A paper read aloud has to work for listeners, so
+      students cut, restructure, and design for an audience that can't reread.
+    goals:
+      - Students will adapt a written paper into a talk or poster for listeners and passersby.
+      - Students will design slides or a poster that are readable and accessible.
+      - Students will present their research and answer questions about it.
+    outcomes: [wpa:rhetorical-knowledge, wpa:knowledge-of-conventions, acrl:creation-process, acrl:scholarship-conversation]
+    topics: [presentations, posters, oral presentations, accessibility]
+    weeks: {min: 1, ideal: 3}
+    priority: optional
+    merge_with: previous
+    readings:
+      core:
+        - plos-tsr-2007-oral-presentations
+        - plos-tsr-2007-poster-presentation
+        - bongers-macartney-psc-poster-presentations
+        - plos-tsr-2021-presentation-slides
+      optional:
+        - mit-commkit-poster
+        - krause-tprw-11-alternative-ways-to-present-your-research
+        - wwm-effective-visual-aids
+        - wwm-preparation-practice-and-delivery
+        - understanding-document-accessibility-microsoft-powerpoint
+        - section508-gov-create-presentations
+        - ws6-technical-scientific-business-presentations-strategies-success
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - cora-50-words-thesis
+    notes: >-
+      There's no openly licensed talk or poster assignment in the catalog, so write your own or use
+      the requirements of the event students are presenting at. Kinkead's empirical research project
+      in Prompt ends in a poster and a presentation and has good guidance on both, though the full
+      assignment assumes an IRB-approved study. Let the venue decide the format: many humanities
+      conferences expect a paper read aloud, while science and social science events often expect
+      posters. The Bongers and Macartney module also covers short talks and the Three Minute Thesis
+      format. Koz's 50-word activity was written for doctoral students; it works as a warm-up for the
+      opening minute of a talk. In a short term this unit folds into the revision unit, and students
+      give a three-minute version of the talk in the last week.

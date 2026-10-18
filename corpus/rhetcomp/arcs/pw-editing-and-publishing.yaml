@@ -1,0 +1,256 @@
+id: pw-editing-and-publishing
+focus: PROFWRIT
+title: Editing and Publishing
+tagline: >-
+  An editing course that ends with each student taking a published text through a full edit and
+  sending the edits to its author.
+rationale: >-
+  Open Professional and Technical Editing with Handbook, by Tiffani Tijerina and colleagues, supplies
+  the core reading for most of this arc. It's an open textbook written with student co-authors at the
+  University of Arkansas at Little Rock, and because it's CC BY-NC-SA you can trim or reorder it. The
+  arc suits a technical or professional editing course, or a professional writing course that wants to
+  spend a term on editing. Students start with what editors do and how they mark up a manuscript,
+  then move to sentence-level copyediting and a comprehensive edit of a document for a campus client.
+  An optional unit looks at automated and AI-assisted editing. The last unit covers style sheets,
+  project management, licensing, and the working relationship between editor and author, and it ends
+  with each student editing a published text and sending the edits to its author. Chapters from
+  Writing Spaces, Bad Ideas About Writing, and Keywords in Technical and Professional Communication
+  question the idea that copyediting means enforcing one correct English. Most assignments come from
+  Prompt: Propper on Wikipedia editing, Lettner-Rust on revising a faculty manual, Talbot on editing AI
+  text, and Loewe's DEE-CR project.
+course_level: "300-400"
+fits_courses: [wwu-eng302, oc-engl235]
+frameworks: [tc]
+units:
+  - id: what-editors-do
+    title: What Editors Do
+    summary: >-
+      Students learn the levels of edit, practice markup on paper and on screen, and work out how
+      editors talk to writers through queries, comments, and the editorial letter.
+    goals:
+      - Students will distinguish proofreading, copyediting, and comprehensive editing and say when each is called for.
+      - Students will mark up a document with standard proofreading marks and with tracked changes and comments.
+      - Students will write queries that a writer can answer and act on.
+    outcomes: [tc:editing-style, tc:collaboration, tc:technology-tools]
+    topics: [technical editing, editing, collaboration]
+    weeks: {min: 1, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - open-professional-technical-editing-ch01-intro-editing
+        - open-professional-technical-editing-ch02-hard-copy-markup
+        - open-professional-technical-editing-ch03-soft-copy-editing
+        - wac-keywords-tpc-chapter-11-editing
+      optional:
+        - open-technical-communication-2e-ch09-technical-editing
+        - howdy-or-hello-ch10-revising-editing
+        - communication-at-work-ch05-editing
+        - tcsj-2023-clem-teaching-editing-social-justice
+        - online-technical-writing-mcmurrey-power-revision
+        - business-writing-for-everyone-ch14-revision-remixing
+        - effective-editing-kpu
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - wsaaa-peer-review-writers-worksheet
+    notes: >-
+      The unit has no major assignment. Give students a short markup exercise each week; marking the
+      same paragraph on paper and then in a word processor lets them compare the two. Edgington's
+      Writer's Worksheet was designed for first-year peer review, but it carries over to editing: the
+      writer tells the editor what kind of help they want before the edit starts, which is how a lot of
+      editing jobs begin. Share it unchanged; it's CC BY-NC-ND. Clem's article reports on a
+      professional editing course redesigned around social justice, in which students' definitions of
+      editing moved from copyediting toward author relationships and substantive editing; read it while
+      you plan the term. Charlton's ETC 408/508 course design in Composition Studies (2013) is another
+      model for a technical editing course, free to read but link-only.
+
+  - id: copyediting
+    title: Copyediting for Style and Correctness
+    summary: >-
+      Students edit sentences for concision, parallelism, precision, and voice, and they study grammar
+      and punctuation as choices that affect readers. The unit also asks whose English counts as correct
+      and what an editor owes a writer whose English differs from the editor's.
+    goals:
+      - Students will edit sentences for concision, parallel structure, and precise word choice.
+      - Students will explain a grammar or punctuation edit in terms of its effect on readers.
+      - Students will tell errors that block a reader apart from differences of dialect or style, and edit accordingly.
+    outcomes: [tc:editing-style, tc:audience-purpose, tc:ethics-accessibility]
+    topics: [style, grammar, punctuation, language diversity]
+    weeks: {min: 1, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - open-professional-technical-editing-ch05-style-voice
+        - open-professional-technical-editing-ch06-parallelism-conciseness
+        - open-professional-technical-editing-ch07-precision-clarity
+        - ws3-grammar-rhetoric-style
+      optional:
+        - ws3-punctuations-rhetorical-effects
+        - wvu-bad-ideas-about-writing-strunk-and-white-set-the-standard
+        - wvu-bad-ideas-about-writing-the-passive-voice-should-be-avoided
+        - bad-ideas-one-correct-way
+        - wac-rethinking-your-writing-chapter-11-editing-in-context
+        - technical-writing-essentials-2e-2-4-importance-of-verbs
+        - wwm-gender-inclusive-language
+        - business-writing-style-guide
+    assignments:
+      major: [prompt-more-than-memorizing-rules-using-wikipedia-to-emphasize-rhet]
+      short_term_variant: null
+      activities:
+        - wsaaa-clause-patterns-clause-meanings
+        - kcworks-active-learning-revision-clinics
+        - wsaaa-exploring-grammar-food-reviews-critical-language-awareness-approach
+    notes: >-
+      Propper's assignment (CC BY-NC) has students study the edits other people have made to
+      Wikipedia articles and assess them for grammar, style, and ideological bias, which gives the class
+      a large supply of real edits to argue about. Shea's Clause Patterns activity is designed to go
+      with Hulst's Grammar, Rhetoric, and Style. Rodak and Cattani's Revision Clinics are lesson plans
+      for sentence- and paragraph-level editing that respect students' right to their own language.
+      Westergard and de los Reyes use adjective strings in food reviews to show grammar as a rhetorical
+      resource. The Bad Ideas About Writing chapters have a license conflict (the WVU page says CC
+      BY-NC-ND 4.0, and the 2017 PDF says CC BY 4.0), so treat them as no-derivatives and include them
+      unchanged.
+
+  - id: comprehensive-editing
+    title: Comprehensive Editing for a Client
+    summary: >-
+      Students edit a whole document for its readers, working on organization, page design, visuals and
+      tables, and accessibility. The major project is a comprehensive edit of a document someone on
+      campus uses, delivered with an editorial letter that explains the changes.
+    goals:
+      - Students will reorganize a document around what its readers need to find and do.
+      - Students will edit page design, visuals, and tables for clarity and accuracy.
+      - Students will check and repair a document's accessibility, including headings, alt text, and table structure.
+      - Students will explain their edits to a client in an editorial letter.
+    outcomes: [tc:editing-style, tc:design-visual, tc:ethics-accessibility, tc:audience-purpose]
+    topics: [technical editing, document design, accessibility, graphics]
+    weeks: {min: 1, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - open-professional-technical-editing-ch08-structural-editing
+        - open-professional-technical-editing-ch09-document-design
+        - open-professional-technical-editing-ch10-accessibility
+        - open-professional-technical-editing-ch11-visuals-tables
+      optional:
+        - open-professional-technical-editing-ch14-editing-across-genres
+        - howdy-or-hello-ch07-design
+        - technical-professional-writing-genres-ch05-document-design
+        - ws2-beyond-black-white-document-design-formatting-writing
+        - wac-keywords-tpc-chapter-9-design
+        - understanding-document-accessibility-microsoft-word
+        - section508-gov-create-pdfs
+        - graphic-design-print-production
+    assignments:
+      major: [prompt-revising-the-faculty-manual-the-client-project-in-your-backy]
+      short_term_variant: textgened-ai-for-editing
+      activities:
+        - google-developers-tech-writing-for-accessibility
+    notes: >-
+      In Lettner-Rust's assignment (CC BY-NC), upper-level students revised a section of their
+      university's faculty policies manual for the faculty who use it. Any campus document with real
+      readers and an owner willing to look at the edit will work, such as a department handbook, a lab
+      safety guide, or a student services page. Ranade's AI for Editing is the lighter version for short terms: students generate
+      an essay with AI and do a comprehensive edit of its structure and readability in a week or two.
+      Google's Tech Writing for Accessibility course gives students a self-paced pass through alt text,
+      color contrast, and inclusive language before they check the client document. Graphic Design and
+      Print Production Fundamentals (CC BY) is book-length background on typography, layout, and print
+      production.
+
+  - id: editing-and-ai
+    title: Editing with Automated and AI Tools
+    summary: >-
+      Students test grammar checkers and generative AI tools both as editors and as writers whose drafts
+      need editing. They look at what the tools get wrong, whose English the tools treat as correct, and
+      what an editor is responsible for when a machine wrote the first draft.
+    goals:
+      - Students will evaluate the suggestions automated editing tools make and decide which to accept.
+      - Students will edit an AI-generated text for accuracy, completeness, and fit with its audience.
+      - Students will explain how AI editing tools treat dialects and varieties of English.
+    outcomes: [tc:technology-tools, tc:editing-style, tc:ethics-accessibility]
+    topics: [ai and writing, technical editing, language diversity, ethics]
+    weeks: {min: 1, ideal: 2}
+    priority: optional
+    merge_with: previous
+    readings:
+      core:
+        - open-professional-technical-editing-ch04-automatic-editing-ai
+        - wac-bad-ideas-ai-writing-chapter-17-generative-ai-replaces-technical-writers-generative-ai
+        - wac-bad-ideas-ai-writing-chapter-12-automated-feedback-programs-provide-invaluable-guidance
+        - wac-bad-ideas-ai-writing-chapter-27-ai-will-empower-non-native-english-writers-to-master
+      optional:
+        - wvu-bad-ideas-about-writing-machines-can-evaluate-writing-well
+        - wac-bad-ideas-ai-writing-chapter-30-using-ai-tools-detracts-from-student-voice-not-every-use
+        - wac-bad-ideas-ai-writing-chapter-2-ai-knows-everything-ai-can-perpetuate-ignorance-prejudices
+        - wac-bad-ideas-ai-writing-chapter-42-generative-ai-provides-great-revision-feedback-generative
+        - technical-writing-essentials-2e-1-5-gen-ai-literacy
+        - wwm-how-large-language-models-llms-like-chatgpt-work
+    assignments:
+      major: [prompt-editing-ai-generated-text-for-accuracy-and-completeness]
+      short_term_variant: null
+      activities:
+        - textgened-exploring-grammar-and-correctness-with-ai-writing-tools
+        - textgened-peer-review-as-a-conversation-evaluating-human-and-generativ
+    notes: >-
+      Talbot's assignment asks for a comprehensive edit of a ChatGPT-generated text for accuracy,
+      rhetorical fit, and completeness. The AI text is published with the assignment, so students can do
+      the edit without using an AI tool themselves, which helps if your course limits AI use. Carillo's
+      activity has students run sentences traditionally marked as errors through two AI writing tools
+      and compare what each flags; pair it with Gruber's chapter on Global Englishes. Ramsey's activity
+      was written for first-year peer review, and here it becomes a comparison of a human editor's
+      comments with an AI tool's. In a short term, fold this unit into Comprehensive Editing and use
+      Ranade's AI for Editing as the project.
+
+  - id: publishing-workflows
+    title: Publishing Workflows and the Author-Editor Relationship
+    summary: >-
+      Students learn where editing sits in a publishing workflow: style sheets, schedules, version
+      control, permissions, and open licenses. The final project is Loewe's DEE-CR, in which each
+      student describes and evaluates a published text, edits it, sends the edits to its author, and
+      reflects on the exchange.
+    goals:
+      - Students will build a style sheet for an editing project and use it to keep edits consistent.
+      - Students will plan an editing project's schedule and keep track of document versions.
+      - Students will explain how copyright and Creative Commons licenses affect what an editor or publisher can do with a text.
+      - Students will send edits to an author tactfully and respond to the author's questions.
+    outcomes: [tc:collaboration, tc:technology-tools, tc:editing-style, tc:ethics-accessibility]
+    topics: [project management, style, copyright, creative commons]
+    weeks: {min: 1, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - open-professional-technical-editing-ch12-style-guides-collaboration
+        - open-professional-technical-editing-ch13-project-management
+        - ws4-find-best-tools-job-experimenting-writing-workflows
+        - cus-6-creative-commons-an-open-option
+      optional:
+        - write-the-docs-guide-docs-as-code
+        - cconline-2010-lowe-creative-commons-copyleft
+        - cus-2-what-copyright-covers
+        - wac-keywords-tpc-chapter-25-project-management
+        - wac-keywords-tpc-chapter-37-translation
+        - lockridge-van-ittersum-writing-workflows
+        - writing-publishing-digital-environments
+    assignments:
+      major: [prompt-a-multifaceted-editing-and-reflection-project-the-dee-cr-pro]
+      short_term_variant: null
+      activities:
+        - wsaaa-owning-process-co-learning-ai-through-critical-inquiry
+        - acrl-teaching-copyleft-critical-approach-information-has-value
+    notes: >-
+      Loewe's DEE-CR project (CC BY-NC) has students find a nonfiction text, describe it, evaluate it,
+      edit it, communicate the edits to its author, and reflect. Have students choose living writers
+      who publish online and can be reached, and give them a fallback (a campus newsletter article, a
+      classmate's published piece) in case the author doesn't answer. Mason's workflow-mapping activity
+      is built to pair with Van Ittersum and Lockridge's Writing Spaces chapter, and their book Writing
+      Workflows (CC BY-NC-ND) covers the same ground at length. Lowe's Computers and
+      Composition Online piece on copyleft licensing for open educational resources gives the licensing
+      discussion a concrete case. For writing majors, Hoermann-Elliott and Williams's freelance pitch
+      assignment, also in Prompt, shows the editor-author relationship from the writer's side.
+      Verzella's menu translation exchange (Writing Spaces Assignments) is a five- to six-week option for
+      a course with partners abroad.

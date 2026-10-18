@@ -1,0 +1,257 @@
+id: bus-business-communication-foundations
+focus: BUSINESS
+title: Business Communication Foundations
+tagline: >-
+  A business communication course organized by message strategy: students analyze audience and
+  channel, adapt messages for readers in other cultures, write routine, persuasive, and bad-news
+  messages, and finish with a short report delivered as a briefing.
+rationale: >-
+  This arc is for a lower-division business communication course, or a professional writing section
+  made up mostly of business majors. It's organized around message strategy rather than one long team
+  project. Students learn to read a writing situation and pick a channel for it, adapt messages for
+  readers in other cultures, write routine messages and then persuasive and bad-news ones, and finish
+  with an individual short report and a briefing on it. Job materials are left out on purpose,
+  since the companion arc, Careers and Professional Identity, covers them; if your course has to include
+  résumés, borrow that arc's second unit. Most of the core reading comes from three business texts:
+  Arley Cruthers's Business Writing For Everyone, Jordan Smith's Communication at Work, and Chatterjee,
+  Ricks, and Waryas Hughey's Communicating Strategically in the Workplace. Technical Writing Essentials,
+  Technical Writing Spaces, and Keywords in Technical and Professional Communication fill in where the
+  business texts are thin. Communication at Work is CC BY and can be adapted freely; the other two
+  business texts are NonCommercial. The catalog has few openly licensed business communication
+  assignments, and most of those are short in-class activities, so expect to write your own prompts
+  for the routine and bad-news messages.
+course_level: "200"
+fits_courses: [oc-engl235]
+frameworks: [tc]
+units:
+  - id: audience-and-channel
+    title: Audience, Purpose, and Channel
+    summary: >-
+      Students analyze workplace writing situations with Cruthers's CMAPP framework (context, message,
+      audience, purpose, product) and decide when a message belongs in an email, a chat, a memo, a phone
+      call, or a meeting.
+    goals:
+      - Students will analyze a workplace writing situation for context, audience, and purpose before they draft.
+      - Students will choose a channel that suits the message, the reader, and how soon a response is needed.
+      - Students will revise for the tone and plain language a business reader expects.
+    outcomes: [tc:audience-purpose, tc:editing-style, tc:technology-tools]
+    topics: [audience, rhetorical situation, plain language, style]
+    weeks: {min: 1, ideal: 2}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - business-writing-for-everyone-ch03-context-audience-purpose
+        - communication-at-work-ch01-professional-communications
+        - communicating-strategically-workplace-ch02-interpersonal-mediated
+        - business-writing-for-everyone-ch04-style-and-tone
+      optional:
+        - programmatic-perspectives-2024-mogull-audience-personas
+        - effective-professional-communication-rhetorical-rhetorical-theory
+        - communicating-strategically-workplace-ch06-language
+        - technical-writing-open-oregon-ch02-audience-analysis
+        - mailchimp-content-style-guide-voice-and-tone
+        - technical-writing-essentials-2e-1-6-case-studies-poor-communication
+        - wac-keywords-tpc-chapter-23-plain-language
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - wsaaa-establishing-who-professional-writing-power-dynamics-improv
+        - prompt-social-justice-and-corporate-mission-statements-analyzing-va
+    notes: >-
+      This unit has no major assignment. A short channel memo works well as the first graded piece:
+      give students one workplace scenario and have them explain which channel they'd use and why, then
+      write the message. Esposito's improv activity has pairs act out workplace relationships with
+      different power dynamics, so students have thought about who the reader is before they write.
+      Mussack's activity has students hold corporate mission statements up against what the companies
+      actually do; it's a good first look at business writing as rhetoric. Mogull's short article on
+      audience personas suits sections with marketing majors.
+
+  - id: writing-across-cultures
+    title: Writing for Readers in Other Cultures
+    summary: >-
+      Students look at how national and organizational culture shape workplace communication, then revise
+      business messages for readers who read English as an additional language or through machine
+      translation.
+    goals:
+      - Students will describe how cultural expectations shape directness, formality, and relationship-building in business messages.
+      - Students will revise a message for readers who read it in a second language or through translation.
+      - Students will analyze a case of workplace miscommunication and write a better response.
+    outcomes: [tc:audience-purpose, tc:ethics-accessibility, tc:editing-style]
+    topics: [intercultural communication, translation, plain language, language diversity]
+    weeks: {min: 1, ideal: 2}
+    priority: optional
+    merge_with: previous
+    readings:
+      core:
+        - communicating-strategically-workplace-ch04-culture
+        - technical-writing-open-oregon-ch13-communicating-across-cultures
+        - ws3-writing-global-contexts-composing-usable-texts-audiences
+        - wac-keywords-tpc-chapter-17-international-intercultural-communication
+      optional:
+        - ws6-write-global-audiences
+        - mailchimp-content-style-guide-writing-for-translation
+        - google-developer-documentation-style-guide-global-audience
+        - business-writing-for-everyone-ch18-getting-along
+        - psp-ch14-speaking-to-global-audience
+        - wac-keywords-tpc-chapter-37-translation
+        - adga-there-is-more-than-one-correct-way-of-writing-and-speak
+        - ws6-composing-technical-documents-localized-usability-international-context
+    assignments:
+      major: [prompt-social-equity-and-intercultural-communication-in-the-workpla]
+      short_term_variant: null
+      activities:
+        - wsaaa-gen-ai-large-language-models-linguistic-whitewashing
+    notes: >-
+      Dunn and Craig's assignment has students analyze cases of intercultural miscommunication at work
+      and then write cases of their own. In two weeks, have students analyze one or two cases and write
+      the message that should have been sent, and leave out writing new cases. Pattanayak's chapter in A
+      Dam Good Argument and Mayer's mini-unit on large language models both question the idea of one
+      correct business English; in a class with multilingual students, assign at least one of them. If
+      you have a partner class
+      abroad, Verzella's menu translation project (WSAAA) is a bigger option, but it runs five to six
+      weeks. In a short term this unit folds into the first one: assign St.Amant's chapter and have
+      students revise one message for a global reader.
+
+  - id: routine-messages
+    title: Routine Messages
+    summary: >-
+      Students write the everyday messages of a workplace (information shares, requests, replies, claims,
+      goodwill messages, and memos) and practice putting the main point and any request where a busy
+      reader will see them.
+    goals:
+      - Students will write routine emails and memos that state the purpose and any request in the opening lines.
+      - Students will match format, length, and formality to the reader and the channel.
+      - Students will revise messages for concision, accuracy, and a subject line that tells the reader what to do.
+    outcomes: [tc:genres-documents, tc:audience-purpose, tc:editing-style]
+    topics: [email, memos, letters, genre]
+    weeks: {min: 1, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - communication-at-work-ch08-routine-messages
+        - communicating-strategically-workplace-ch07-routine-messages
+        - business-writing-for-everyone-ch06-emails-memos-letters
+        - communication-at-work-ch06-electronic-communication
+      optional:
+        - technical-writing-essentials-2e-7-2-memos
+        - effective-professional-communication-rhetorical-technical-correspondence
+        - technical-professional-writing-genres-ch06-emails-memos-texting
+        - communication-at-work-ch07-traditional-communication
+        - open-technical-communication-2e-ch12-business-correspondence
+        - ws4-make-move-writing-genres
+        - section508-gov-create-email-messages
+        - online-technical-writing-mcmurrey-business-correspondence
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - wsaaa-rhetorical-moves-analysis-emails
+        - textgened-writing-situation-based-emails-with-and-against-chatgpt
+        - kcworks-sample-memorandum-cortez
+        - oercommons-neff-batty-herbert-bus204
+    notes: >-
+      There's no major assignment here. Assign four or five short messages built on realistic scenarios
+      and grade them as a set. Parzefall's rhetorical moves activity pairs with Jacobson, Pawlowski, and
+      Tardy's Make Your "Move" chapter. Neff and Batty-Herbert's BUS-204 is a full community college
+      business communications course that covers inquiry, goodwill, adjustment, and collection letters,
+      so pull the letter work you need from it. Banu's email activity uses ChatGPT; check it against your
+      course AI policy. For accounting sections, Horton and Xing's tax memo assignment in Prompt can
+      replace one of the routine messages.
+
+  - id: persuasive-and-bad-news
+    title: Persuasive and Bad-News Messages
+    summary: >-
+      Students write messages that ask readers to do something they may resist and messages that deliver
+      news readers don't want. They choose between direct and indirect structures and keep the reader's
+      goodwill without burying the point.
+    goals:
+      - Students will decide whether a direct or indirect structure suits a message and its reader.
+      - Students will write a persuasive message that addresses the reader's interests and likely objections.
+      - Students will write a bad-news message that states the decision clearly and keeps the reader's goodwill.
+      - Students will explain where hedging and spin in a workplace message become an ethical problem.
+    outcomes: [tc:audience-purpose, tc:genres-documents, tc:ethics-accessibility, tc:editing-style]
+    topics: [persuasion, ethics, crisis communication, social media]
+    weeks: {min: 1, ideal: 3}
+    priority: optional
+    merge_with: previous
+    readings:
+      core:
+        - communicating-strategically-workplace-ch08-bad-news
+        - business-writing-for-everyone-ch07-good-neutral-negative-messages
+        - business-writing-for-everyone-ch08-persuading-your-reader
+        - technical-writing-essentials-2e-2-2-writing-to-persuade
+      optional:
+        - howdy-or-hello-ch04-persuasion
+        - business-writing-for-everyone-ch15-social-media
+        - wac-keywords-tpc-chapter-7-crisis-communication
+        - howdy-or-hello-ch03-ethics
+        - technical-professional-writing-genres-ch04-ethics
+        - open-technical-communication-2e-ch11-logical-fallacies
+        - wac-keywords-tpc-chapter-30-risk-communication
+    assignments:
+      major: [prompt-authenticity-and-the-rhetoric-of-selling-on-social-media-a-r]
+      short_term_variant: wsaaa-framing-bad-news-hedging-voice-hr-memos
+      activities:
+        - wsaaa-antagonizing-tailoring-llm-writing-mock-public-relations-crisis
+    notes: >-
+      McCaughey's assignment set pairs a semester-long blog with a researched social media marketing
+      proposal for an outside professional audience. Use only the proposal; the blog won't fit in three
+      weeks. It was written for a first-year course, so you may want to raise the bar for business
+      majors, for instance by asking for a budget and measurable goals. Mayer's HR memo activity has
+      students study how hedging and word choice frame a policy change and then draft a one-page bad-news
+      memo. In a full term, run it during the unit. In a 5- or 8-week term this unit folds into routine
+      messages, and Mayer's memo replaces one of the routine ones. Rioux's crisis activity has students
+      push a chatbot to draft crisis messages for a fictional company and then pick apart the generic
+      language it produces.
+      Both WSAAA activities are CC BY-NC-ND, so share them unchanged.
+
+  - id: short-report-and-briefing
+    title: Short Report and Briefing
+    summary: >-
+      Each student audits how one organization communicates with the public, collecting its posters,
+      flyers, reports, and media releases, and writes up findings and recommendations in a short report
+      with an executive summary. Students then present the findings in a five- to ten-minute briefing.
+    goals:
+      - Students will gather and analyze an organization's public communication as evidence.
+      - Students will organize a short report so a reader could act on the executive summary alone.
+      - Students will design pages and graphics that support the report's findings.
+      - Students will present findings in a short briefing with readable, accessible slides.
+    outcomes: [tc:genres-documents, tc:research-usability, tc:design-visual, tc:audience-purpose]
+    topics: [reports, document design, visual rhetoric, presentations]
+    weeks: {min: 2, ideal: 4}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - business-writing-for-everyone-ch11-writing-reports
+        - ws6-last-be-written-first-be-read-writing
+        - business-writing-for-everyone-ch12-visual-communication
+        - ws6-technical-scientific-business-presentations-strategies-success
+      optional:
+        - technical-writing-essentials-2e-7-6-short-and-long-reports
+        - communicating-strategically-workplace-ch11-reports-proposals
+        - ws3-understanding-visual-rhetoric
+        - leveraging-data-visualization-visualize-with-purpose
+        - business-writing-for-everyone-ch13-oral-presentations
+        - communicating-strategically-workplace-ch09-organizing-presentations
+        - plos-tsr-2021-presentation-slides
+        - section508-gov-create-presentations
+    assignments:
+      major: [kcworks-visual-communication-audit-devoss]
+      short_term_variant: null
+      activities:
+        - acrl-spot-spin-can-you-trust-data
+        - textgened-embodying-rhetoric-quick-scripts-and-acts-of-persuasion
+    notes: >-
+      DeVoss's Visual Communication Audit is written as an analysis. Here it becomes a report: have
+      students address it to the organization's communications staff, open with an executive summary,
+      and end with recommendations. It's CC BY-NC, so you can adapt it with attribution. Local nonprofits,
+      campus offices, and small businesses make better subjects than national brands, since students can
+      collect a full set of materials and the recommendations have a chance of reaching someone who can
+      use them. Ilyasova's
+      chapter on memos and executive summaries is CC BY-NC-ND and goes in the reader unchanged. The
+      catalog has no lighter report assignment; in a short term, cut the audit to three artifacts and a
+      two-page memo report, and drop the briefing or shrink it to three minutes.

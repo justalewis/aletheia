@@ -1,0 +1,260 @@
+id: bus-careers-and-professional-identity
+focus: BUSINESS
+title: Careers and Professional Identity
+tagline: >-
+  A career-focused business communication course: students build a professional presence online,
+  write targeted application materials, practice interviews, learn how teams work, and research a
+  career field through an informational interview.
+rationale: >-
+  This arc suits a business communication or professional writing course for students who are a year
+  or two from the job market, including career and technical programs where the job search is the
+  point of the course. It starts with how students present themselves as professionals online, moves
+  through résumés, cover letters, and interviews, turns to the communication that happens after someone
+  is hired (teams, meetings, conflict), and ends with a career research project in which each student
+  studies a field, profiles an employer, and interviews someone who does the work. Both major
+  assignments come from business courses: Catherine Young's Career Communications Portfolio in the
+  second unit and Susan Archambault's Career Research Portfolio in the last. Core readings come from
+  Communication at Work, Business Writing For Everyone, Communicating Strategically in the Workplace,
+  Effective Professional Communication, and Technical Writing Essentials, plus a few chapters from
+  Writing Spaces, Keywords in Technical and Professional Communication, and Try This: Research Methods
+  for Writers on privacy, professions, and interviewing. The catalog has almost nothing
+  openly licensed on LinkedIn or online presence as such, so the first unit leans on chapters about
+  workplace social media and privacy, plus two short bio assignments. Ask students to choose a career
+  field in the first two weeks. Informational interviews take time to arrange, and the job posting they
+  target in the résumé unit can come from the same field.
+course_level: "200"
+fits_courses: []
+frameworks: [tc]
+units:
+  - id: professional-identity-online
+    title: Professional Identity and Online Presence
+    summary: >-
+      Students look at what counts as professional in the field they hope to join and how newcomers learn
+      a community's norms. They audit their own online presence and draft a professional bio for a
+      specific platform.
+    goals:
+      - Students will describe how a field's expectations and their own backgrounds shape their professional identity.
+      - Students will audit their online presence and decide what to make public, keep private, or create.
+      - Students will write a professional bio for a specific platform and reader.
+    outcomes: [tc:audience-purpose, tc:ethics-accessibility, tc:technology-tools]
+    topics: [professional identity, social media, privacy, professionalization]
+    weeks: {min: 1, ideal: 2}
+    priority: optional
+    merge_with: next
+    readings:
+      core:
+        - business-writing-for-everyone-ch15-social-media
+        - ws4-understanding-maintaining-privacy-when-writing-digital-technologies
+        - ws4-read-room-navigating-social-contexts-written-texts
+        - wac-keywords-tpc-chapter-24-profession
+      optional:
+        - business-writing-for-everyone-ch01-reading-writing-beliefs
+        - ws5-i-passed-first-year-writingwhat-now-adapting
+        - wac-keywords-tpc-chapter-33-social-media
+        - ws6-social-media-as-space-todays-technical-communication
+        - plos-tsr-2020-twitter-scientist
+        - communication-at-work-ch06-electronic-communication
+        - gz2e-13-2-the-first-year-writing-program-and-your-career
+        - section508-gov-create-social-media
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - kcworks-social-media-bios-lockett
+        - textgened-introduce-yourself-with-a-professional-bio
+    notes: >-
+      This unit has no major assignment. The bio and the audit feed the LinkedIn page in Young's
+      portfolio, which is why the unit folds into the résumé unit in a short term. Lockett's bio
+      assignment comes from a rhetoric of advertising course and asks students to think about how race,
+      gender, and place affect self-presentation online. Keep that part of the prompt when you adapt it.
+      Gardner's activity has students draft a bio with generative AI from their résumés, so check it
+      against your AI policy and talk with students about what personal information they hand to a tool.
+      Kim's privacy chapter is good preparation for that conversation. Savage's Profession essay is the most academic reading in the
+      arc; assign a section of it if the whole thing is too much for your students. The PLOS piece is
+      about Twitter and the platform details are dated, but its advice on audience carries over to
+      LinkedIn.
+
+  - id: resumes-and-cover-letters
+    title: Résumés and Cover Letters
+    summary: >-
+      Students pick a real posting in their target field, analyze what the employer is screening for, and
+      write a targeted résumé, cover letter, and LinkedIn page, along with short spoken introductions.
+    goals:
+      - Students will analyze a job posting for the qualifications and keywords an employer and an applicant-tracking system will look for.
+      - Students will write a résumé with specific, accurate bullet points a reader can scan quickly.
+      - Students will write a cover letter that connects their experience to one position at one organization.
+      - Students will adapt the same experience for a résumé, a LinkedIn profile, and a spoken pitch.
+    outcomes: [tc:genres-documents, tc:audience-purpose, tc:design-visual]
+    topics: [resumes, cover letters, job search, employment writing]
+    weeks: {min: 1, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - communication-at-work-ch09-job-applications
+        - business-writing-for-everyone-ch17-employment
+        - effective-professional-communication-rhetorical-applying-for-a-job
+        - technical-professional-writing-genres-ch07-applying-to-jobs
+      optional:
+        - howdy-or-hello-ch16-applications
+        - wwm-resumes
+        - wwm-cover-letters
+        - wwm-introduction-to-employment-writing
+        - online-technical-writing-mcmurrey-resumes
+        - online-technical-writing-mcmurrey-application-letters
+        - technical-writing-open-oregon-ch12-employment-materials
+        - open-technical-communication-2e-ch13-job-application-materials
+    assignments:
+      major: [cuny-ccny-young-eco21660-career-communications-portfolio-2025]
+      short_term_variant: null
+      activities:
+        - textgened-writing-for-career-readiness-engaging-chatgpt-to-develop-res
+    notes: >-
+      Young wrote the Career Communications Portfolio for a business communication course at City
+      College. It asks for a résumé, a cover letter, a LinkedIn page, and three spoken narratives, each
+      with a short rubric, and it's built on Universal Design for Learning principles. In her course it's
+      worth 30 percent of the grade. If you're teaching the interview unit, hold the spoken narratives
+      until then; they make good interview practice. Cruthers's chapter explains how applicant-tracking
+      software reads an application, so pair it with the posting analysis. Large's activity has students
+      use ChatGPT to work toward specific, accurate résumé bullet points; check it against your AI
+      policy. The catalog has no lighter version of the portfolio, so in a short term cut the LinkedIn
+      page and the narratives.
+
+  - id: interviews-and-follow-up
+    title: Interviews and Follow-Up
+    summary: >-
+      Students prepare for screening and behavioral interviews, practice answering and asking questions,
+      and write thank-you and follow-up messages.
+    goals:
+      - Students will prepare answers to common interview questions using specific examples from their own experience.
+      - Students will prepare questions for the interviewer that show they've researched the employer.
+      - Students will write a timely, specific thank-you or follow-up message after an interview.
+    outcomes: [tc:audience-purpose, tc:genres-documents]
+    topics: [job search, job interview, listening, letters]
+    weeks: {min: 1, ideal: 2}
+    priority: optional
+    merge_with: previous
+    readings:
+      core:
+        - communication-at-work-ch10-interpersonal
+        - communicating-strategically-workplace-ch12-employment
+        - wwm-thank-you-letters
+      optional:
+        - suso-ch04-importance-of-listening
+        - wwm-techniques-for-building-confidence
+        - technical-writing-essentials-2e-8-1-finding-your-voice-public-speaker
+        - communication-at-work-ch01-professional-communications
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - textgened-interview-q-a-with-ai
+    notes: >-
+      The catalog has no openly licensed mock interview assignment that doesn't use AI. Banu's activity
+      has students use a chatbot as both interviewer and interviewee and then reflect on using it. Banu
+      built it for an online business and professional writing course for juniors and seniors, and it
+      runs about two weeks. If you'd rather not use AI, run mock interviews in pairs or trios with an
+      observer, or ask your campus
+      career center to send staff for a class session. The thank-you letters section is CC BY-NC-ND, so
+      it goes in the reader unchanged. In a short term, this unit folds into the résumé unit: one round
+      of mock interviews and one follow-up message.
+
+  - id: teams-and-workplace-communication
+    title: Teams and Workplace Communication
+    summary: >-
+      Students form small teams by industry for the career research project, write a team charter, run
+      and document their own meetings, and study how conflict, feedback, and cultural difference play out
+      in workplace groups.
+    goals:
+      - Students will set shared expectations, roles, and decision rules in a written team charter.
+      - Students will run a meeting from an agenda and record its decisions in minutes.
+      - Students will respond to conflict and give feedback in ways that keep a team working.
+      - Students will adjust how they communicate for teammates whose cultures and working styles differ from their own.
+    outcomes: [tc:collaboration, tc:genres-documents, tc:audience-purpose]
+    topics: [collaboration, teamwork, meeting minutes, intercultural communication]
+    weeks: {min: 1, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - communication-at-work-ch11-group-communication
+        - communicating-strategically-workplace-ch03-teams
+        - technical-writing-essentials-2e-4-3-managing-team-conflict
+        - business-writing-for-everyone-ch18-getting-along
+      optional:
+        - technical-writing-essentials-2e-4-1-understanding-team-dynamics
+        - technical-writing-essentials-2e-4-4-leadership-and-communication
+        - technical-writing-essentials-2e-4-2-project-management-teamwork
+        - communicating-strategically-workplace-ch04-culture
+        - ws5-navigating-collaborative-project
+        - ws2-writing-eyeball-eyeball-building-successful-collaboration
+        - wac-keywords-tpc-chapter-5-collaboration
+        - communication-teamwork-neurodiversity
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - wsaaa-putting-ourselves-company-writers-overcoming-obstacles-creating-successful
+        - prompt-bridging-rhetorical-genre-studies-and-ethics-of-representati
+        - wsaaa-collaborative-problem-solving-deliberative-discourse-toward-group-consensus
+    notes: >-
+      The catalog has no team assignment written for a business course, so this unit has no major. The
+      teams work on the career research project: students researching related fields share sources and
+      interview leads, and each team plans a joint panel for the final presentations. NeCamp and Kendall
+      Theado's writing self-portraits give students something concrete to bring to the charter
+      conversation. Whitney's assignment has students take minutes of a class session and then analyze
+      how the minutes represent what was said and who said it. Rotate the note-taker role so everyone on
+      a team writes minutes at least once. Communication and Teamwork Skills to Support Neurodiversity is
+      a whole book; point teams to the sections they need. The two WSAAA activities are CC BY-NC-ND.
+
+  - id: career-research-project
+    title: Career Research Project
+    summary: >-
+      Each student researches a career field, profiles an organization that hires in it, interviews
+      someone who does the work, and reports the findings in a written report and a ten-minute
+      presentation.
+    goals:
+      - Students will find and evaluate sources on a career field and on an employer in it.
+      - Students will plan, conduct, and document an informational interview ethically.
+      - Students will write a report that brings published sources together with what they learned in the interview.
+      - Students will present their findings to classmates who are considering related careers.
+    outcomes: [tc:research-usability, tc:genres-documents, tc:audience-purpose, tc:design-visual]
+    topics: [career research, informational interview, primary research, presentations]
+    weeks: {min: 2, ideal: 4}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - business-writing-for-everyone-ch09-research-process
+        - howdy-or-hello-appendix-b-qualitative-interview-design
+        - wac-try-this-chapter-5-working-with-people
+        - communication-at-work-ch12-presentations
+      optional:
+        - ws2-introduction-primary-research-observations-surveys-interviews
+        - wac-try-this-chapter-2-making-research-ethical
+        - communication-at-work-ch03-researching
+        - technical-writing-essentials-2e-5-3-finding-evaluating-sources
+        - effective-professional-communication-rhetorical-writing-a-report
+        - business-writing-for-everyone-ch10a-citing-sources
+        - technical-writing-essentials-2e-8-4-presenting-as-a-team
+        - xch-2021-petersen-technical-writers-nz-australia
+    assignments:
+      major: [cora-career-research-portfolio]
+      short_term_variant: wsaaa-discourse-communities-manual-presentation
+      activities:
+        - cora-interview-scholar
+    notes: >-
+      Archambault's Career Research Portfolio asks for a long research paper on a career field, with a
+      company profile and an interview with a professional, plus a ten-minute presentation. It's CC
+      BY-NC-SA. Have students line up their interviews during the teams unit at the latest. If a
+      professional doesn't answer in time, adapt Acosta's Interview a Scholar activity, which has
+      students interview professors, so the student interviews a faculty member in the field instead.
+      Petersen and her undergraduate students interviewed nineteen technical communicators in New
+      Zealand and Australia, and the article shows what a set of interviews can turn up. It's free to
+      read but all rights reserved, so link to it. For 5- and 8-week terms, Yim's Discourse
+      Communities Manual Presentation is the lighter version: one interview with a member of the field
+      and a short presentation of a newcomer's guide. It's CC BY-NC-ND and written for discourse
+      communities in general, so write your own assignment sheet that points it at a profession, and
+      cite Yim. Informational
+      interviews for a class project usually don't need IRB review, but check your campus policy if
+      students plan to record interviews or share them outside class.

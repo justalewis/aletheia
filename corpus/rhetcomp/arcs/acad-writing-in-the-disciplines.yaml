@@ -1,0 +1,215 @@
+id: acad-writing-in-the-disciplines
+focus: ACADEMIC
+title: Writing in the Disciplines
+tagline: >-
+  A sophomore-level WID course: students study how their major makes knowledge, learn to read
+  its research articles, and finish with an analysis of a genre their field asks them to write.
+rationale: >-
+  This arc suits a section full of students from different majors who want to know how writing
+  works in theirs. Its starting point is that disciplines make knowledge in different ways, and
+  their writing follows from those differences. Students interview a faculty member in their
+  major, compare how the humanities, social sciences, and sciences treat evidence, learn to read a
+  research article from their field, and close with an analysis of a genre they'll be asked to
+  write. Charles Bazerman's The Informed Writer carries the first two units: its chapter on how
+  writing creates knowledge opens the course, and the chapters after it take the humanities, the
+  social sciences, and the experimental sciences one at a time. The UNC Writing
+  Center's discipline handouts, Preparing to Publish (Huffman, Cotos, and Becker), Writing Spaces,
+  and Choosing & Using Sources fill in around it. Writing about Writing lets students study any
+  discourse community they like; this arc keeps them inside the academy and inside their own
+  major. It also fits WWU's ENG 101, whose catalog description is built around writing across
+  disciplines.
+course_level: "200"
+fits_courses: [wwu-eng101]
+frameworks: [wpa, acrl]
+units:
+  - id: disciplines-as-communities
+    title: Disciplines as Communities
+    summary: >-
+      Students look at what makes writing "academic" and why the answer changes from field to
+      field. Each student interviews a faculty member in their major about how people in the field
+      do research and write it up, and those notes feed the genre analysis at the end of the term.
+    goals:
+      - Students will explain how a discipline's questions and methods shape the writing it values.
+      - Students will interview a faculty member about research and writing in their major.
+      - Students will name the genres and expectations that matter most in their intended field.
+    outcomes: [wpa:rhetorical-knowledge, acrl:scholarship-conversation, acrl:research-inquiry]
+    topics: [writing in the disciplines, discourse community, academic writing, interviews]
+    weeks: {min: 2, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - ws1-academic-writing
+        - wac-informed-writer-chapter-12-creating-knowledge
+        - ws4-creating-using-sharing-information-research-communities
+        - unc-handout-finding-your-field
+      optional:
+        - ws3-understanding-discourse-communities
+        - wvu-bad-ideas-about-writing-first-year-composition-prepares-students-for-academic
+        - wvu-bad-ideas-about-writing-you-can-learn-to-write-in-general
+        - guptill-what-does-the-professor-want-understanding-the-assignme
+        - ws2-composition-as-write-passage
+        - wac-involved-chapter-2-the-classroom-situation
+        - atd-2026-russell-faculty-expectations-undergraduate-writing
+        - processes-writing-across-academic-careers
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - cora-interview-scholar
+        - cora-cast-your-students-scholars
+    notes: >-
+      The catalog has no openly licensed field-profile assignment, so this unit has no major of its
+      own; the interview is the main thing students produce. CORA's Interview a Scholar lesson
+      offers two variations: you interview a faculty member in front of the class, or each student
+      interviews two professors from different fields and compares the answers. Russell's Across
+      the Disciplines article draws on interviews with 47 faculty about what they expect from
+      upper-level student writing. It was written for WAC administrators, so read it before you
+      decide to assign it. Processes is a whole book of short pieces by faculty about writing in
+      their fields; choose two or three from fields your students are in.
+
+  - id: evidence-across-disciplines
+    title: Evidence and Inquiry across the Disciplines
+    summary: >-
+      Students compare how the humanities, social sciences, and natural sciences ask questions and
+      what each counts as evidence, using Bazerman's chapters on each area and the UNC discipline
+      handouts. Then they search the databases their own field uses and build an annotated
+      bibliography of sources from their major.
+    goals:
+      - Students will compare how two or more disciplines define a problem and support a claim.
+      - Students will search a discipline-specific database using deliberate keywords and filters.
+      - Students will annotate sources from their field and explain how each one makes its case.
+    outcomes: [wpa:critical-thinking-reading-composing, acrl:searching-strategic, acrl:creation-process, acrl:authority]
+    topics: [writing in the disciplines, evidence, information literacy, annotated bibliography]
+    weeks: {min: 1, ideal: 3}
+    priority: optional
+    merge_with: next
+    readings:
+      core:
+        - wac-informed-writer-chapter-13-reading-and-writing-about-past-events-the-humanities-and
+        - wac-informed-writer-chapter-14-reading-and-writing-about-events-as-they-happen
+        - wac-informed-writer-chapter-15-reading-and-writing-about-designed-events-the-experimental
+        - cus-4-specialized-databases
+      optional:
+        - wac-informed-writer-chapter-16-reading-and-writing-about-generalizations-theoretical
+        - unc-handout-psychology
+        - unc-handout-sociology
+        - unc-handout-communication-studies
+        - unc-handout-scientific-writing
+        - cus-2-quantitative-or-qualitative
+        - cus-4-search-statements
+        - purdue-owl-subject-specific-writing
+    assignments:
+      major: [cora-annotated-bibliography-introduction-disciplines]
+      short_term_variant: null
+      activities:
+        - cora-library-database-teach
+        - cora-topic-types-terms
+    notes: >-
+      Galoozis's annotated bibliography comes in five versions (arts, humanities, social sciences,
+      sciences, and quantitative reasoning), so students can use the one that matches their major.
+      It was written for a first-year seminar, so raise the source count or require scholarly
+      sources. The UNC handouts cover only a handful of fields. For other majors, Purdue OWL's
+      subject-specific pages help, but they're link-only. Book the library session for this unit
+      and run the database teach-in during it. In a short term this unit folds into the next one:
+      keep the Bazerman chapter that matches each student's area and let the article analysis do
+      the annotated bibliography's work.
+
+  - id: reading-research-articles
+    title: Reading Research Articles
+    summary: >-
+      Students learn how research articles in their field are put together (IMRaD and its
+      variations, the moves of an introduction, the abstract) and read one article closely enough
+      to explain how the study was designed, carried out, and reported.
+    goals:
+      - Students will describe the sections of a research article and what each one does.
+      - Students will read an abstract and an introduction for the problem, the gap, and the contribution.
+      - Students will analyze how a published study was designed, conducted, and reported.
+    outcomes: [wpa:critical-thinking-reading-composing, wpa:knowledge-of-conventions, acrl:scholarship-conversation, acrl:creation-process]
+    topics: [research articles, imrad, reading strategies, abstracts]
+    weeks: {min: 2, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - huffman-ptp-sections-of-a-research-article
+        - ws2-reading-games-strategies-reading-scholarly-sources
+        - mit-commkit-journal-article-introduction
+        - cus-7-scholarly-articles-as-sources
+      optional:
+        - bongers-macartney-psc-journal-articles
+        - ysw-2025-dibrico-zakonova-adapting-imrad
+        - unc-handout-abstracts
+        - gz2e-10-4-a-deeper-look-at-scholarly-sources
+        - wac-informed-writer-chapter-7-analyzing-the-authors-purpose-and-technique
+        - unc-handout-scientific-reports
+    assignments:
+      major: [prompt-analyze-a-published-research-study-an-assignment-to-scaffold]
+      short_term_variant: cora-scholarly-article-autopsy
+      activities:
+        - wsaaa-getting-peek-behind-wizards-curtain-teaching-students-read
+        - cora-making-sense-scholarly-journal-abstracts
+        - cora-reading-academic-articles
+    notes: >-
+      Hall wrote his assignment with literacy studies research in mind, but its questions about how
+      a study was designed, carried out, and reported work for any empirical article. Humanities
+      students may not find an IMRaD article to analyze; let them analyze a journal article from
+      their field and trade the methods questions for questions about evidence and sources. DePew's
+      lesson plan runs about ten class sessions around Christina Haas's "Learning to Read Biology,"
+      which isn't in the catalog, so you'll need library access to it. The plan is CC BY-NC-ND;
+      use it as published. In a short term, the article autopsy (groups take apart one article in a
+      single session) replaces the individual analysis. The Young Scholars in Writing piece is by two
+      NYU undergraduates who built and tested a reading tool based on IMRaD. It's link-only and makes
+      a good model of undergraduate research.
+
+  - id: genre-analysis-in-the-major
+    title: Genre Analysis in the Major
+    summary: >-
+      Students collect examples of a genre their field asks students or professionals to write (a
+      lab report, case brief, policy memo, literature review, artist's statement), analyze its
+      moves and conventions, and explain why the field writes that way. The project draws on the
+      faculty interview from the first unit.
+    goals:
+      - Students will collect and analyze several examples of a genre from their major.
+      - Students will connect the genre's moves and conventions to the field's values and methods.
+      - Students will compare what the samples show with what faculty or style guides say the genre requires.
+      - Students will create a guide or remediation that teaches the genre to a newcomer.
+    outcomes: [wpa:rhetorical-knowledge, wpa:knowledge-of-conventions, wpa:processes, acrl:research-inquiry]
+    topics: [genre, disciplinary genres, writing in the disciplines, academic style]
+    weeks: {min: 3, ideal: 5}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - huffman-ptp-what-is-a-genre
+        - ws4-make-move-writing-genres
+        - unc-handout-should-i-use-i
+        - wac-bad-ideas-ai-writing-chapter-26-ai-can-write-like-an-expert-in-any-discipline-ai-can-help
+      optional:
+        - ws1-navigating-genres
+        - stylus-2026-fonseca-how-code-communicates
+        - ws1-i-need-you-say-i-why-first
+        - unc-handout-passive-voice
+        - wvu-bad-ideas-about-writing-excellent-academic-writing-must-be-serious
+        - jwa-2025-kane-citation-practices-micusp
+        - atd-2018-baird-dilger-dispositions-science-labs
+    assignments:
+      major: [kcworks-anatomy-of-a-genre-stecher]
+      short_term_variant: prompt-cross-disciplinary-concision-and-clarity-writing-social-scie
+      activities:
+        - wsaaa-rhetorical-moves-analysis-emails
+        - textgened-genre-generators
+    notes: >-
+      Stecher wrote her assignment for artistic genres (literature, music, film, visual arts), so
+      rewrite the prompt for disciplinary genres. It's CC BY-NC-SA, so you can adapt it as long as
+      your version carries the same license. Its last part has students turn the analysis into a
+      new piece, such as a guide, video, or infographic, that teaches the genre to a newcomer. Run
+      the email moves activity first; it follows the model in "Make Your Move" and gives students
+      practice on a familiar genre before they take on an unfamiliar one. In a short term, students
+      analyze abstracts from their field with Troutman's version of the Swales and Feak model
+      instead of doing the full genre study. Kane's article runs citation-classifying software on
+      upper-level student papers and finds that English papers lean on primary sources and cite
+      densely, while Biology papers report more secondary research. It was written for researchers,
+      so pull a finding or two for discussion rather than assigning the whole thing. Fonseca's
+      Stylus essay, a first-year computer science student's genre analysis of C code, is link-only
+      and a good model for students in technical majors.

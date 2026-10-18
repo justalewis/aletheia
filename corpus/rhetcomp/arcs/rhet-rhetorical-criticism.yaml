@@ -1,0 +1,254 @@
+id: rhet-rhetorical-criticism
+focus: RHETORIC
+title: Rhetorical Criticism
+tagline: >-
+  Students practice several methods of rhetorical criticism on speeches, genres, monuments, and digital
+  media, then write a critical essay on an artifact they choose.
+rationale: >-
+  This arc teaches criticism as a set of methods, each asking a different question of a text. Students
+  begin with neo-Aristotelian criticism of speeches, move to Burke's identification and dramatism,
+  study how genres recur, apply ideological, feminist, and cultural lenses, and finish with visual and
+  digital artifacts and a critical essay on an artifact of their own choosing. Reading Rhetorical
+  Theory supplies most of the method chapters; Writing Spaces fills in identification, genre, and
+  visual rhetoric; and the published criticism students read as models comes from constellations,
+  Present Tense, enculturation, and the Journal of Multimodal Rhetorics. Public-domain speeches by
+  Johnson, Obama, Lincoln, and Reagan give the early units their artifacts. Burke's own books are
+  still in copyright and aren't in the catalog, so the Burke unit works from secondary accounts. The
+  catalog also has no assignment for Burkean criticism and only a link-only one for speech criticism,
+  so expect to write those two prompts yourself.
+course_level: "300-400"
+fits_courses: []
+frameworks: [wpa]
+units:
+  - id: neo-aristotelian-criticism
+    title: Criticism and the Neo-Aristotelian Reading
+    summary: >-
+      Students learn what rhetorical criticism is for and practice its oldest method: reading a speech
+      in its situation for its proofs, arrangement, style, and effect on an audience. Lyndon Johnson's
+      1965 voting-rights address and Barack Obama's 2015 Selma remarks give the class two speeches about
+      the same events, delivered fifty years apart.
+    goals:
+      - Students will explain what a rhetorical critic does beyond describing a text.
+      - Students will reconstruct the rhetorical situation of a speech, including its audiences and constraints.
+      - Students will evaluate a speech using Aristotle's proofs and the canons.
+      - Students will compare two speeches on the same subject delivered in different situations.
+    outcomes: [wpa:rhetorical-knowledge, wpa:critical-thinking-reading-composing, wpa:processes]
+    topics: [rhetorical analysis, rhetorical situation, speeches, classical rhetoric, kairos]
+    weeks: {min: 2, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - rrt-ch01-what-is-rhetorical-theory
+        - rrt-ch05-rhetorical-situation
+        - pt-lbj-american-promise-1965
+        - pt-obama-selma-50th-2015
+      optional:
+        - pt-aristotle-rhetoric-roberts
+        - pt-lincoln-second-inaugural-1865
+        - pt-fdr-day-of-infamy-1941
+        - pt-douglass-what-to-the-slave-fourth-of-july
+        - openstax-wg-ch09-rhetorical-analysis
+        - bad-ideas-rhetoric-empty-speech
+        - adga-the-rhetorical-appeals-and-sociohistorical-context
+    assignments:
+      major: [fyca-comparative-rhetorical-analysis-23]
+      short_term_variant: null
+      activities:
+        - wsaaa-learning-listen-immersion-rhetorical-choices
+        - kcworks-rhetorical-analysis-peer-review-handout-degrasse
+    notes: >-
+      Sladek's comparative analysis is link-only on the First-Year Composition Archive and was written
+      for a first-year course. Link to it or write your own sheet, and ask for a judgment of each speech
+      along with the description. Johnson's and Obama's speeches are federal works in the public domain,
+      and the Miller Center hosts video of Johnson's. Have students listen before they read the
+      transcript. Rodrigue and Stedman's listening sequence was written for audio texts such as
+      podcasts and runs four class sessions; the first two are enough here. If students haven't read
+      Aristotle in another course, assign Book I, chapters 1 to 3, from the Roberts translation.
+
+  - id: burke-identification-dramatism
+    title: Burke, Identification, and Dramatism
+    summary: >-
+      Students study Kenneth Burke's claim that persuasion works through identification and use it to
+      read how speakers and performers build a shared "we" with an audience and draw lines against
+      others. The readings come at Burke secondhand, through Blakesley's chapter and the Burkean parlor,
+      along with Ramler's reading of Beyoncé's "Formation" as a performance of identification.
+    goals:
+      - Students will explain Burke's concepts of identification and division and find both at work in a text.
+      - Students will use the dramatistic pentad (act, scene, agent, agency, purpose) to describe how a text frames an event.
+      - Students will write a short Burkean reading of an artifact they choose.
+    outcomes: [wpa:critical-thinking-reading-composing, wpa:rhetorical-knowledge]
+    topics: [rhetoric, rhetorical analysis, audience, persuasion]
+    weeks: {min: 1, ideal: 2}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - ws5-elaborate-rhetorics
+        - adga-the-burkean-parlor-metaphor
+        - constellations-beyonce-formation
+      optional:
+        - pt-twain-europe-and-elsewhere
+        - e88-41-the-politics-of-fear-how-it-manipulates-us-to-trib
+        - pt-washington-atlanta-compromise-1895
+        - enculturation-27-exiled-speak-back
+        - present-tense-crossing-balsero-art
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - wsaaa-establishing-who-professional-writing-power-dynamics-improv
+    notes: >-
+      Burke's books are still in copyright, so none of them is in the catalog. Give students the pentad
+      from A Grammar of Motives in your own handout. The Burkean parlor section of A Dam Good Argument
+      quotes a paragraph from Burke's 1941 The Philosophy of Literary Form. The book's CC BY license
+      doesn't extend to Burke's words, so keep that paragraph intact as a quotation with its citation.
+      Twain's "Corn-pone Opinions," on how people take on the opinions of their group, makes a plain
+      early companion to Blakesley.
+      Washington's Atlanta address is a hard case of a speaker seeking identification with an audience
+      that held power over him. Esposito's improv activity was written for professional writing; use it
+      to stage act, scene, and agent in pairs before students try the pentad on a text. No assignment in
+      the catalog asks for Burkean criticism, and a two-page pentadic reading of a news story works as
+      the unit paper.
+
+  - id: genre-criticism
+    title: "Genre Criticism: Eulogies, Inaugurals, and Recurring Forms"
+    summary: >-
+      Students study genres as typical responses to situations that keep coming back, then read
+      eulogies and inaugural addresses across centuries to see what each new speaker keeps and changes.
+      The major project dissects a genre the student chooses.
+    goals:
+      - Students will define genre as a response to a recurring situation and give examples from outside school writing.
+      - Students will compare several examples of one genre to identify its stable features and its variations.
+      - Students will explain how a text borrows a genre's authority, including texts that imitate a genre to mislead.
+    outcomes: [wpa:knowledge-of-conventions, wpa:rhetorical-knowledge, wpa:critical-thinking-reading-composing]
+    topics: [genre, speeches, storytelling, public memory]
+    weeks: {min: 1, ideal: 2}
+    priority: optional
+    merge_with: previous
+    readings:
+      core:
+        - rrt-ch11-rhetoric-and-narrative
+        - ws1-navigating-genres
+        - pt-thucydides-pericles-funeral-oration
+        - pt-reagan-challenger-1986
+      optional:
+        - pt-lincoln-gettysburg-1863
+        - pt-jfk-inaugural-1961
+        - pt-eisenhower-farewell-1961
+        - xch-2019-shosted-prageru-as-genre
+        - ysw-2024-kothari-transforming-taboo
+        - cf-2012-rounsaville-selecting-genres-uptake
+        - wvu-bad-ideas-about-writing-popular-culture-is-only-useful-as-a-text-for-criticism
+    assignments:
+      major: [kcworks-anatomy-of-a-genre-stecher]
+      short_term_variant: null
+      activities:
+        - textgened-genre-generators
+    notes: >-
+      Pericles, Lincoln at Gettysburg, and Reagan after the Challenger explosion give students three
+      speeches honoring the dead, spanning about 2,400 years. Hallsby's Chapter 11 covers form, genre,
+      and frame theory and Fisher's narrative paradigm, so it also supports narrative readings in the
+      Burke unit. Shosted argues that PragerU videos imitate academic genres to borrow their
+      credibility; his article appeared in an undergraduate issue of Xchanges. Kothari's study of
+      recovery narratives appeared in Young Scholars in Writing. Both are link-only, and both show
+      students genre criticism written by undergraduates. Stecher's Anatomy of a Genre was written for
+      artistic genres (literature, music, film, the visual arts); point it at speech and media genres,
+      and drop the multimodal remediation if time is short. If this unit drops, it folds into the Burke
+      unit; move Hallsby's chapter there.
+
+  - id: ideological-feminist-cultural-criticism
+    title: Ideological, Feminist, and Cultural Criticism
+    summary: >-
+      Students read criticism that asks whose interests a text serves and whose it erases: work on
+      counterpublics and settler colonialism, feminist readings of a memorial and of how AI gets
+      represented, and an analysis of a university's use of a tribal name. They then write a critique
+      of how a group is represented in media.
+    goals:
+      - Students will describe what ideological, feminist, and cultural critics look for in a text.
+      - Students will analyze how an artifact represents a group and whose perspective it assumes.
+      - Students will state their own position as critics and account for how it shapes their reading.
+      - Students will support an ideological reading with close attention to language and images.
+    outcomes: [wpa:critical-thinking-reading-composing, wpa:rhetorical-knowledge, wpa:processes]
+    topics: [feminist rhetorics, cultural rhetorics, public sphere, decolonial, ideology]
+    weeks: {min: 2, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - rrt-ch10-counterpublics
+        - rrt-ch16-settler-colonial-rhetorics
+        - constellations-commemorating-sexism-titanic
+        - present-tense-composing-ai-whiteness-masculinity
+      optional:
+        - rrt-ch15-latine-rhetorical-theory
+        - rrt-ch03-propaganda-common-good
+        - constellations-utah-utes-rhetorical-sovereignty
+        - present-tense-against-hillbilly-hot-takes
+        - jomr-swartz-savewomenssports
+        - qcw-2024-hodges-dissecting-desires
+        - present-tense-sleep-dealer-rhetorical-coloniality
+        - jump-2024-gillette-robocop-feminist-icon
+    assignments:
+      major: [prompt-interrogating-the-good-muslim-challenging-representations-of]
+      short_term_variant: null
+      activities:
+        - acrl-scholarship-not-neutral-using-positionality-statements-sourc
+        - textgened-probing-biases-with-generative-ai
+    notes: >-
+      Welji's assignment has students analyze the language of TV shows, films, or speeches to argue
+      about how Muslims are represented in U.S. media. Keep her focus or open it to another group, and
+      either way require sources written by members of the group being represented. Hodges's analysis
+      of objectifying ads comes from Queen City Writers, an undergraduate journal, so students see this
+      kind of reading done by a peer. Swartz analyzes anti-trans posts, and Hoff writes about a
+      university's use of the Ute name and imagery; before discussion, talk about how to quote and
+      reproduce hateful material in an essay. Gillette's RoboCop piece is a student video essay in
+      JUMP+ and is link-only. The positionality lesson has students read scholars' positionality
+      statements; ask them to write one for themselves before drafting.
+
+  - id: visual-digital-critical-essay
+    title: Visual and Digital Artifacts and the Critical Essay
+    summary: >-
+      Students apply the term's methods to images, places, and platforms (protest murals, restroom
+      signs, a harassment campaign on Twitter), then write a critical essay on an artifact they choose,
+      using whichever method suits it.
+    goals:
+      - Students will describe how images, spaces, and platforms persuade, using terms from visual and digital rhetoric.
+      - Students will choose a critical method suited to their artifact and justify the choice.
+      - Students will write and revise a critical essay that makes and supports a judgment about an artifact.
+    outcomes: [wpa:critical-thinking-reading-composing, wpa:rhetorical-knowledge, wpa:processes, wpa:knowledge-of-conventions]
+    topics: [visual rhetoric, digital rhetoric, social media, public memory, rhetorical analysis]
+    weeks: {min: 2, ideal: 4}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - rrt-ch12-visual-rhetoric
+        - rrt-ch18-digital-rhetorics
+        - jomr-2021-dufresne-slow-looking-blm-murals
+        - present-tense-2018-trice-potts-dark-patterns
+      optional:
+        - ws3-understanding-visual-rhetoric
+        - present-tense-indecorous-objects
+        - enculturation-2021-sparby-reading-mean-comments
+        - cconline-2011-devoss-platt-image-manipulation-ethics
+        - dougherty-hodv-how-to-lie-with-charts
+        - enculturation-27-rendering-everyday-life
+        - jomr-migliaccio-queering-collective-memory-douglass
+        - present-tense-2010-parrott-ill-google-it
+    assignments:
+      major: [prompt-writing-the-selfie-using-selfies-to-practice-character-prese]
+      short_term_variant: wsaaa-outside-frame-image-analysis
+      activities:
+        - acrl-inside-feed-how-algorithms-shape-what-we-see
+        - wsaaa-peer-review-writers-worksheet
+    notes: >-
+      The catalog has no openly licensed criticism prompt that leaves the artifact open. Sessolo's
+      selfie project comes closest: it's the final project of an upper-level digital and social media
+      writing course and asks for a critical analysis of a visual practice. It's CC BY-NC, so you can
+      open it to any artifact and add a requirement that students name and justify their method. Paur's
+      Outside the Frame, the short-term version, analyzes a single news photograph and its context.
+      Dufresne writes about the Raleigh murals as a white educator and reflects on that position; ask
+      students to account for their own position in the critical essay the same way. Trice and Potts
+      analyze a sample of tweets from the GamerGate campaign, so tell students what they'll be reading.
+      Give the last two weeks to drafting, peer review with the writer's worksheet, and revision.

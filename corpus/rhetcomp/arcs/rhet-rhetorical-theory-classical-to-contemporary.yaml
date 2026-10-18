@@ -1,0 +1,253 @@
+id: rhet-rhetorical-theory-classical-to-contemporary
+focus: RHETORIC
+title: Rhetorical Theory, Classical to Contemporary
+tagline: >-
+  Students read the Western rhetorical tradition in public-domain translations, from Plato through the
+  Enlightenment, and finish with the speakers and writers that tradition left out.
+rationale: >-
+  This arc is for an upper-division history of rhetoric or rhetorical theory course. Students read
+  primary texts in roughly chronological order: the argument over what rhetoric is in Plato's
+  dialogues and Isocrates, Aristotle's Rhetoric, Cicero and Quintilian on the orator's education, and
+  the Enlightenment rhetorics of Campbell, Blair, and Whately. The last unit reads women, Black, and
+  Indigenous rhetors who spoke and wrote alongside that tradition (Margaret Fell, Maria Stewart, and
+  Red Jacket among them) together with recent scholarship on how histories of rhetoric get written.
+  Atilla Hallsby's Reading Rhetorical Theory supplies most of the contemporary commentary, with
+  chapters from Writing Spaces and Bad Ideas About Writing and articles from enculturation and
+  constellations. Every primary text is a public-domain translation or edition, most from the
+  nineteenth or early twentieth century, so expect older English and plan reading guides. Several
+  are scanned books. The catalog has almost no assignments written for a history of rhetoric course,
+  so plan to write most unit projects yourself; the unit notes say where an existing assignment
+  comes close.
+course_level: "300-400"
+fits_courses: []
+frameworks: [wpa]
+units:
+  - id: plato-isocrates-sophists
+    title: "What Is Rhetoric? Plato, Isocrates, and the Sophists"
+    summary: >-
+      Students read the earliest surviving arguments over whether rhetoric is an art, a knack, or a
+      civic education. Plato's Gorgias calls it a knack for flattery, and the Phaedrus sketches what a
+      true rhetoric would require. Isocrates answers with his own account of what training in speech
+      can and can't do.
+    goals:
+      - Students will summarize Plato's case against rhetoric in the Gorgias and the alternative he sketches in the Phaedrus.
+      - Students will compare Isocrates' view of rhetorical education with Plato's.
+      - Students will explain why histories of rhetoric usually start in Athens and what that starting point leaves out.
+    outcomes: [wpa:critical-thinking-reading-composing, wpa:rhetorical-knowledge]
+    topics: [classical rhetoric, sophists, rhetoric, persuasion]
+    weeks: {min: 2, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - rrt-ch02-origins-of-rhetorical-theory
+        - pt-plato-gorgias-jowett
+        - pt-plato-phaedrus-jowett
+        - pt-isocrates-against-the-sophists
+      optional:
+        - bad-ideas-rhetoric-empty-speech
+        - psp-ch02-origins-of-public-speaking
+        - pt-plato-apology-jowett
+        - pt-isocrates-antidosis
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - wsaaa-analyzing-ai-ai-debate-as-rhetorical-observation
+    notes: >-
+      The Gorgias and the Phaedrus are long. Assign the exchanges with Gorgias and Polus from the first,
+      and the second half of the Phaedrus, where Socrates turns to rhetoric and writing and tells the
+      myth of Theuth. Jowett's nineteenth-century translations read stiffly, but the newer ones are
+      still in copyright. Against the Sophists runs about two pages; from the Antidosis, the usual
+      excerpt is the passage on logos (around sections 253 to 257). Hallsby's Chapter 2 pairs with a
+      short encomium paper in his book. That paper isn't cataloged separately, but it makes a good first
+      assignment. The catalog has no open translation of Gorgias's Encomium of Helen, so students will
+      know Gorgias mainly through Plato's portrait of him. The AI debate activity gives Plato's charge,
+      persuasion without knowledge, a present-day test case.
+
+  - id: aristotle
+    title: Aristotle's Rhetoric and the Three Genres
+    summary: >-
+      Students work through Aristotle's definition of rhetoric, the three proofs, the enthymeme, and the
+      three kinds of oratory, then test them on Greek speeches: Pericles' funeral oration, Lysias's
+      courtroom speeches, and Demosthenes' Philippics. The major assignment applies the enthymeme to a
+      present-day political account.
+    goals:
+      - Students will explain Aristotle's definition of rhetoric and his three artistic proofs.
+      - Students will identify enthymemes in a contemporary argument and state the premises they leave unspoken.
+      - Students will classify speeches as deliberative, forensic, or epideictic and explain what each kind asks of its audience.
+    outcomes: [wpa:rhetorical-knowledge, wpa:critical-thinking-reading-composing, wpa:processes]
+    topics: [classical rhetoric, ethos, pathos, logos, speeches]
+    weeks: {min: 2, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - pt-aristotle-rhetoric-roberts
+        - rrt-ch01-what-is-rhetorical-theory
+        - bad-ideas-logos-logic
+        - pt-thucydides-pericles-funeral-oration
+      optional:
+        - pt-lysias-orations
+        - pt-demosthenes-philippics-kennedy
+        - constellations-countering-racial-enthymemes
+        - pt-lincoln-gettysburg-1863
+        - gz2e-6-9-kairos-a-rhetorical-appeal-lost-in-time
+        - ws3-constructing-scholarly-ethos-writing-classroom
+    assignments:
+      major: [cora-twitter-politics-metaphor-enthymeme-trump]
+      short_term_variant: null
+      activities:
+        - kcworks-rhetorical-analysis-peer-review-handout-degrasse
+    notes: >-
+      Roberts's 1924 translation is public domain in the US by date. The usual excerpts are Book I,
+      chapters 1 to 3, and Book II, chapter 1; Freese's 1926 Loeb translation is another public-domain
+      option. Pericles' funeral oration is often taught with the Gettysburg Address, and reading them
+      side by side lets students see how much of the epideictic form Lincoln kept. Jarvis first used his
+      assignment two days after a presidential election, but it works with any political figure's
+      account or a hashtag. Rodriguez's article on racial enthymemes is a published example of
+      the same kind of analysis. Set ground rules for discussing current political figures before
+      students choose accounts.
+
+  - id: rome-and-the-orators-education
+    title: Cicero, Quintilian, and the Education of the Orator
+    summary: >-
+      Students read Roman accounts of what an orator has to know and be: Cicero on the ideal speaker and
+      the three styles, Quintilian on training a speaker from childhood, and Augustine adapting both for
+      Christian preaching. Style, memory, and delivery get more attention here than in the Greek texts.
+    goals:
+      - Students will describe the five canons and the three styles as Cicero and Quintilian present them.
+      - Students will evaluate Quintilian's ideal of the orator as a good man skilled in speaking.
+      - Students will practice imitation and figures of speech the way Roman students did.
+    outcomes: [wpa:rhetorical-knowledge, wpa:knowledge-of-conventions, wpa:processes]
+    topics: [classical rhetoric, style, delivery, memory, invention]
+    weeks: {min: 1, ideal: 2}
+    priority: optional
+    merge_with: previous
+    readings:
+      core:
+        - pt-cicero-on-oratory-and-orators-watson
+        - pt-quintilian-institutio-oratoria-butler
+        - ws3-evolution-imitation-building-style
+        - ws3-writing-force-flair
+      optional:
+        - pt-cicero-brutus-orator-jones
+        - pt-augustine-christian-doctrine-book-iv
+        - pt-longinus-on-the-sublime-havell
+        - pt-jfk-inaugural-1961
+        - present-tense-2010-parrott-ill-google-it
+        - kairos-2012-bowie-rhetorical-roots-podcasting
+        - suso-ch02-ethics-matters
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - textgened-embodying-rhetoric-quick-scripts-and-acts-of-persuasion
+    notes: >-
+      From Watson's De Oratore, assign Book I and the passage on memory in Book II; from Butler's
+      Quintilian, Book XII, chapter 1. Watson's text is a scanned 1896 printing, so budget time for
+      students to find their way around it. Augustine's Book IV is link-only because New Advent's
+      lightly revised version of Shaw's translation is copyrighted. The unrevised 1887 translation on
+      CCEL is public domain, so take the text from there if you want it in the reader. Meyer's and FitzGerald's Writing Spaces chapters bring
+      imitation and the figures into a present-day writing class, and FitzGerald ends with a commonplace
+      book exercise. No assignment in the catalog asks for classical imitation or a commonplace book,
+      so build a short one from those two chapters. Kennedy's inaugural is a standard text for teaching
+      antithesis and chiasmus. If this unit drops, keep Quintilian XII.1 and FitzGerald and move them
+      into the Aristotle unit.
+
+  - id: enlightenment-rhetoric-and-its-heirs
+    title: Enlightenment Rhetoric and Its Heirs
+    summary: >-
+      Students read the British rhetorics that shaped college teaching in Britain and the United States
+      through the nineteenth century: Campbell on the faculties of the mind, Blair on taste and style,
+      and Whately on presumption and burden of proof. Two contemporary chapters carry the line forward
+      to Burke's identification and the rhetorical situation.
+    goals:
+      - Students will explain how Campbell and Blair tie persuasion to the psychology of the audience and to taste.
+      - Students will apply Whately's concepts of presumption and burden of proof to a current dispute.
+      - Students will connect eighteenth- and nineteenth-century theories of audience to twentieth-century accounts of the rhetorical situation.
+    outcomes: [wpa:rhetorical-knowledge, wpa:critical-thinking-reading-composing]
+    topics: [audience, style, persuasion, rhetorical situation, rhetorical theory]
+    weeks: {min: 1, ideal: 2}
+    priority: optional
+    merge_with: next
+    readings:
+      core:
+        - pt-campbell-philosophy-of-rhetoric
+        - pt-blair-lectures-rhetoric-belles-lettres
+        - rrt-ch05-rhetorical-situation
+        - ws5-elaborate-rhetorics
+      optional:
+        - pt-whately-elements-of-rhetoric
+        - pt-burke-conciliation-1775
+        - pt-emerson-american-scholar-1837
+        - wvu-bad-ideas-about-writing-the-five-paragraph-essay-transmits-knowledge
+        - ws2-sixth-paragraph-re-vision-essay
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - acrl-defining-different-kinds-authority
+    notes: >-
+      Campbell, Blair, and Whately are scanned books from the Internet Archive. The usual Campbell
+      excerpt is Book I, chapter 1, on the four ends of speaking. For Blair, choose two or three
+      lectures on taste and style; for Whately, his treatment of presumption and burden of proof.
+      Blakesley defines rhetoric in Burke's terms of identification and division, and Hallsby covers
+      Bitzer's rhetorical situation along with the rhetorical ecologies model offered as an alternative.
+      Edmund Burke's speech on conciliation was a school model of deliberative oratory for generations.
+      Pair Blair with Bernstein and Lowry's Bad Ideas chapter and ask students where the rules of the
+      school essay came from. Heldt's authority activity gives students practice with Whately's
+      question of when deference to authority is reasonable. If this unit drops, it folds into the
+      next one, since Wollstonecraft, Stewart, and the Grimkés wrote within a few decades of Campbell,
+      Blair, and Whately.
+
+  - id: who-the-tradition-left-out
+    title: Who the Tradition Left Out
+    summary: >-
+      Students read rhetors the standard history passes over, among them Margaret Fell, Maria Stewart,
+      and Red Jacket, alongside scholarship on writing rhetorical history from decolonial and cultural
+      rhetorics perspectives. The final project asks students to analyze an artifact through a
+      framework that doesn't start in Athens.
+    goals:
+      - Students will analyze how women, Black, and Indigenous rhetors claimed the right to speak to audiences that denied it.
+      - Students will explain how the choice of a starting point shapes whose rhetoric a history counts.
+      - Students will analyze a rhetorical artifact using a framework from outside the Greco-Roman tradition.
+      - Students will describe how transcription, translation, and editing shape the record of a speaker's words.
+    outcomes: [wpa:critical-thinking-reading-composing, wpa:rhetorical-knowledge, wpa:processes]
+    topics: [feminist rhetorics, african american rhetorics, indigenous rhetorics, decolonial, cultural rhetorics]
+    weeks: {min: 3, ideal: 4}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - enculturation-21-knowing-your-story
+        - pt-fell-womens-speaking-justified-1666
+        - pt-maria-stewart-meditations-1879
+        - pt-red-jacket-religion-1805
+      optional:
+        - constellations-historical-work-cultural-rhetorics
+        - rrt-ch16-settler-colonial-rhetorics
+        - pt-astell-serious-proposal
+        - pt-wollstonecraft-vindication
+        - pt-sarah-grimke-letters-equality
+        - pt-sojourner-truth-1851-speech
+        - pt-cooper-voice-from-the-south
+        - pt-wong-chin-foo-why-am-i-a-heathen-1887
+    assignments:
+      major: [prompt-expanding-graduate-student-rhetorical-knowledge-african-amer]
+      short_term_variant: prompt-archival-research-for-community-and-skill-building-in-the-on
+      activities:
+        - textgened-finding-forgotten-chinese-women-critically-engaging-with-cha
+    notes: >-
+      Assign Dougherty first and have students apply his proposals for decolonial rhetorical history to
+      this course's own reading list. Kareem wrote her assignment for graduate students; it asks them to
+      analyze artifacts through an African American rhetorical framework rooted in Kemet (ancient
+      Egypt). For undergraduates, gloss the framework's terms in a handout and narrow the choice of
+      artifacts. Evans's archive activity is the short-term version: students explore a historic
+      African American newspaper, so point them to a local paper or a digitized one. Red Jacket's speech
+      reached print through interpreters and editors, and Sojourner Truth's Akron speech survives in two
+      versions, the 1851 Anti-Slavery Bugle report and Frances Gage's 1863 recollection. Both raise the
+      question of whose words students are reading. Stewart's Meditations is a scanned 1879 edition
+      that may not include her public lectures, and Fell's tract is available as scans of the 1666 and
+      1667 printings. In the Finding Forgotten Chinese Women activity, students compare ChatGPT's
+      descriptions of Chinese women and men with scholarly ones and write about the bias they find.

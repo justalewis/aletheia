@@ -1,0 +1,246 @@
+id: sci-scientific-and-research-writing
+focus: SCIWRIT
+title: Scientific and Research Writing
+tagline: >-
+  An upper-division course in the genres researchers write for each other: the research article, the
+  literature review, the lab report, the referee's review, the abstract, and the poster.
+rationale: >-
+  This arc teaches the genres scientists use to report their work to other scientists. Students first
+  read research articles in their own field as a genre, then review the literature on a question, write
+  a lab report or short IMRaD report with figures, put it through referee-style peer review, and boil it
+  down to an abstract and a poster. It suits upper-division sections made up mostly of science, health,
+  and engineering majors. It works best when students have data of their own to write about; the report
+  unit's notes cover where that data can come from. Most of the readings are short and practical:
+  the Ten Simple Rules articles from PLOS Computational Biology, MIT's CommKit, UNC Writing Center
+  handouts, Preparing to Publish, Principles of Scientific Communication, and Wilke's Fundamentals of
+  Data Visualization. Bazerman's The Informed Writer and Technical Writing Spaces cover the rhetorical
+  side. The catalog has no openly licensed lab report assignment, so expect to write the report prompt
+  yourself.
+course_level: "300-400"
+fits_courses: [oc-engl235, wwu-eng302]
+frameworks: [wpa, tc]
+units:
+  - id: research-article-as-genre
+    title: The Research Article as Genre
+    summary: >-
+      Students read research articles from their own field as a genre with recognizable sections and
+      moves, and they write a guide for newcomers on how researchers in that field put one together.
+    goals:
+      - Students will describe the IMRaD structure and the work each section does.
+      - Students will analyze published research articles in their field for conventions and the reasons behind them.
+      - Students will write a guide that explains to a newcomer how researchers in their field write a research article.
+    outcomes: [wpa:knowledge-of-conventions, wpa:rhetorical-knowledge, tc:genres-documents]
+    topics: [genre, research articles, imrad, writing in the disciplines]
+    weeks: {min: 1, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - huffman-ptp-what-is-a-genre
+        - huffman-ptp-sections-of-a-research-article
+        - wac-informed-writer-chapter-15-reading-and-writing-about-designed-events-the-experimental
+        - plos-tsr-2017-structuring-papers
+      optional:
+        - bongers-macartney-psc-journal-articles
+        - unc-handout-scientific-writing
+        - peters-et-al-wais-stasis-theory-better-paper
+        - wac-informed-writer-chapter-14-reading-and-writing-about-events-as-they-happen
+        - unc-handout-psychology
+        - penrose-katz-writing-in-the-sciences
+        - wac-shaping-written-knowledge
+        - wac-writing-biology
+    assignments:
+      major: [wsaaa-write-like]
+      short_term_variant: null
+      activities:
+        - wsaaa-getting-peek-behind-wizards-curtain-teaching-students-read
+        - acrl-analyzing-articles
+    notes: >-
+      Epps's How to Write a ___ Like a ___ fits this unit as written: students fill the first blank with
+      "research article" and the second with a researcher in their field. It's CC BY-NC-ND, so share it
+      unchanged. DePew's lesson series is built on Christina Haas's "Learning to Read Biology," which isn't
+      openly licensed and isn't in the catalog, so you'll need library access to it. The series runs about
+      ten sessions, more than this unit has, so pick the ones you need. Bazerman's Shaping Written
+      Knowledge and Myers's Writing Biology are link-only background on how the experimental article took
+      its shape. Penrose and Katz's Writing in the Sciences is a whole book; send students there if they
+      want more.
+
+  - id: literature-reviews-and-introductions
+    title: Literature Reviews and Introductions
+    summary: >-
+      Students review the published research on a focused question and write a literature review that
+      ends at a gap, the way a research article's introduction does.
+    goals:
+      - Students will search their field's literature for studies on a focused question.
+      - Students will synthesize sources by theme, method, or finding instead of summarizing them one at a time.
+      - Students will write a literature review that moves from what is known to what isn't.
+    outcomes: [wpa:critical-thinking-reading-composing, wpa:processes, tc:research-usability]
+    topics: [literature review, synthesis, research articles]
+    weeks: {min: 1, ideal: 3}
+    priority: optional
+    merge_with: previous
+    readings:
+      core:
+        - ws6-lets-party-composing-review-literature-technical-topic
+        - plos-tsr-2013-literature-review
+        - huffman-ptp-goals-effective-introduction
+        - lloyd-wtlr-dissection-of-a-literature-review
+      optional:
+        - unc-handout-literature-reviews
+        - mit-commkit-journal-article-introduction
+        - frederiksen-phelps-lr-what-is-a-literature-review
+        - frederiksen-phelps-lr-synthesizing-sources
+        - frederiksen-phelps-lr-writing-the-literature-review
+        - wac-informed-writer-chapter-9-comparing-and-synthesizing-sources
+        - practical-intro-writing-reviews-health
+    assignments:
+      major: [cora-literature-review]
+      short_term_variant: cora-annotated-bibliography-introduction-disciplines
+      activities:
+        - cora-research-matrix-synthesizing-search-results
+        - cora-whose-shoulders-are-you-standing-inclusive-citation-practice
+        - cora-ai-might-summarize-it-cant-think-ai-assisted-lit-reviews
+    notes: >-
+      McLean's assignment treats the literature review as the rationale for a research question, the job
+      it does inside an IMRaD introduction. If students will report their own data in the next unit,
+      have them review the literature on that same question. Galoozis's annotated bibliography has a
+      sciences version and makes a lighter stand-in for 5- and 8-week terms. In a short term this unit
+      folds into the genre unit, and students write a one-page review from the articles they're already
+      reading. Frederiksen and Phelps wrote for education and nursing graduate students, so pick chapters.
+      Bellamy's lesson asks students to look at whose work they cite, and Perry's has them check what an
+      AI summary of the literature leaves out.
+
+  - id: methods-results-and-figures
+    title: Methods, Results, and Figures
+    summary: >-
+      Students write a lab report or short IMRaD report on data from a lab course, a public dataset, or a
+      small study of their own. The unit concentrates on methods someone else could repeat, results
+      reported before any interpretation, and figures and tables that make sense on their own.
+    goals:
+      - Students will write methods and results sections that follow their field's conventions.
+      - Students will design figures and tables with informative titles, labels, and captions.
+      - Students will report statistics accurately and keep results separate from discussion.
+      - Students will match voice and tense to their field's expectations.
+    outcomes: [tc:genres-documents, tc:design-visual, tc:editing-style, wpa:knowledge-of-conventions]
+    topics: [lab reports, imrad, data visualization, figures]
+    weeks: {min: 2, ideal: 4}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - unc-handout-scientific-reports
+        - technical-writing-essentials-2e-7-7-lab-reports
+        - plos-tsr-2014-better-figures
+        - wilke-fdv-titles-captions-tables
+      optional:
+        - unc-handout-figures-and-charts
+        - unc-handout-statistics
+        - mit-commkit-figure-design
+        - bongers-macartney-psc-figures
+        - peters-et-al-wais-best-practices-data-visualization
+        - plos-tsr-2020-colorize-data-visualization
+        - unc-handout-passive-voice
+        - duke-swr-lesson-2-cohesion-coherence-emphasis
+    assignments:
+      major: []
+      short_term_variant: prompt-breaking-away-from-the-traditional-lab-report-a-technical-em
+      activities:
+        - cora-understanding-data-visualization
+        - acrl-spot-spin-can-you-trust-data
+    notes: >-
+      There's no openly licensed lab report or IMRaD report assignment in the catalog, so write your own
+      around the data your students have. Students in lab courses can use data from those; others can work
+      from a public dataset or a short survey, and anything with human participants needs an IRB check
+      first. The UNC handout and section 7.7 of Technical Writing Essentials walk through the report
+      section by section, and the PLOS figure rules and Wilke's chapter on titles and captions cover the
+      visuals. Rhudy's assignment swaps the lab report for a technical email to a supervisor; use it as
+      the lighter version in short terms. The UNC handouts and Wilke are CC BY-NC-ND; the PLOS articles
+      and Technical Writing Essentials are CC BY.
+
+  - id: peer-review-and-revision
+    title: Peer Review and Revision
+    summary: >-
+      Students review each other's reports the way journal referees do, write a response to reviewers, and
+      revise. The readings cover how scientific peer review works, what it misses, and how fields catch
+      mistakes after publication.
+    goals:
+      - Students will write a referee-style review that separates major concerns from minor ones.
+      - Students will respond to reviewer comments point by point and revise their report.
+      - Students will explain what peer review does and doesn't guarantee about published research.
+    outcomes: [wpa:processes, tc:collaboration, tc:editing-style]
+    topics: [peer review (scientific), peer review, revision]
+    weeks: {min: 1, ideal: 2}
+    priority: optional
+    merge_with: previous
+    readings:
+      core:
+        - plos-tsr-2026-writing-peer-review
+        - plos-tsr-2017-response-to-reviewers
+        - plos-tsr-2006-reviewers
+        - ws5-good-bad-ugly-peer-review
+      optional:
+        - atd-2025-kramer-writing-circles-stem
+        - plos-tsr-2005-getting-published
+        - e88-21-despite-public-pledges-leading-scientific-journals
+        - conversation-2026-nepal-ultrathin-coating-hidden-leak
+        - wac-becoming-expert-writer-chapter-5-revision-refinement-resubmission-and-writing-for
+        - plos-tsr-2018-collaborative-writing
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - acrl-peer-review
+        - textgened-peer-review-as-a-conversation-evaluating-human-and-generativ
+    notes: >-
+      This unit has no major assignment; the review and the response letter count toward the report.
+      Rahman and DeBlasio's ten rules give students a structure for the review, and Noble's give them one
+      for the response. Kramer and colleagues studied weekly peer review groups on lab reports and research
+      proposals in kinesiology courses. The article is written for instructors, though students can read
+      it too; start there if you want to run review in standing groups. Doctorow on journals that don't
+      correct statistical misconduct and Nepal on a measurement problem that fooled a field for over a
+      decade show what review misses. In a short term, fold one round of peer review into the report unit.
+
+  - id: abstracts-posters-and-presentations
+    title: Abstracts, Posters, and Presentations
+    summary: >-
+      Students condense their report into an abstract, design a research poster, and present it at a class
+      poster session or in a short talk.
+    goals:
+      - Students will write an abstract that reports the question, methods, key results, and significance within a word limit.
+      - Students will design a poster that a reader can follow in a few minutes.
+      - Students will present their research to an audience and answer questions about it.
+    outcomes: [wpa:rhetorical-knowledge, tc:design-visual, tc:genres-documents, tc:audience-purpose]
+    topics: [abstracts, posters, oral presentations, undergraduate research]
+    weeks: {min: 1, ideal: 2}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - huffman-ptp-defining-abstracts
+        - mit-commkit-journal-article-abstract
+        - plos-tsr-2007-poster-presentation
+        - mit-commkit-poster
+      optional:
+        - unc-handout-abstracts
+        - plos-tsr-2015-empirical-rules-writing-science
+        - bongers-macartney-psc-poster-presentations
+        - plos-tsr-2007-oral-presentations
+        - plos-tsr-2021-presentation-slides
+        - ws6-technical-scientific-business-presentations-strategies-success
+        - communicating-strategically-workplace-ch09-organizing-presentations
+    assignments:
+      major: [prompt-an-empirical-research-project-in-english-and-writing-studies]
+      short_term_variant: null
+      activities:
+        - prompt-abstract-analysis-and-revision-assignment-using-ms-word-read
+        - wsaaa-unpacking-abstracts-conventions-empirical-abstracts-social-science-papers
+        - cora-50-words-thesis
+    notes: >-
+      The catalog has no poster assignment written for science students. Kinkead's is the closest: she
+      wrote it for English majors doing IRB-approved empirical research, and it ends in a research report,
+      a poster, and a presentation. The poster and presentation stages carry over to science students with
+      little change. It's CC BY-NC. Ford's activity has students revise an abstract against Word's
+      readability statistics. Ab Latif's color-coded chart was built for social science abstracts, but
+      it transfers to empirical abstracts in the sciences. Koz wrote the 50-word exercise for graduate
+      students, and it works as an abstract warm-up.
+      If your campus holds an undergraduate research day, aim the poster session at it.

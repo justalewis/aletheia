@@ -67,8 +67,6 @@ export function usePack(): AsyncState<PackInfo> {
   return ctx;
 }
 
-export const PRIMARY_FOCUSES = ["FYC", "TECHCOMM"];
-
 export const FALLBACK_PRESETS: TermPreset[] = [
   { id: "semester-16", label: "16-week semester", weeks: 16, fixed_start: 1, fixed_end: 1, pages_per_week: 40 },
   { id: "semester-15", label: "15-week semester", weeks: 15, fixed_start: 1, fixed_end: 1, pages_per_week: 40 },

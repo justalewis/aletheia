@@ -1,0 +1,257 @@
+id: pw-content-strategy-and-web-writing
+focus: PROFWRIT
+title: Content Strategy and Web Writing
+tagline: >-
+  Writing for screens, taught through one organization's content: a plain language rewrite, revised
+  web pages, a content plan, and a style guide to keep it all consistent.
+rationale: >-
+  This arc fits professional writing sections with students headed toward communications, marketing,
+  nonprofit, or web jobs, where most of the writing appears on screens and belongs to an organization.
+  At the start of the term each student chooses an organization (a campus office, a local nonprofit, a
+  small business) whose content they'll work on through the last week. They rewrite one of its public
+  documents in plain language and revise pages on its website. Then they inventory what it publishes, plan a short
+  campaign, and write social media posts for it. The term ends with a content style guide that records
+  the voice and word choices they've settled on. Government and practitioner guides carry much of the
+  reading: the Digital.gov plain language series, the GOV.UK writing standards, Section508.gov, the
+  W3C accessibility tutorials, and the Mailchimp Content Style Guide. Chapters from Open Technical
+  Communication, Technical Writing Spaces, Keywords in Technical and Professional Communication, and
+  Business Writing For Everyone supply the rhetoric behind those guides. The catalog has good plain
+  language and social media assignments but no openly licensed assignment for revising a web page or
+  auditing a site's content, so plan on writing those two yourself.
+course_level: "200"
+fits_courses: [wwu-eng302, oc-engl235]
+frameworks: [tc]
+units:
+  - id: plain-language
+    title: Plain Language
+    summary: >-
+      Students learn the federal plain language guidelines and the research behind them, then rewrite a
+      dense public document (a policy, a benefits notice, a terms-of-service page) for the people who
+      have to use it and test the rewrite with a reader.
+    goals:
+      - Students will apply plain language guidelines to word choice, sentences, and organization.
+      - Students will rewrite a public document for the readers who depend on it.
+      - Students will test a revised document with a reader and revise again based on what they learn.
+    outcomes: [tc:audience-purpose, tc:editing-style, tc:research-usability, tc:ethics-accessibility]
+    topics: [plain language, audience, style, usability testing]
+    weeks: {min: 1, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - digital-gov-plain-language-guide-principles
+        - digital-gov-plain-language-guide-writing
+        - digital-gov-plain-language-guide-test
+        - wac-keywords-tpc-chapter-23-plain-language
+      optional:
+        - govuk-writing-standards-clear-language
+        - cdc-clear-communication-index-everyday-words
+        - nngroup-articles-plain-language-experts
+        - online-technical-writing-mcmurrey-translating-technical-information
+        - technical-writing-essentials-2e-2-3-communicating-with-precision
+        - business-writing-for-everyone-ch04-style-and-tone
+        - ws6-write-global-audiences
+        - plainlanguage-gov-archive
+    assignments:
+      major: [textgened-translating-a-policy-document-into-plain-english]
+      short_term_variant: null
+      activities:
+        - wsaaa-concise-writing-strategies
+        - prompt-abstract-analysis-and-revision-assignment-using-ms-word-read
+    notes: >-
+      Laquintano's assignment has students translate a policy document into plain English and compare
+      their version with one from a large language model. If your course limits AI use, the
+      comparison can come out without breaking the assignment. Choose the source document from the
+      organization students will work with all term if it has one dense enough. The Digital.gov guide
+      to testing for understanding is short enough to use as the checklist for the reader test. The
+      Nielsen Norman Group piece on plain language for experts is link-only. Ford's activity is built
+      around abstracts and the readability statistics in Microsoft Word; treat the grade level as
+      something to discuss, not a target to hit.
+
+  - id: writing-for-the-web
+    title: Writing for the Web
+    summary: >-
+      Students look at how people read on screens (scanning, searching, leaving when they can't find
+      something) and revise pages on their organization's website with clearer titles, front-loaded
+      summaries, useful headings, and link text that says where it goes. Accessibility is part of the
+      revision from the first draft.
+    goals:
+      - Students will explain how reading on the web differs from reading on paper and what that means for page structure.
+      - Students will write titles, summaries, headings, and links that help readers find what they came for.
+      - Students will revise web content to meet basic accessibility guidelines.
+    outcomes: [tc:design-visual, tc:audience-purpose, tc:ethics-accessibility, tc:technology-tools]
+    topics: [writing for the web, accessibility, document design, information architecture]
+    weeks: {min: 1, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - open-technical-communication-2e-ch22-web-writing
+        - govuk-writing-standards-clear-structure
+        - govuk-writing-standards-add-links
+        - w3c-wai-tutorials-writing-tips
+      optional:
+        - govuk-writing-standards-clear-titles
+        - govuk-writing-standards-summaries
+        - nngroup-articles-how-users-read-on-the-web
+        - nngroup-articles-f-shaped-pattern
+        - mailchimp-content-style-guide-web-elements
+        - accessibility-toolkit-2e-links
+        - w3c-wai-tutorials-page-structure
+        - writing-spaces-web-writing-style-guide
+    assignments:
+      major: [textgened-website-blog-multimedia-piece-in-writing-and-medicine]
+      short_term_variant: null
+      activities:
+        - digitalgov-how-to-conduct-usability-test
+    notes: >-
+      There's no openly licensed assignment for revising an existing web page, so expect to write your
+      own. A revision of two or three pages from the organization's site, with a memo explaining the
+      changes, fills three weeks. Runciman's Website/Blog/Multimedia Piece (CC BY-NC) comes from a
+      Writing and Medicine course, where students adapt their own research into a web article for the
+      public. Rewrite it around the organization's pages, or keep it as written for students who want to
+      write a new page. Like the rest of TextGenEd, it includes generative AI steps; drop them if your
+      course doesn't allow AI. The Digital.gov usability test script works for a quick test of a revised page with two
+      or three readers. Both Nielsen Norman Group articles are link-only. The Writing Spaces Web Writing
+      Style Guide dates from 2011, and its examples show their age.
+
+  - id: content-strategy
+    title: Content Strategy
+    summary: >-
+      Students step back from single pages to everything the organization publishes. They inventory its
+      content against what its users need, decide what to keep, revise, merge, or cut, and plan a short
+      campaign across channels.
+    goals:
+      - Students will define user needs before deciding what content an organization should publish.
+      - Students will inventory and evaluate an organization's existing content.
+      - Students will write a content plan that says who maintains each piece and how often.
+    outcomes: [tc:research-usability, tc:audience-purpose, tc:genres-documents, tc:collaboration]
+    topics: [content strategy, user research, information architecture, structured authoring]
+    weeks: {min: 1, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - govuk-writing-standards-meet-user-needs
+        - digital-gov-usability-topic-introduction-to-content
+        - technical-writing-essentials-2e-6-3-five-planes-of-ux
+        - wac-keywords-tpc-chapter-6-content-management
+      optional:
+        - wac-keywords-tpc-chapter-34-structure
+        - mailchimp-content-style-guide-creating-structured-content
+        - wac-keywords-design-thinking-chapter-22-modularity
+        - ws6-writing-technical-content-online-spaces
+        - uswds-design-principles
+        - digital-gov-accessibility-for-teams
+        - web-writing-pfannenstiel
+        - discipline-of-organizing-4p
+    assignments:
+      major: [kcworks-informational-campaign-arola]
+      short_term_variant: null
+      activities:
+        - digitalgov-how-to-write-research-plan
+    notes: >-
+      The catalog has no content audit assignment. A spreadsheet inventory with a row for each page and
+      columns for audience, last update, owner, and a keep, revise, merge, or cut decision is enough for
+      this unit. Arola and Sheppard's Informational Campaign (CC BY-NC) has groups study existing
+      campaigns, draw up best practices, and then build a campaign with a graphic identity, a short
+      video, and a website. It usually runs five to seven weeks; for this unit, keep the campaign
+      analysis, the pitch, and a content plan, and drop the video. The Digital.gov research plan outline
+      helps students decide what they need to learn about the organization's users before they
+      recommend cuts. Pfannenstiel's Web Writing (CC BY-SA) is a three-chapter book whose last chapter
+      covers content strategy and content management. Glushko's Discipline of Organizing goes much
+      deeper into information architecture, at book length.
+
+  - id: social-media
+    title: Social Media
+    summary: >-
+      Students analyze how their organization uses one or two platforms, then write a set of posts and
+      a short posting plan, with accessible images and captions and a plan for answering comments and
+      complaints.
+    goals:
+      - Students will analyze how audience, purpose, and platform shape an organization's posts.
+      - Students will write accessible posts with alt text, captions, and readable hashtags.
+      - Students will recommend a social media approach to an organization and support it with research.
+    outcomes: [tc:audience-purpose, tc:genres-documents, tc:ethics-accessibility, tc:research-usability]
+    topics: [social media, audience, accessibility, ethics]
+    weeks: {min: 1, ideal: 2}
+    priority: optional
+    merge_with: previous
+    readings:
+      core:
+        - ws6-social-media-as-space-todays-technical-communication
+        - wac-keywords-tpc-chapter-33-social-media
+        - business-writing-for-everyone-ch15-social-media
+        - section508-gov-create-social-media
+      optional:
+        - communication-at-work-ch06-electronic-communication
+        - plos-tsr-2015-online-outreach
+        - present-tense-2018-west-pope-corporate-kairos
+        - tcsj-2025-jin-interest-driven-public-networks
+        - tcsj-2025-mavridou-hernandez-minks-seo-conversion
+        - ws4-understanding-maintaining-privacy-when-writing-digital-technologies
+        - writing-strategic-communication-industries
+    assignments:
+      major: [prompt-authenticity-and-the-rhetoric-of-selling-on-social-media-a-r]
+      short_term_variant: null
+      activities:
+        - kcworks-social-media-bios-lockett
+        - wsaaa-antagonizing-tailoring-llm-writing-mock-public-relations-crisis
+    notes: >-
+      McCaughey's assignment set (CC BY-NC) comes from a themed first-year course and has two parts, a
+      semester-long blog and a researched social media marketing proposal written for outside
+      professionals. Use the proposal, addressed to the organization students have been working with,
+      and leave out the blog unless you want a running assignment. Lockett's Social Media Bios has
+      students write and combine several versions of a professional bio; it's a short warm-up on voice
+      before they write as the organization. Rioux's mock PR crisis has students push a large language
+      model to draft crisis messages and then pick apart the generic language it produces. Share it
+      unchanged, since it's CC BY-NC-ND. Roberts-Crews's Writing for Strategic Communication Industries
+      (CC BY-NC) covers PR writing and social media messaging at book length. In a short term, fold this
+      unit into the campaign and have students write the posts as part of the content plan.
+
+  - id: content-style-guide
+    title: Voice, Tone, and the Content Style Guide
+    summary: >-
+      Students study how organizations write down their voice and word choices, then write a content
+      style guide for their organization covering voice and tone, a word list, formatting, and writing
+      about people. They apply it to the pages and posts they wrote earlier and revise wherever their
+      own work doesn't follow it.
+    goals:
+      - Students will compare how published style guides describe voice and tone.
+      - Students will write a content style guide that another writer could follow without asking them questions.
+      - Students will revise their earlier work for consistency with the guide.
+    outcomes: [tc:editing-style, tc:audience-purpose, tc:ethics-accessibility, tc:collaboration]
+    topics: [style, content strategy, audience, accessibility]
+    weeks: {min: 1, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - mailchimp-content-style-guide-voice-and-tone
+        - govuk-writing-standards-right-tone
+        - govuk-writing-standards-a-to-z-style-guide
+        - mailchimp-content-style-guide-writing-about-people
+      optional:
+        - 18f-content-guide
+        - google-developer-documentation-style-guide-voice-and-tone
+        - google-developer-documentation-style-guide-word-list
+        - mailchimp-content-style-guide-writing-for-accessibility
+        - mailchimp-content-style-guide-writing-for-translation
+        - wac-keywords-tpc-chapter-35-style
+        - wwm-gender-inclusive-language
+        - microsoft-writing-style-guide
+    assignments:
+      major: [wsaaa-brand-style-guide-assignment]
+      short_term_variant: null
+      activities:
+        - kcworks-exercises-in-style-brooke
+    notes: >-
+      Sorapure's Brand Style Guide assignment is written for a personal visual brand (color, typography,
+      imagery, page design). Point it at the organization and add the written sections: voice and tone,
+      a word list, and guidance on writing about people. It's CC BY-NC-ND, so write your own assignment
+      sheet and cite the original. The Technical Documentation arc uses the same assignment for a
+      documentation style guide; this version is about an organization's public voice. Brooke's
+      Exercises in Style has students rewrite one short scenario under a new constraint each week, and
+      rewriting one organizational message in four or five voices helps a class agree on the one it
+      wants. The 18F Content Guide is CC0; 18F was disbanded in 2025, and the guide has moved to its
+      consolidated guides repository on GitHub. The Microsoft Writing Style Guide is link-only.

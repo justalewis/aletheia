@@ -1,0 +1,249 @@
+id: pw-organizations-and-communities
+focus: PROFWRIT
+title: Writing for Organizations and Communities
+tagline: >-
+  A semester spent writing for one nonprofit or community group, with a communication audit, a grant
+  proposal, and a policy brief written on its behalf.
+rationale: >-
+  Use this arc in professional writing sections that can work with organizations outside the
+  classroom, whether that means a formal service-learning partner or a small nonprofit a student
+  already volunteers with. Each student or team stays with one organization all term. They start by
+  auditing what it publishes, then meet the people who run it and agree in writing on a project. The
+  middle of the term goes to a grant proposal for the organization, followed by a policy brief for the
+  decision-makers it's trying to reach. The course ends with a presentation to the partner and a
+  handoff of files the organization can keep using after the term. Readings come from Technical
+  Writing Spaces, Keywords in Technical and Professional Communication, Writing Spaces, Technical
+  Writing Essentials, McMurrey's Online Technical Writing, and Business Writing For Everyone, along
+  with practitioner handouts from PLOS and the UNC Writing Center. Most of the assignments are from
+  Prompt (Gindlesparger on writing for nonprofits, Grobman on community-engaged policy briefs), plus
+  DeVoss's Visual Communication Audit. Grant writing is the thinnest spot. The openly licensed readings
+  lean toward research grants, so plan on bringing in a real foundation's call for proposals.
+course_level: "300-400"
+fits_courses: [wwu-eng302, oc-engl235]
+frameworks: [tc]
+units:
+  - id: reading-an-organization
+    title: Reading an Organization
+    summary: >-
+      Students choose an organization and collect what it publishes (website, flyers, reports,
+      newsletters, social posts, mission statement). They work out who each piece is written for and
+      what its design says about the organization, then write an audit with recommendations the
+      organization could act on.
+    goals:
+      - Students will identify the genres an organization uses and the audience each one is written for.
+      - Students will analyze how an organization's visual and verbal choices present it to the public.
+      - Students will write an audit that recommends specific, doable changes to an organization's communication.
+    outcomes: [tc:audience-purpose, tc:genres-documents, tc:design-visual]
+    topics: [genre, audience, visual rhetoric, document design]
+    weeks: {min: 1, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - wac-keywords-tpc-chapter-14-genre
+        - business-writing-for-everyone-ch03-context-audience-purpose
+        - technical-writing-essentials-2e-3-4-visual-rhetoric
+        - ws4-make-move-writing-genres
+      optional:
+        - wac-keywords-tpc-chapter-2-actor-activity
+        - howdy-or-hello-ch02-rhetorical-situation
+        - ws4-read-room-navigating-social-contexts-written-texts
+        - online-technical-writing-mcmurrey-audience-analysis
+        - wac-keywords-tpc-chapter-4-audience
+        - business-writing-for-everyone-ch12-visual-communication
+        - ws3-understanding-visual-rhetoric
+        - howdy-or-hello-ch07-design
+    assignments:
+      major: [kcworks-visual-communication-audit-devoss]
+      short_term_variant: null
+      activities:
+        - prompt-social-justice-and-corporate-mission-statements-analyzing-va
+    notes: >-
+      DeVoss's audit has students gather an organization's external communication (posters, flyers,
+      reports, media releases) and analyze its visual design. It's CC BY-NC, so you can widen it to
+      cover written genres and their audiences as well. Mussack's mission statement activity makes a good first class session, since
+      students compare what the organization says it values with what it publishes. If a student hasn't
+      found an organization by the end of the first week, the campus library or a student services
+      office will do for the audit.
+
+  - id: working-with-a-partner
+    title: Working with a Community Partner
+    summary: >-
+      Before anyone writes for an organization, students read about how community-engaged projects go
+      wrong and what reciprocity looks like day to day. They meet with people at their organization,
+      map its stakeholders, and write a scope memo that sets out what they'll deliver, by when, and who
+      approves it.
+    goals:
+      - Students will describe an organization's goals and constraints in the organization's own terms.
+      - Students will recognize savior framing in community-engaged writing and keep it out of their own project.
+      - Students will write a scope memo that names deliverables, deadlines, and who approves the work.
+    outcomes: [tc:ethics-accessibility, tc:collaboration, tc:research-usability]
+    topics: [ethics, collaboration, civic engagement, project management]
+    weeks: {min: 1, ideal: 2}
+    priority: optional
+    merge_with: previous
+    readings:
+      core:
+        - ws4-public-writing-social-change
+        - technical-writing-essentials-2e-5-6-public-engagement-consultation
+        - constellations-principles-cr-methodologies
+        - ws4-technologies-trust-creating-networks-goodwill-collaboration
+      optional:
+        - wac-keywords-tpc-chapter-27-public
+        - programmatic-perspectives-2023-rivera-online-design-thinking-indigenous
+        - wac-keywords-design-thinking-chapter-24-social-design
+        - wac-keywords-tpc-chapter-5-collaboration
+        - wac-keywords-tpc-chapter-25-project-management
+        - technical-writing-essentials-2e-4-2-project-management-teamwork
+        - wac-community-is-the-way
+        - wac-community-literacy-local-publics
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - wsaaa-avoiding-savior-complex-community-engaged-writing
+        - wsaaa-using-community-listening-collaboratively-develop-assignment-students
+    notes: >-
+      The catalog has no scope memo or project agreement assignment, so expect to write a one-page
+      template yourself. Iglesias's three-day sequence on the savior complex fits the first week.
+      Kelenyi's community listening activity was written for a partner profile in first-year writing;
+      use the listening practice before students meet their organization. Last's chapter on public
+      engagement walks through stakeholder mapping, and the map becomes the scope memo's list of
+      readers. In a short term this unit folds into the audit: skip the formal agreement and have
+      students write for the organization they audited. Knight's Community is the Way (CC BY-NC-ND) is a
+      book-length guide to community-engaged writing and design, useful when you plan the partnership
+      side of the course. Long's Community Literacy
+      and the Rhetoric of Local Publics is free to read but link-only.
+
+  - id: grant-proposal
+    title: Grant Proposals
+    summary: >-
+      Students find a real funding opportunity that fits their organization, read the funder's call
+      closely, and write a grant proposal with a need statement, goals and objectives, methods, an
+      evaluation plan, and a budget narrative.
+    goals:
+      - Students will read a funder's call for its priorities, requirements, and review criteria.
+      - Students will write a need statement backed by evidence about the community the organization serves.
+      - Students will draft the standard sections of a grant proposal and match the budget to the work it pays for.
+    outcomes: [tc:genres-documents, tc:audience-purpose, tc:research-usability]
+    topics: [grant writing, proposals, research, audience]
+    weeks: {min: 2, ideal: 4}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - plos-tsr-2006-getting-grants
+        - unc-handout-grant-proposals
+        - online-technical-writing-mcmurrey-proposals
+        - wac-keywords-tpc-chapter-26-proposal
+      optional:
+        - grant-writing-the-essentials
+        - wcc-2023-kurlinkus-teaching-chatgpt-grant-writing
+        - technical-professional-writing-genres-ch09-proposals
+        - communicating-strategically-workplace-ch11-reports-proposals
+        - business-writing-for-everyone-ch08-persuading-your-reader
+        - technical-writing-essentials-2e-5-1-defining-your-scope
+        - mit-commkit-nsf-research-proposal
+        - howdy-or-hello-ch18-proposals
+    assignments:
+      major: [prompt-writing-for-nonprofits-in-a-professionally-oriented-institut]
+      short_term_variant: prompt-putting-us-back-in-museums-increasing-student-engagement-via
+      activities:
+        - wsaaa-convincing-machine-using-rhetoric-get-most-out-ai
+    notes: >-
+      Gindlesparger's Writing for Nonprofits assignment lets students choose the nonprofit genre they
+      write in and then reflect on how their values shaped their choices. Here, point most students at a
+      grant proposal; a fundraising letter or an annual report section works for an organization that
+      isn't applying for anything this year. Bourne and Chalupa's Ten Simple Rules and the UNC handout
+      lean toward research funding, and MIT's NSF guide is for a graduate fellowship, so pair them with
+      a call from a community foundation in your area. Renfro's Grant Writing: The Essentials is a whole
+      book (CC BY-NC-SA) written with nonprofit management students in mind, and the catalog doesn't
+      have its chapters yet; send students there for finding funders and planning a proposal. In
+      Convincing the Machine, Cole, Maher, and Rice have students act as grant writers who prompt and
+      revise AI drafts toward a funder's expectations. It's CC BY-NC-ND, so share it unchanged, and check it against your
+      AI policy. For a short term, Zeleny's museum proposal asks students to identify a problem at a
+      museum and propose a change, and it doesn't depend on a partner.
+
+  - id: policy-brief
+    title: Policy Briefs for Decision-Makers
+    summary: >-
+      Students take what they've learned about their organization's issue and write a short policy
+      brief or white paper for people outside the organization who can change something, such as city
+      officials, a school board, or a funder's program officer.
+    goals:
+      - Students will write a brief that a busy reader with no background in the issue can act on.
+      - Students will open with a recommendation and an executive summary.
+      - Students will support each recommendation with evidence the organization is willing to stand behind.
+    outcomes: [tc:genres-documents, tc:audience-purpose, tc:research-usability, tc:design-visual]
+    topics: [reports, public writing, summary, data visualization]
+    weeks: {min: 1, ideal: 3}
+    priority: optional
+    merge_with: previous
+    readings:
+      core:
+        - unc-handout-policy-briefs
+        - online-technical-writing-mcmurrey-white-papers
+        - ws6-last-be-written-first-be-read-writing
+      optional:
+        - business-writing-for-everyone-ch11-writing-reports
+        - online-technical-writing-mcmurrey-background-reports
+        - ws6-assessing-sources-technical-communication-research
+        - howdy-or-hello-ch19-informational-reports
+        - wac-keywords-tpc-chapter-8-data-visualization
+        - technical-writing-essentials-2e-3-3-figures-and-tables
+        - dougherty-hodv-how-to-lie-with-charts
+    assignments:
+      major: [prompt-the-policy-brief-assignment-transferable-skills-in-action-in]
+      short_term_variant: null
+      activities:
+        - cora-understanding-data-visualization
+    notes: >-
+      Grobman's students wrote policy briefs for a nonprofit partner and for city officials in Reading,
+      Pennsylvania, as part of a professional writing capstone. The assignment is CC BY-NC, so swap in
+      your own partner and local officials. Keep the brief on the same issue as the grant proposal so
+      students can reuse the research behind their need statement. The UNC handout and Ilyasova's
+      chapter on executive summaries are CC BY-NC-ND and go in the reader unchanged. Murph's CORA lesson
+      on reading charts helps students who plan to put data in the brief. In a short term, drop the
+      brief and have students add a one-page summary for decision-makers to the grant proposal.
+
+  - id: presenting-and-handing-off
+    title: Presenting and Handing Off
+    summary: >-
+      Students present their work to the organization, package the files so its staff can edit and
+      reuse them after the term, and write a reflection on what writing for an outside reader changed
+      about how they worked.
+    goals:
+      - Students will present a project to the people who will use it and answer their questions.
+      - Students will deliver accessible, editable files with notes on how to update them.
+      - Students will reflect on how their own values and the organization's needs shaped their writing.
+    outcomes: [tc:collaboration, tc:audience-purpose, tc:ethics-accessibility, tc:technology-tools]
+    topics: [presentations, accessibility, collaboration, reflection]
+    weeks: {min: 1, ideal: 2}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - ws6-technical-scientific-business-presentations-strategies-success
+        - communication-at-work-ch12-presentations
+        - section508-gov-create-documents
+        - ws5-we-write-because-we-care-developing-writerly
+      optional:
+        - technical-writing-essentials-2e-8-4-presenting-as-a-team
+        - technical-writing-essentials-2e-8-3-using-visual-aids
+        - section508-gov-create-presentations
+        - understanding-document-accessibility-google-docs
+        - understanding-document-accessibility-microsoft-word
+        - wac-keywords-tpc-chapter-24-profession
+        - business-writing-for-everyone-ch13-oral-presentations
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - prompt-integrating-metacognitive-practice-as-a-strategy-for-more-eq
+    notes: >-
+      There's no handoff assignment in the catalog. Ask for a short cover memo with each set of files
+      that lists what's included, which files the organization can edit, and what will need updating and
+      when. Charley's reflection practice comes from community-based learning and is aimed at telling
+      community members' stories more fairly; assign it alongside Lester and colleagues' We Write
+      Because We Care. If the partner can't come to class, record the presentation and send it with
+      the files.

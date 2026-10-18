@@ -42,3 +42,4 @@ units:
 - Prefer chapter- and article-level items over whole books.
 - Units' `ideal` weeks plus the term's fixed weeks should total about 16 for a semester arc.
 - Text fields are instructor-facing and are written in Justin's documentation voice.
+- Check an arc with `python tools/check_arcs.py corpus/rhetcomp/arcs/<file>.yaml`. It fails on unknown ids and bad values and warns on the soft rules above. The backend test suite runs it over every arc.

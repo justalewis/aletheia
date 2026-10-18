@@ -1,0 +1,213 @@
+id: sci-health-and-environmental-communication
+focus: SCIWRIT
+title: Health and Environmental Communication
+tagline: >-
+  Students rewrite health information in plain language, analyze and revise risk messages, read
+  environmental writing through an environmental justice lens, and design a public information campaign
+  for a community they research.
+rationale: >-
+  This arc builds a course around public communication about health and the environment: the documents
+  people use to decide whether to get vaccinated, evacuate, drink the water, or change what they do. It
+  starts with health communication and plain language, moves to risk and crisis communication, turns to
+  environmental writing and environmental justice, and finishes with a team campaign on a health or
+  environmental issue for a specific community. Readings pair tech comm scholarship from Keywords in
+  Technical and Professional Communication, Technical Writing Spaces, and Technical Writing Essentials
+  with practical guidance from the CDC's Clear Communication Index and Crisis and Emergency Risk
+  Communication (CERC) manual, Digital.gov's plain language guides, and Section508.gov. Essays that
+  scientists wrote for The Conversation, reprinted in 88 Open Essays, supply most of the environmental
+  reading. The CDC, Digital.gov, and Section508.gov materials are public domain, so you can adapt them
+  freely; the Keywords essays are CC BY-NC-ND. The catalog has little openly licensed environmental
+  rhetoric scholarship, so the environmental unit leans on public writing more than theory.
+course_level: "300-400"
+fits_courses: [oc-engl235, wwu-eng302]
+frameworks: [wpa, tc]
+units:
+  - id: health-communication-and-plain-language
+    title: Health Communication and Plain Language
+    summary: >-
+      Students look at how health information reaches patients and the public, and why so much of it
+      loses readers. They write and revise a plain-language summary of a medical study, score their drafts
+      with the CDC Clear Communication Index, and test them with readers.
+    goals:
+      - Students will explain how health literacy and plain language affect whether readers can use health information.
+      - Students will score a health document with the CDC Clear Communication Index and explain the results.
+      - Students will write and revise a plain-language summary of a medical study for patients or the public.
+      - Students will test a draft with readers from its intended audience and revise it.
+    outcomes: [tc:audience-purpose, tc:editing-style, tc:research-usability, wpa:rhetorical-knowledge]
+    topics: [health communication, plain language, audience, usability testing]
+    weeks: {min: 1, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - wac-keywords-tpc-chapter-20-medical-health-communication
+        - wac-keywords-tpc-chapter-23-plain-language
+        - cdc-clear-communication-index-everyday-words
+        - digital-gov-plain-language-guide-principles
+      optional:
+        - cdc-clear-communication-index
+        - digital-gov-plain-language-guide-writing
+        - digital-gov-plain-language-guide-test
+        - technical-writing-essentials-2e-3-1-readability
+        - ws6-write-global-audiences
+        - e88-35-cheaper-versions-of-the-most-expensive-drugs-may-b
+        - e88-58-minorities-face-more-obstacles-to-a-lifesaving-org
+        - nngroup-articles-plain-language-experts
+    assignments:
+      major: [textgened-professional-writing-for-healthcare-writing-revising-researc]
+      short_term_variant: cora-investigation-disease-and-prescribed-treatment
+      activities:
+        - prompt-abstract-analysis-and-revision-assignment-using-ms-word-read
+        - digitalgov-how-to-conduct-usability-test
+    notes: >-
+      McKee's TextGenEd sequence has students draft and revise lay summaries of medical journal articles
+      and test AI along the way. If you'd rather leave AI out, the drafting and revision steps stand on
+      their own. Archambault's CORA assignment, a two-page report on a diagnosis and its treatment from the
+      patient's side, is the lighter version for short terms. The Clear Communication Index was built for
+      public health materials, so its items on numbers and risk apply here in a way they often don't for
+      other documents. The catalog has no reading on health literacy as such; Teston's keyword essay and
+      the CDC's Everyday Words list come closest. Digital.gov's usability test script adapts easily to a
+      short reader test of a lay summary.
+
+  - id: risk-and-crisis-communication
+    title: Risk and Crisis Communication
+    summary: >-
+      Students study how agencies and experts talk to the public about hazards like disease outbreaks and
+      industrial accidents. The readings explain why people's sense of a risk rarely matches the numbers
+      and how messages change during a crisis. Students then analyze and revise the risk communication
+      from a historical case.
+    goals:
+      - Students will explain why experts and members of the public often judge the same risk differently.
+      - Students will analyze how a risk message handles uncertainty, numbers, and fear.
+      - Students will revise a crisis message using principles from the CDC's CERC manual.
+    outcomes: [tc:audience-purpose, tc:ethics-accessibility, wpa:critical-thinking-reading-composing]
+    topics: [risk communication, health communication, ethics]
+    weeks: {min: 1, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - wac-keywords-tpc-chapter-30-risk-communication
+        - cdc-cerc-psychology-of-a-crisis
+        - cdc-cerc-messages-and-audiences
+        - technical-writing-essentials-2e-1-6-case-studies-poor-communication
+      optional:
+        - cdc-cerc-manual
+        - e88-87-for-a-flooded-midwest-climate-forecasts-offer-litt
+        - e88-24-measles-why-its-so-deadly-and-why-vaccination-is-s
+        - e88-67-what-the-us-could-learn-about-vaccination-from-nig
+        - online-technical-writing-mcmurrey-special-notices
+        - dougherty-hodv-how-to-lie-with-charts
+        - e88-60-how-rural-areas-like-floridas-panhandle-can-become
+        - mit-commkit-policy-memo
+    assignments:
+      major: [textgened-rhetorical-prompt-engineering]
+      short_term_variant: null
+      activities:
+        - wsaaa-antagonizing-tailoring-llm-writing-mock-public-relations-crisis
+        - acrl-spot-spin-can-you-trust-data
+    notes: >-
+      Kopp, McCracken, Steiner, and Zamparutti built their assignment on the Three Mile Island accident.
+      Students analyze and revise its risk communication with ChatGPT over about three weeks. The case
+      works without AI too: students analyze the original communication and write the revision themselves.
+      Start with Scott's keyword essay for the field's vocabulary, then assign the two CERC chapters
+      together; they're public domain and short. The Technical Writing Essentials case studies show what
+      poor communication has cost in engineering failures. Rioux wrote her LLM crisis activity for business
+      communication, but it takes only one or two sessions and shows students how generic a machine-drafted
+      crisis message sounds.
+
+  - id: environmental-rhetoric-and-justice
+    title: Environmental Rhetoric and Justice
+    summary: >-
+      Students read environmental writing by scientists and scholars and ask who bears environmental harm
+      and whose knowledge counts. Then they document environmental activism or an environmental issue
+      where they live.
+    goals:
+      - Students will analyze how environmental writing assigns harm and responsibility.
+      - Students will explain how an environmental justice lens changes the questions a writer asks.
+      - Students will weigh Indigenous and community knowledge alongside scientific evidence.
+      - Students will document a local environmental issue or campaign with primary sources.
+    outcomes: [wpa:rhetorical-knowledge, wpa:critical-thinking-reading-composing, tc:ethics-accessibility]
+    topics: [environmental rhetoric, environment, climate change, civic engagement]
+    weeks: {min: 1, ideal: 3}
+    priority: optional
+    merge_with: next
+    readings:
+      core:
+        - ws5-environmental-justice-writing-urban-spaces
+        - e88-74-how-a-green-new-deal-could-exploit-developing-coun
+        - e88-45-mapping-the-us-counties-where-traffic-air-pollutio
+        - e88-46-why-native-americans-do-not-separate-religion-from
+      optional:
+        - jomr-jackson-bratta-decolonial-directions
+        - e88-75-capturing-carbon-to-fight-climate-change-is-dividi
+        - e88-56-why-women-from-asia-are-confronting-u-s-fracking-o
+        - e88-26-hydropower-dams-can-harm-coastal-areas-far-downstr
+        - e88-25-hope-and-mourning-in-the-anthropocene-understandin
+        - e88-09-is-burning-trash-a-good-way-to-handle-it-waste-inc
+        - present-tense-sleep-dealer-rhetorical-coloniality
+        - wac-bad-ideas-ai-writing-chapter-22-generative-ai-can-be-accessed-for-free-ai-poses
+    assignments:
+      major: [wsaaa-activist-archival-project]
+      short_term_variant: null
+      activities:
+        - wsaaa-nature-journal-observing-naming-knowing-kara-mae-brown
+        - prompt-rooted-writing-counterstories-in-environmental-education
+    notes: >-
+      Rischard's Writing Spaces chapter is the catalog's one student-facing introduction to environmental
+      justice writing. The other core readings are public essays: Táíwò on who pays for climate policy,
+      Khreis on traffic pollution and children's health, and LaPier on Indigenous knowledge and science.
+      Jackson and Bratta's piece is a multimodal installation, so link to it instead of reprinting it.
+      Bates and Warren-Riley's Activist Archival Project usually runs four to five weeks; to fit it into
+      three, have students document a single campaign. It's CC BY-NC-ND. Brown's nature journal and
+      Davis's counterstory prompt are low-stakes writing about students' own ties to the natural world.
+      In a short term, drop this unit and let teams pick an environmental issue for the campaign.
+
+  - id: public-information-campaign
+    title: Public Information Campaign
+    summary: >-
+      Teams design a public information campaign on a health or environmental issue for a specific
+      community. They research the audience, settle on a core message, and produce a set of materials,
+      such as a fact sheet, social media posts, an infographic, and a short video or web page, that they
+      test with members of that community.
+    goals:
+      - Students will research a community audience and consult its members before writing for it.
+      - Students will develop a core message and adapt it across several genres and media.
+      - Students will make campaign materials accessible, with plain language, alt text, and captions.
+      - Students will collaborate on a campaign and pitch it to a client or decision-maker.
+    outcomes: [tc:collaboration, tc:design-visual, tc:genres-documents, tc:ethics-accessibility]
+    topics: [public writing, infographics, social media, accessibility]
+    weeks: {min: 2, ideal: 5}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - technical-writing-essentials-2e-5-6-public-engagement-consultation
+        - gupta-sct-inclusive-science-communication
+        - bongers-macartney-psc-infographics
+        - section508-gov-create-social-media
+      optional:
+        - bongers-macartney-psc-social-media
+        - section508-gov-create-alternative-text
+        - digital-gov-plain-language-guide-design
+        - jomr-2021-smothers-writing-as-designing-infographics
+        - ws6-worth-thousand-words-constructing-visual-arguments-technical
+        - wac-keywords-tpc-chapter-8-data-visualization
+        - plos-tsr-2020-colorize-data-visualization
+        - wac-keywords-tpc-chapter-27-public
+    assignments:
+      major: [kcworks-informational-campaign-arola]
+      short_term_variant: textgened-website-blog-multimedia-piece-in-writing-and-medicine
+      activities:
+        - cora-infographics-workshop
+        - wsaaa-avoiding-savior-complex-community-engaged-writing
+    notes: >-
+      In Arola's Informational Campaign, groups study existing campaigns and draw up best practices before
+      building their own, with a graphic identity, a short video, and a website. Teams pitch and present
+      along the way. It usually runs five to seven weeks and is CC BY-NC. Run Iglesias's three-day
+      savior-complex sequence before teams contact anyone outside the class, and use Last's section on
+      public engagement to map stakeholders before anyone drafts. For short terms, Runciman's TextGenEd assignment has each student
+      adapt research for the public as a web article, blog, infographic, or social media series over two to
+      three weeks. If you have a community health partner, Ward's Prompt assignment, in which health
+      sciences students propose an intervention for a local health disparity, is an alternative major,
+      though it was designed for eight weeks.

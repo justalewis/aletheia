@@ -1,0 +1,264 @@
+id: acad-research-writing-and-synthesis
+focus: ACADEMIC
+title: Research Writing and Synthesis
+tagline: >-
+  An upper-division research course built around the literature review: students search their
+  field strategically, look at citation as a practice, synthesize what they find, propose a
+  project, and write an extended researched essay.
+rationale: >-
+  This arc is for students who've written a research paper before and are ready to do research
+  the way their major does it. The literature review sits in the middle of the term. Students
+  start with a question from their field and a search strategy for it, then look at citation as
+  something writers do for reasons (who gets cited, for what, in which system). They synthesize
+  their sources into a review, propose a project that answers a gap the review turns up, and
+  finish with an extended researched essay. The search log feeds the review, the review supplies
+  the gap the proposal argues for, and the proposal becomes the plan for the essay. The
+  literature review readings come from two open guides written by librarians, Frederiksen and
+  Phelps's Literature Reviews for Education and Nursing Graduate Students and Lloyd and colleagues'
+  Writing the Literature Review, along with the UNC Writing Center, the PLOS "Ten Simple Rules"
+  series, and Technical Writing Spaces. Choosing & Using Sources and Write What Matters cover
+  searching. Bazerman's The Informed Writer, Writing Spaces, and Bad Ideas About Writing cover
+  synthesis and citation, and most of the activities come from CORA and the ACRL Sandbox. The arc
+  can also run as a demanding version of OC's ENGL& 102. Book a library session for the first
+  unit.
+course_level: "300-400"
+fits_courses: [oc-engl102]
+frameworks: [wpa, acrl]
+units:
+  - id: questions-and-searching
+    title: Research Questions and Strategic Searching
+    summary: >-
+      Students turn an interest in their field into a question that published research can help
+      answer, then build a search strategy for it: keywords and related terms, search statements,
+      specialized databases, and citation chasing. A running search log shows how the question
+      changed as they searched.
+    goals:
+      - Students will frame a research question that a field's published work can help answer.
+      - Students will build and revise search statements using keywords, related terms, and database filters.
+      - Students will use specialized databases and citation chasing to find the central sources on a question.
+      - Students will explain where a source sits in the information lifecycle and how that affects its use.
+    outcomes: [acrl:research-inquiry, acrl:searching-strategic, acrl:creation-process, wpa:processes]
+    topics: [research question, information literacy, research process]
+    weeks: {min: 2, ideal: 2}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - cus-4-search-statements
+        - wwm-precision-searching
+        - cus-6-publication-formats-and-the-information-lifecycle
+        - wvu-bad-ideas-about-writing-research-starts-with-answers
+      optional:
+        - cus-3-related-and-alternative-terms
+        - cus-3-google-scholar
+        - cus-1-the-purpose-of-research-questions
+        - wwm-search-tools
+        - krause-tprw-02-understanding-and-using-the-library-and-the-i
+        - wac-bad-ideas-ai-writing-chapter-11-generative-ai-can-do-my-research-for-me-researchers-should
+        - present-tense-2018-gruwell-constructing-research-platform
+        - gz2e-9-4-using-effective-keywords-in-your-research
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - cora-strategic-searching-spreadsheet
+        - acrl-thats-what-she-said-citation-chasing
+        - cora-scholarly-party
+        - textgened-understanding-and-avoiding-hallucinated-references-an-ai-wri
+    notes: >-
+      There's no search log assignment in the catalog, so this unit has no major; ask for a short
+      log of searches, results, and changes to the question, and collect it with the literature
+      review. The Strategic Searching Spreadsheet already has students record their searches, which
+      gets the log started. Ask the librarian to work with students' own questions instead of a
+      sample topic. "Research Starts with Answers" is a short Bad Ideas chapter that helps with
+      students who arrive with a thesis and want sources to back it up. If students are using AI
+      tools to find sources, run the hallucinated-references experiment before they start
+      collecting. Gruwell's Present Tense article on how platforms and algorithms shape research was
+      written for scholars; assign it if your class wants to talk about how algorithms decide what a
+      search turns up.
+
+  - id: citation-as-practice
+    title: Citation as a Practice
+    summary: >-
+      Students treat citation as something writers do on purpose: to place themselves in a
+      conversation, to borrow authority, to give credit, and sometimes to leave people out. They
+      compare citation systems across fields and look at who gets cited in the conversation around
+      their own question.
+    goals:
+      - Students will explain how citation systems reflect the values of the fields that use them.
+      - Students will identify the work citations do in a published article from their field.
+      - Students will examine whose work gets cited on their topic and decide how their own citations should respond.
+    outcomes: [acrl:information-value, acrl:authority, acrl:scholarship-conversation, wpa:knowledge-of-conventions]
+    topics: [citation, plagiarism, ethics, writing in the disciplines]
+    weeks: {min: 1, ideal: 2}
+    priority: optional
+    merge_with: next
+    readings:
+      core:
+        - ws2-everything-changes-why-mla-isnt-always-right
+        - wac-informed-writer-chapter-6-recognizing-the-many-voices-in-a-text
+        - wvu-bad-ideas-about-writing-plagiarism-deserves-to-be-punished
+        - cus-3-challenges-in-citing-sources
+      optional:
+        - jtw-2020-kratzke-citation-systems-scholarly-roles
+        - wac-keywords-tpc-afterword-afterword-diversity-equity-and-inclusion-through-citational
+        - ws1-composing-anthology-exercise-patchwriting
+        - wvu-bad-ideas-about-writing-citing-sources-is-a-basic-skill-learned-early-on
+        - wwm-acknowledging-and-citing-generative-ai-in-academic-work
+        - wac-bad-ideas-ai-writing-chapter-48-ai-powered-research-and-citation-platforms-will-enhance
+        - wac-informed-writer-chapter-11-a-guide-to-reference-and-documentation
+        - cus-2-why-cite-sources
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - cora-whose-shoulders-are-you-standing-inclusive-citation-practice
+        - wsaaa-fuzzy-logic-fuzzy-definition-plagiarism-getting-even-fuzzier
+        - cora-citation-generators-can-you-trust-them
+        - cora-citations-wild-wrangling-your-citations-zotero
+    notes: >-
+      This unit has no major assignment. In a short term it folds into the literature review, and
+      the inclusive citation lesson carries most of its work there. Kratzke's Journal of Teaching
+      Writing article, which argues that citation systems match the roles writers take on
+      (lecturers, colleagues, scientists), is the closest fit in the catalog for this unit, but it's
+      link-only and can't go in the reader. Walker's chapter has a license conflict in its
+      record: the PDF says CC BY-NC-SA 3.0, and the WAC Clearinghouse page says CC BY-NC-ND 4.0.
+      It's marked verbatim, so reprint it unchanged. Get students set up in Zotero or another
+      citation manager here; they'll need it for the review.
+
+  - id: literature-review
+    title: Synthesis and the Literature Review
+    summary: >-
+      Students move from summarizing sources one at a time to grouping them by theme, method, or
+      point of debate, and they write a literature review that shows what their field knows about
+      the question and where the gaps are.
+    goals:
+      - Students will distinguish a literature review from an annotated bibliography and from a research essay.
+      - Students will organize sources by theme, method, or point of debate using a synthesis matrix.
+      - Students will write a literature review that identifies agreements, disagreements, and gaps in published work.
+    outcomes: [acrl:scholarship-conversation, wpa:critical-thinking-reading-composing, wpa:knowledge-of-conventions, wpa:processes]
+    topics: [literature review, synthesis, genre, reading strategies]
+    weeks: {min: 3, ideal: 4}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - frederiksen-phelps-lr-what-is-a-literature-review
+        - frederiksen-phelps-lr-synthesizing-sources
+        - lloyd-wtlr-dissection-of-a-literature-review
+        - unc-handout-literature-reviews
+      optional:
+        - frederiksen-phelps-lr-writing-the-literature-review
+        - ws6-lets-party-composing-review-literature-technical-topic
+        - plos-tsr-2013-literature-review
+        - wac-informed-writer-chapter-9-comparing-and-synthesizing-sources
+        - gz2e-5-5-synthesis-and-literature-reviews
+        - krause-tprw-09-the-categorization-and-evaluation-exercise
+        - online-technical-writing-mcmurrey-literature-reviews
+        - cus-2-beam-a-solution-that-might-shine
+    assignments:
+      major: [cora-literature-review]
+      short_term_variant: prompt-mapping-the-conversation-a-graphic-organizer-tool-for-synthe
+      activities:
+        - cora-synthesis
+        - cora-beam-me-source-use-and-synthesis
+        - cora-ai-might-summarize-it-cant-think-ai-assisted-lit-reviews
+    notes: >-
+      McLean's CORA assignment treats the literature review as the rationale for a research
+      question, which sets up the proposal in the next unit. It says it works best after an
+      annotated bibliography; this arc doesn't have one, so have students build a synthesis matrix
+      as they read and use it in place of the bibliography. Frederiksen and Phelps wrote for
+      education and nursing graduate students. The advice holds for undergraduates, but expect
+      questions about the nursing examples. In a short term, Streit's Mapping the Conversation
+      organizer is the lighter version: students map the conversation and write a few paragraphs of
+      synthesis in place of a full review. Perry's menu of AI activities keeps students' own
+      analysis at the center when they use AI on a review. Perry says to pick and choose, so one or
+      two activities is plenty.
+
+  - id: research-proposal
+    title: Research Proposal
+    summary: >-
+      Students propose the project their review points toward: the question, why it matters, what's
+      already known, the gap, and how they'll answer it with published sources, primary research,
+      or both. Peers and the instructor respond before students commit to the extended essay.
+    goals:
+      - Students will argue for a question's significance using the gaps their literature review identified.
+      - Students will describe methods and sources suited to the question and to their field.
+      - Students will plan a timeline and revise the plan in response to feedback.
+    outcomes: [acrl:research-inquiry, wpa:rhetorical-knowledge, wpa:processes, wpa:knowledge-of-conventions]
+    topics: [proposals, research question, primary research, ethics]
+    weeks: {min: 1, ideal: 2}
+    priority: optional
+    merge_with: previous
+    readings:
+      core:
+        - unc-handout-grant-proposals
+        - mit-commkit-nsf-research-proposal
+        - wac-involved-chapter-10-the-investigative-process
+        - wac-try-this-chapter-2-making-research-ethical
+      optional:
+        - cus-2-quantitative-or-qualitative
+        - technical-writing-essentials-2e-5-2-research-terminology-methodologies
+        - wac-try-this-chapter-1-what-are-research-methods
+        - ws2-introduction-primary-research-observations-surveys-interviews
+        - wac-involved-chapter-12-new-investigations-fieldwork-and-laboratories
+        - unc-handout-honors-theses
+    assignments:
+      major: [prompt-the-research-prospectus-in-first-year-writing-and-beyond-tea]
+      short_term_variant: null
+      activities:
+        - wsaaa-so-speed-dating-articulating-arguments-significance
+    notes: >-
+      Hayes's prospectus asks students to find a gap in published scholarship. The FYC Inquiry and
+      Research arc uses it in the third week, which is early for that; here students arrive with a
+      finished literature review, so the gap is already on the page. The UNC grant proposal handout
+      and the CommKit guide to the NSF Graduate Research Fellowship proposal show what a funded
+      proposal looks like. Most students are writing for you and their classmates, but a student
+      applying for an undergraduate research grant can write to that funder instead. If anyone
+      plans surveys or interviews, check your campus IRB policy now. In a short term, students add
+      a one-page plan to the end of the literature review instead of writing a separate proposal.
+
+  - id: extended-researched-essay
+    title: Extended Researched Essay
+    summary: >-
+      Students write a long researched essay that builds on the review and makes an argument of its
+      own (or a research report, if they collected data), then revise it through peer review.
+    goals:
+      - Students will write an extended essay that makes an original argument from a synthesis of sources.
+      - Students will integrate sources the way their field expects.
+      - Students will revise substantially in response to peer and instructor feedback.
+    outcomes: [wpa:rhetorical-knowledge, wpa:critical-thinking-reading-composing, wpa:processes, acrl:scholarship-conversation]
+    topics: [synthesis, argument, revision, peer review]
+    weeks: {min: 3, ideal: 4}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - wac-informed-writer-chapter-10-writing-the-research-paper
+        - krause-tprw-10-the-research-essay
+        - guptill-constructing-the-thesis-and-argument-from-the-ground-up
+      optional:
+        - krause-tprw-08-the-antithesis-exercise
+        - wvu-bad-ideas-about-writing-the-traditional-research-paper-is-best
+        - guptill-intros-and-outros
+        - wac-problems-into-problems
+        - krause-tprw-11-alternative-ways-to-present-your-research
+        - wac-rethinking-your-writing-chapter-21-late-inquiry-addressing-gaps-and-complications
+    assignments:
+      major: [wsaaa-writing-about-writing-waw-synthesis-essay-assignment]
+      short_term_variant: null
+      activities:
+        - oercommons-pairr-peer-ai-review-reflection
+        - wsaaa-learning-incorporate-source-material-full-menu-options-developing
+        - acrl-research-process-reflection-prompts
+    notes: >-
+      Borchert's synthesis essay comes from an advanced composition course where students pick
+      topics from Writing Spaces and Bad Ideas About Writing essays. If your students are writing in
+      their majors, keep her structure and let the literature review supply the topic. The
+      assignment is CC BY-NC-ND, so hand it out as published or write your own version from
+      scratch. Students who collected data can write a research report instead; Kinkead's empirical
+      research project in Prompt (a report, a poster, and a presentation) is a good model, though
+      it assumes IRB approval. The catalog has no lighter version of this project. In a short term,
+      cap the length and have students build the essay directly on the literature review. Williams's
+      Problems into PROBLEMS, a short book on how writers frame a problem to motivate readers,
+      helps students whose introductions don't yet say why the question matters.

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Icon } from "../components/Icon";
 import { api } from "../api";
 import { ErrorMessage, Loading } from "../components/Status";
-import { focusesOf, PRIMARY_FOCUSES, useAsync, useDocumentTitle, usePack } from "../hooks";
+import { focusesOf, useAsync, useDocumentTitle, usePack } from "../hooks";
 import { myBuilds } from "../storage";
 
 const fmt = new Intl.NumberFormat("en-US");
@@ -18,9 +18,10 @@ export default function Home() {
   const saved = Object.entries(myBuilds()).sort((a, b) => (b[1].updated || "").localeCompare(a[1].updated || ""));
 
   const focuses = focusesOf(pack.data).filter((f) => !f.tag_only);
-  const primary = PRIMARY_FOCUSES.map((code) => focuses.find((f) => f.code === code)).filter(Boolean) as typeof focuses;
-  const others = focuses.filter((f) => !PRIMARY_FOCUSES.includes(f.code));
   const arcCount = (code: string) => arcs.data?.filter((a) => a.focus === code).length ?? 0;
+  // Every focus is listed until the sample courses load; then a focus without any moves to "Other focuses".
+  const withArcs = arcs.data ? focuses.filter((f) => arcCount(f.code) > 0) : focuses;
+  const others = arcs.data ? focuses.filter((f) => arcCount(f.code) === 0) : [];
 
   return (
     <div className="container page">
@@ -73,7 +74,7 @@ export default function Home() {
         </p>
         {pack.data && (
           <ul className="index-list">
-            {primary.map((f) => (
+            {withArcs.map((f) => (
               <li key={f.code}>
                 <Link className="index-row" to={`/focus/${f.code}`}>
                   <span className="index-title">{f.label}</span>
@@ -104,7 +105,6 @@ export default function Home() {
               <li key={f.code}>
                 <Link className="chip-link" to={`/catalog?focus=${f.code}`}>
                   {f.label}
-                  {arcCount(f.code) > 0 && <span className="meta"> · {plural(arcCount(f.code), "sample course")}</span>}
                 </Link>
               </li>
             ))}

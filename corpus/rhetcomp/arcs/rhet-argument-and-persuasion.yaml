@@ -1,0 +1,263 @@
+id: rhet-argument-and-persuasion
+focus: RHETORIC
+title: Argument and Persuasion
+tagline: >-
+  Students learn the appeals and the Toulmin and Rogerian models, take apart arguments made in good and
+  bad faith, and finish with a researched argument of their own.
+rationale: >-
+  This arc suits a course where argument is the subject, such as a second-semester composition course
+  or a lower-division rhetoric course on persuasion. Students begin with the rhetorical situation and
+  the appeals, then learn to read an argument closely: find the claim, summarize it fairly, and judge
+  the reasoning. From there they build arguments with the stasis questions and the Toulmin and
+  Rogerian models, study fallacies and arguments made in bad faith, and write a researched argument.
+  Anna Mills's How Arguments Work carries much of the reading. The rest comes from A Dam Good
+  Argument, Write What Matters, the Gagich and Zickel Guide to Rhetoric, Genre, and Success, OpenStax's
+  Writing Guide, Writing Spaces, Bad Ideas About Writing, and Reading Rhetorical Theory, with essays
+  from 88 Open Essays and a few public-domain speeches as practice texts. The Toulmin and Rogerian
+  project is link-only, and the catalog has no general researched-argument prompt, so plan on writing
+  at least one assignment sheet yourself.
+course_level: "100"
+fits_courses: [oc-engl102, wwu-eng101]
+frameworks: [wpa, acrl]
+units:
+  - id: situation-and-appeals
+    title: The Rhetorical Situation and the Appeals
+    summary: >-
+      Students learn to describe the situation an argument responds to and to name how it works on
+      its audience through character, emotion, reasoning, and timing. Short speeches give them texts
+      where the appeals are easy to point to.
+    goals:
+      - Students will describe the audience, purpose, exigence, and constraints of an argument.
+      - Students will identify appeals to ethos, pathos, and logos and explain how each works on a particular audience.
+      - Students will explain how timing (kairos) changes what an argument can accomplish.
+    outcomes: [wpa:rhetorical-knowledge, wpa:critical-thinking-reading-composing]
+    topics: [rhetorical situation, rhetorical appeals, ethos, pathos, logos, kairos]
+    weeks: {min: 1, ideal: 2}
+    priority: optional
+    merge_with: next
+    readings:
+      core:
+        - gz2e-6-2-what-is-the-rhetorical-situation
+        - haw-ch08-how-arguments-appeal-to-emotion-pathos
+        - haw-ch09-how-arguments-establish-trust-and-connection
+        - bad-ideas-logos-logic
+      optional:
+        - gz2e-6-9-kairos-a-rhetorical-appeal-lost-in-time
+        - ws3-constructing-scholarly-ethos-writing-classroom
+        - adga-the-rhetorical-appeals-and-sociohistorical-context
+        - wwm-persuasive-appeals
+        - ws2-murder-rhetorically-speaking
+        - pt-fdr-day-of-infamy-1941
+        - pt-patrick-henry-liberty-1775
+        - pt-swift-modest-proposal
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - acrl-defining-different-kinds-authority
+        - acrl-tweet-response-simulation
+    notes: >-
+      There's no major assignment in this unit. In a short term, teach the vocabulary during the first
+      week of the next unit, where students put it to use right away. Assign Fox's Bad Ideas chapter
+      early, since many students arrive thinking logos means formal logic. Roosevelt's war message and
+      Henry's liberty speech are short and lean hard on pathos and timing. Swift's Modest Proposal is the
+      standard text for persona and irony; a few students will read it straight the first time, so
+      plan to talk through that reading in class. Heldt's activity sorts the kinds of authority writers
+      claim, using articles on climate change, and works as a lesson on ethos.
+
+  - id: reading-and-analyzing-arguments
+    title: Reading and Analyzing Arguments
+    summary: >-
+      Students find the claim and reasons in someone else's argument, summarize it fairly, and judge
+      how well the reasoning holds up. The major assignment has them compare the rhetorical moves in a
+      human-written argument and an AI-generated one.
+    goals:
+      - Students will identify an argument's main claim, reasons, evidence, and unstated assumptions.
+      - Students will write a summary of an argument that its author would accept as fair.
+      - Students will evaluate the strength of an argument's reasoning and evidence.
+      - Students will compare the rhetorical choices in a human-written and an AI-generated argument.
+    outcomes: [wpa:critical-thinking-reading-composing, wpa:rhetorical-knowledge, wpa:processes]
+    topics: [argument, summary, reading strategies, evidence, rhetorical analysis]
+    weeks: {min: 2, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - haw-ch02-reading-to-figure-out-the-argument
+        - haw-ch03-writing-a-summary-of-another-writers-argument
+        - haw-ch04-assessing-the-strength-of-an-argument-logos
+        - ws1-finding-good-argument-why-bother-logic
+      optional:
+        - haw-ch10-writing-argument-analysis
+        - adga-situating-arguments
+        - adga-interpretation-analysis-and-close-reading
+        - openstax-wg-ch09-rhetorical-analysis
+        - e88-12-must-the-president-be-a-moral-leader
+        - e88-17-habits-and-virtues-does-it-matter-if-a-leader-kick
+        - e88-72-fix-the-machine-not-the-person
+        - pt-paine-common-sense
+    assignments:
+      major: [wsaaa-can-chatgpt-make-right-moves-comparative-rhetorical-analysis]
+      short_term_variant: null
+      activities:
+        - merlot-cmu-oli-argument-diagramming
+        - wsaaa-analyzing-ai-ai-debate-as-rhetorical-observation
+        - kcworks-rhetorical-analysis-peer-review-handout-degrasse
+    notes: >-
+      Mills's chapters build on each other, so assign them in order. Jones's "Finding the Good Argument"
+      introduces the Toulmin model, which the next unit covers in detail. The comparative analysis by
+      Cook, Meindl, and Laflen runs four to five weeks as written; to fit three, have students compare
+      one human-written argument with one AI-generated version on the same question. It's CC BY-NC-ND,
+      so share the assignment sheet unchanged and put your adjustments in a separate handout. Carnegie
+      Mellon's argument diagramming course is free and self-paced; assign the first modules as homework
+      before students map an argument in class. The essays by Blake, Ciulla, and Swartz are short and
+      make good practice texts. Common Sense is long, so assign an excerpt.
+
+  - id: building-arguments
+    title: "Building Arguments: Stasis, Toulmin, and Rogerian Models"
+    summary: >-
+      Students use the stasis questions to find what is in dispute, then write the same argument two
+      ways: a classical or Toulmin argument for readers who can be moved by reasons, and a Rogerian
+      argument for readers who start out opposed.
+    goals:
+      - Students will use the stasis questions of fact, definition, value, and policy to locate the point at issue.
+      - Students will map an argument's claim, reasons, warrants, and qualifiers using the Toulmin model.
+      - Students will write a Rogerian argument that states an opposing position fairly before proposing common ground.
+      - Students will explain how audience changed the way they built each argument.
+    outcomes: [wpa:rhetorical-knowledge, wpa:processes, wpa:knowledge-of-conventions, wpa:critical-thinking-reading-composing]
+    topics: [argument, stasis theory, counterargument, thesis, audience]
+    weeks: {min: 2, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - peters-et-al-wais-stasis-theory-better-paper
+        - adga-three-kinds-of-claims
+        - wwm-toulmin-argument-model
+        - wwm-rogerian-argument-model
+      optional:
+        - adga-aristotelian-and-rogerian-argumentation
+        - wwm-aristotelian-classical-argument-model
+        - adga-constructing-the-thesis-and-argument-from-the-ground-up
+        - ws2-other-hand-role-antithetical-writing-first-year
+        - gz2e-8-4-counterargument-and-response
+        - haw-ch05-responding-to-an-argument
+        - wwm-establishing-lines-of-communication-with-the-opposition
+        - alternatives-to-agonism
+    assignments:
+      major: [fyca-argument-2-ways-24]
+      short_term_variant: null
+      activities:
+        - textgened-writing-against-the-machine-debating-with-chatgpt
+        - wsaaa-collaborative-problem-solving-deliberative-discourse-toward-group-consensus
+        - wsaaa-exploring-community-personal-connection-as-idea-generation-argumentative
+    notes: >-
+      The stasis chapter comes from Writing Arguments in STEM, so its examples are scientific, but the
+      four questions apply to any public issue. Sladek's Argument 2 Ways asks for two arguments on one
+      subject for two different rhetorical situations; for this unit, require one Toulmin argument and
+      one Rogerian. It's in the First-Year Composition Archive and is link-only, so link to it or write
+      your own sheet from it. Writing Against the Machine has students prompt ChatGPT to argue against
+      their claim and then sort the counterclaims it produces; it fits the week students draft the
+      Toulmin argument. Moon's deliberation activity, in which groups work toward consensus on an issue,
+      fits the week they draft the Rogerian one. Warren's activity helps students find topics in their own
+      communities so the class doesn't default to the usual debate topics. Fennelly's Alternatives to
+      Agonism is an instructor resource on non-combative approaches to argument; use it for planning.
+
+  - id: fallacies-and-bad-faith
+    title: Fallacies, Bad Faith, and Demagoguery
+    summary: >-
+      Students study how arguments go wrong, by accident and on purpose. They learn the common
+      fallacies, then look at arguments built to mislead: propaganda, racial enthymemes, and
+      misinformation made to spread.
+    goals:
+      - Students will recognize common fallacies and explain why the reasoning fails in context.
+      - Students will distinguish an honest argument with weak reasoning from one made in bad faith.
+      - Students will trace how an unstated premise carries a claim a speaker never makes outright.
+      - Students will test a contested claim against credible evidence.
+    outcomes: [wpa:critical-thinking-reading-composing, wpa:rhetorical-knowledge, acrl:authority]
+    topics: [logical fallacies, propaganda, misinformation, cognitive bias, argument]
+    weeks: {min: 1, ideal: 2}
+    priority: optional
+    merge_with: previous
+    readings:
+      core:
+        - bad-ideas-logical-fallacies
+        - gz2e-6-5-logical-fallacies
+        - rrt-ch03-propaganda-common-good
+        - constellations-countering-racial-enthymemes
+      optional:
+        - openstax-wg-ch11-reasoning-strategies
+        - adga-ten-rules-for-ethical-arguments
+        - e88-41-the-politics-of-fear-how-it-manipulates-us-to-trib
+        - e88-16-misinformation-and-biases-infect-social-media-both
+        - e88-66-education-in-the-dis-information-age
+        - e88-77-why-good-people-turn-bad-online
+        - present-tense-2018-trice-potts-dark-patterns
+        - intermezzo-15-steudeman
+    assignments:
+      major: [cora-evaluating-claims-facebook-edition]
+      short_term_variant: null
+      activities:
+        - wsaaa-upstream-lateral-moves-through-information-networks
+        - acrl-quote-tracing-activity
+    notes: >-
+      Read Bommarito's chapter alongside the Gagich and Zickel list of fallacies. Bommarito doubts that
+      memorizing fallacy names helps students evaluate arguments, and the pairing lets the class test
+      his claim on the list itself. Rodriguez draws his examples from Trump's speeches, interviews, and
+      tweets; set ground rules before discussion and keep attention on how the enthymemes work. Moran's
+      Evaluating Claims began as an assignment in an honors chemistry course and asks for a two-page
+      paper on a pseudoscientific claim or conspiracy theory; let students choose claims from any
+      field. Trice and Potts analyze a sample of tweets from the GamerGate harassment campaign, so tell
+      students what they'll be reading. Steudeman's collection on teaching demagoguery is written for instructors. If this unit
+      drops, move Bommarito and the fallacy list into the previous unit's counterargument work.
+
+  - id: researched-argument
+    title: The Researched Argument
+    summary: >-
+      Students choose an issue where informed people disagree, research the positions they hold, and
+      write an argument that answers the strongest objections. They use the stasis questions to narrow
+      the topic and the Toulmin model to check their own reasoning before peer review.
+    goals:
+      - Students will develop a research question on an issue where informed people disagree.
+      - Students will find, evaluate, and synthesize sources that represent more than one position.
+      - Students will write an argument that supports its claim with evidence and responds to the strongest counterarguments.
+      - Students will revise in response to peer and instructor feedback.
+    outcomes: [wpa:processes, wpa:critical-thinking-reading-composing, wpa:knowledge-of-conventions, acrl:research-inquiry, acrl:scholarship-conversation]
+    topics: [research question, source evaluation, synthesis, argument, counterargument]
+    weeks: {min: 2, ideal: 4}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - haw-ch06-the-research-process
+        - haw-ch07-forming-a-research-based-argument
+        - openstax-wg-ch12-argumentative-research
+        - adga-research-should-start-with-questions-not-answers
+      optional:
+        - adga-four-moves-and-a-habit
+        - adga-listening-to-sources-talking-to-sources
+        - ws5-everythings-biased-guide-determining-when-bias-matters
+        - krause-tprw-08-the-antithesis-exercise
+        - adga-the-burkean-parlor-metaphor
+        - adga-quoting-summarizing-and-paraphrasing
+        - wvu-bad-ideas-about-writing-the-traditional-research-paper-is-best
+        - openstax-wg-ch10-position-argument
+    assignments:
+      major: [textgened-ai-at-work-an-argument-essay]
+      short_term_variant: prompt-walk-local-argue-local-a-campus-based-prompt-for-a-basic-wri
+      activities:
+        - wsaaa-so-speed-dating-articulating-arguments-significance
+        - cora-research-matrix-synthesizing-search-results
+        - cora-beam-me-source-use-and-synthesis
+    notes: >-
+      The catalog has no general, openly licensed researched-argument assignment. Dorn's AI at Work
+      essay comes closest. She wrote it for an advanced argumentative writing course, and it asks
+      students to research how AI is used in their field and argue a position about it. Keep her
+      structure and open the topic, or keep the AI focus if your students are close to their majors;
+      it's CC BY-NC, so you can adapt it. Langdon and Lloyd's Walk Local, Argue Local is the short-term
+      version: students argue with an assigned text about the campus using their own observations,
+      with no outside research. It was written for a basic writing course and built around a walking
+      tour of campus, so swap in a neighborhood or an online space if a campus walk doesn't suit your
+      section. The research matrix
+      and BEAM lessons come from library sessions, and your librarian may want to co-teach one. DeRise's
+      chapter helps students who think any source with a point of view is disqualified.

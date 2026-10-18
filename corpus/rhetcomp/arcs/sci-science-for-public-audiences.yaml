@@ -1,0 +1,252 @@
+id: sci-science-for-public-audiences
+focus: SCIWRIT
+title: Science for Public Audiences
+tagline: >-
+  A public science writing course: students explain a published study for general readers, try
+  features and data stories, trace how shaky findings and misinformation spread, and finish with a
+  public piece for an audience they choose.
+rationale: >-
+  This arc is for a 200-level science writing course where most of the writing goes to readers outside
+  the lab. Students start by separating science writing for the public from scientific writing for
+  peers. Then they read a research article closely enough to explain it, try longer feature and
+  data-story forms, study how findings get overstated and corrected on their way to the public, and end
+  with a piece on a socioscientific issue, written for a specific audience in a genre that audience
+  reads. Most of the model texts are short articles from The Conversation, where researchers write about
+  their own work for general readers; many come by way of the 88 Open Essays reader. The how-to readings
+  come from the PLOS Ten Simple Rules series, MIT's CommKit, Principles of Scientific Communication, the
+  Science Communication Toolkit, and Writing Spaces. Nearly all the Conversation pieces are CC BY-ND, so
+  the reader can include them only whole and unchanged. The catalog has no openly licensed feature or
+  profile assignment, so plan to write that one yourself.
+course_level: "200"
+fits_courses: []
+frameworks: [wpa, tc]
+units:
+  - id: science-and-its-publics
+    title: Science and Its Publics
+    summary: >-
+      Students separate writing about science for general readers from writing science for other
+      scientists, and they ask who "the public" is in public science. The first models are short pieces
+      researchers wrote about their own work for general readers.
+    goals:
+      - Students will distinguish science writing for general readers from scientific writing for peers.
+      - Students will analyze how a public-facing science article adapts research for its readers.
+      - Students will explain how trust and prior beliefs shape the way readers take in scientific claims.
+    outcomes: [wpa:rhetorical-knowledge, wpa:critical-thinking-reading-composing, tc:audience-purpose]
+    topics: [science communication, popular science, audience, rhetorical situation]
+    weeks: {min: 1, ideal: 2}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - duke-swr-science-writing-vs-scientific-writing
+        - bongers-macartney-psc-knowing-your-audience
+        - e88-36-getting-a-scientific-message-across-means-taking-h
+        - ws5-writing-science-first-year-college-why-it
+      optional:
+        - bevan-smith-science-communication-in-the-usa
+        - gascoigne-et-al-communicating-science-introduction
+        - e88-31-to-seek-common-ground-on-lifes-big-questions-we-ne
+        - e88-46-why-native-americans-do-not-separate-religion-from
+        - the-conversation-us
+        - stylus-2026-ramirezmunoz-tiktok-paleontology
+        - wac-forgotten-tribe-scientists-as-writers
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - cora-scientific-research-popular-sources-classroom-activity
+        - acrl-defining-different-kinds-authority
+    notes: >-
+      This unit has no major assignment; it sets up the lay summary in the next one. Start with Duke's
+      short page on science writing versus scientific writing, then have students test the distinction on
+      Hendricks's essay. Thaiss and Wade wrote their chapter for STEM students in first-year writing, and
+      it ends with teacher resources. Bitter's think-pair-share puts a popular and a scholarly source on
+      the same topic side by side. Heldt's handout on kinds of authority comes with a list of global
+      warming articles to discuss. The Conversation's site sorts its articles by field if students want
+      models closer to their majors.
+
+  - id: explaining-research
+    title: Explaining Research
+    summary: >-
+      Students read a peer-reviewed article in a field they care about, trace how the news covered it,
+      and write a lay summary that explains the study's question, methods, and findings to readers who
+      don't have the background.
+    goals:
+      - Students will read a research article for its question, methods, findings, and limitations.
+      - Students will trace a news story about a study back to the original article and judge the coverage.
+      - Students will write a lay summary that is accurate, readable, and clear about what the study did not show.
+    outcomes: [wpa:critical-thinking-reading-composing, wpa:processes, tc:audience-purpose, tc:editing-style]
+    topics: [research articles, reading strategies, science communication, popular science]
+    weeks: {min: 1, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - plos-tsr-2023-engaging-science-communication
+        - ws2-reading-games-strategies-reading-scholarly-sources
+        - e88-24-measles-why-its-so-deadly-and-why-vaccination-is-s
+        - e88-49-wastewater-is-an-asset-it-contains-nutrients-energ
+      optional:
+        - cus-7-scholarly-articles-as-sources
+        - gz2e-2-5-reading-workflows-for-academic-articles
+        - e88-04-mushrooms-natures-greatest-decomposers
+        - e88-20-male-teachers-are-most-likely-to-rate-highly-in-un
+        - e88-26-hydropower-dams-can-harm-coastal-areas-far-downstr
+        - e88-54-what-the-ban-on-gene-edited-babies-means-for-famil
+        - duke-swr-lesson-2-cohesion-coherence-emphasis
+    assignments:
+      major: [prompt-in-layman-s-terms-teaching-students-to-understand-the-scient]
+      short_term_variant: null
+      activities:
+        - cora-newspaper-article-research-article-backtracking-find-origina
+        - acrl-analyzing-articles
+    notes: >-
+      Tremaglio and Kraczkowski wrote their blog-style lay summary for introductory biology. It comes with
+      an analysis worksheet, a blog worksheet, and a rubric, all CC BY-NC, so you can rework them for your
+      course. Have students find their article through a news story; that way Hansen's backtracking
+      activity and the lay summary share a source. Borowiec's ten rules (a headline message, less jargon,
+      a reason for the reader to care) make a good revision checklist. If you want AI in the unit, Lewis
+      and Martin's Teaching Critical AI Literacy through Popular Natural Science Articles (WSAAA, CC
+      BY-NC-ND) has students compare an AI rewrite of a research article with the original, and McKee's
+      TextGenEd sequence has students test AI while they draft lay summaries of medical articles.
+
+  - id: features-and-data-stories
+    title: Features, Profiles, and Data Stories
+    summary: >-
+      Students study the longer forms of public science writing: the feature built around people and
+      places, the profile of a researcher, and the data story that makes its case through charts. Each
+      student drafts a short feature, profile, or data story.
+    goals:
+      - Students will analyze how features use scenes and people to carry scientific information.
+      - Students will interview a researcher and write about that person's work for general readers.
+      - Students will build a short data story that pairs a clear claim with an honest chart.
+    outcomes: [wpa:rhetorical-knowledge, wpa:knowledge-of-conventions, tc:design-visual]
+    topics: [profile, interviews, data visualization, visual storytelling]
+    weeks: {min: 1, ideal: 2}
+    priority: optional
+    merge_with: next
+    readings:
+      core:
+        - openstax-wg-ch05-profile
+        - e88-81-austin-indiana-the-hiv-capital-of-small-town-ameri
+        - wilke-fdv-telling-a-story
+        - ws5-strategies-analyzing-composing-data-stories
+      optional:
+        - wwm-profile
+        - e88-11-the-emotional-lives-of-animals
+        - e88-63-california-knew-the-carr-wildfire-could-happen-it
+        - e88-09-is-burning-trash-a-good-way-to-handle-it-waste-inc
+        - dougherty-hodv-tell-and-show-your-data-story
+        - plos-tsr-2018-scientific-comics
+        - plos-tsr-2018-popular-science-book
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - cora-interview-scholar
+        - cora-understanding-data-visualization
+    notes: >-
+      The catalog has no openly licensed science feature or profile assignment, so expect to write your
+      own. Wapner's long piece on the HIV outbreak in Austin, Indiana is the feature model, and the
+      OpenStax profile chapter covers interviewing and structure. Acosta's Interview a Scholar activity
+      gets students talking with a faculty researcher, and that researcher can be the profile's subject.
+      For data stories, pair Wilke's chapter on building a sequence of figures toward a point with
+      Laflen's strategies for reading and composing data stories. Wapner, Wilke, and Laflen are all under
+      NoDerivatives licenses, so they go into the reader unchanged. In a short term this unit folds into
+      the public project, and students who want to can choose a feature or data story as their public
+      genre.
+
+  - id: uncertainty-and-misinformation
+    title: Uncertainty, Error, and Misinformation
+    summary: >-
+      Students look at how science handles its own mistakes and how public coverage handles uncertainty:
+      overstated findings, corrections, misleading charts, and claims that spread well ahead of the
+      evidence. Each student investigates one questionable claim and reports what the evidence supports.
+    goals:
+      - Students will explain how scientific findings get corrected and why provisional results are often reported as settled.
+      - Students will identify misleading uses of data in charts and headlines.
+      - Students will investigate a viral or pseudoscientific claim by reading laterally and tracing it to its sources.
+      - Students will report what the evidence supports, including what is still uncertain.
+    outcomes: [wpa:critical-thinking-reading-composing, wpa:rhetorical-knowledge, tc:ethics-accessibility]
+    topics: [misinformation, source evaluation, cognitive bias, data visualization]
+    weeks: {min: 1, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - conversation-2026-nepal-ultrathin-coating-hidden-leak
+        - e88-21-despite-public-pledges-leading-scientific-journals
+        - dougherty-hodv-how-to-lie-with-charts
+        - e88-16-misinformation-and-biases-infect-social-media-both
+      optional:
+        - conversation-2026-mcneil-microplastics-lab-gloves
+        - e88-87-for-a-flooded-midwest-climate-forecasts-offer-litt
+        - e88-66-education-in-the-dis-information-age
+        - ws4-effectively-efficiently-reading-credibility-online-sources
+        - adga-four-moves-and-a-habit
+        - gz2e-10-6-misinformation-and-disinformation
+        - unc-handout-statistics
+    assignments:
+      major: [cora-evaluating-claims-facebook-edition]
+      short_term_variant: null
+      activities:
+        - acrl-spot-spin-can-you-trust-data
+        - cora-sift-pick-fact-checking-source-evaluation
+        - cora-science-media
+        - textgened-fact-checking-auto-generated-ai-hype
+    notes: >-
+      Moran's Evaluating Claims started in an honors chemistry course. Students write a two-page paper
+      that supports or rejects a pseudoscientific claim or conspiracy theory with credible evidence. It's
+      CC BY-NC-SA. In the Nepal article and the McNeil and Clough article, researchers explain how a
+      measurement problem misled their own field; pair them with Doctorow's essay on journals that won't
+      correct statistical misconduct. Wu's piece on climate forecasts and Midwest flooding is a good test
+      case for how a scientist writes about projections. Hood's Spot the Spin fits in one 45-minute
+      session. Massa's Science in the Media has groups present on how popular media reported one finding,
+      if you want a group project alongside the paper. The Conversation pieces here are CC BY-ND, and
+      Shaffer's essay is CC BY-NC.
+
+  - id: public-science-project
+    title: Public Science Project
+    summary: >-
+      Students pick a socioscientific issue, a specific audience, and a genre that audience reads (an
+      op-ed, an explainer, a social media series, an infographic, a Wikipedia edit) and produce a public
+      piece. Peer review focuses on accuracy and inclusive communication.
+    goals:
+      - Students will choose a genre and venue that fit a specific public audience.
+      - Students will write about a socioscientific issue accurately and inclusively for that audience.
+      - Students will give and use peer feedback on accuracy and inclusive communication.
+      - Students will explain what they changed for their audience and why.
+    outcomes: [wpa:rhetorical-knowledge, wpa:processes, wpa:knowledge-of-conventions, tc:ethics-accessibility]
+    topics: [public writing, science communication, social media, accessibility]
+    weeks: {min: 2, ideal: 4}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - mit-commkit-op-ed
+        - gupta-sct-inclusive-science-communication
+        - plos-tsr-2015-online-outreach
+        - bongers-macartney-psc-social-media
+      optional:
+        - bongers-macartney-psc-infographics
+        - plos-tsr-2020-twitter-scientist
+        - section508-gov-create-social-media
+        - ws2-why-blog-searching-writing-web
+        - wac-try-this-chapter-8-research-and-the-rhetorical-forms-it-takes
+        - e88-58-minorities-face-more-obstacles-to-a-lifesaving-org
+        - e88-60-how-rural-areas-like-floridas-panhandle-can-become
+    assignments:
+      major: [prompt-inclusive-science-writing-about-socioscientific-issues-for-d]
+      short_term_variant: wsaaa-informative-argumentative-infographic
+      activities:
+        - wikiedu-editing-wikipedia-science-communication
+        - prompt-scaffolding-toward-self-efficacy-preparing-underrepresented
+    notes: >-
+      Kelp, Pisano, Alderfer, and Levinger built their assignment at Colorado State around a
+      socioscientific issue and a peer review on inclusive science communication. It's CC BY-NC, so you
+      can adapt the prompt. The CommKit op-ed guide and Gupta, Harding, and Talluri's chapter on inclusive
+      science communication give the peer review its criteria. If students publish outside the class, as
+      a Wikipedia edit through Wiki Education's handout or an op-ed pitched with Hoermann-Elliott and
+      Williams's pitch sequence, talk through what it means to put their name on public writing. Breaux's
+      infographic assignment is the smaller public piece for short terms; it's CC BY-NC-ND, so share it
+      unchanged or write your own sheet and cite hers.
