@@ -6,14 +6,15 @@ Build state (what the frontend holds and posts):
      "units": [{"key", "title", "start_week", "end_week", "weeks", "goals", "outcomes",
                 "readings": [{"id", "selected"}], "assignments": [{"id", "role", "selected"}]}]}
 
-Only selected items are exported. The reader carries the full text of each redistributable
-reading the content cache holds (see content/embed.py for the rules), under its attribution;
-everything else is linked.
+Only selected items are exported. The reader and the Common Cartridge carry the full text of
+each redistributable reading the content cache holds (see content/embed.py for the rules),
+under its attribution; everything else is linked.
 """
 from __future__ import annotations
 
 import io
 import re
+import shutil
 import uuid
 import zipfile
 from dataclasses import dataclass, field
@@ -26,6 +27,8 @@ from builder.licensing import attribution, license_report
 from builder.reader_pdf import build as build_reader_pdf
 from catalog.models import Assignment, Reading
 from content.embed import attach
+from content.sanitize import shift_headings
+from content.store import Entry
 
 
 @dataclass
@@ -132,17 +135,27 @@ def _page(title: str, ident: str, body: str) -> str:
     return render_to_string("builder/cc_page.html", {"title": title, "identifier": ident, "body": body})
 
 
-def build_imscc(ctx: dict, flavor: str = "canvas") -> bytes:
+CC_HEADING_LEVEL = 2          # the LMS shows the page title as h1, so a reading's own headings start at h2
+CC_FILES = "web_resources"    # course files; Canvas's $IMS-CC-FILEBASE$ stands for this folder
+
+
+def build_imscc(ctx: dict, flavor: str = "canvas", store=None) -> bytes:
     """Common Cartridge 1.1. `canvas` adds Canvas's course_settings layer (real Pages, modules,
-    assignment shells); `standard` is plain CC 1.1 for Moodle, D2L, and others."""
+    assignment shells); `standard` is plain CC 1.1 for Moodle, D2L, and others.
+
+    Full text follows the HTML reader's rules: cached web text goes on the reading's page, and a
+    cached publisher PDF goes into the course files byte for byte, linked from that page."""
     canvas = flavor == "canvas"
+    attach(ctx["readings"], "html", store)
     course_id = _ident("c", ctx["title"])
     files: dict[str, str] = {}
+    pdfs: dict[str, Entry] = {}                 # package path -> cache entry, copied in unchanged
+    pdf_refs: dict[str, tuple[str, str]] = {}   # reading id -> (resource id, path under CC_FILES)
     resources: list[str] = []
     modules: list[dict] = []
     used_paths: set[str] = set()
 
-    def add_page(title: str, body_html: str, key: str) -> str:
+    def add_page(title: str, body_html: str, key: str, deps: tuple[str, ...] = ()) -> str:
         ident = _ident("g", course_id, key)
         path = f"wiki_content/{_slug(title)}.html"
         n = 2
@@ -151,8 +164,36 @@ def build_imscc(ctx: dict, flavor: str = "canvas") -> bytes:
             n += 1
         used_paths.add(path)
         files[path] = _page(title, ident, body_html)
-        resources.append(f'<resource identifier="{ident}" type="webcontent" href="{path}"><file href="{path}"/></resource>')
+        dep = "".join(f'<dependency identifierref="{d}"/>' for d in deps)
+        resources.append(f'<resource identifier="{ident}" type="webcontent" href="{path}"><file href="{path}"/>{dep}</resource>')
         return ident
+
+    def add_pdf(r: Reading) -> tuple[str, str]:
+        """Put a reading's cached PDF in the course files once, however many units list it."""
+        if r.id not in pdf_refs:
+            name = f"readings/{_slug(r.title)}.pdf"
+            n = 2
+            while f"{CC_FILES}/{name}" in pdfs:
+                name = f"readings/{_slug(r.title)}-{n}.pdf"
+                n += 1
+            path = f"{CC_FILES}/{name}"
+            pdfs[path] = r.fulltext.entry
+            ident = _ident("f", course_id, r.id)
+            resources.append(f'<resource identifier="{ident}" type="webcontent" href="{path}"><file href="{path}"/></resource>')
+            pdf_refs[r.id] = (ident, name)
+        return pdf_refs[r.id]
+
+    def reading_page(u: ResolvedUnit, r: Reading) -> str:
+        page, deps = {"r": r}, ()
+        if r.fulltext and r.fulltext.mode == "html":
+            page["text"] = shift_headings(r.fulltext.html, CC_HEADING_LEVEL)
+        elif r.fulltext and r.fulltext.mode == "pdf":
+            ident, name = add_pdf(r)
+            # Wiki pages sit in wiki_content/, so the standard flavor's link climbs one folder.
+            page["pdf_href"] = f"$IMS-CC-FILEBASE$/{name}" if canvas else f"../{CC_FILES}/{name}"
+            deps = (ident,)
+        body = render_to_string("builder/cc_reading.html", page)
+        return add_page(r.title, body, f"{u.key}:{r.id}", deps)
 
     def add_assignment(a: Assignment, key: str, position: int) -> str:
         ident = _ident("i", course_id, key)
@@ -185,8 +226,7 @@ def build_imscc(ctx: dict, flavor: str = "canvas") -> bytes:
         if u.readings:
             items.append(("ContextModuleSubHeader", "Readings", None))
             for r in u.readings:
-                body = render_to_string("builder/cc_reading.html", {"r": r})
-                items.append(("WikiPage", r.title, add_page(r.title, body, f"{u.key}:{r.id}")))
+                items.append(("WikiPage", r.title, reading_page(u, r)))
         if u.assignments:
             items.append(("ContextModuleSubHeader", "Assignments and activities", None))
             for a in u.assignments:
@@ -247,4 +287,7 @@ def build_imscc(ctx: dict, flavor: str = "canvas") -> bytes:
         z.writestr("imsmanifest.xml", manifest)
         for path, content in files.items():
             z.writestr(path, content)
+        for path, entry in pdfs.items():
+            with entry.open_pdf() as src, z.open(path, "w") as dst:
+                shutil.copyfileobj(src, dst)
     return buf.getvalue()
