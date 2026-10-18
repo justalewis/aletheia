@@ -24,7 +24,7 @@ python tools/harvest/pressbooks.py --max-books 300 --network https://opentextbc.
 - Emits a book record and one record per chapter. Front matter, back matter, and part pages are left out unless they run 1,000+ words and aren't boilerplate (acknowledgements, glossary, licensing, and so on). Chapters under 100 words are skipped. Each chapter carries its own license from its metadata, falling back to the book's; a book whose chapters are stricter than it takes the strictest chapter license, as `build_catalog.tighten_parents` does.
 - Most Pressbooks-hosted sites (`*.pressbooks.pub` and many custom domains on the same service) answer the harvester with a CloudFront 403. Those hosts are skipped after one request, never retried, and once two hosts under one domain refuse, the rest of that domain is skipped without asking. A book on a refused host that clearly passes the filter still gets a book-level record from the Directory data, with no license, so it stays link-only until someone checks.
 - Responses are cached in `research/harvest/raw/pressbooks/` (gitignored), so a rerun is cheap. `--refresh` ignores the cache, and `--retry-blocked` forgets refused hosts.
-- Writes `research/harvest/pressbooks-candidates.jsonl`, `pressbooks-summary.json`, and `pressbooks-hosts.json` (every Directory host, which `otl.py` uses to spot Pressbooks books).
+- Writes `research/harvest/pressbooks-candidates.jsonl` (gitignored), `pressbooks-summary.json`, and `pressbooks-hosts.json` (every Directory host, which `otl.py` uses to spot Pressbooks books). `--max-books` defaults to 300; hosts already known to refuse don't count against it.
 
 ## 2. Open Textbook Library
 
@@ -60,7 +60,7 @@ Skim the .md file. For each book you want:
 
 1. Check the license on the book's own page, especially for records marked *license not fetched* or *license unverified*. Fix `license`, `license_url`, and `license_verified` on the queue line if needed (`license_family` and `reuse_tier` are recomputed on approval).
 2. Check the skins, topics, `course_level`, and `audience`. They are keyword guesses.
-3. For a near duplicate, decide whether it replaces nothing (approve it by id) or is the same work (leave it).
+3. For a near duplicate, look at the pack record it matched. If it's a different work, or an edition worth listing too, approve it by id; if it's the same work, leave it.
 
 Then approve:
 
@@ -75,3 +75,4 @@ python manage.py load_pack rhetcomp
 - A book id brings its chapters (`--book-only` skips them); a chapter id brings its book if the book isn't in the pack.
 - Approved records are appended to `readings.jsonl` with their ids (renamed with a suffix only if the id was taken since the queue was written). Existing lines are never touched, the file stays sorted by id as `tools/export_pack.py` writes it, and approved queue lines are marked `approved` so a second run doesn't add them again.
 - Approved records keep `needs_review: true` in the pack, which `load_pack` ignores, so a later pass can find the records whose tags haven't been checked by hand.
+- To try an approval without touching the pack, copy `corpus/rhetcomp/` somewhere, pass `--pack <copy>/readings.jsonl` (and a copy of the queue file, since approval marks its lines), and load it with `ALETHEIA_CORPUS_DIR` and `DATABASE_URL` pointing at the copies.
