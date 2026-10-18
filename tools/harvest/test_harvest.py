@@ -70,8 +70,17 @@ def test_otl_license_names():
     ("Information Literacy for the Digital Age", "", [], [], True),
     ("Business Communication for Success", "", [], [], True),
     ("88 Open Essays", "A reader for first-year composition courses.", [], [], True),
-    ("Guide to Grant Proposals", "", ["Writing and editing guides"], ["thema:CBW"], True),
-    ("Untitled Handbook", "", [], ["lc:PE1408 .A1"], True),
+    ("Guide to Grant Proposals", "A grant writing guide.", ["Writing and editing guides"], ["thema:CBW"], True),
+    ("Untitled Handbook", "Exercises for college writing courses.", [], ["lc:PE1408 .A1"], True),
+    # Subject headings alone never keep a book: authors pick them, and they are noisy.
+    ("Untitled Handbook", "", [], ["lc:PE1408 .A1"], False),
+    ("Hematology Laboratory Manual", "", ["Writing and editing guides"], ["thema:CBW"], False),
+    ("UBC Library Pressbooks Template", "A template for writing books.", ["Writing and editing guides"], ["thema:CBW"], False),
+    ("Introduction to the Nepali Language", "", ["Writing and editing guides"], ["thema:CBW"], False),
+    ("Vanguard: Exercises for the Creative Writing Classroom", "", [], [], False),
+    ("Launching Digital Writing in the Elementary Classroom", "", [], [], False),
+    ("Manual de Redacción", "Para el curso de composition courses.", ["Writing and editing guides"], [], False),
+    ("Archived - Speaking and Writing Physics 101", "", [], [], False),
     ("The Mass Media Landscape", "Lessons on the evolution of U.S. mass media.", ["Media studies"], [], False),
     ("Introduction to Poetry Writing", "", [], [], False),
     ("Writing Proofs in Mathematics", "", [], [], False),
@@ -259,6 +268,14 @@ def test_otl_subject_does_not_carry_a_literature_book():
     lit = dict(OTL_BOOK, title="American Literature to 1865", description="Readings in early American literature.")
     rec, score, _ = otl.book_record(lit, set())
     assert rec is None
+    latin = dict(OTL_BOOK, title="Virgil, Aeneid 4. Latin Text, Commentary and Interpretative Essays", description="")
+    assert otl.book_record(latin, set())[0] is None
+
+
+def test_otl_subject_tips_a_borderline_writing_book():
+    book = dict(OTL_BOOK, title="Beyond Argument: Essaying as a Practice of (Ex)Change", description="")
+    rec, score, reasons = otl.book_record(book, set())
+    assert rec is not None and "OTL subject: Literature, Rhetoric, and Poetry" in reasons
 
 
 def test_otl_plan_pages_core_subjects_then_scoped_searches():
@@ -372,6 +389,8 @@ def test_unique_ids():
     assert merge.book_id("A Book", taken) == "a-book-2"
     assert merge.book_id("A Book", taken) == "a-book-3"
     assert merge.book_id("Writing in College: A Guide for Students", set()) == "writing-in-college"
+    assert merge.book_id("Voices of USU: An Anthology of Student Writing, vol. 17", set()) == \
+        "voices-of-usu-an-anthology-of-student-writing-vol-17"
 
 
 def test_approve_appends_sorted_and_never_touches_existing_lines(tmp_path, candidates, pack):

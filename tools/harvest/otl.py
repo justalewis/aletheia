@@ -113,11 +113,18 @@ def book_record(b: dict, pb_hosts: set[str]) -> tuple[dict | None, int, list[str
     subjects = b.get("subjects", []) or []
     names = [s.get("name", "") for s in subjects]
     # The Library's subjects are whole fields ("Literature, Rhetoric, and Poetry", call number
-    # PE1408, holds every literature anthology too), so they don't count toward the score.
+    # PE1408, holds every literature anthology too), so membership in one we page through is
+    # worth a single point: enough to tip "Beyond Argument" over, not a British Literature survey.
     score, reasons = subject_score(title, desc, language=b.get("language", ""))
+    in_subject = next((n for n in names if any(re.search(p, n or "", re.I) for p in FULL_SUBJECTS)), "")
+    if in_subject and score > -99:
+        score += 1
+        reasons.append(f"OTL subject: {in_subject}")
     if not keep_book(score):
         return None, score, reasons
-    formats = [{"format": f.get("format", ""), "url": f.get("url", "")} for f in b.get("formats", []) or [] if f.get("url")]
+    # The API docs call the field "format"; live responses call it "type".
+    formats = [{"format": f.get("type") or f.get("format") or "", "url": f.get("url", "")}
+               for f in b.get("formats", []) or [] if f.get("url")]
 
     def first(kind_pat: str) -> str:
         return next((f["url"] for f in formats if re.search(kind_pat, f["format"], re.I)), "")

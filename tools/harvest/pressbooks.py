@@ -56,8 +56,10 @@ BOILERPLATE_TITLE = re.compile(  # ...and a title that isn't one of these
     r"licen[cs]\w*|attributions?|media attributions|image credits|versioning|version history|revision history|"
     r"review statement|feedback|errata|glossary|index|bibliography|references|works cited|further reading|"
     r"how to use this|using this (book|text)|cover|title page|table of contents|contents|list of (figures|tables|links)|"
-    r"contributors|authors?|editors?|adoption\w*|print version|downloads?|instructor resources|ancillar\w*)\b",
+    r"contributors|authors?|editors?|adoption\w*|print version|downloads?|instructor resources|ancillar\w*|"
+    r"(video |audio )?transcripts?|misc(ellaneous)?)\b",
     re.I)
+APPENDIX_PREFIX = re.compile(r"^\s*appendix\s+[\w.]+\s*[:.\-—]\s*", re.I)
 
 
 # Some Directory descriptions open with the book's license; it is kept as a hint in the notes,
@@ -222,7 +224,8 @@ def substantive(entry: dict, kind: str) -> bool:
     words = int(entry.get("word_count") or 0)
     if kind == "chapter":
         return bool(entry.get("has_post_content", True)) and words >= MIN_CHAPTER_WORDS
-    return words >= SUBSTANTIVE_WORDS and not BOILERPLATE_TITLE.search(clean_html(entry.get("title", "")))
+    title = APPENDIX_PREFIX.sub("", clean_html(entry.get("title", "")))
+    return words >= SUBSTANTIVE_WORDS and not BOILERPLATE_TITLE.search(title)
 
 
 def build_records(entry: dict, meta: dict, toc: dict | None, score: int, reasons: list[str]) -> list[dict]:

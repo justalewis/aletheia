@@ -145,8 +145,18 @@ class PackIndex:
 # Cross-source dedupe of candidate books
 # ---------------------------------------------------------------------------
 
+def first_surname(authors: str) -> str:
+    first = (authors or "").split(";")[0]
+    return norm_text(first.split(",")[0] if "," in first else (first.split() or [""])[-1])
+
+
 def merge_sources(candidates: list[dict]) -> list[dict]:
-    """One record per book across sources. Chapters follow their book's surviving key."""
+    """One record per book across sources (and across Pressbooks networks that host a copy).
+
+    Books merge when they share a normalized URL, or the same title and first author. Chapters
+    follow the surviving book; when two copies of a book both brought chapters, only the
+    survivor's chapters are kept.
+    """
     books = [c for c in candidates if c["level"] == "book"]
     chapters = [c for c in candidates if c["level"] != "book"]
     books.sort(key=lambda r: (SOURCE_PREFERENCE.get(r["harvest"]["source"], 9), not r.get("license"),
@@ -154,7 +164,8 @@ def merge_sources(candidates: list[dict]) -> list[dict]:
     groups: list[list[dict]] = []
     index: dict[str, int] = {}
     for b in books:
-        keys = [f"u:{u}" for u in url_keys(b)] + [f"t:{norm_text(b['title'])}", f"k:{b['harvest']['key']}"]
+        keys = [f"u:{u}" for u in url_keys(b)] + [f"t:{norm_text(b['title'])}|{first_surname(b.get('authors', ''))}",
+                                                  f"k:{b['harvest']['key']}"]
         if otl := b["harvest"].get("otl_key"):
             keys.append(f"k:{otl}")
         hit = next((index[k] for k in keys if k in index), None)
@@ -165,11 +176,14 @@ def merge_sources(candidates: list[dict]) -> list[dict]:
         for k in keys:
             index.setdefault(k, hit)
     alias: dict[str, str] = {}
+    chapter_source: dict[str, str] = {}  # surviving book key -> the book key whose chapters to keep
     merged = []
     for g in groups:
         best = dict(g[0])
         best["harvest"] = dict(best["harvest"])
         others = g[1:]
+        with_chapters = [b["harvest"]["key"] for b in g if b["harvest"].get("chapter_count")]
+        chapter_source[best["harvest"]["key"]] = with_chapters[0] if with_chapters else best["harvest"]["key"]
         for o in others:
             alias[o["harvest"]["key"]] = best["harvest"]["key"]
             for k in PACK_FIELDS:
@@ -199,9 +213,13 @@ def merge_sources(candidates: list[dict]) -> list[dict]:
     seen_keys = set()
     out = []
     for r in merged + chapters:
-        h = r["harvest"]
-        if h.get("parent_key") in alias:
-            h["parent_key"] = alias[h["parent_key"]]
+        h = r["harvest"] = dict(r["harvest"])
+        if r["level"] != "book":
+            own = h.get("parent_key", "")
+            survivor = alias.get(own, own)
+            if chapter_source.get(survivor, survivor) != own:
+                continue  # another copy of this book supplies the chapters
+            h["parent_key"] = survivor
         if h["key"] in seen_keys:
             continue
         seen_keys.add(h["key"])
@@ -214,8 +232,14 @@ def merge_sources(candidates: list[dict]) -> list[dict]:
 # ---------------------------------------------------------------------------
 
 def book_id(title: str, taken: set[str]) -> str:
-    base = slug(main_title(title) if len(norm_text(main_title(title)).split()) >= 3 else title, 60)
-    return unique(base, taken)
+    """Slug of the main title when it is specific (3+ words), else of the whole title.
+
+    A subtitle that carries a volume or edition number stays in, so volumes get distinct ids.
+    """
+    main = main_title(title)
+    rest = title[len(main):]
+    use_main = len(norm_text(main).split()) >= 3 and not re.search(r"\d|\bvol", rest, re.I)
+    return unique(slug(main if use_main else title, 60), taken)
 
 
 def chapter_id(parent_id: str, title: str, taken: set[str]) -> str:
@@ -364,9 +388,9 @@ def queue_markdown(queue: list[dict], dupes: list[dict], stats: dict, day: str, 
             bits.append(f"{len(chs)} chapters" + (f" ({new_ch} new)" if chs and new_ch != len(chs) else ""))
             if b.get("year"):
                 bits.append(str(b["year"]))
-            via = b["harvest"]["source"] + ("+" + "+".join(sorted({a["source"] for a in b["harvest"].get("also_from", [])}))
-                                            if b["harvest"].get("also_from") else "")
-            bits.append(via)
+            also = b["harvest"].get("also_from", [])
+            via = "+".join(sorted({b["harvest"]["source"]} | {a["source"] for a in also}))
+            bits.append(via + (f", {len(also) + 1} copies" if also else ""))
             lines.append(f"- **{b['title']}** `{b['id']}`  ")
             lines.append(f"  {b.get('authors') or 'authors not listed'}. " + "; ".join(bits) + ".  ")
             lines.append(f"  {b.get('landing_url')}  ")

@@ -260,6 +260,10 @@ class PoliteSession:
 
 KEEP_SCORE = 3
 PRESCREEN_SCORE = 2   # looser bar for the first pass, before full metadata is fetched
+# Subject headings are chosen by each book's authors and are noisy (lab manuals and Pressbooks
+# templates carry "Writing and editing guides"), so codes and heading names together add at
+# most this much: a book also needs a title or description signal to be kept.
+SUBJECT_CAP = 2
 
 # Subject codes, matched by prefix: "thema:CBW" also matches "thema:CBW1".
 SUBJECT_CODE_RULES: dict[str, tuple[int, str]] = {
@@ -319,12 +323,14 @@ TITLE_RULES: list[tuple[str, int, str]] = [
     (r"\bwrit(e|es|ing|ers?|ten)\b", 3, "title: writing"),
     (r"\brhetoric(s|al)?\b", 3, "title: rhetoric"),
     (r"\b(english|college|first[- ]year|freshman|academic|writing)\s+composition\b|"
-     r"\bcomposition\s+(and|&)\s+rhetoric\b|\bcomposition\s+(i{1,2}|[12]|10[12])\b", 3, "title: composition"),
+     r"\bcomposition\s+(and|&)\s+rhetoric\b|\bcomposition\s+(i{1,2}|[12]|10[12])\b|"
+     r"\bcomposition\s+(classroom|studies|course|pedagogy|program|theory)\b|\bcomposing\b", 3, "title: composition"),
     (r"\b(technical|professional|business|workplace|scientific|science|engineering|written)\s+"
-     r"communications?\b|\bcommunicating\s+(science|research|at work|in the workplace)\b", 3, "title: tech/prof/business communication"),
+     r"communications?\b|\bcommunicating\s+(science|research|at work|in the workplace)\b|"
+     r"\bcommunication for (business|the workplace|professionals?)\b", 3, "title: tech/prof/business communication"),
     (r"\bpublic speaking\b|\bspeech(es)?\s+(communication|making)\b|\bspeechmaking\b|"
      r"\boral (communication|presentations?)\b|\bpresentation skills\b|\bpublic address\b", 3, "title: public speaking"),
-    (r"\binformation literacy\b|\bresearch (skills|process|papers?)\b|\blibrary research\b|"
+    (r"\binformation literacy\b|\bresearch (skills|process|papers?)\b|\b(library|college|academic) research\b|"
      r"\bevaluating (information|sources)\b|\bcitation\b|\bplagiarism\b", 3, "title: research/information literacy"),
     (r"\bessays?\b", 2, "title: essays"),
     (r"\bargument(s|ation|ative)?\b", 2, "title: argument"),
@@ -339,6 +345,7 @@ DESCRIPTION_RULES: list[tuple[str, str]] = [
     (r"\bcomposition (course|class|classroom|students|instructors|program)s?\b", "description: composition course"),
     (r"\bwriting (course|class|classroom|instruction|instructors|pedagogy|process|studies|program)s?\b", "description: writing course/process"),
     (r"\b(academic|research|technical|professional|business|scientific|workplace) writing\b", "description: academic/technical/professional writing"),
+    (r"\b(grant|proposal|report|essay|thesis) writing\b", "description: genre writing"),
     (r"\brhetoric(al)?\b", "description: rhetoric"),
     (r"\binformation literacy\b", "description: information literacy"),
     (r"\bpublic speaking\b", "description: public speaking"),
@@ -347,16 +354,27 @@ DESCRIPTION_RULES: list[tuple[str, str]] = [
 ]
 
 # Negative title rules: things that look like writing but belong to another field.
-NEGATIVE_TITLE_RULES: list[tuple[str, int, str]] = [
-    (r"\b(poetry|poems?|short stor(y|ies)|novels?|screenwrit\w*|playwrit\w*|songwrit\w*|scriptwrit\w*)\b|"
-     r"(?<![-\w])fiction\b", -4, "not in scope: creative writing (fiction, poetry, scripts)"),
-    (r"\bproofs?\b|\bmathematical\b", -3, "not in scope: mathematical proof writing"),
+# (pattern, points, label, exception): the rule doesn't apply when the title also matches the exception.
+NEGATIVE_TITLE_RULES: list[tuple[str, int, str, str]] = [
+    (r"\b(poetry|poems?|short stor(y|ies)|novels?|screenwrit\w*|playwrit\w*|songwrit\w*|scriptwrit\w*|"
+     r"creative writing)\b|(?<![-\w])fiction\b", -4, "not in scope: creative writing (fiction, poetry, scripts)",
+     r"\bnon-?fiction\b|\bessays?\b|\brhetoric"),
+    (r"\b(american|british|world|english|canadian|african american) literature\b", -3,
+     "not in scope: literature survey or anthology", r"\bcomposition\b|\brhetoric|writing (about|and|with) literature"),
+    (r"\b(early childhood|elementary|kindergarten|preschool|primary school|k-12)\b", -3,
+     "not in scope: K-12 literacy", ""),
+    (r"^\W*archived\b", -3, "archived copy of a book", ""),
+    (r"\b(didacticiel|manual de|gu[ií]a|introducci[oó]n|[ée]crire|[ée]criture|r[ée]daction|redacci[oó]n|"
+     r"escritura)\b", -3, "not in scope: book in another language", ""),
+    (r"\bproofs?\b|\bmathematical\b", -3, "not in scope: mathematical proof writing", ""),
     (r"\b(spanish|french|german|italian|chinese|mandarin|japanese|korean|arabic|portuguese|russian|"
-     r"hebrew|hindi|swahili|ojibwe|cree|español|français)\b", -3, "not in scope: language other than English"),
+     r"hebrew|hindi|urdu|punjabi|nepali|tagalog|vietnamese|turkish|persian|farsi|greek|latin|swahili|"
+     r"ojibwe|cree|español|français)\b", -3, "not in scope: language other than English", r"\brhetoric|\benglish\b"),
+    (r"\bpressbooks\b|\btemplate\b|publishing open textbooks|\boer publishing\b|\bself-publishing\b|"
+     r"making open textbooks", -3, "not in scope: guides to producing OER", ""),
+    (r"\blaboratory (manual|guide)\b|\blab manual\b|\bpracticum\b|\bclinical (\w+ )?(manual|laboratory)\b", -3,
+     "not in scope: lab and clinical manuals", ""),
 ]
-
-# A creative-writing title is still in scope when it is about nonfiction or the essay.
-NEGATIVE_EXCEPTIONS = re.compile(r"\bnon-?fiction\b|\bessays?\b|\brhetoric", re.I)
 
 
 def subject_score(title: str, description: str = "", subject_names: list[str] | None = None,
@@ -368,16 +386,18 @@ def subject_score(title: str, description: str = "", subject_names: list[str] | 
         return -99, [f"not in English (language {language})"]
     title = title or ""
     desc = description or ""
+    subject_points = 0
     for code in subject_codes or []:
         hit = _code_rule(code)
         if hit and hit[1] not in reasons:
-            score += hit[0]
+            subject_points += hit[0]
             reasons.append(hit[1])
     for name in subject_names or []:
         for pat, pts, label in SUBJECT_NAME_RULES:
             if re.search(pat, name or "", re.I) and label not in reasons:
-                score += pts
+                subject_points += pts
                 reasons.append(label)
+    score += min(subject_points, SUBJECT_CAP)
     for pat, pts, label in TITLE_RULES:
         if re.search(pat, title, re.I):
             score += pts
@@ -388,8 +408,8 @@ def subject_score(title: str, description: str = "", subject_names: list[str] | 
             desc_points += 2
             reasons.append(label)
     score += desc_points
-    for pat, pts, label in NEGATIVE_TITLE_RULES:
-        if re.search(pat, title, re.I) and not NEGATIVE_EXCEPTIONS.search(title):
+    for pat, pts, label, exception in NEGATIVE_TITLE_RULES:
+        if re.search(pat, title, re.I) and not (exception and re.search(exception, title, re.I)):
             score += pts
             reasons.append(label)
     return score, reasons
@@ -443,33 +463,40 @@ def classify_subject_code(identifier: str) -> str | None:
 # ---------------------------------------------------------------------------
 
 SKIN_RULES: dict[str, str] = {
-    "FYC": r"first[- ]year (writing|composition)|college (writing|composition)|english composition|"
-           r"composition (i{1,2}|[12]|10[12])\b|freshman (writing|composition)|\bengl?\s?10[12]\b|"
-           r"composition (and|&) rhetoric|rhetoric (and|&) composition|introduction to (college )?writing",
+    "FYC": r"first[- ]year (writing|composition)|college (reading and )?(writing|composition)|english composition|"
+           r"composition (i{1,2}|[12]|10[12])\b|freshman (writing|composition)|\bengl?\s?(10[12]|1301|1302)\b|"
+           r"composition (and|&) rhetoric|rhetoric (and|&) composition|introduction to (college )?writing|"
+           r"writing (for|in) (success|college)|\bcollege writers\b|^\W*composition\b|\breading and writing\b|"
+           r"\bstudent writing\b|writing about (literature|texts)|successful writing",
     "RESEARCH": r"information literacy|research (writing|papers?|process|skills|questions?)|library research|"
-                r"evaluat\w+ (sources|information)|citation|plagiarism|annotated bibliograph|literature reviews?",
-    "ACADEMIC": r"academic writing|writing across the curriculum|writing in the disciplines|\bwac\b|"
-                r"graduate (writing|students)|thesis|dissertation|scholarly writing|writing in (psychology|nursing|"
-                r"biology|history|the sciences|engineering|social sciences|the humanities|business)",
+                r"evaluat\w+ (sources|information)|citation|plagiarism|annotated bibliograph|literature reviews?|"
+                r"(academic|practical|college) research|research and writing|\bsources\b",
+    "ACADEMIC": r"academic (\w+ )?(writing|english|essays?|reading)|writing across the curriculum|writing in the disciplines|"
+                r"\bwac\b|\be?gap\b|english for academic purposes|graduate (writing|students|researchers)|thesis|dissertation|"
+                r"masters? level|scholarly writing|writing (in|for) (psychology|nursing|biology|history|the sciences|"
+                r"engineering|social sciences|the humanities|business|law)|students of history",
     "WAW": r"writing about writing|writing studies|threshold concepts|discourse communit|literacy narratives?",
     "TECHCOMM": r"technical (writing|communication)|documentation|\binstructions\b|usability|user experience|"
-                r"\bux\b|technical editing|engineering (writing|communication)",
-    "PROFWRIT": r"professional (writing|communication)|workplace (writing|communication)|grant writing|"
-                r"grant proposals?|proposal writing|r[eé]sum[eé]s?|cover letters?|nonprofit",
+                r"\bux\b|technical editing|engineering (writing|communication)|plain language|style guide|"
+                r"\bhow-to\b|\btutorials?\b",
+    "PROFWRIT": r"professional (\w+ )?(writing|communications?)|workplace (writing|communication)|grant writing|"
+                r"\bgrants?\b|proposal writing|report writing|r[eé]sum[eé]s?|cover letters?|nonprofit|"
+                r"public relations|strategic communication|legal writing",
     "BUSINESS": r"business (writing|communication|correspondence)|managerial communication|organizational communication",
     "SCIWRIT": r"scien\w+ (writing|communication)|communicating science|lab reports?|writing in the sciences|"
                r"science journalism|health communication",
-    "RHETORIC": r"\brhetoric",
+    "RHETORIC": r"\brhetoric|\bargument(s|ation)?\b",
     "CULTURAL_RHET": r"cultural rhetorics?|indigenous|decolonial|african american rhetoric|black rhetoric|"
                      r"latinx|chicanx|feminist rhetoric|queer rhetoric|asian american",
     "MULTIMODAL": r"multimodal|digital (writing|composition|rhetoric|media)|visual rhetoric|podcast|"
                   r"writing for the web|web writing|social media",
     "CREATIVE_NF": r"creative non-?fiction|personal essays?|memoir|literary journalism",
-    "L2": r"multilingual|second language|\besl\b|english language learners?|translingual|\bl2\b",
+    "L2": r"multilingual|second language|\besl\b|english language learners?|translingual|\bl2\b|world englishes",
     "SPEECH": r"public speaking|speech(es)? (communication|making)|speechmaking|oral (communication|presentations?)|"
               r"presentation skills|public address",
     "PEDAGOGY": r"teaching (of )?writing|writing pedagogy|for (writing )?instructors|writing (center|centre)s?|"
-                r"\btutor(s|ing)\b|writing program administrat|teachers of writing|course design",
+                r"\btutor(s|ing)\b|writing programs?\b|teachers of writing|course design|\bteach(ing)? [\w ]{0,30}writ|"
+                r"writing instruction|essay graders|new faculty|writing assessment",
 }
 
 # Topic vocabulary taken from the existing pack (corpus/rhetcomp/readings.jsonl).
