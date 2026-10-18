@@ -36,6 +36,8 @@ import {
   toggleAssignment,
   toggleReading,
 } from "./model";
+import { ProgramBar } from "../programs/ProgramBar";
+import { draftFits, programStart, withProgram } from "../programs/start";
 import { SearchDrawer, type SearchTarget } from "./SearchDrawer";
 import { SidePanel } from "./SidePanel";
 import { TermBar } from "./TermBar";
@@ -137,9 +139,10 @@ export default function Builder() {
         const arcId = search.get("arc");
         const focusParam = search.get("focus") ?? "";
         const term = termFromParams(search, presetList);
+        const start = await programStart(search, signal); // ?program=…: see programs/start.ts
         const draft = forceFresh.current ? null : loadDraft(null);
         forceFresh.current = false;
-        if (draft && (draft.state.arc_id ?? null) === (arcId ?? null)) {
+        if (draft && draftFits(draft.state, arcId, start)) {
           rememberBriefs(draft.readings, draft.assignments);
           const s = normalizeState(draft.state);
           const arcFull = s.arc_id ? await api.arc(s.arc_id, signal).catch(() => null) : null;
@@ -155,13 +158,16 @@ export default function Builder() {
           setBanner({ kind: "restored-new", savedAt: draft.savedAt });
           return;
         }
-        if (arcId) {
+        if (start?.state) {
+          setArc(start.arc);
+          setState(start.state);
+        } else if (arcId) {
           const [plan, arcFull] = await Promise.all([api.plan(arcId, term, signal), api.arc(arcId, signal).catch(() => null)]);
           if (signal.aborted) return;
           setArc(arcFull);
-          setState(stateFromPlan(plan, focusParam));
+          setState(withProgram(stateFromPlan(plan, focusParam), start));
         } else {
-          setState(blankState(term, focusParam));
+          setState(withProgram(blankState(term, focusParam), start));
         }
         setBuildId(null);
         setToken(null);
@@ -492,6 +498,7 @@ export default function Builder() {
         </div>
       )}
 
+      <ProgramBar state={state} readOnly={readOnly} onEdit={edit} />
       {!readOnly && (
         <div className="save-bar" role="region" aria-label="Save">
           <p className="save-status" aria-live="polite">

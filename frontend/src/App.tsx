@@ -9,6 +9,9 @@ import Catalog from "./pages/Catalog";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import Builder from "./builder/Builder";
+import NewProgram from "./programs/NewProgram";
+import ProgramPage from "./programs/ProgramPage";
+import ProgramAdmin from "./programs/ProgramAdmin";
 
 export default function App() {
   const pack = useAsync((signal) => api.pack(signal), []);
@@ -64,6 +67,9 @@ export default function App() {
           <Route path="/focus/:focus" element={<FocusPage />} />
           <Route path="/arcs/:id" element={<ArcDetail />} />
           <Route path="/build/:id" element={<Builder />} />
+          <Route path="/programs/new" element={<NewProgram />} />
+          <Route path="/programs/:id" element={<ProgramPage />} />
+          <Route path="/programs/:id/admin" element={<ProgramAdmin />} />
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />

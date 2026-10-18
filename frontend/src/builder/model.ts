@@ -115,6 +115,8 @@ export function normalizeState(raw: Partial<BuildState> | null | undefined): Bui
     arc_id: s.arc_id ?? null,
     term,
     plan_note: s.plan_note ?? null,
+    program: s.program ?? null,
+    section: s.section ?? null,
     units: (s.units ?? []).map((u, i) => ({
       key: u.key || newUnitKey(),
       title: u.title ?? `Unit ${i + 1}`,

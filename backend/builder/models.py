@@ -23,6 +23,11 @@ class Build(models.Model):
     forked_from = models.ForeignKey("self", null=True, blank=True, on_delete=models.SET_NULL)
     # The whole editable state as the frontend holds it: term, units, selections, outcomes.
     state = models.JSONField(default=dict)
+    # Set when an instructor saves a course inside a writing program (see programs/).
+    program = models.ForeignKey("programs.Program", null=True, blank=True, on_delete=models.SET_NULL,
+                                related_name="builds")
+    # {"course_code", "section", "term", "enrollment", "instructor"}; feeds the program's ZTC report.
+    section = models.JSONField(default=dict, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
