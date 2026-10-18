@@ -560,7 +560,7 @@ def approve(queue_path: Path, wanted: str, pack_path: Path = PACK_READINGS, book
     lines = dict(existing)
     for rec in added:
         lines[rec["id"]] = json.dumps(rec, ensure_ascii=False, sort_keys=True)
-    pack_path.write_text("".join(lines[k] + "\n" for k in sorted(lines)), encoding="utf-8")
+    pack_path.write_text("".join(lines[k] + "\n" for k in sorted(lines)), encoding="utf-8", newline="\n")
     # Mark the queue lines so a second --approve doesn't add them again.
     added_ids = {rec["id"] for rec in added}
     for q in queue:
@@ -606,7 +606,8 @@ def main(argv=None) -> None:
     write_jsonl(HARVEST_DIR / f"{name}.jsonl", queue)
     day = f"{args.date[:4]}-{args.date[4:6]}-{args.date[6:]}"
     summaries = (read_json(HARVEST_DIR / "pressbooks-summary.json"), read_json(HARVEST_DIR / "otl-summary.json"))
-    (HARVEST_DIR / f"{name}.md").write_text(queue_markdown(queue, dupes, stats, day, name, summaries), encoding="utf-8")
+    (HARVEST_DIR / f"{name}.md").write_text(queue_markdown(queue, dupes, stats, day, name, summaries),
+                                            encoding="utf-8", newline="\n")
     for k, v in stats.items():
         print(f"{k}: {v}")
     print(f"wrote research/harvest/{name}.jsonl and .md")

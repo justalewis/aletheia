@@ -416,12 +416,13 @@ def test_approve_appends_sorted_and_never_touches_existing_lines(tmp_path, candi
     pack_path = tmp_path / "readings.jsonl"
     original = [json.dumps(r, ensure_ascii=False, sort_keys=True) for r in sorted(pack, key=lambda r: r["id"])]
     original[0] = original[0].replace('", "', '",  "', 1)  # odd spacing must survive byte for byte
-    pack_path.write_text("\n".join(original) + "\n", encoding="utf-8")
+    pack_path.write_text("\n".join(original) + "\n", encoding="utf-8", newline="\n")
     queue, _, _ = merge.build_queue(candidates, pack)
     queue_path = tmp_path / "queue.jsonl"
     common.write_jsonl(queue_path, queue)
 
     added = merge.approve(queue_path, "all", pack_path=pack_path)
+    assert b"\r\n" not in pack_path.read_bytes()  # LF, like the rest of the pack, even on Windows
     lines = pack_path.read_text(encoding="utf-8").splitlines()
     ids = [json.loads(l)["id"] for l in lines]
     assert ids == sorted(ids)
