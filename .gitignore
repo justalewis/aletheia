@@ -1,22 +1,30 @@
-# Python
-**/.venv/
-**/__pycache__/
+# Corpus files belong only in corpus/, which has its own allowlist (corpus/.gitignore, written by
+# tools/import_corpus.py). Everywhere else, keep stray downloads such as an unzipped Drive folder
+# out of commits.
+*.pdf
+*.doc
+*.docx
+*.epub
+*.zip
+*.pptx
+
+# Python and tool leftovers
+__pycache__/
 *.pyc
+*.json.tmp
+
+# --- App build output and local environments (restored alongside the corpus rules above)
+**/.venv/
 backend/db.sqlite3
 backend/staticfiles/
-
-# Node
 frontend/node_modules/
 frontend/dist/
+.claude/
+.env
+*.log
 
-# Private research files: they describe what's in Justin's Google Drive
+# --- Private research files: they describe what's in Justin's Google Drive
 research/drive_inventory.json
 research/pdf_mirror.json
 research/catalog/
 docs/proposal.md
-
-# Local
-.env
-*.log
-.DS_Store
-Thumbs.db
