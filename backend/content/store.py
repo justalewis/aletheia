@@ -5,7 +5,8 @@ ALETHEIA_CONTENT_CACHE to move it, or point STORAGES["content"] at object storag
 
     <key>/meta.json      what was cached, from where, and when (written last)
     <key>/content.html   sanitized full text, for readings published as web pages
-    <key>/source.pdf     the publisher's PDF, byte for byte, for readings published as PDFs
+    <key>/source.pdf     the publisher's PDF, byte for byte, for readings published as PDFs (for a
+                         chapter of a whole-book PDF, its own pages, copied unchanged)
     <key>/img/<name>     images the HTML uses, so the PDF reader doesn't fetch at export time
     _report.json         the last warm run: every reading's status, cached or not
 

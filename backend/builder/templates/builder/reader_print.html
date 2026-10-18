@@ -94,7 +94,7 @@
     </div>
     <p class="source">Text from {{ it.r.fulltext.source_page }}, copied {{ it.r.fulltext.fetched }}.{% if it.r.fulltext.note %} {{ it.r.fulltext.note }}{% endif %}</p>
     {% else %}
-    <p class="note">The next {{ it.pages }} page{{ it.pages|pluralize }} reproduce the publisher's PDF exactly as published{% if it.r.fulltext.source_page %} ({{ it.r.fulltext.source_page }}){% endif %}, copied {{ it.r.fulltext.fetched }}. They keep their own page numbers; this reader's page numbers resume after them.</p>
+    <p class="note">The next {{ it.pages }} page{{ it.pages|pluralize }} reproduce {% if it.r.fulltext.printed_pages %}pages {{ it.r.fulltext.printed_pages }} of the publisher's PDF of the whole book{% else %}the publisher's PDF{% endif %} exactly as published{% if it.r.fulltext.source_page %} ({{ it.r.fulltext.source_page }}){% endif %}, copied {{ it.r.fulltext.fetched }}. They keep their own page numbers; this reader's page numbers resume after them.</p>
     {% endif %}
   </article>
   {% endif %}{% endfor %}

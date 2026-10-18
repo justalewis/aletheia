@@ -89,6 +89,15 @@ def test_lazy_images_and_missing_alt():
     assert s.html.count('alt=""') == 2
 
 
+def test_image_inside_a_zoom_button_is_kept():
+    html = ('<figure><span data-type="media"><button aria-label="Click to enlarge image">'
+            '<img alt="A lake" src="/fig.webp"></button></span><figcaption>Figure 1</figcaption></figure>'
+            '<button>Show answer</button>')
+    s = sanitize(html, BASE)
+    assert s.images == ["https://books.example.org/fig.webp"] and not s.dropped
+    assert "<button" not in s.html and "Show answer" not in s.html
+
+
 def test_text_is_unchanged():
     """Sanitizing moves markup around but never edits the words (NoDerivatives works rely on this)."""
     text = "It was the best of times, it was the worst of times — “quoted” & <escaped>."

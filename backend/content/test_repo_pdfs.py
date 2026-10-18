@@ -116,6 +116,36 @@ def test_whole_book_files_and_offline_runs_never_fetch(pack, content_store, corp
     assert w.warm(r).status == "offline" and session.calls == []
 
 
+def test_a_repo_file_that_is_the_whole_book_gives_the_chapter_its_pages(pack, content_store, tmp_path):
+    from io import BytesIO
+
+    from pypdf import PdfReader, PdfWriter
+
+    from content.test_warm import book_pdf
+
+    writer = PdfWriter(clone_from=PdfReader(BytesIO(book_pdf())))
+    for _ in range(90):  # long enough that no chapter could be the whole file
+        writer.add_blank_page(width=300, height=400)
+    buf = BytesIO()
+    writer.write(buf)
+    data = buf.getvalue()
+    files = tmp_path / "corpus" / "files"
+    (files / "drive").mkdir(parents=True)
+    (files / "drive" / "manifest.json").write_text(json.dumps({"files": [entry("collection.pdf", data, ["first"])]}))
+    r = reading(pack, "first", tier="verbatim", pdf_url="https://books.example.edu/collection.pdf#page=5", pages=3)
+    r.title = "First Chapter Title Here"
+    w, session = make_warmer(content_store, {BASE + "drive/collection.pdf": (200, {}, data)}, files)
+    w.prepare([r], [r.pdf_url])
+    out = w.warm(r)
+    assert (out.status, out.via) == ("cached", "book-pages")
+    assert out.detail == "2 pages (printed 3-4) from drive/collection.pdf"
+    meta = content_store.get("first").meta
+    assert meta["repo_file"] == "drive/collection.pdf" and meta["repo_url"] == BASE + "drive/collection.pdf"
+    assert "local_file" not in meta and meta["book_pages"] == "5-6"
+    # The repo's copy was enough: the publisher was never asked.
+    assert session.calls == ["https://raw.example.org/robots.txt", BASE + "drive/collection.pdf"]
+
+
 def test_no_base_url_or_a_folder_outside_the_corpus_turns_it_off(corpus, tmp_path):
     assert len(RepoPdfs("", [corpus / "drive"], corpus)) == 0
     elsewhere = tmp_path / "mine"
