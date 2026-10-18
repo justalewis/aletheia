@@ -271,6 +271,8 @@ export interface BuildState {
   section?: SectionInfo | null;
   /** Class dates (start date, meeting days, no-class days); see builder/schedule.ts. */
   schedule?: CourseSchedule | null;
+  /** Outcome sets the coverage view checks this course against. */
+  outcome_set_ids?: string[];
 }
 
 export interface ProgramLink {
@@ -295,6 +297,87 @@ function programFields(state: BuildState) {
   const p = state.program;
   if (!p || p.mode === "template") return { program_id: null, section: null };
   return { program_id: p.id, section: { ...state.section, instructor: state.section?.instructor || state.instructor } };
+}
+
+/* ------------------------------------------------------------------ outcomes (backend/catalog/outcomes_api.py) */
+
+export interface OutcomeSetInfo extends OutcomeSetBrief {
+  source_url: string;
+}
+
+/** A catalog item matched to an outcome, with its score and a one-line reason. */
+interface MatchFields {
+  score: number;
+  why: string;
+}
+export type ReadingMatch = ReadingBrief & MatchFields & { item_type: "reading" };
+export type AssignmentMatch = AssignmentBrief & MatchFields & { item_type: "assignment" };
+export type ItemMatch = ReadingMatch | AssignmentMatch;
+
+export interface OutcomeInfo {
+  id: string;
+  set_id: string;
+  label: string;
+  text: string;
+  codes: string[];
+  topics: string[];
+}
+
+export interface RecommendQuery {
+  outcome_set_id?: string;
+  outcome_ids?: string[];
+  focus?: string;
+  tiers?: string[];
+  levels?: string[];
+  per_outcome?: number;
+  exclude_ids?: string[];
+}
+
+export interface OutcomeRecommendation extends OutcomeInfo {
+  readings: ReadingMatch[];
+  assignments: AssignmentMatch[];
+  total: { readings: number; assignments: number };
+}
+
+export interface Recommendations {
+  outcome_set: OutcomeSetInfo | null;
+  unknown_ids: string[];
+  outcomes: OutcomeRecommendation[];
+}
+
+export type CoverageStatus = "ok" | "weak" | "none";
+
+export interface CoverageCell {
+  unit_key: string;
+  count: number;
+  reading_ids: string[];
+  assignment_ids: string[];
+}
+
+export interface CoverageRow extends OutcomeInfo {
+  cells: CoverageCell[];
+  total: number;
+  strength: number;
+  status: CoverageStatus;
+}
+
+export interface CoverageGap {
+  outcome_id: string;
+  set_id: string;
+  label: string;
+  status: "weak" | "none";
+  total: number;
+  unit_key: string | null;
+  unit_title: string | null;
+  suggestions: ItemMatch[];
+}
+
+export interface Coverage {
+  units: { key: string; title: string }[];
+  sets: OutcomeSetInfo[];
+  unknown_set_ids: string[];
+  outcomes: CoverageRow[];
+  gaps: CoverageGap[];
 }
 
 export interface SavedBuild {
@@ -463,6 +546,22 @@ export const api = {
 
   licenseReport: (state: BuildState, signal?: AbortSignal) =>
     json<LicenseReport>("/license-report", { method: "POST", body: { state }, signal }),
+
+  recommend: async (query: RecommendQuery, signal?: AbortSignal) => {
+    const r = await json<Recommendations>("/recommend", { method: "POST", body: query, signal });
+    r.outcomes.forEach((o) => remember(o.readings, o.assignments));
+    return r;
+  },
+
+  coverage: async (state: BuildState, outcome_set_ids: string[], signal?: AbortSignal) => {
+    const c = await json<Coverage>("/coverage", { method: "POST", body: { state, outcome_set_ids }, signal });
+    const items = c.gaps.flatMap((g) => g.suggestions);
+    remember(
+      items.filter((i): i is ReadingMatch => i.item_type === "reading"),
+      items.filter((i): i is AssignmentMatch => i.item_type === "assignment"),
+    );
+    return c;
+  },
 
   createBuild: (state: BuildState, forked_from?: string) =>
     json<{ id: string; edit_token: string }>("/builds", {

@@ -40,6 +40,7 @@ import { ProgramBar } from "../programs/ProgramBar";
 import { draftFits, programStart, withProgram } from "../programs/start";
 import { ScheduleEditor } from "./ScheduleEditor";
 import { useScheduleDates } from "./schedule";
+import { OutcomesPanel } from "./OutcomesPanel";
 import { SearchDrawer, type SearchTarget } from "./SearchDrawer";
 import { SidePanel } from "./SidePanel";
 import { TermBar } from "./TermBar";
@@ -666,6 +667,8 @@ export default function Builder() {
               </button>
             )}
           </section>
+
+          <OutcomesPanel state={state} readOnly={readOnly} onEdit={edit} />
         </div>
 
         <aside className="builder-side" aria-label="Course summary, licenses, and export">

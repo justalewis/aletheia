@@ -14,6 +14,7 @@ from django.conf import settings
 from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
 
+from catalog import outcomes
 from catalog.models import (
     Arc, Assignment, Outcome, OutcomeSet, Pack, Reading, Source, Unit, UnitAssignment, UnitReading,
 )
@@ -143,6 +144,7 @@ class Command(BaseCommand):
 
         n_out = self.load_outcomes(p, root / files.get("outcomes", "outcomes/"))
         n_arcs, problems = self.load_arcs(p, root / files.get("arcs", "arcs/"))
+        problems += self.load_outcome_scores(p, root / files.get("outcomes", "outcomes/"))
 
         self.stdout.write(self.style.SUCCESS(
             f"{p.id}: {len(readings)} readings, {len(assignments)} assignments, "
@@ -153,6 +155,8 @@ class Command(BaseCommand):
     def load_outcomes(self, p: Pack, folder: Path) -> int:
         count = 0
         for f in sorted(folder.glob("*.yaml")):
+            if f.stem == "crosswalk":  # topic -> code weights; see load_outcome_scores
+                continue
             doc = load_yaml(f) or {}
             if f.stem == "frameworks":
                 for fw in doc.get("frameworks", []) if isinstance(doc, dict) else []:
@@ -177,6 +181,18 @@ class Command(BaseCommand):
                     frameworks=o.get("frameworks", []), topics=o.get("topics", []))
             count += 1
         return count
+
+    def load_outcome_scores(self, p: Pack, folder: Path) -> list[str]:
+        """Store the topic -> outcome crosswalk and score every item against it (catalog.outcomes).
+        Runs after arcs, since items inherit the outcomes of arc units that use them."""
+        codes = set(Outcome.objects.filter(outcome_set__pack=p, outcome_set__kind="framework").values_list("id", flat=True))
+        topics = {t.lower() for model in (Reading, Assignment)
+                  for ts in model.objects.filter(pack=p).values_list("topics", flat=True) for t in ts}
+        crosswalk, problems = outcomes.load_crosswalk(folder / "crosswalk.yaml", codes, topics)
+        p.crosswalk = crosswalk
+        p.save(update_fields=["crosswalk"])
+        outcomes.score_items(p, crosswalk)
+        return problems
 
     def load_arcs(self, p: Pack, folder: Path) -> tuple[int, list[str]]:
         problems, count = [], 0

@@ -11,6 +11,8 @@ class Pack(models.Model):
     name = models.CharField(max_length=200)
     version = models.CharField(max_length=40)
     config = models.JSONField(default=dict)  # pack.yaml: focuses, reuse tiers, term presets
+    # outcomes/crosswalk.yaml as catalog.outcomes.load_crosswalk returns it: weights and {code: {topic: weight}}.
+    crosswalk = models.JSONField(default=dict)
     loaded_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
@@ -59,6 +61,12 @@ class LicensedRecord(models.Model):
     skins_text = models.TextField(blank=True)   # "|FYC|RESEARCH|"
     topics_text = models.TextField(blank=True)  # "|audience|genre|"
     search_text = models.TextField(blank=True)  # lowercased title, authors, parent, summary, topics
+    # Outcome matching, computed by load_pack (catalog.outcomes.score_items). Scores are per framework
+    # code ({"wpa:processes": 1.96}); evidence says where each came from ({code: {"topics": [...],
+    # "units": [...]}}); outcomes_text is "|wpa:processes|acrl:authority|" for filtering.
+    outcome_scores = models.JSONField(default=dict)
+    outcome_evidence = models.JSONField(default=dict)
+    outcomes_text = models.TextField(blank=True)
 
     class Meta:
         abstract = True

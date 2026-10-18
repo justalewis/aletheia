@@ -12,6 +12,7 @@ api = NinjaAPI(title="Aletheia API", version="0.1.0")
 api.add_router("/", catalog_router)
 api.add_router("/", builder_router)
 api.add_router("/", programs_router)
+api.add_router("/", "catalog.outcomes_api.router")
 
 
 def spa(request, *args, **kwargs):

@@ -7,6 +7,7 @@ import FocusPage from "./pages/FocusPage";
 import ArcDetail from "./pages/ArcDetail";
 import Catalog from "./pages/Catalog";
 import About from "./pages/About";
+import Outcomes from "./pages/Outcomes";
 import NotFound from "./pages/NotFound";
 import Builder from "./builder/Builder";
 import NewProgram from "./programs/NewProgram";
@@ -52,6 +53,9 @@ export default function App() {
                 <NavLink to="/catalog">Catalog</NavLink>
               </li>
               <li>
+                <NavLink to="/outcomes">By outcome</NavLink>
+              </li>
+              <li>
                 <NavLink to="/build/new">New course</NavLink>
               </li>
               <li>
@@ -71,6 +75,7 @@ export default function App() {
           <Route path="/programs/:id" element={<ProgramPage />} />
           <Route path="/programs/:id/admin" element={<ProgramAdmin />} />
           <Route path="/catalog" element={<Catalog />} />
+          <Route path="/outcomes" element={<Outcomes />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
