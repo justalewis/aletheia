@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <assignment identifier="{{ ident }}" {{ ns|safe }}>
   <title>{{ title }}</title>
-  <due_at/>
+  {% if due_at %}<due_at>{{ due_at }}</due_at>{% else %}<due_at/>{% endif %}
   <lock_at/>
   <unlock_at/>
   <module_locked>false</module_locked>
