@@ -1,0 +1,241 @@
+id: fyc-cultural-rhetorics
+focus: FYC
+title: Cultural Rhetorics
+tagline: >-
+  Students study how communities make meaning through story, language, and the things they make,
+  then analyze a cultural artifact using frameworks from the community it comes from.
+rationale: >-
+  Cultural rhetorics scholars hold that every community has its own rhetorical practices and that
+  meaning comes out of relationships among people, places, and things. The arc is built on that
+  idea. Students begin with story and their own positionality, then study how language standards
+  carry power, using the CCCC's Students' Right to Their Own Language resolution as a touchstone.
+  They look at how communities argue and remember through things they make and perform, and they
+  analyze a cultural artifact with frameworks drawn from the community it comes from. A reflective
+  portfolio closes the term. Most readings come from constellations, enculturation, the Journal of
+  Multimodal Rhetorics, and Present Tense, alongside Bad Ideas About Writing chapters on language, a
+  few Writing Spaces chapters, and public-domain writing by Zora Neale Hurston, Zitkala-Ša, and
+  Frederick Douglass. In every unit, the core readings take up Black, Indigenous, Latinx, Asian
+  American, queer, or disability rhetorics directly. Several journal pieces were written for
+  scholars; plan on reading guides or in-class annotation for those.
+course_level: "100"
+fits_courses: [oc-engl101, wwu-eng101]
+frameworks: [wpa, acrl]
+units:
+  - id: story-and-relationality
+    title: Story and Relationality
+    summary: >-
+      Students read cultural rhetorics scholarship that is itself told as story, then write a
+      positionality story about where they come from and who they're accountable to. The relational
+      frame set up here carries through the rest of the course.
+    goals:
+      - Students will explain how cultural rhetorics scholars use story as a way of making knowledge.
+      - Students will write a positionality story that names the communities and relationships shaping their perspective.
+      - Students will identify the dominant narrative a counterstory pushes against.
+    outcomes: [wpa:rhetorical-knowledge, wpa:critical-thinking-reading-composing, wpa:processes]
+    topics: [storytelling, relationality, cultural rhetorics, counterstory]
+    weeks: {min: 2, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - constellations-welcome-storied-introduction
+        - ws7-writing-counterstories-ways-challenge-dominant-narratives-fyc
+        - e88-01-the-danger-of-a-single-story
+        - pt-hurston-how-it-feels-to-be-colored-me
+      optional:
+        - enculturation-our-story-begins-here
+        - enculturation-21-like-the-molave
+        - enculturation-21-working-from-or-with-anger
+        - enculturation-21-exhuming-transgenre-ties
+        - jomr-hubrig-crip-doulas
+        - wcc-2023-snell-counterstory-eating-belonging
+        - constellations-my-name-is-klaris
+        - pt-zitkala-sa-american-indian-stories
+    assignments:
+      major: [prompt-renovating-the-personal-positionality-stories-in-the-global]
+      short_term_variant: prompt-rooted-writing-counterstories-in-environmental-education
+      activities:
+        - inoue-sample-charter-for-compassion
+        - wsaaa-map-making-storytelling
+    notes: >-
+      The positionality story prompt builds on Cedillo and Bratta's 2019 article on positionality
+      stories, which isn't in the catalog; the Prompt article explains enough of it to teach from.
+      "Our Story Begins Here" is the field's founding statement, written as a performance in acts.
+      It's long and assumes some background, so assign one act or read part of it aloud in class. For
+      Zitkala-Ša, assign the boarding-school essays, "Impressions of an Indian Childhood" and "The
+      School Days of an Indian Girl." The Rooted Writing prompt was written for an environmental
+      leadership course; for the short-term version, drop the nature focus and ask for any ancestral
+      story or practice.
+
+  - id: language-power-srtol
+    title: "Language, Power, and Students' Right to Their Own Language"
+    summary: >-
+      Students examine how one variety of English became "standard" and whose interests that standard
+      serves. The CCCC's 1974 resolution and its 2020 Demand for Black Linguistic Justice are the
+      touchstones, and students finish by writing up the grammar of a language variety they use.
+    goals:
+      - Students will summarize the argument of Students' Right to Their Own Language and the debates around it.
+      - Students will describe the rules of a non-standardized variety of English they use.
+      - Students will analyze how language standards affect who gets heard in school and in public life.
+    outcomes: [wpa:rhetorical-knowledge, wpa:knowledge-of-conventions, wpa:critical-thinking-reading-composing]
+    topics: [language diversity, "students' right to their own language", translingualism, african american rhetorics]
+    weeks: {min: 2, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - bad-ideas-one-correct-way
+        - bad-ideas-aal-not-good-english
+        - ws4-workin-languages-who-we-are-matters-our
+        - ws5-color-my-voice-academic-writing-myth-standard
+      optional:
+        - cccc-students-right-to-their-own-language
+        - cccc-demand-black-linguistic-justice-2020
+        - jomr-franz-et-al-writing-towards-liberation
+        - bad-ideas-official-american-english
+        - constellations-language-as-moving-anchor
+        - constellations-historical-work-cultural-rhetorics
+        - ws5-can-i-add-discourse-communities-writers-use
+        - wac-bad-ideas-ai-writing-chapter-27-ai-will-empower-non-native-english-writers-to-master
+    assignments:
+      major: [wsaaa-non-standardized-grammar-assignment]
+      short_term_variant: wsaaa-grammar-text-messaging-analyzing-non-standard-english-develop
+      activities:
+        - wsaaa-reflective-writing-about-podcasts-critical-language-awareness
+        - wsaaa-gen-ai-large-language-models-linguistic-whitewashing
+        - wsaaa-teaching-three-writing-university-beyond-course-concepts-simultaneously
+    notes: >-
+      Both CCCC statements are link-only, so the reader points to them on the CCCC site. They're short
+      enough to read together in class. Franz, Charity Hudley, Turner, and Tano wrote their guide for
+      Black students at HBCUs, and it models a student-facing text that treats language variety as a
+      resource. Expect some students to push back, since many were taught that correctness is neutral.
+      The grammar assignment helps with that: students find that the variety they speak at home
+      follows rules of its own.
+
+  - id: community-rhetorics-and-making
+    title: Community Rhetorics and Making
+    summary: >-
+      Students study how communities argue and remember through what they make and perform,
+      including rasquache art, Garifuna dance, and kirtan. Then the class makes something together, a
+      multimodal cookbook in which each student documents a recipe and the family or community
+      history attached to it.
+    goals:
+      - Students will describe how a community makes arguments through art, performance, food, or other made things.
+      - Students will apply cultural rhetorics principles for working ethically with communities.
+      - Students will compose a multimodal contribution to a shared class project.
+    outcomes: [wpa:rhetorical-knowledge, wpa:processes, wpa:knowledge-of-conventions]
+    topics: [cultural rhetorics, chicanx and latinx rhetorics, indigenous rhetorics, asian american rhetorics, multimodal]
+    weeks: {min: 2, ideal: 3}
+    priority: optional
+    merge_with: next
+    readings:
+      core:
+        - constellations-principles-cr-methodologies
+        - constellations-rasquache-rhetorics
+        - constellations-wanaragua-garinagu
+        - enculturation-21-mahamantra-kirtan
+      optional:
+        - jomr-soto-vega-plena-diasporican-activism
+        - enculturation-21-building-culture-of-solidarity
+        - constellations-4c4equality-webtext
+        - jomr-green-abolitionist-podcasting
+        - jomr-jackson-bratta-decolonial-directions
+        - present-tense-indigenous-visibility-statement
+        - rrt-ch10-counterpublics
+        - enculturation-21-we-are-here
+    assignments:
+      major: [wsaaa-personal-cultural-identity-through-food-multimodal-cultural-cookbook]
+      short_term_variant: cora-zines-people
+      activities:
+        - wsaaa-using-community-listening-collaboratively-develop-assignment-students
+        - wsaaa-shaping-multilingual-identity-translanguaging-practices-through-digital-storytelling
+    notes: >-
+      This unit drops first in a short term. If it does, move "Ethically Working Within Communities"
+      into the artifact analysis unit, since students need it before they write about someone else's
+      community. The cookbook runs four to five weeks as written; at three weeks, cut it to one recipe
+      and one reflection. Food can be hard to write about for students dealing with food insecurity or
+      an eating disorder, so offer another made object (a song, a craft, a family photograph) as an
+      alternative.
+
+  - id: cultural-artifact-analysis
+    title: Cultural Artifact Analysis
+    summary: >-
+      Students analyze a cultural artifact, such as a mascot, a song, a mural, or a piece of art,
+      using frameworks from the community that made it or is represented by it. The core readings
+      model the move with a university team's use of a tribal name, Black women's hip-hop, art made
+      in the Japanese American incarceration camps, and a queer public artwork of Frederick Douglass.
+    goals:
+      - Students will research the community and history an artifact comes from.
+      - Students will analyze the artifact using concepts from cultural rhetorics scholarship.
+      - Students will reflect on their own position in relation to the artifact and its community.
+    outcomes: [wpa:critical-thinking-reading-composing, wpa:rhetorical-knowledge, wpa:processes, acrl:authority]
+    topics: [rhetorical analysis, visual rhetoric, public memory, cultural rhetorics, queer rhetorics]
+    weeks: {min: 3, ideal: 4}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - constellations-utah-utes-rhetorical-sovereignty
+        - constellations-rapsody-rhetorical-interventions
+        - enculturation-27-rendering-everyday-life
+        - jomr-migliaccio-queering-collective-memory-douglass
+      optional:
+        - ws3-understanding-visual-rhetoric
+        - constellations-beyonce-formation
+        - present-tense-crossing-balsero-art
+        - enculturation-27-asian-american-hipster-rhetoric
+        - jomr-oakley-detransition-counterstory
+        - jomr-swartz-savewomenssports
+        - jomr-2021-dufresne-slow-looking-blm-murals
+        - kairos-2016-butler-asl-music-videos
+    assignments:
+      major: [wsaaa-cultural-analysis-podcast]
+      short_term_variant: wsaaa-outside-frame-image-analysis
+      activities:
+        - acrl-scholarship-not-neutral-using-positionality-statements-sourc
+        - wsaaa-learning-listen-immersion-rhetorical-choices
+        - kcworks-rhetorical-analysis-peer-review-handout-degrasse
+    notes: >-
+      The Cultural Analysis Podcast asks for a transcript, so a student without recording equipment can
+      turn in the transcript as a written analysis. The positionality-statement lesson ties source
+      evaluation back to the positionality stories from the first unit. Butler's article on ASL music
+      videos, the unit's disability rhetorics example, is link-only on Kairos. Before anyone drafts,
+      talk through how to quote slurs and reproduce hateful images; Swartz's article on anti-trans
+      posts gives you a case to discuss.
+
+  - id: reflective-portfolio
+    title: Reflective Portfolio
+    summary: >-
+      Students gather work from the term and reflect on how their writing, and their sense of their
+      own position, changed. In place of the usual final reflective essay, they make a zine.
+    goals:
+      - Students will select and revise work from the term for a final portfolio.
+      - Students will reflect on how their thinking about story, language, and community changed.
+      - Students will explain the composing choices they made across the term.
+    outcomes: [wpa:processes, wpa:critical-thinking-reading-composing]
+    topics: [reflection, writing identity, revision, metacognition]
+    weeks: {min: 1, ideal: 2}
+    priority: core
+    merge_with: previous
+    readings:
+      core:
+        - ws1-reflective-writing-revision-process-were-you-thinking
+        - bad-ideas-leave-yourself-out
+        - wcc-2021-keeton-writing-while-black
+      optional:
+        - openstax-wg-ch20-portfolio-reflection
+        - ws4-importance-transfer-first-year-writing-course
+        - ws5-we-write-because-we-care-developing-writerly
+        - wac-rethinking-your-writing-chapter-12-creating-your-writing-theory
+        - ws5-whats-diff-version-history-revision-reflections
+    assignments:
+      major: [wsaaa-reflecting-zines-multimodal-alternative-final-reflective-essay]
+      short_term_variant: wsaaa-reflective-cover-letter
+      activities:
+        - wsaaa-zine-project-reorienting-concepts-composition-through-multimodal-reflection
+        - wsaaa-towards-self-assessing-writing-beyond-writing-center-consultations
+    notes: >-
+      Keeton's autoethnography traces how schooling shaped a Black, queer writer's relationship with
+      writing, and it shows students a reflection that names identity directly. The low-stakes zine
+      activity works as a practice round a week before the final zine. Zines need paper, scissors, and
+      a copier or a free design tool, so arrange materials ahead of time.

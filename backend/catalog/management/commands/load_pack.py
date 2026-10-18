@@ -42,9 +42,30 @@ def load_yaml(path: Path):
     return json.loads(json.dumps(yaml.safe_load(path.read_text(encoding="utf-8")), default=str))
 
 
-def as_int(v):
-    m = re.search(r"\d+", str(v or ""))
-    return int(m.group()) if m else None
+WORDS_PER_PAGE = 300
+PART_LEVELS = {"chapter", "article", "primary-text"}
+
+
+def parse_pages(value, level: str) -> int | None:
+    """Page count from the research data's mixed formats: "12", "88-92", "~400 words",
+    "131 (start)". Book-sized totals copied onto chapters are discarded."""
+    s = str(value or "").strip().lower().replace(",", "")
+    if not s:
+        return None
+    if m := re.search(r"(\d+)\s*words", s):
+        return max(1, round(int(m.group(1)) / WORDS_PER_PAGE))
+    if m := re.search(r"(\d+)\s*[-–]\s*(\d+)", s):
+        a, b = int(m.group(1)), int(m.group(2))
+        return b - a + 1 if b >= a else None
+    if "start" in s:
+        return None
+    m = re.search(r"\d+", s)
+    if not m:
+        return None
+    n = int(m.group())
+    if level in PART_LEVELS and n > 80:
+        return None
+    return n or None
 
 
 def clean(rec: dict, fields: set[str]) -> dict:
@@ -84,7 +105,8 @@ class Command(BaseCommand):
 
         readings = jsonl(root / files.get("readings", "readings.jsonl"))
         Reading.objects.filter(pack=p).delete()
-        rows = [Reading(id=r["id"], pack=p, pages=as_int(r.get("pages")), **clean(r, READING_FIELDS)) for r in readings]
+        rows = [Reading(id=r["id"], pack=p, pages=parse_pages(r.get("pages"), r.get("level", "")), **clean(r, READING_FIELDS))
+                for r in readings]
         for row in rows:
             row.fill_index_fields()
         Reading.objects.bulk_create(rows, batch_size=500)
@@ -123,10 +145,12 @@ class Command(BaseCommand):
                 for fw in doc.get("frameworks", []) if isinstance(doc, dict) else []:
                     s = OutcomeSet.objects.create(
                         id=fw.get("id", f"fw-{count}"), pack=p, kind="framework", title=fw.get("name", fw.get("id", "")), data=fw)
-                    for i, o in enumerate(fw.get("categories", fw.get("outcomes", []))):
+                    entries = fw.get("categories") or fw.get("frames") or fw.get("outcomes") or []
+                    for i, o in enumerate(entries):
+                        body = o.get("definition") or o.get("description") or o.get("text") or ""
+                        text = f"{o['name']}: {body}" if o.get("name") and body else (body or o.get("name", ""))
                         Outcome.objects.create(
-                            id=o.get("code") or f"{s.id}-{i + 1}", outcome_set=s, order=i,
-                            text=o.get("description") or o.get("text") or o.get("name", ""),
+                            id=o.get("code") or f"{s.id}-{i + 1}", outcome_set=s, order=i, text=text,
                             frameworks=[o["code"]] if o.get("code") else [], topics=o.get("topics", []))
                     count += 1
                 continue

@@ -1,0 +1,246 @@
+id: fyc-inquiry-and-research
+focus: FYC
+title: Inquiry and Research
+tagline: >-
+  An ENGL 102-style research course: students develop a question, evaluate and annotate sources,
+  gather some evidence of their own, and write a research essay with a multimodal version for a
+  public audience.
+rationale: >-
+  This arc teaches research as a process of finding out. Students spend the first weeks building a
+  question they want answered, and the thesis comes later, once they've read enough to have one. Each
+  unit produces a piece of the final project: a prospectus, an annotated bibliography, a small
+  primary study, and then a research essay along with a translation of that research into another
+  mode for readers outside the class. The ACRL Framework is mapped unit by unit next to the WPA
+  Outcomes, and many of the activities come from the ACRL Sandbox and CORA, two collections of
+  lessons written by instruction librarians. Readings draw on Writing Spaces, Choosing & Using
+  Sources, Try This: Research Methods for Writers, A Dam Good Argument, Steven Krause's The Process of
+  Research Writing, and Write What Matters. If your campus offers library instruction sessions,
+  schedule them during the source evaluation and annotated bibliography units.
+course_level: "100"
+fits_courses: [oc-engl102, wwu-eng101]
+frameworks: [wpa, acrl]
+units:
+  - id: research-questions
+    title: Research Questions
+    summary: >-
+      Students move from a topic to a question they can investigate, using invention activities and
+      background reading. The unit ends with a research prospectus that states the question, what's
+      already known about it, and how the student plans to find out more.
+    goals:
+      - Students will narrow a broad topic to a focused research question.
+      - Students will distinguish research questions from questions with quick or settled answers.
+      - Students will write a prospectus that explains why a question is worth pursuing and how they will pursue it.
+    outcomes: [acrl:research-inquiry, acrl:scholarship-conversation, wpa:processes]
+    topics: [research question, invention, information literacy]
+    weeks: {min: 2, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - adga-research-should-start-with-questions-not-answers
+        - ws2-looking-trouble-finding-way-into-writing-assignment
+        - wac-try-this-chapter-1-what-are-research-methods
+        - cus-2-narrowing-a-topic
+      optional:
+        - wvu-bad-ideas-about-writing-research-starts-with-a-thesis-statement
+        - cus-4-regular-vs-research-questions
+        - cus-5-influence-of-a-research-question
+        - cus-6-developing-your-research-question
+        - wwm-tips-for-developing-research-questions
+        - wac-rethinking-your-writing-chapter-19-early-inquiry-exploring-research-questions
+        - krause-tprw-00-why-write-research-projects
+        - wcc-2021-schumacher-becoming-research-geek
+    assignments:
+      major: [prompt-the-research-prospectus-in-first-year-writing-and-beyond-tea]
+      short_term_variant: acrl-developing-research-question-peer-mind-mapping
+      activities:
+        - wsaaa-developing-fruitful-research-questions
+        - acrl-3-ps-population-place-problem
+        - wsaaa-i-didnt-know-i-could-research-that-using
+        - wsaaa-source-speed-dating-where-do-research-topics-come
+    notes: >-
+      Hayes's prospectus asks students to find a gap in published scholarship, which is a lot to ask
+      in the third week. For most first-year students, a gap in what they've read so far is enough. In
+      a short term, the peer mind-mapping lesson gets each student to a provisional question in one
+      class session and can replace the prospectus. Source Speed Dating needs a stack of short sources
+      on varied topics, so pull those ahead of time.
+
+  - id: source-evaluation
+    title: Source Evaluation and Information Literacy
+    summary: >-
+      Students practice lateral reading, trace claims back to where they started, and look at who
+      produces information and who can afford to read it. The same habits apply to a social media
+      feed and a library database.
+    goals:
+      - Students will evaluate online sources by reading laterally.
+      - Students will explain how a source's authority depends on its context and on the question being asked.
+      - Students will describe how cost and access shape what information is available to them.
+    outcomes: [acrl:authority, acrl:information-value, acrl:creation-process, acrl:searching-strategic, wpa:critical-thinking-reading-composing]
+    topics: [source evaluation, information literacy, misinformation]
+    weeks: {min: 1, ideal: 2}
+    priority: optional
+    merge_with: next
+    readings:
+      core:
+        - ws4-effectively-efficiently-reading-credibility-online-sources
+        - ws5-everythings-biased-guide-determining-when-bias-matters
+        - adga-four-moves-and-a-habit
+        - cus-3-evaluating-for-credibility
+      optional:
+        - ws3-assessing-source-credibility-crafting-well-informed-argument
+        - ws2-googlepedia-turning-information-behaviors-into-research-skills
+        - ws1-wikipedia-good-you
+        - cus-5-popular-substantive-popular-professional-and-scholarl
+        - cus-6-publication-formats-and-the-information-lifecycle
+        - ws4-creating-using-sharing-information-research-communities
+        - wac-bad-ideas-ai-writing-chapter-9-traditional-information-literacy-instruction-prepares
+        - wac-bad-ideas-ai-writing-chapter-11-generative-ai-can-do-my-research-for-me-researchers-should
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - cora-sift-pick-fact-checking-source-evaluation
+        - wsaaa-upstream-lateral-moves-through-information-networks
+        - acrl-scholarship-not-neutral-using-positionality-statements-sourc
+        - wsaaa-playing-paywalls-information-literacy-theory-practice
+    notes: >-
+      This unit has no major assignment. Students apply the evaluation work in the annotated
+      bibliography, so in a short term the unit folds into that one. "Four Moves and a Habit" is Mike
+      Caulfield's short version of what became the SIFT method, and the SIFT and PICK lesson builds on
+      it. If students are already using chatbots to find sources, add the two chapters from Bad Ideas
+      about AI and Writing.
+
+  - id: annotated-bibliography
+    title: Annotated Bibliography
+    summary: >-
+      Students find, read, and annotate the sources that will support their research essay. Each
+      annotation summarizes a source and explains how the student plans to use it, and the readings
+      treat sources as voices in a conversation the student is joining.
+    goals:
+      - Students will locate scholarly and popular sources using deliberate search strategies.
+      - Students will summarize and evaluate sources accurately and fairly.
+      - Students will explain how each source relates to their research question and to the other sources.
+    outcomes: [acrl:scholarship-conversation, acrl:searching-strategic, wpa:critical-thinking-reading-composing, wpa:knowledge-of-conventions]
+    topics: [annotated bibliography, synthesis, citation, reading strategies]
+    weeks: {min: 2, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - wwm-tracking-research-with-annotated-bibliographies
+        - ws2-walk-talk-cook-eat-guide-using-sources
+        - adga-listening-to-sources-talking-to-sources
+        - ws2-reading-games-strategies-reading-scholarly-sources
+      optional:
+        - openstax-wg-ch14-annotated-bibliography
+        - krause-tprw-06-the-annotated-bibliography-exercise
+        - cus-7-scholarly-articles-as-sources
+        - wac-try-this-chapter-3-working-with-sources-worknets-and-invention
+        - ws2-annoying-ways-people-use-sources
+        - ws5-doing-research-fun-citing-sources-not-understanding
+        - wvu-bad-ideas-about-writing-citing-sources-is-a-basic-skill-learned-early-on
+        - cus-3-synthesis-of-your-own-ideas
+    assignments:
+      major: [cora-annotated-bibliography]
+      short_term_variant: wsaaa-full-class-annotated-bibliography-class-community-building-applied
+      activities:
+        - cora-annotated-bibliographies-shining-light-source-evaluation-bea
+        - acrl-thats-what-she-said-citation-chasing
+        - cora-research-matrix-synthesizing-search-results
+        - prompt-the-unbibliography-when-failure-is-not-a-waste-of-time
+    notes: >-
+      The CORA assignment sheet is a basic one, so set the number of sources and the citation style
+      for your course. The BEAM lesson gives students four words (background, exhibit, argument,
+      method) for how they'll use a source, and annotations written with those words are easier to
+      draft from later. For 5- and 8-week terms, the whole class can build one bibliography together
+      in place of individual ones. The unbibliography has students annotate the sources they rejected and say
+      why they rejected them.
+
+  - id: primary-research
+    title: Primary Research
+    summary: >-
+      Students design and carry out a small study, such as a survey, a few interviews, or an
+      observation, that adds evidence of their own to the project. Research ethics and consent come
+      before anyone collects data.
+    goals:
+      - Students will choose a primary research method that fits their research question.
+      - Students will design a survey, interview protocol, or observation plan and collect data ethically.
+      - Students will analyze their data and report what they found.
+    outcomes: [acrl:research-inquiry, acrl:creation-process, wpa:processes, wpa:critical-thinking-reading-composing]
+    topics: [primary research, interviews, ethics, observation]
+    weeks: {min: 2, ideal: 3}
+    priority: optional
+    merge_with: next
+    readings:
+      core:
+        - ws2-introduction-primary-research-observations-surveys-interviews
+        - wac-try-this-chapter-2-making-research-ethical
+        - wac-try-this-chapter-5-working-with-people
+        - ws4-analyze-data-primary-research-study
+      optional:
+        - wac-try-this-chapter-6-working-with-places-and-things
+        - wac-try-this-chapter-4-working-with-words
+        - ws2-putting-ethnographic-writing-context
+        - ws4-at-work-archives-place-based-research-writing
+        - cus-10-people-as-sources
+        - cus-9-data-as-sources
+        - wac-involved-chapter-12-new-investigations-fieldwork-and-laboratories
+        - openstax-wg-ch15-case-study-profile
+    assignments:
+      major: [oercommons-hawley-survey-assignments]
+      short_term_variant: cora-interview-scholar
+      activities:
+        - textgened-the-first-pass-second-pass-strategy-of-ai-and-traditional-me
+        - cora-research-diary
+    notes: >-
+      Check your institution's IRB policy before this unit. At many campuses, projects that stay in
+      the classroom don't need review, but students who plan to publish or present their findings
+      elsewhere may. Hawley's materials cover surveys only; for interviews or observation, use the Try
+      This chapters as the assignment guide. The CORA interview activity is the lighter version: one
+      interview with a faculty member gives each student a primary source for the essay.
+
+  - id: research-essay-and-translation
+    title: Research Essay and Multimodal Translation
+    summary: >-
+      Students write a research essay that brings their sources, and any data they collected, into an
+      argument. Then they translate the findings into another mode (a photo essay, an infographic, a
+      podcast, a short video) for readers outside the class.
+    goals:
+      - Students will write a research essay that synthesizes published sources and any findings of their own.
+      - Students will address counterarguments and complications in their research.
+      - Students will translate their research into a multimodal genre for a public audience.
+      - Students will explain how the change in mode and audience shaped their choices.
+    outcomes: [wpa:rhetorical-knowledge, wpa:knowledge-of-conventions, wpa:processes, acrl:scholarship-conversation]
+    topics: [synthesis, argument, counterargument, multimodal]
+    weeks: {min: 3, ideal: 4}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - krause-tprw-10-the-research-essay
+        - ws2-other-hand-role-antithetical-writing-first-year
+        - wac-try-this-chapter-8-research-and-the-rhetorical-forms-it-takes
+        - ws5-thinking-across-modes-media-baking-cake-two
+      optional:
+        - krause-tprw-11-alternative-ways-to-present-your-research
+        - ws3-introduction-strategies-multimodal-composing
+        - wvu-bad-ideas-about-writing-the-traditional-research-paper-is-best
+        - openstax-wg-ch12-argumentative-research
+        - wac-rethinking-your-writing-chapter-21-late-inquiry-addressing-gaps-and-complications
+        - ws5-strategies-analyzing-composing-data-stories
+        - haw-ch07-forming-a-research-based-argument
+        - wwm-framing-sources-mea-l-paragraphs-and-quote-sandwiches
+    assignments:
+      major: [cuny-laguardia-vanslyck-belonging-exile-migration-2019]
+      short_term_variant: wsaaa-informative-argumentative-infographic
+      activities:
+        - prompt-in-the-realm-of-the-possible-writing-abstracts-to-refine-res
+        - wsaaa-dramatizing-conversation-creating-dialogue-scripts-support-source-synthesis
+        - acrl-research-process-reflection-prompts
+    notes: >-
+      VanSlyck's sequence (a research essay, a photo essay, and a reflective essay) was written for a
+      course themed on migration. The structure works for any topic, and the materials are CC BY-SA,
+      so you can rewrite the prompts for your own theme. When the term is short, students can build an
+      infographic from their annotated bibliography in place of the full essay and translation.
+      Writing an abstract before drafting, as Kotch's activity asks, helps students who have plenty of
+      sources and no argument yet.

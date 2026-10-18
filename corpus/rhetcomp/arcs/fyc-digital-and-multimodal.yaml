@@ -1,0 +1,198 @@
+id: fyc-digital-and-multimodal
+focus: FYC
+title: Digital and Multimodal Composition
+tagline: >-
+  Students analyze multimodal texts, remix existing media under fair use, produce an opinion podcast,
+  and publish a collaborative web text.
+rationale: >-
+  This arc has students compose in a new mode in each unit and explain the rhetorical choices behind
+  each project in writing. They start by analyzing how a multimodal text works and turn the analysis
+  into best practices for their own projects. They then make a fair-use video essay from existing
+  media, record an opinion podcast, and close with a collaborative web text. Pair each major project
+  with a short artist's statement; the WSAAA prompt listed in the web text unit works for all four.
+  Readings come from Writing Spaces, Reading Rhetorical Theory, Choosing & Using Sources (for
+  copyright and fair use), Kairos, Computers and Composition Online, the Journal of Multimodal
+  Rhetorics, Queen City Writers, and web-writing guidance from the W3C and Open Technical
+  Communication. Plan for tools before the term starts. Audacity, a phone camera, and a browser-based
+  video editor are enough for every project here, but students without reliable devices will need
+  campus equipment or extra time.
+course_level: "100"
+fits_courses: [oc-engl101, wwu-eng101]
+frameworks: [wpa, acrl]
+units:
+  - id: multimodal-rhetorical-analysis
+    title: Multimodal Rhetorical Analysis
+    summary: >-
+      Students analyze how a multimodal text (an ad, a music video, a website, a public artwork)
+      combines words, images, sound, and design to make its case. They turn the analysis into a list
+      of best practices to guide their own projects later in the term.
+    goals:
+      - Students will identify the modes a text uses and how those modes work together.
+      - Students will analyze design choices in relation to audience and purpose.
+      - Students will draw best practices from their analysis to guide their own multimodal work.
+    outcomes: [wpa:rhetorical-knowledge, wpa:critical-thinking-reading-composing, wpa:knowledge-of-conventions]
+    topics: [multimodal, visual rhetoric, rhetorical analysis, digital rhetoric]
+    weeks: {min: 2, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - ws3-introduction-strategies-multimodal-composing
+        - ws3-understanding-visual-rhetoric
+        - rrt-ch12-visual-rhetoric
+        - qcw-2024-hodges-dissecting-desires
+      optional:
+        - openstax-wg-ch17-image-analysis
+        - wac-rethinking-your-writing-chapter-8-designing-across-modalities
+        - gz2e-7-3-multimodal-texts-and-rhetorical-situations
+        - cconline-2011-devoss-platt-image-manipulation-ethics
+        - dougherty-hodv-how-to-lie-with-charts
+        - jomr-swartz-savewomenssports
+        - wac-keywords-tpc-chapter-21-multimodality
+        - jump-2022-fontana-omega-mart-ad-analysis
+    assignments:
+      major: [kcworks-multimodal-rhetorical-analysis-warnick]
+      short_term_variant: wsaaa-outside-frame-image-analysis
+      activities:
+        - wsaaa-deep-digital-reading-google-docs
+        - kcworks-rhetorical-analysis-peer-review-handout-degrasse
+    notes: >-
+      Hodges's analysis of fashion ads comes from Queen City Writers, an undergraduate journal, so
+      students see what a strong student analysis of images looks like. The Omega Mart piece in JUMP+ is a student
+      video analysis and is link-only. The Warnick, Arola, and Sheppard assignment ends with a list of
+      best practices; have students keep it, since they'll plan the remix, podcast, and web text from
+      it. The image analysis is the short-term version because it covers a single photograph.
+
+  - id: remix-and-fair-use
+    title: Remix and Fair Use
+    summary: >-
+      Students study how remix works and how copyright, fair use, and Creative Commons licenses apply
+      to it. They then make a short video essay that transforms existing media and write up the
+      fair-use reasoning behind it.
+    goals:
+      - Students will explain the four fair-use factors and apply them to their own work.
+      - Students will distinguish transformative use from copying.
+      - Students will compose a remix that makes an argument with borrowed material.
+      - Students will credit and license their sources correctly.
+    outcomes: [wpa:knowledge-of-conventions, wpa:processes, acrl:information-value]
+    topics: [remix, copyright and fair use, video, citation]
+    weeks: {min: 2, ideal: 3}
+    priority: optional
+    merge_with: next
+    readings:
+      core:
+        - ws1-composing-anthology-exercise-patchwriting
+        - cus-1-what-is-fair-use
+        - cus-2-the-four-factors
+        - qcw-2023-marshall-bootstraps-playlist
+      optional:
+        - cus-4-common-examples-of-fair-use
+        - cus-6-creative-commons-an-open-option
+        - cus-7-public-domain-and-term-of-copyright
+        - wvu-bad-ideas-about-writing-popular-culture-is-only-useful-as-a-text-for-criticism
+        - rrt-ch18-digital-rhetorics
+        - cconline-2011-york-culture-jams
+        - cconline-2014-brown-mehler-reading-reflecting-gifs
+        - wac-keywords-design-thinking-chapter-7-affordances
+    assignments:
+      major: [kcworks-fair-use-video-essay-scott]
+      short_term_variant: null
+      activities:
+        - acrl-teaching-copyleft-critical-approach-information-has-value
+        - kcworks-stirred-not-shaken-remix-assessment
+    notes: >-
+      The Choosing & Using Sources sections on fair use run 200 to 800 words each, so assign several
+      together. Kuhn and Scott's assignment has students write a code of best practices for fair use
+      alongside the video essay, and that code gives you a standard for grading their fair-use claims.
+      "Stirred, Not Shaken" walks you and the class through building a remix rubric together and
+      includes sample assignments. The York and Brown and Mehler articles were written for
+      instructors, so use them for your own planning. If you drop this unit, move the two core
+      fair-use readings into the podcast unit, since podcasts that use clips raise the same questions.
+
+  - id: podcast
+    title: Podcast
+    summary: >-
+      Students script, record, and edit an opinion podcast episode on a current issue. The readings
+      cover the rhetoric of sound, access for listeners who are Deaf or hard of hearing, and podcasting
+      as a form of activism.
+    goals:
+      - Students will analyze the rhetorical choices in published audio, including voice, music, and pacing.
+      - Students will script and record an argument for listeners.
+      - Students will edit their audio and provide a transcript so the episode is accessible.
+    outcomes: [wpa:rhetorical-knowledge, wpa:processes, wpa:knowledge-of-conventions]
+    topics: [podcasting, sound, multimodal, accessibility, argument]
+    weeks: {min: 2, ideal: 4}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - kairos-2012-bowie-rhetorical-roots-podcasting
+        - cconline-folk-making-waves-voiceless-audio
+        - jomr-green-abolitionist-podcasting
+        - ws5-thinking-across-modes-media-baking-cake-two
+      optional:
+        - openstax-wg-ch19-scripting-for-the-public-forum
+        - enculturation-27-sounding-asian-america
+        - buckner-daley-do-you-hear-what-i-hear
+        - kairos-2016-rodrigue-navigating-the-soundscape
+        - kairos-2016-butler-asl-music-videos
+        - jump-2024-gauthier-treatment-talk
+        - wwm-preparation-practice-and-delivery
+    assignments:
+      major: [prompt-the-opinion-podcast-a-visceral-form-of-persuasion]
+      short_term_variant: kcworks-concept-in-60-dewitt
+      activities:
+        - wsaaa-learning-listen-immersion-rhetorical-choices
+        - wsaaa-our-sonically-composed-worlds
+    notes: >-
+      Bowie's and Folk's pieces are webtexts built around audio, so budget listening time along with
+      reading time. Folk makes the case for voiceless audio essays; offer that option to students who
+      don't want to record their own voices. Buckner and Daley write about a hearing teacher and a Deaf
+      student working out a sound assignment together; read it before you require audio from
+      everyone. When time is tight, swap in the 60-second audio or video piece for the full episode.
+
+  - id: web-text
+    title: Web Text
+    summary: >-
+      Students build a collaborative web text, a set of linked pages that makes its argument through
+      structure and navigation as well as prose. The readings cover writing for screens, web
+      accessibility, and how blogs and wikis circulate.
+    goals:
+      - Students will organize content into linked pages that readers can navigate.
+      - Students will write web content that readers can scan and that works with assistive technology.
+      - Students will collaborate on a shared digital project and document their own contributions.
+      - Students will reflect on their composing choices across the term's projects.
+    outcomes: [wpa:knowledge-of-conventions, wpa:processes, wpa:rhetorical-knowledge]
+    topics: [writing for the web, accessibility, digital writing, collaboration]
+    weeks: {min: 2, ideal: 4}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - ws2-why-blog-searching-writing-web
+        - ws5-enabling-reader
+        - w3c-wai-tutorials-writing-tips
+        - open-technical-communication-2e-ch22-web-writing
+      optional:
+        - unc-handout-blogs
+        - ws5-you-are-good-wikipedia
+        - ws4-understanding-maintaining-privacy-when-writing-digital-technologies
+        - govuk-writing-standards-clear-structure
+        - govuk-writing-standards-add-links
+        - open-technical-communication-ch09-intro-html
+        - wac-bad-ideas-ai-writing-chapter-21-we-can-simply-rely-on-ai-for-alt-text-ai-should-support
+        - openstax-wg-ch18-multimodal-and-online-writing
+    assignments:
+      major: [prompt-imagining-the-essay-as-digital-assemblage-collaborative-stud]
+      short_term_variant: wsaaa-twine-project-engaging-metacognition-remediation-digital-narrative
+      activities:
+        - wsaaa-multimodal-proposal
+        - wsaaa-reflective-artists-statement-multimodal-assignments
+    notes: >-
+      Dixon's students built their project in Scalar, a free platform for media-rich, long-form
+      writing; WordPress, Google Sites, or plain HTML work too. Dixon's course was in media and
+      anthropology, so substitute your own topic. Students publishing under their own names should
+      know who can see the site and for how long, and Kim's chapter on privacy covers the questions to
+      ask. The W3C document license means the accessibility tips stay word for word. The Twine project
+      is the short-term version: students turn an earlier essay into a branching hypertext, so the
+      content already exists.

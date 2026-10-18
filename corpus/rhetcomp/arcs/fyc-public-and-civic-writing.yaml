@@ -1,0 +1,205 @@
+id: fyc-public-and-civic-writing
+focus: FYC
+title: Public and Civic Writing
+tagline: >-
+  Students analyze arguments made in public life, write an op-ed or proposal of their own, and finish
+  by producing a document for a community partner.
+rationale: >-
+  This arc moves students from reading public arguments to writing them, and then to writing for an
+  organization outside the university. The first unit gives them the vocabulary of the rhetorical
+  situation: exigence, audience, constraints, and kairos. They use it to analyze a public argument in
+  the second unit, write an op-ed or a proposal in the third, and in the fourth produce a document a
+  local organization has asked for. The analysis unit is built around commemoration, so students read
+  speeches and look at public art alongside current arguments over monuments, starting with Frederick
+  Douglass's 1876 oration at the unveiling of the Freedmen's Memorial. Readings come from Writing
+  Spaces, Reading Rhetorical Theory, A Dam Good Argument, Write What Matters, 88 Open Essays, the MIT
+  CommKit, and public-domain and federal speeches. The community partner unit needs lead time. Line up
+  partners before the term starts, or use that unit's short-term variant, which has students write for
+  an affected public without a formal partnership.
+course_level: "100"
+fits_courses: [oc-engl101, wwu-eng101]
+frameworks: [wpa, acrl]
+units:
+  - id: rhetorical-situation
+    title: The Rhetorical Situation
+    summary: >-
+      Students learn to describe the situation a piece of writing responds to: who it addresses, what
+      prompted it, and what limits the writer worked within. Short historical speeches give them cases
+      where the audience and the moment are easy to see.
+    goals:
+      - Students will identify the exigence, audience, purpose, and constraints of a text.
+      - Students will explain how timing shapes what a writer can say.
+      - Students will describe a rhetorical situation they are part of in their own community.
+    outcomes: [wpa:rhetorical-knowledge, wpa:critical-thinking-reading-composing]
+    topics: [rhetorical situation, audience, kairos, civic engagement]
+    weeks: {min: 1, ideal: 3}
+    priority: optional
+    merge_with: next
+    readings:
+      core:
+        - ws5-rhetoric-choose-own-adventure-primer
+        - rrt-ch05-rhetorical-situation
+        - ws3-exigency-makes-my-message-indispensable-my-reader
+        - bad-ideas-rhetoric-empty-speech
+      optional:
+        - ws2-murder-rhetorically-speaking
+        - gz2e-6-2-what-is-the-rhetorical-situation
+        - gz2e-6-9-kairos-a-rhetorical-appeal-lost-in-time
+        - ws5-elaborate-rhetorics
+        - adga-situating-arguments
+        - pt-douglass-what-to-the-slave-fourth-of-july
+        - pt-washington-atlanta-compromise-1895
+        - pt-red-jacket-religion-1805
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - wsaaa-establishing-who-professional-writing-power-dynamics-improv
+        - acrl-tweet-response-simulation
+        - wsaaa-lobsters-second-conversations-addressing-so-writing
+    notes: >-
+      There's no major assignment here. The vocabulary carries into the next unit, so in a short term
+      you can teach it during that unit's first week. Douglass, Washington, and Red Jacket each spoke
+      to an audience that held power over them, and that makes constraint concrete for students. Red
+      Jacket's speech reached print through interpreters and editors; ask students what that does to
+      our sense of the speaker. The Lobsters activity uses David Foster Wallace's "Consider the
+      Lobster," which isn't in the catalog, so you'll need your own copy.
+
+  - id: public-argument-analysis
+    title: Analyzing a Public Argument
+    summary: >-
+      Students analyze an argument made in public (a speech, an op-ed, a monument, a mural) in its
+      historical and social context. The unit's case is commemoration: Douglass's oration at the
+      Freedmen's Memorial, the Black Lives Matter murals in Raleigh, and current debates over which
+      monuments should stay up.
+    goals:
+      - Students will analyze how a public argument uses appeals, evidence, and design to reach its audience.
+      - Students will research the historical and social context of a public argument.
+      - Students will describe the positions in a civic controversy fairly before taking one.
+    outcomes: [wpa:critical-thinking-reading-composing, wpa:rhetorical-knowledge, wpa:processes, acrl:authority]
+    topics: [rhetorical analysis, public memory, rhetorical appeals, deliberation]
+    weeks: {min: 3, ideal: 4}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - ws1-backpacks-vs-briefcases-steps-toward-rhetorical-analysis
+        - adga-the-rhetorical-appeals-and-sociohistorical-context
+        - pt-douglass-oration-memory-of-lincoln
+        - jomr-2021-dufresne-slow-looking-blm-murals
+      optional:
+        - haw-ch10-writing-argument-analysis
+        - openstax-wg-ch09-rhetorical-analysis
+        - bad-ideas-logos-logic
+        - present-tense-horrorism-historical-signs
+        - pt-obama-selma-50th-2015
+        - e88-50-memorial-day
+        - constellations-countering-racial-enthymemes
+        - rrt-ch03-propaganda-common-good
+    assignments:
+      major: [prompt-writing-as-memory-work-teaching-the-civic-deliberations-over]
+      short_term_variant: wsaaa-acting-bias-staging-media-analysis-first-year-writing
+      activities:
+        - acrl-quote-tracing-activity
+        - kcworks-rhetorical-analysis-peer-review-handout-degrasse
+    notes: >-
+      The Freedmen's Memorial in Washington, D.C., drew calls for its removal in 2020, so Douglass's
+      speech gives students a nineteenth-century argument and a recent controversy about the same
+      statue. Swiencicki and Lowe wrote their sequence for linked rhetoric and philosophy courses, and
+      the rhetoric assignments work without the philosophy side. Dufresne writes about the Raleigh
+      murals as a white educator and reflects on that position; students can use the article as a
+      model for naming their own. Students who want to analyze an op-ed or a speech can use the
+      Backpacks vs. Briefcases steps and the peer-review handout with any public text.
+
+  - id: op-ed-or-proposal
+    title: Op-Ed or Proposal
+    summary: >-
+      Students take a position on a local issue and argue it for a public audience, either in an op-ed
+      or in a team proposal for change on campus. Op-eds and proposal arguments from 88 Open Essays
+      serve as published models.
+    goals:
+      - Students will choose an issue in their community and a venue or decision-maker to address.
+      - Students will support a claim with evidence and answer the strongest objections to it.
+      - Students will adapt their argument to the conventions of an op-ed or a proposal.
+    outcomes: [wpa:rhetorical-knowledge, wpa:knowledge-of-conventions, wpa:processes, acrl:scholarship-conversation]
+    topics: [proposal argument, public writing, argument, counterargument]
+    weeks: {min: 2, ideal: 4}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - mit-commkit-op-ed
+        - wwm-proposal-argument-model
+        - wac-rethinking-your-writing-chapter-18-developing-projects-that-propose-change
+        - e88-60-how-rural-areas-like-floridas-panhandle-can-become
+      optional:
+        - openstax-wg-ch06-proposal
+        - wwm-writing-letters-to-the-editor
+        - wwm-writing-letters-to-elected-officials
+        - e88-10-how-to-save-the-middle-class-when-jobs-dont-pay
+        - e88-82-on-reparations-the-question-isnt-if-but-when-and-h
+        - adga-ten-rules-for-ethical-arguments
+        - wwm-the-ethics-and-importance-of-arguments-across-moral-tri
+        - ws5-environmental-justice-writing-urban-spaces
+    assignments:
+      major: [wsaaa-proposal-change-campus]
+      short_term_variant: null
+      activities:
+        - wsaaa-exploring-community-personal-connection-as-idea-generation-argumentative
+        - wsaaa-collaborative-problem-solving-deliberative-discourse-toward-group-consensus
+        - wsaaa-so-speed-dating-articulating-arguments-significance
+        - wsaaa-write-thons-community-panels-encouraging-students-go-public
+    notes: >-
+      The catalog has no openly licensed op-ed assignment yet, so the major assignment is Swofford's
+      campus proposal. For students who choose the op-ed, the CommKit guide can serve as the assignment
+      sheet; it's addressed to scientists, but its advice on structure and length applies to anyone.
+      Swofford's proposal is the second half of a two-part sequence that opens with a genre analysis of
+      proposals, and it can be assigned alone. In a short term, assign a single op-ed in place of the
+      team proposal.
+
+  - id: community-partner-genre
+    title: Writing for a Community Partner
+    summary: >-
+      Students work with a local nonprofit, agency, or campus office to produce a document the
+      organization needs, such as a flyer, a web page, a grant section, or a policy brief. They study
+      the organization's existing documents first and reflect at the end on how the partner's values
+      and audience shaped their choices.
+    goals:
+      - Students will learn a partner organization's goals, audiences, and existing genres.
+      - Students will produce a document that meets a need the partner has named.
+      - Students will practice reciprocity and accountability in community-engaged work.
+      - Students will reflect on how writing for an outside audience changed their process.
+    outcomes: [wpa:rhetorical-knowledge, wpa:knowledge-of-conventions, wpa:processes]
+    topics: [public writing, civic engagement, genre, accessibility]
+    weeks: {min: 3, ideal: 4}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - ws4-public-writing-social-change
+        - ws4-rhetorical-possibilities-accessibility
+        - govuk-writing-standards-writing-guidelines
+        - constellations-principles-cr-methodologies
+      optional:
+        - ws5-we-write-because-we-care-developing-writerly
+        - ws4-make-move-writing-genres
+        - unc-handout-policy-briefs
+        - w3c-wai-tutorials-writing-tips
+        - openstax-wg-ch19-scripting-for-the-public-forum
+        - ws4-technologies-trust-creating-networks-goodwill-collaboration
+        - wac-try-this-chapter-8-research-and-the-rhetorical-forms-it-takes
+        - ws6-social-media-as-space-todays-technical-communication
+    assignments:
+      major: [prompt-writing-for-nonprofits-in-a-professionally-oriented-institut]
+      short_term_variant: wsaaa-engaging-audiences-beyond-university-writing-reflecting-non-academic
+      activities:
+        - wsaaa-avoiding-savior-complex-community-engaged-writing
+        - wsaaa-using-community-listening-collaboratively-develop-assignment-students
+    notes: >-
+      Contact partners before the term and agree on a deliverable and a timeline; most organizations
+      need several weeks to answer questions and review drafts. Gindlesparger's prompt comes from a
+      dedicated nonprofit writing course, so you may want to narrow the genre choices for first-year
+      students. Run the savior-complex sequence before students meet their partners. The GOV.UK
+      guidelines work as a plain-language reference for anything written for the public. If
+      partnerships aren't possible, use the short-term variant: students translate an academic source's
+      findings into a genre for the people those findings affect.

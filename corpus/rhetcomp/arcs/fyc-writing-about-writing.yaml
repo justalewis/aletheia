@@ -1,0 +1,198 @@
+id: fyc-writing-about-writing
+focus: FYC
+title: Writing about Writing
+tagline: >-
+  Students make writing the subject of the course: they trace their own literacy histories, study a
+  discourse community and one of its genres, and finish with a theory of writing they can take into
+  other classes.
+rationale: >-
+  This arc treats writing as something students can research. They start with their own literacy
+  histories, study a discourse community they belong to or want to join, analyze a genre that
+  community uses, and then look back across the term to write a theory of writing for the courses
+  ahead of them. Literacy sponsorship leads into discourse communities, discourse communities lead
+  into genre, and genre leads into the transfer readings in the last unit. Writing Spaces supplies
+  most of the concept readings. The rest come from Rethinking Your Writing, Bad Ideas About Writing,
+  Write What Matters, Try This, and Literacy in Composition Studies, and the student literacy
+  narratives come from Queen City Writers. Most major assignments come from the Writing Spaces
+  Assignments and Activities Archive (WSAAA). Those prompts are CC BY-NC-ND, so hand them out as
+  published or write your own version from scratch.
+course_level: "100"
+fits_courses: [oc-engl101, wwu-eng101]
+frameworks: [wpa, acrl]
+units:
+  - id: literacy-narrative
+    title: Literacy Narrative
+    summary: >-
+      Students write about how they learned to read, write, or use a language, and about the people,
+      institutions, and technologies that sponsored that learning. Morris Young's short piece
+      introduces Deborah Brandt's term literacy sponsorship, and students use it to explain who and
+      what shaped their reading and writing.
+    goals:
+      - Students will narrate a specific experience of learning to read, write, or use a language.
+      - Students will identify the sponsors of their literacy, including people, institutions, and technologies.
+      - Students will describe their current habits and beliefs as writers.
+    outcomes: [wpa:rhetorical-knowledge, wpa:processes]
+    topics: [literacy narrative, writing identity, narrative, reflection]
+    weeks: {min: 2, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - ws7-reflecting-literacy-identities-through-writing-personal-narratives
+        - wac-rethinking-your-writing-chapter-1-reframing-your-story-about-writing
+        - lics-2013-young-sponsoring-literacy-studies
+        - qcw-2024-sheridan-appetite-for-words
+      optional:
+        - ws2-storytelling-narration-who-i-am-story
+        - openstax-wg-ch03-literacy-narrative
+        - ws2-ten-ways-think-about-writing-metaphoric-musings
+        - wvu-bad-ideas-about-writing-some-people-are-just-born-good-writers
+        - ws1-inspired-writer-vs-real-writer
+        - qcw-2024-thoroughman-barbies-live-forever
+        - wcc-2021-keeton-writing-while-black
+        - pt-douglass-narrative
+    assignments:
+      major: [wsaaa-literacy-autobiography]
+      short_term_variant: oercommons-layton-literacy-narrative-hyperdoc
+      activities:
+        - wsaaa-writing-like-you-using-metaphors-explain-writing-writers
+        - wsaaa-reflective-agency-journaling-locate-writing-identity
+        - wsaaa-who-tells-my-writing-story-better-exploring-genre
+    notes: >-
+      The Literacy Autobiography prompt takes a translingual approach. Multilingual students can write
+      about moving between languages, and students who speak one language can write about dialects,
+      registers, or digital literacies. Layton's hyperdoc walks students through the narrative step
+      by step, so it suits a short term with less class time for drafting workshops. The metaphor
+      activity pairs with Reid's "Ten Ways to Think about Writing" in the optional list. Douglass's
+      Narrative is the whole book; assign chapters 6 and 7, where he learns to read. Save the AI
+      comparison activity until students have a full draft.
+
+  - id: discourse-community-study
+    title: Discourse Community Study
+    summary: >-
+      Students pick a discourse community they belong to or want to join, interview a member, and
+      analyze the community's goals, vocabulary, and genres. This is the first unit with primary
+      research, so it also introduces interviewing and research ethics.
+    goals:
+      - Students will define a discourse community using the criteria Melzer presents.
+      - Students will plan and conduct an interview with a community member.
+      - Students will analyze how a community's genres and specialized language serve its goals.
+    outcomes: [wpa:rhetorical-knowledge, wpa:critical-thinking-reading-composing, acrl:research-inquiry]
+    topics: [discourse community, genre, interviews, primary research]
+    weeks: {min: 2, ideal: 4}
+    priority: optional
+    merge_with: next
+    readings:
+      core:
+        - ws3-understanding-discourse-communities
+        - ws4-read-room-navigating-social-contexts-written-texts
+        - ws5-can-i-add-discourse-communities-writers-use
+        - wac-try-this-chapter-5-working-with-people
+      optional:
+        - ws2-introduction-primary-research-observations-surveys-interviews
+        - wac-try-this-chapter-2-making-research-ethical
+        - ws4-creating-using-sharing-information-research-communities
+        - wac-involved-chapter-2-the-classroom-situation
+        - unc-handout-finding-your-field
+        - ws2-putting-ethnographic-writing-context
+        - wac-mindful-reading-chapter-1-annotating-your-way-into-academic-discourse
+        - stylus-2026-ramirezmunoz-tiktok-paleontology
+    assignments:
+      major: [wsaaa-discourse-communities-manual-presentation]
+      short_term_variant: wsaaa-communication-guide-assignment
+      activities:
+        - cora-interview-scholar
+        - wsaaa-exploring-ideology-written-language-translingual-approach
+    notes: >-
+      In a short term this unit folds into genre analysis. Keep Melzer's chapter and have students
+      choose a genre from a community they already know. The Communication Guide is the lighter
+      option because students write about a community where they're already experts, so there's no
+      interview to schedule. Tremain's chapter on code-meshing gives multilingual students a way to
+      write about what they bring to a community. The Stylus essay on TikTok paleontologists is a
+      first-year student's discourse community analysis and is link-only.
+
+  - id: genre-analysis
+    title: Genre Analysis
+    summary: >-
+      Students study a genre closely enough to teach it to a newcomer. Dirk's chapter and the "Make
+      Your Move" chapter supply the vocabulary of genre and rhetorical moves, and Wardle's Bad Ideas
+      chapter argues that no one learns to write "in general."
+    goals:
+      - Students will identify the conventions and rhetorical moves of a genre from a set of samples.
+      - Students will explain how a genre's conventions respond to its audience and purpose.
+      - Students will write a guide that teaches a newcomer how to compose in the genre.
+    outcomes: [wpa:rhetorical-knowledge, wpa:knowledge-of-conventions, wpa:critical-thinking-reading-composing]
+    topics: [genre, rhetorical situation, reading strategies, transfer]
+    weeks: {min: 3, ideal: 4}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - ws1-navigating-genres
+        - ws4-make-move-writing-genres
+        - wvu-bad-ideas-about-writing-you-can-learn-to-write-in-general
+        - wwm-genre
+      optional:
+        - wac-rethinking-your-writing-chapter-13-applying-and-adapting-genres
+        - ws2-read-like-writer
+        - ws5-rhetoric-choose-own-adventure-primer
+        - huffman-ptp-what-is-a-genre
+        - wvu-bad-ideas-about-writing-the-five-paragraph-essay-is-rhetorically-sound
+        - cf-2012-rounsaville-selecting-genres-uptake
+        - wac-try-this-chapter-4-working-with-words
+        - pt-stanton-declaration-of-sentiments-1848
+    assignments:
+      major: [wsaaa-write-like]
+      short_term_variant: wsaaa-grammar-text-messaging-analyzing-non-standard-english-develop
+      activities:
+        - wsaaa-rhetorical-moves-analysis-emails
+        - textgened-genre-generators
+    notes: >-
+      The email moves activity follows the model in "Make Your Move," so assign that chapter first.
+      The Declaration of Sentiments makes a quick genre-borrowing lesson: put it next to the
+      Declaration of Independence and have students mark what Stanton kept and what she changed.
+      Rounsaville's article on uptake was written for teachers, but strong students can handle it;
+      skim it before you decide. The text-messaging assignment works as the short-term version
+      because students analyze a genre they already write every day.
+
+  - id: reflection-and-transfer
+    title: Reflection, Transfer, and Portfolio
+    summary: >-
+      Students revise earlier work, write a theory of writing, and name the ideas from the course
+      they expect to use in other classes. The transfer readings give them terms for that
+      explanation.
+    goals:
+      - Students will revise a piece of earlier work and explain the reasons for their changes.
+      - Students will articulate a theory of writing in their own words, using the course's key terms.
+      - Students will identify situations outside this course where they can use what they learned.
+    outcomes: [wpa:processes, wpa:rhetorical-knowledge, wpa:critical-thinking-reading-composing]
+    topics: [reflection, transfer, metacognition, revision]
+    weeks: {min: 2, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - ws1-reflective-writing-revision-process-were-you-thinking
+        - ws4-importance-transfer-first-year-writing-course
+        - wac-rethinking-your-writing-chapter-12-creating-your-writing-theory
+      optional:
+        - openstax-wg-ch20-portfolio-reflection
+        - ws5-dispositions-toward-learning
+        - ws5-i-passed-first-year-writingwhat-now-adapting
+        - ws5-whats-diff-version-history-revision-reflections
+        - cf-2012-robertson-prior-knowledge-transfer
+        - wvu-bad-ideas-about-writing-writing-knowledge-transfers-easily
+        - ws5-changing-mindset-about-revision
+    assignments:
+      major: [kcworks-revision-portfolio-rodak]
+      short_term_variant: wsaaa-reflective-cover-letter
+      activities:
+        - wsaaa-using-reflection-metacognition-develop-half-essay
+        - wsaaa-using-growth-mindset-revision-plan-interpret-apply-instructor
+    notes: >-
+      Rodak's portfolio asks students to show how a piece changed and why, so they need their drafts
+      and your feedback from earlier units. Tell them in the first week to keep everything. Taczak's
+      chapter and the Robertson article both come out of the Teaching for Transfer research, which
+      asks students to write a theory of writing, and the chapter in Rethinking Your Writing walks
+      them through drafting one. In a short term, a reflective cover letter attached to one revised
+      piece can stand in for the portfolio.
