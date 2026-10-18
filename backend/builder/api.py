@@ -10,6 +10,7 @@ from builder.planning import Term, plan_course
 from catalog.api import _pack
 from catalog.models import Arc, Assignment, Reading
 from catalog.serializers import arc_units_for_planning, assignment_brief, reading_brief
+from programs.links import program_fields
 
 router = Router(tags=["builder"])
 
@@ -25,6 +26,9 @@ class PlanIn(Schema):
 class BuildIn(Schema):
     state: dict
     forked_from: str | None = None
+    # Optional program link and section info (see programs/links.py).
+    program_id: str | None = None
+    section: dict | None = None
 
 
 class ExportIn(Schema):
@@ -69,7 +73,8 @@ def create_build(request, body: BuildIn):
     arc = Arc.objects.filter(id=state.get("arc_id")).first()
     build = Build.objects.create(
         pack=_pack(None), title=(state.get("title") or "Untitled course")[:300], focus=state.get("focus", ""),
-        arc=arc, state=state, forked_from=Build.objects.filter(id=body.forked_from).first() if body.forked_from else None)
+        arc=arc, state=state, forked_from=Build.objects.filter(id=body.forked_from).first() if body.forked_from else None,
+        **program_fields(body))
     return {"id": str(build.id), "edit_token": build.edit_token}
 
 
@@ -77,7 +82,8 @@ def create_build(request, body: BuildIn):
 def get_build(request, build_id: str):
     b = get_object_or_404(Build, id=build_id)
     return {"id": str(b.id), "title": b.title, "state": b.state, "updated": b.updated.isoformat(),
-            "forked_from": str(b.forked_from_id) if b.forked_from_id else None}
+            "forked_from": str(b.forked_from_id) if b.forked_from_id else None,
+            "program_id": str(b.program_id) if b.program_id else None, "section": b.section}
 
 
 @router.put("/builds/{build_id}")
@@ -88,6 +94,8 @@ def update_build(request, build_id: str, body: BuildIn):
     b.state = body.state
     b.title = (body.state.get("title") or b.title)[:300]
     b.focus = body.state.get("focus", b.focus)
+    for k, v in program_fields(body).items():
+        setattr(b, k, v)
     b.save()
     return {"id": str(b.id), "updated": b.updated.isoformat()}
 

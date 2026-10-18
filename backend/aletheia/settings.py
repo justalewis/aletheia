@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "catalog",
     "builder",
     "content",
+    "programs",
 ]
 
 MIDDLEWARE = [
