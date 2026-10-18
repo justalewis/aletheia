@@ -1,0 +1,23 @@
+id: oc-engl235
+institution: Olympic College
+course: "ENGL& 235"
+title: "Technical Writing"
+credits: 5
+catalog_description: "Problem-solving strategies, information literacy, and research for professional and technical writing settings."
+catalog_prerequisite: "Successful completion of ENGL& 101 with a 2.0 or better or its equivalent."
+source_urls:
+  - "https://catalog.olympic.edu/preview_course_nopop.php?catoid=25&coid=53137"
+retrieved: 2026-10-17
+outcomes_status: not-found-publicly
+notes: >-
+  No official OC course outcomes for ENGL& 235 are published on the open web.
+  The 2026-27 OC catalog entry gives only the description, prerequisite,
+  credits, and "5 hours Lecture." olympic.edu pages mention ENGL& 235 only in
+  degree worksheets (AA-DTA, AS Track 1, BSCS, BAS OLTM). Other Washington
+  colleges' ENGL& 235 outcomes (Bates, Big Bend, Cascadia, Tacoma, etc.) are
+  not OC's and were not used. Per Justin's English Coordinator handbook
+  (local: English Coordinator - Handbook/source/50_governance.md), "ENGL&235
+  and composition outcomes are on the Adjunct Resources shell" (Canvas course
+  2530513), and the official text is in OC's Curriculog. Paste it to fill
+  `outcomes`. When filled, tag with tc: codes as well as wpa:/acrl: codes.
+outcomes: []

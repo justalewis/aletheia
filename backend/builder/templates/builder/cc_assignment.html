@@ -1,0 +1,4 @@
+<p><em>Instructor: this is an assignment shell. Replace this text with your own prompt, or adapt the source below{% if a.effective_tier == "verbatim" %} (its license allows sharing it unchanged but not adapting it){% elif a.effective_tier == "link-only" %} (link to it; its license doesn't allow copying){% endif %}.</em></p>
+{% if a.summary %}<p>{{ a.summary }}</p>{% endif %}
+{% if a.best_url %}<p><a href="{{ a.best_url }}" target="_blank" rel="noopener">Source assignment</a></p>{% endif %}
+<p style="font-size: 0.85em; color: #555;">{{ a.credit }}{% if a.license_url %} <a href="{{ a.license_url }}" target="_blank" rel="noopener">License</a>{% endif %}</p>

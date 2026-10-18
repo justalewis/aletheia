@@ -1,0 +1,75 @@
+id: oc-engl101
+institution: Olympic College
+course: "ENGL& 101"
+title: "English Composition I"
+credits: 5
+catalog_description: "A college-level introduction to effective written composition for academic, vocational, and occupational students, with emphasis on exposition."
+catalog_prerequisite: "Appropriate placement test score, or IE 045/046/047 (level 4) with a 3.0 or better, or IE 100/101/102 (level 5) with a 2.0 or better, or BSTEC 150 and 250 with a 2.5 or better, or ENGL 091 with a 3.3 or better, or ENGL 099 with grade of 2.00 or better, or English 101 instructor permission."
+source_urls:
+  - "https://catalog.olympic.edu/preview_course_nopop.php?catoid=25&coid=53136"
+retrieved: 2026-10-17
+outcomes_status: not-found-publicly
+notes: >-
+  No official OC course outcomes for ENGL& 101 are published on the open web.
+  The 2026-27 OC catalog (Modern Campus) entry gives only the description,
+  prerequisite, credits, and "5 hours Lecture"; the archived 2020-21 entry
+  (https://catalog.olympic.edu/preview_course_nopop.php?catoid=5&coid=7375) is
+  the same, and the 2017-18 PDF catalog has no course outcomes either. The
+  olympic.edu English page and the olympic.edu site search turned up nothing.
+  Washington common course numbering (the "&") standardizes only the
+  department, number, and title; SBCTC says it "does not require faculty to
+  change or standardize their course content"
+  (https://www.sbctc.edu/colleges-staff/programs-services/common-course-numbering/ccn.aspx).
+  Justin's own English Coordinator handbook (local:
+  English Coordinator - Handbook/source/50_governance.md and 30_adjuncts.md)
+  says the official outcomes live in OC's Curriculog and are posted on the
+  English Adjunct Resources Canvas shell (course 2530513); syllabi must list
+  the Curriculog outcomes. Neither is public. Paste them from there to fill
+  `outcomes`. The statewide recommended set below is NOT OC's official list
+  and is kept separate for that reason.
+outcomes: []
+related_outcome_sets:
+  - id: wa-decomposing-engl101-2019
+    name: "ENGL&101 Learning Outcomes ((de)Composing ENGL&101, Approved Spring, 2019)"
+    status: >-
+      Voluntary statewide recommendation adopted by the (de)Composing ENGL&101
+      faculty learning community (SBCTC-supported) at its spring 2019 meeting.
+      The document says the outcomes are not meant to be prescriptive and that
+      each college decides how to use them. Whether OC adopted or adapted them
+      is not verified. Do not treat as OC's official outcomes.
+    source_urls:
+      - "https://docs.google.com/document/d/1sMh-EF5CTT9H75QGCTKAb4nhPKzIV0kzxjT1ttxTAXk/edit"
+      - "https://docs.google.com/document/d/1mTH1kp64JGORyX9VQvzr9kFJbkRxwfM9-f6fNyQ16JU/edit"
+      - "https://lists.ctc.edu/pipermail/guidedpathways_lists.ctc.edu/Week-of-Mon-20191007/000479.html"
+    source_notes: >-
+      First URL is the outcomes document itself (short link
+      http://bit.ly/2m5XE7R); second is the group's June 2019 annual report,
+      which reprints the six outcomes; third is the SBCTC Guided Pathways list
+      announcement. The document says the six outcomes mirror the WPA Outcomes
+      Statement for First-Year Writing.
+    stem: "After completing English 101, you will be able to"
+    outcomes:
+      - id: wa-decomposing-engl101-1
+        text: "use rhetorical knowledge (audience, purpose, genre, etc.) to analyze and compose texts in/for varying situations, of multiple modalities, and in multiple genres;"
+        frameworks: [wpa:rhetorical-knowledge]
+        topics: [rhetorical situation, audience, genre, multimodal, rhetorical analysis]
+      - id: wa-decomposing-engl101-2
+        text: "analyze the formal rules and informal guidelines that define genres to make conscious rhetorical choices;"
+        frameworks: [wpa:knowledge-of-conventions, wpa:rhetorical-knowledge]
+        topics: [genre, rhetorical analysis]
+      - id: wa-decomposing-engl101-3
+        text: "read and think critically about texts (print, media, data, etc.) as part of a process of composing;"
+        frameworks: [wpa:critical-thinking-reading-composing]
+        topics: [reading strategies, multimodal, writing process]
+      - id: wa-decomposing-engl101-4
+        text: "identify information needs, and locate and critically evaluate information sources;"
+        frameworks: [wpa:critical-thinking-reading-composing, acrl:searching-strategic, acrl:authority]
+        topics: [information literacy, source evaluation]
+      - id: wa-decomposing-engl101-5
+        text: "use and reflect upon multiple composing processes, individually and collectively,  to conceptualize, develop and finalize projects for a variety of modalities and technologies;"
+        frameworks: [wpa:processes]
+        topics: [writing process, collaboration, reflection, multimodal]
+      - id: wa-decomposing-engl101-6
+        text: "analyze and explain how your experience with and understanding of composing has developed and will continue to develop."
+        frameworks: [wpa:processes]
+        topics: [reflection, metacognition, transfer]

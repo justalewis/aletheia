@@ -1,0 +1,7 @@
+<h2>Licenses and credits</h2>
+{% for s in report.statements %}<p>{{ s }}</p>{% endfor %}
+<ol>
+{% for r in readings %}<li>{{ r.credit }}{% if r.license_url %} <a href="{{ r.license_url }}" target="_blank" rel="noopener">License</a>{% endif %}</li>{% endfor %}
+{% for a in assignments %}<li>{{ a.credit }}{% if a.license_url %} <a href="{{ a.license_url }}" target="_blank" rel="noopener">License</a>{% endif %}</li>{% endfor %}
+</ol>
+<p style="font-size: 0.85em; color: #555;">Built with Aletheia on {{ generated }}.</p>

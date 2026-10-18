@@ -1,0 +1,13 @@
+**/.venv
+**/__pycache__
+**/*.pyc
+**/node_modules
+frontend/dist
+backend/db.sqlite3
+backend/staticfiles
+research
+docs
+tools
+.git
+*.md
+!frontend/README.md

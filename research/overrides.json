@@ -1,0 +1,252 @@
+{
+  "_about": [
+    "Hand-checked corrections applied by tools/build_catalog.py after the merge (see apply_overrides).",
+    "rules: match records by case-insensitive regex on fields ('a|b' tries either field); applied in order.",
+    "readings / assignments: entries keyed by final catalog id; applied after the rules.",
+    "Each entry may 'set' fields, rewrite notes with 'notes_sub' ([regex, replacement]), and append a 'note'.",
+    "License rule: when sources disagree, record the most restrictive license and keep the others in notes.",
+    "Evidence for every change below was gathered on 2026-10-17; see research/cleanup_report.md."
+  ],
+  "rules": [
+    {
+      "name": "writing-spaces-1-2-chapters-strictest",
+      "applies_to": "readings",
+      "match": {"id": "^ws[12]-", "parent_title": "^Writing Spaces: Readings on Writing, Volume [12]$", "license": "BY-NC-SA"},
+      "set": {
+        "license": "CC BY-NC-ND 3.0 US",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+        "license_verified": true
+      },
+      "notes_sub": [
+        ["CC BY-NC-SA: may be adapted/remixed for noncommercial use if adaptations carry the same license\\.\\s*", ""],
+        ["; this record follows the PDF\\.", "."]
+      ],
+      "note": "License check 2026-10-17: recorded CC BY-NC-ND 3.0 US, the most restrictive statement (volume copyright page in the PDF: CC BY-NC-ND 3.0 US 'unless otherwise stated'; WAC Clearinghouse volume page, rechecked today: CC BY-NC-ND 4.0 'unless otherwise stated'). The chapter footnote's CC BY-NC-SA 3.0 US is kept only as this note. Writing Spaces' Terms of Use say the license on the chapter's first page governs, so this can be relaxed to CC BY-NC-SA 3.0 US if that footnote is accepted as controlling."
+    },
+    {
+      "name": "bad-ideas-wvu-page",
+      "applies_to": "readings",
+      "match": {"title|parent_title": "^Bad Ideas About Writing"},
+      "set": {
+        "license": "CC BY-NC-ND 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "license_verified": true
+      },
+      "notes_sub": [["\\s*Confirm before adapting or redistributing\\.", ""]],
+      "note": "License check 2026-10-17: the WVU Libraries page for the book (textbooks.lib.wvu.edu/badideas/) states CC BY-NC-ND 4.0 (rechecked today; the WVU textbooks home page has no such footer, so it is specific to this book). The 2017 PDF copyright page, the Open Textbook Library, and LibreTexts say CC BY 4.0. Recorded CC BY-NC-ND 4.0, the more restrictive. Ask WVU Libraries' Digital Publishing Institute which applies before adapting."
+    },
+    {
+      "name": "how-arguments-work-otl",
+      "applies_to": "readings",
+      "match": {"title|parent_title": "^How Arguments Work"},
+      "set": {
+        "license": "CC BY-NC-SA",
+        "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+        "license_verified": true
+      },
+      "note": "License check 2026-10-17: the Open Textbook Library lists the book as CC BY-NC-SA (no version; 4.0 deed linked as the likely one); LibreTexts pages say CC BY-NC 4.0. Recorded CC BY-NC-SA, the more restrictive (adaptations must keep the same license)."
+    },
+    {
+      "name": "archive-as-classroom-ccdp-catalog",
+      "applies_to": "readings",
+      "match": {"id|parent_id": "^comer-harker-mccorkle-archive-as-classroom$"},
+      "set": {
+        "license": "CC BY-NC-ND 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "license_verified": true
+      },
+      "notes_sub": [["; recorded as CC BY 4\\.0, but confirm before adapting\\.", "."]],
+      "note": "License check 2026-10-17: the CCDP catalog page (ccdigitalpress.org/archive-as-classroom) states CC BY-NC-ND 4.0; the book site's footer shows '(cc) BY 4.0' beside an 'All rights reserved' line from its HTML5 UP template. Recorded CC BY-NC-ND 4.0, the more restrictive."
+    },
+    {
+      "name": "lics-article-pages",
+      "applies_to": "readings",
+      "match": {"id": "^lics-(budhathoki|parmegiani|patterson|davis)-"},
+      "set": {
+        "license": "CC BY-NC-ND 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "license_verified": true
+      },
+      "note": "License check 2026-10-17: the article page's license block and DC.Rights metadata state CC BY-NC-ND 4.0."
+    },
+    {
+      "name": "writing-commons-footer",
+      "applies_to": "readings",
+      "match": {"id": "^writing-commons-((citation|genre|information-literacy|research|style|writing-studies)-section$|rhetorical-)", "license": "All rights reserved"},
+      "set": {"license_verified": true},
+      "note": "License check 2026-10-17: the page shows an author copyright line and the footer 'Copyright © 2026 Writing Commons LLC. All Rights Reserved.'; no Creative Commons license appears on it. Link only."
+    },
+    {
+      "name": "primary-texts-federal",
+      "applies_to": "readings",
+      "match": {"id": "^pt-(reagan-challenger-1986|fdr-four-freedoms-1941|chinese-exclusion-act-1882|executive-order-9066-1942|eisenhower-farewell-1961|jfk-inaugural-1961|fdr-day-of-infamy-1941|jackson-indian-removal-1830|wilson-fourteen-points-1918|obama-selma-50th-2015|lbj-american-promise-1965)$"},
+      "set": {"license_verified": true},
+      "note": "License check 2026-10-17: verified by rule, not by a license statement: public domain as a work of the U.S. federal government (17 U.S.C. 105). Host pages carry no license; site copyright notices (e.g., Miller Center) cover only the site."
+    },
+    {
+      "name": "primary-texts-by-date",
+      "applies_to": "readings",
+      "match": {"id": "^pt-(?!augustine)", "license_verified": "^false$", "license": "^Public Domain"},
+      "set": {"license_verified": true},
+      "note": "License check 2026-10-17: verified by rule, not by a license statement: public domain in the US by publication date (published before 1931). Host-site footers (Wikisource's CC BY-SA, Internet Archive, Avalon, Perseus) do not restrict the underlying public-domain text."
+    },
+    {
+      "name": "jump-plus-no-license",
+      "applies_to": "readings",
+      "match": {"id": "^(journal-jump-plus|jump-)", "license": "All rights reserved"},
+      "set": {"license_verified": true},
+      "note": "License check 2026-10-17: no Creative Commons or other open license on the article page or the journal's About page; default copyright applies. Link only."
+    },
+    {
+      "name": "stylus-no-license",
+      "applies_to": "readings",
+      "match": {"id": "^(journal-stylus|stylus-)", "license": "All rights reserved"},
+      "set": {"license_verified": true},
+      "note": "License check 2026-10-17: no license statement on the article page or the journal's Submissions page (which discusses only authors' use of copyrighted material); default copyright applies. Link only."
+    },
+    {
+      "name": "xchanges-no-license",
+      "applies_to": "readings",
+      "match": {"id": "^(journal-xchanges|xch-)", "license": "All rights reserved"},
+      "set": {"license_verified": true},
+      "note": "License check 2026-10-17: the article page, About page, and Submissions page show only '© 2026 Xchanges'; no open license. Link only."
+    },
+    {
+      "name": "kairos-praxiswiki-no-license",
+      "applies_to": "assignments",
+      "match": {"source_repository": "^Kairos", "license": "All rights reserved"},
+      "set": {"license_verified": true},
+      "note": "License check 2026-10-17: no license statement on the PraxisWiki page; default copyright applies. Link only."
+    },
+    {
+      "name": "composition-studies-no-license",
+      "applies_to": "assignments",
+      "match": {"source_repository": "^Composition Studies", "license": "All rights reserved"},
+      "set": {"license_verified": true},
+      "note": "License check 2026-10-17: the journal's archive page carries no license statement; the issue PDFs are free to read only. Link only."
+    }
+  ],
+  "readings": {
+    "handbook-mindful-technical-writing": {
+      "set": {"license": "CC BY-NC-SA", "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"},
+      "note": "License check 2026-10-17: Montana Tech's repository page states CC BY-SA 4.0 (rechecked today); the Open Textbook Library listing seen in the first pass says CC BY-NC-SA. Recorded CC BY-NC-SA, the more restrictive. The PDF's own copyright page would settle it."
+    },
+    "mindful-technical-writing": {
+      "set": {"license": "CC BY-NC-SA", "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"},
+      "note": "License check 2026-10-17: Montana Tech's repository page states CC BY-SA 4.0 (rechecked today); the Open Textbook Library listing seen in the first pass says CC BY-NC-SA. Recorded CC BY-NC-SA, the more restrictive. The PDF's own copyright page would settle it."
+    },
+    "advanced-level-writing-mindful-practices": {
+      "set": {"license": "CC BY-NC-SA", "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/", "license_verified": true},
+      "note": "License check 2026-10-17: the Open Textbook Library page shows 'Attribution-NonCommercial-ShareAlike CC BY-NC-SA' (no version). The companion Handbook and Mindful Technical Writing show CC BY-SA 4.0 on Montana Tech's repository; CC BY-NC-SA is the stricter of the two."
+    },
+    "penrose-katz-writing-in-the-sciences": {
+      "set": {"license": "CC BY-NC-ND 4.0", "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/", "license_verified": true},
+      "notes_sub": [[",? so check the PDF copyright page before adapting\\.", "."]],
+      "note": "License check 2026-10-17: the Parlor Press product page states CC BY-NC-SA 4.0 (rechecked today); the Parlor Press open-access collection listing seen in the first pass said CC BY-NC-ND 4.0 (that listing now returns 404). Recorded CC BY-NC-ND 4.0, the more restrictive. The PDF's copyright page would settle it."
+    },
+    "the-muse-mtsu": {
+      "set": {"license": "CC BY-NC-SA", "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"},
+      "note": "License check 2026-10-17: the book's Pressbooks page states CC BY-NC 4.0 (rechecked today); the Open Textbook Library listing seen in the first pass says CC BY-NC-SA. Recorded CC BY-NC-SA, the more restrictive."
+    },
+    "gagich-zickel-guide-rhetoric-genre-success-interactive-2e": {
+      "set": {"license": "CC BY-NC-SA 4.0", "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"},
+      "note": "License check 2026-10-17: the Pressbooks page gives the book CC BY-NC 4.0 but also says it adapts Gagich and Zickel's original, published under CC BY-NC-SA; ShareAlike requires adaptations to keep that license. Recorded CC BY-NC-SA 4.0. Chapter records keep their own page-level licenses."
+    },
+    "rhetoric-and-composition-wikibooks": {
+      "set": {"license": "CC BY-NC-SA 4.0", "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"},
+      "note": "License check 2026-10-17: Wikibooks (landing_url) offers the text under CC BY-SA 4.0; the LibreTexts copy (html_url) is tagged CC BY-NC-SA 4.0. Recorded CC BY-NC-SA 4.0, the more restrictive; copying from Wikibooks directly would allow CC BY-SA."
+    },
+    "e88-75-capturing-carbon-to-fight-climate-change-is-dividi": {
+      "set": {"license": "CC BY-ND 4.0", "license_url": "https://creativecommons.org/licenses/by-nd/4.0/", "license_verified": true},
+      "notes_sub": [["No license statement for the essay text was captured automatically; check the attribution at the end of the page before reuse \\(collection is CC BY 4\\.0, but essay licenses supersede it\\)\\.", "The essay's own license supersedes the collection's CC BY 4.0."]],
+      "note": "License check 2026-10-17: the essay's attribution line on the page reads CC BY-ND 4.0 (Attribution-NoDerivatives)."
+    },
+    "e88-52-concerning-the-way-in-which-princes-should-keep-fa": {
+      "set": {"license": "Public Domain (Public Domain Mark, via Project Gutenberg)", "license_url": "https://creativecommons.org/publicdomain/mark/1.0/", "license_verified": true},
+      "notes_sub": [
+        ["No license statement for the essay text was captured automatically; check the attribution at the end of the page before reuse \\(collection is CC BY 4\\.0, but essay licenses supersede it\\)\\.", "The essay's own status supersedes the collection's CC BY 4.0."],
+        ["; the underlying text is centuries old, but the translation's license was not identified\\.", "."]
+      ],
+      "note": "License check 2026-10-17: the page marks the text, identified by Project Gutenberg, as free of known copyright restrictions (Public Domain Mark wording). The collection's own additions on the page (headnote, image) keep their own licenses."
+    },
+    "pt-augustine-christian-doctrine-book-iv": {
+      "set": {"license_verified": true},
+      "note": "License check 2026-10-17: the New Advent page (html_url) carries 'Copyright © 2026 by New Advent LLC', so the record stays link only; Shaw's 1887 translation itself is public domain by date and can be taken from CCEL (landing_url)."
+    },
+    "pt-isocrates-against-the-sophists": {
+      "note": "Perseus generally releases its digital texts under CC BY-SA 3.0 US; not confirmed for this text (the site timed out on 2026-10-17). Credit Perseus if copying its edition."
+    },
+    "pt-isocrates-antidosis": {
+      "note": "Perseus generally releases its digital texts under CC BY-SA 3.0 US; not confirmed for this text (the site timed out on 2026-10-17). Credit Perseus if copying its edition."
+    },
+    "drc-digital-samaritans": {
+      "set": {"license": "CC BY-NC-ND 4.0", "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/", "license_verified": true},
+      "note": "License check 2026-10-17: Crossref metadata for DOI 10.3998/drc.13406713.0001.001 lists CC BY-NC-ND 4.0 (the DRC site serves a Cloudflare bot check to automated requests)."
+    },
+    "drc-rhizcomics": {
+      "note": "License check 2026-10-17: still unverified. The DRC site serves a Cloudflare bot check, and Crossref (DOI 10.3998/mpub.7626373) carries no license."
+    },
+    "drc-on-visual-rhetoric": {
+      "note": "License check 2026-10-17: still unverified. The DRC site serves a Cloudflare bot check; the University of Michigan Press page shows no license, and Crossref (DOI 10.3998/mpub.12734862) carries none."
+    },
+    "drc-100-years-new-media-pedagogy": {
+      "note": "License check 2026-10-17: still unverified. The DRC site serves a Cloudflare bot check."
+    },
+    "drc-making-space": {
+      "note": "License check 2026-10-17: still unverified. The DRC site serves a Cloudflare bot check."
+    },
+    "wac-textgened-continuing-experiments": {
+      "set": {"license": "CC BY-NC 4.0", "license_url": "https://creativecommons.org/licenses/by-nc/4.0/", "license_verified": true},
+      "note": "License check 2026-10-17: the collection page has only the WAC Clearinghouse site copyright footer; item pages state 'This content is licensed under a Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) license' (rechecked on 'Stump the Robot'; all TextGenEd assignment records carry CC BY-NC)."
+    },
+    "wac-textgened-teaching-with-text-generation": {
+      "set": {"license": "CC BY-NC 4.0", "license_url": "https://creativecommons.org/licenses/by-nc/4.0/", "license_verified": true},
+      "note": "License check 2026-10-17: the collection page has only the WAC Clearinghouse site copyright footer; TextGenEd item pages state CC BY-NC 4.0 and all TextGenEd assignment records carry CC BY-NC."
+    },
+    "writing-spaces-essay-clusters": {
+      "note": "License check 2026-10-17: an index page with no license statement; each linked essay keeps its own Writing Spaces license (see the essay and volume records). Left unlicensed (link only)."
+    },
+    "writing-spaces-essay-sequences": {
+      "note": "License check 2026-10-17: an index page with no license statement; each linked essay keeps its own Writing Spaces license (see the essay and volume records). Left unlicensed (link only)."
+    },
+    "writing-spaces-vol-7": {
+      "note": "License check 2026-10-17: Volume 7 is in progress and the essay index page states no license. Left unlicensed (link only)."
+    },
+    "writing-commons-composing-with-ai-section": {
+      "note": "License check 2026-10-17: this URL now returns 404 (Page not found), so the license could not be rechecked."
+    },
+    "diving-into-rhetoric-palmer": {
+      "note": "License check 2026-10-17: pressbooks.pub serves a Cloudflare bot check to automated requests (page and API), so the license is still unconfirmed."
+    }
+  },
+  "assignments": {
+    "wikiedu-editing-wikipedia-brochure": {
+      "set": {"license": "CC BY-SA 4.0", "license_url": "https://creativecommons.org/licenses/by-sa/4.0/", "license_verified": true},
+      "note": "License check 2026-10-17: the Commons file page and its API metadata state CC BY-SA 4.0."
+    },
+    "merlot-reinhardt-email-format": {
+      "set": {"license": "No open license (MERLOT record: 'Creative Commons: No'); free access", "license_verified": true},
+      "note": "License check 2026-10-17: the MERLOT record says 'Creative Commons: No'. Link only."
+    },
+    "merlot-brown-technical-writing-exercise": {
+      "set": {"license": "No open license (MERLOT record: 'Creative Commons: No'); free access", "license_verified": true},
+      "note": "License check 2026-10-17: the MERLOT record says 'Creative Commons: No'. Link only."
+    },
+    "merlot-reekie-written-communication-engineers": {
+      "set": {"license": "No open license (MERLOT record: 'Creative Commons: No'); free access", "license_verified": true},
+      "note": "License check 2026-10-17: the MERLOT record says 'Creative Commons: No'. Link only."
+    },
+    "merlot-downs-quote-sandwich": {
+      "note": "License check 2026-10-17: the MERLOT record says 'Creative Commons: Unknown'; still unverified."
+    },
+    "merlot-hanlon-writing-with-a-fable": {
+      "note": "License check 2026-10-17: the MERLOT record says 'Creative Commons: Unknown'; still unverified."
+    },
+    "kcworks-project-inspire-science-communication-taylor": {
+      "note": "License check 2026-10-17: the KC Works API record still has no rights statement; still unverified."
+    },
+    "wsaaa-using-recipe-archives-place-based-research-writing": {
+      "note": "License check 2026-10-17: the entry page states no license and its download still points to another contribution's PDF; still unverified."
+    }
+  }
+}

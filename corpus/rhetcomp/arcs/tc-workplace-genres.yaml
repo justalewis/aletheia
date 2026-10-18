@@ -1,0 +1,264 @@
+id: tc-workplace-genres
+focus: TECHCOMM
+title: Workplace Genres
+tagline: >-
+  The standard tech comm service course: correspondence and job materials, then one team project
+  that runs from proposal to progress report, recommendation report, and presentation.
+rationale: >-
+  This is the classic service course in technical and professional communication, built for
+  mixed-major sections. The first two units cover email, memos, résumés, and cover letters. The rest of the semester is one team project: teams
+  propose an investigation, report progress partway through, deliver a recommendation report, and
+  present it. Core readings rotate among six open textbooks (Technical Writing Essentials, Howdy or
+  Hello?, Open Technical Communication, the Open Oregon Technical Writing text, McMurrey's Online
+  Technical Writing, and Business Writing For Everyone), so you can lean on whichever one your program
+  already assigns without changing the sequence. The catalog is thin on openly licensed assignments for
+  the later report genres, so several units list activities only, and the notes say how each one ties
+  back to the team project.
+course_level: mixed
+fits_courses: [oc-engl235, wwu-eng302]
+frameworks: [tc]
+units:
+  - id: email-and-memos
+    title: Email and Memos
+    summary: >-
+      Students analyze the moves in workplace email and memos, then write routine, request, and
+      bad-news messages for realistic scenarios.
+    goals:
+      - Students will identify the rhetorical moves in common workplace emails.
+      - Students will choose a direct or indirect structure based on the message and the reader.
+      - Students will write concise emails and memos with clear subject lines and requests.
+    outcomes: [tc:audience-purpose, tc:genres-documents, tc:editing-style]
+    topics: [email, memos, genre, audience]
+    weeks: {min: 1, ideal: 2}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - technical-writing-essentials-2e-7-1-correspondence-emails-letters
+        - business-writing-for-everyone-ch06-emails-memos-letters
+        - ws4-make-move-writing-genres
+        - howdy-or-hello-ch15-correspondence
+      optional:
+        - technical-writing-essentials-2e-7-2-memos
+        - business-writing-for-everyone-ch07-good-neutral-negative-messages
+        - open-technical-communication-2e-ch12-business-correspondence
+        - technical-writing-open-oregon-ch01-professional-communications
+        - online-technical-writing-mcmurrey-business-correspondence
+        - section508-gov-create-email-messages
+        - technical-professional-writing-genres-ch06-emails-memos-texting
+        - communication-at-work-ch08-routine-messages
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - wsaaa-rhetorical-moves-analysis-emails
+        - wsaaa-framing-bad-news-hedging-voice-hr-memos
+        - textgened-writing-situation-based-emails-with-and-against-chatgpt
+        - kcworks-sample-memorandum-cortez
+    notes: >-
+      This unit runs on short assignments, so grade the emails and memos as a set. The rhetorical moves
+      activity is built on Jacobson, Pawlowski, and Tardy's Make Your "Move" chapter; assign them
+      together. For engineering-heavy sections, the Prompt assignment Breaking Away from the Traditional
+      Lab Report replaces a lab report with a technical email to a supervisor.
+
+  - id: resume-and-cover-letter
+    title: Résumé and Cover Letter
+    summary: >-
+      Students analyze a real job posting and write a résumé and cover letter targeted to it, along with
+      a short professional bio.
+    goals:
+      - Students will analyze a job posting for the qualifications the employer is screening for.
+      - Students will write a résumé a reader can scan quickly, with specific and accurate bullet points.
+      - Students will write a cover letter that connects their experience to one position.
+    outcomes: [tc:genres-documents, tc:audience-purpose, tc:design-visual]
+    topics: [resumes, cover letters, job search, employment writing]
+    weeks: {min: 1, ideal: 2}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - howdy-or-hello-ch16-applications
+        - wwm-resumes
+        - wwm-cover-letters
+        - technical-writing-open-oregon-ch12-employment-materials
+      optional:
+        - business-writing-for-everyone-ch17-employment
+        - online-technical-writing-mcmurrey-resumes
+        - online-technical-writing-mcmurrey-application-letters
+        - open-technical-communication-2e-ch13-job-application-materials
+        - communication-at-work-ch09-job-applications
+        - wwm-thank-you-letters
+        - excelsior-owl-writing-for-your-career
+        - technical-writing-essentials-2e-3-2-headings-and-lists
+    assignments:
+      major: [cuny-ccny-young-eco21660-career-communications-portfolio-2025]
+      short_term_variant: null
+      activities:
+        - textgened-writing-for-career-readiness-engaging-chatgpt-to-develop-res
+        - textgened-introduce-yourself-with-a-professional-bio
+        - textgened-interview-q-a-with-ai
+    notes: >-
+      Young's Career Communications Portfolio adds a LinkedIn page and three spoken narratives to the
+      résumé and cover letter, with a short rubric for each piece and Universal Design for Learning
+      principles built in. Trim the pieces you don't need for a two-week unit. All three activities use
+      generative AI, so check them against your course AI policy before assigning them.
+
+  - id: proposal
+    title: Proposal
+    summary: >-
+      Teams pick a problem at their school or workplace, study sample proposals, and write a proposal
+      asking a real decision-maker for approval to research solutions.
+    goals:
+      - Students will analyze sample proposals to learn the genre's conventions.
+      - Students will define the problem, scope, and method for a team project.
+      - Students will write a persuasive proposal to someone who can approve it.
+    outcomes: [tc:genres-documents, tc:research-usability, tc:collaboration]
+    topics: [proposals, research, collaboration, genre]
+    weeks: {min: 1, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - technical-writing-essentials-2e-7-4-proposals
+        - open-technical-communication-2e-ch14-proposals
+        - technical-writing-open-oregon-ch03-proposals
+        - wac-keywords-tpc-chapter-26-proposal
+      optional:
+        - howdy-or-hello-ch18-proposals
+        - online-technical-writing-mcmurrey-proposals
+        - technical-professional-writing-genres-ch09-proposals
+        - technical-writing-essentials-2e-5-1-defining-your-scope
+        - business-writing-for-everyone-ch08-persuading-your-reader
+        - ws6-assessing-sources-technical-communication-research
+        - technical-writing-essentials-2e-4-5-collaborative-writing
+        - ws6-stronger-together-collaborative-work-technical-writing-classroom
+    assignments:
+      major: [wsaaa-proposal-change-campus]
+      short_term_variant: textgened-organizational-ai-policy-proposal-assignment
+      activities:
+        - wsaaa-genre-analysis-project-proposals
+    notes: >-
+      Swofford's genre analysis and campus proposal assignments are designed as a pair. Here the genre
+      analysis shrinks to a few class sessions. The proposal launches the project that carries through
+      the next three units, so steer teams toward problems they can research in the weeks left in the
+      term. McCaughey's Organizational AI Policy Proposal runs about three weeks and works as the
+      short-term version.
+
+  - id: progress-report
+    title: Progress Report
+    summary: >-
+      Partway through the project, teams report what they've done, what's left, and what has changed,
+      and they keep minutes of their own meetings.
+    goals:
+      - Students will report a project's status accurately, including problems and schedule changes.
+      - Students will organize a progress report by time period or by task.
+      - Students will record team decisions in meeting minutes.
+    outcomes: [tc:collaboration, tc:genres-documents]
+    topics: [progress reports, project management, collaboration, memos]
+    weeks: {min: 1, ideal: 2}
+    priority: optional
+    merge_with: next
+    readings:
+      core:
+        - technical-writing-essentials-2e-7-5-progress-reports
+        - technical-writing-open-oregon-ch06-progress-reports
+        - open-technical-communication-2e-ch15-progress-reports
+      optional:
+        - online-technical-writing-mcmurrey-progress-reports
+        - howdy-or-hello-ch19-informational-reports
+        - technical-writing-essentials-2e-4-2-project-management-teamwork
+        - technical-writing-essentials-2e-4-3-managing-team-conflict
+        - wac-keywords-tpc-chapter-25-project-management
+        - howdy-or-hello-ch13-collaborative-writing
+        - business-writing-for-everyone-ch18-getting-along
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - prompt-bridging-rhetorical-genre-studies-and-ethics-of-representati
+    notes: >-
+      The catalog has no standalone progress report assignment; the report covers the team project from
+      the proposal unit. Whitney's meeting minutes assignment is listed as an activity because the
+      minutes give teams a record to draw on when they write the report. In a short term, drop this unit
+      and have teams send a one-page progress memo during the recommendation report unit.
+
+  - id: recommendation-report
+    title: Recommendation Report
+    summary: >-
+      Teams research the options for the problem they proposed, compare them against stated criteria,
+      and recommend one in a formal report with an executive summary and visuals.
+    goals:
+      - Students will compare options against stated criteria using primary and secondary research.
+      - Students will present data in tables and figures that support the recommendation.
+      - Students will write an executive summary a busy reader could act on by itself.
+    outcomes: [tc:genres-documents, tc:research-usability, tc:design-visual]
+    topics: [recommendation reports, feasibility reports, data visualization, research]
+    weeks: {min: 1, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - howdy-or-hello-ch20-recommendation-reports
+        - technical-writing-essentials-2e-7-6-short-and-long-reports
+        - online-technical-writing-mcmurrey-recommendation-feasibility-reports
+        - ws6-last-be-written-first-be-read-writing
+      optional:
+        - technical-writing-open-oregon-ch10-technical-reports
+        - open-technical-communication-2e-ch17-technical-report-contents
+        - technical-professional-writing-genres-ch11-analytical-reports
+        - technical-writing-essentials-2e-3-3-figures-and-tables
+        - ws6-worth-thousand-words-constructing-visual-arguments-technical
+        - business-writing-for-everyone-ch11-writing-reports
+        - technical-writing-essentials-2e-5-2-research-terminology-methodologies
+        - technical-writing-open-oregon-ch08-graphics
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - acrl-spot-spin-can-you-trust-data
+        - oercommons-hawley-survey-assignments
+    notes: >-
+      The catalog has no openly licensed recommendation report assignment that fits a team project, so
+      the report completes the project teams proposed earlier. Teams running a survey can use Hawley's
+      assignments to draft their questions and write up the results. Ilyasova's chapter on memos,
+      abstracts, and executive summaries supports the executive summary goal.
+
+  - id: presentation
+    title: Presentation
+    summary: >-
+      Teams present their recommendation to the class or to the decision-maker they wrote to, with
+      accessible slides and a plan for handling questions.
+    goals:
+      - Students will build a presentation around one recommendation and the evidence for it.
+      - Students will design slides that are readable and accessible.
+      - Students will present as a team and answer questions.
+    outcomes: [tc:design-visual, tc:audience-purpose, tc:collaboration, tc:ethics-accessibility]
+    topics: [presentations, visual rhetoric, accessibility, collaboration]
+    weeks: {min: 1, ideal: 2}
+    priority: optional
+    merge_with: previous
+    readings:
+      core:
+        - technical-writing-essentials-2e-8-2-developing-presentation-skills
+        - technical-writing-essentials-2e-8-3-using-visual-aids
+        - ws6-technical-scientific-business-presentations-strategies-success
+        - business-writing-for-everyone-ch13-oral-presentations
+      optional:
+        - technical-writing-essentials-2e-8-4-presenting-as-a-team
+        - howdy-or-hello-ch14-oral-communication
+        - online-technical-writing-mcmurrey-oral-presentations
+        - section508-gov-create-presentations
+        - understanding-document-accessibility-google-slides
+        - communication-at-work-ch12-presentations
+        - technical-professional-writing-genres-ch12-oral-reports
+        - technical-writing-essentials-2e-8-1-finding-your-voice-public-speaker
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - textgened-embodying-rhetoric-quick-scripts-and-acts-of-persuasion
+    notes: >-
+      The catalog has no tech comm presentation assignment; the presentation reports the team project.
+      The Section508.gov and Toronto Metropolitan University slide guides cover accessible slide design.
+      If the term runs short, fold the presentation into the recommendation report unit as a short
+      briefing.

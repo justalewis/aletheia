@@ -1,0 +1,33 @@
+# Fly.io config for Aletheia. The app name must be unique on Fly; change it if taken.
+app = "aletheia-oer"
+primary_region = "sea"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[deploy]
+  # Runs once per deploy in a temporary machine: apply migrations, then reload the corpus pack.
+  release_command = "sh -c 'python manage.py migrate --noinput && python manage.py load_pack rhetcomp'"
+
+[env]
+  DJANGO_DEBUG = "0"
+  DJANGO_ALLOWED_HOSTS = "aletheia-oer.fly.dev"
+  DJANGO_CSRF_ORIGINS = "https://aletheia-oer.fly.dev"
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+
+  [[http_service.checks]]
+    interval = "30s"
+    timeout = "5s"
+    grace_period = "20s"
+    method = "GET"
+    path = "/healthz"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "1gb"

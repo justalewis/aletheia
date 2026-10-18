@@ -1,0 +1,52 @@
+# Aletheia corpus pack: rhetoric and composition
+#
+# A corpus pack is everything Aletheia needs to serve one discipline: its focuses,
+# topic vocabulary, outcome frameworks, catalog records, and sample course arcs.
+# A new discipline supplies a new pack with the same layout; no code changes.
+
+id: rhetcomp
+name: Rhetoric and Composition
+version: 0.1.0
+updated: 2026-10-17
+maintainer: Justin Lewis
+data_license: CC BY 4.0  # applies to Aletheia's catalog records and arc text, not to the works they describe
+
+files:
+  readings: readings.jsonl
+  assignments: assignments.jsonl
+  sources: sources.jsonl
+  commercial: commercial.jsonl   # table-of-contents reference only; never redistributed
+  outcomes: outcomes/            # one YAML file per course, plus frameworks.yaml
+  arcs: arcs/                    # one YAML file per sample course arc
+
+focuses:
+  - {code: FYC, label: First-Year Composition, frameworks: [wpa, acrl]}
+  - {code: TECHCOMM, label: Technical Communication, frameworks: [tc]}
+  - {code: PROFWRIT, label: Professional Writing, frameworks: [tc]}
+  - {code: BUSINESS, label: Business Communication, frameworks: [tc]}
+  - {code: ACADEMIC, label: Academic Writing and WAC, frameworks: [wpa, acrl]}
+  - {code: SCIWRIT, label: Science Writing, frameworks: [wpa, tc]}
+  - {code: RHETORIC, label: Rhetoric, frameworks: [wpa]}
+  # Tags that cut across focuses (used for filtering and arc building, not as top-level skins)
+  - {code: RESEARCH, label: Research and Information Literacy, frameworks: [acrl], tag_only: true}
+  - {code: WAW, label: Writing about Writing, tag_only: true}
+  - {code: CULTURAL_RHET, label: Cultural Rhetorics, tag_only: true}
+  - {code: MULTIMODAL, label: Digital and Multimodal, tag_only: true}
+  - {code: CREATIVE_NF, label: Creative Nonfiction, tag_only: true}
+  - {code: L2, label: Multilingual Writers, tag_only: true}
+  - {code: SPEECH, label: Public Speaking, tag_only: true}
+  - {code: PEDAGOGY, label: For Instructors, tag_only: true}
+
+reuse_tiers:
+  adapt: {label: Adapt freely, licenses: [CC BY, CC BY-SA, CC0, Public Domain, OGL]}
+  adapt-nc: {label: Adapt (noncommercial), licenses: [CC BY-NC, CC BY-NC-SA]}
+  verbatim: {label: Use whole and unchanged, licenses: [CC BY-ND, CC BY-NC-ND, W3C Document License]}
+  link-only: {label: Link only, licenses: [All rights reserved (free access), unknown]}
+  # Records with license_verified: false are treated as link-only until checked.
+
+term_presets:
+  - {id: semester-16, label: 16-week semester, weeks: 16, fixed_start: 1, fixed_end: 1, pages_per_week: 40}
+  - {id: semester-15, label: 15-week semester, weeks: 15, fixed_start: 1, fixed_end: 1, pages_per_week: 40}
+  - {id: quarter-10, label: 10-week quarter, weeks: 10, fixed_start: 0, fixed_end: 1, pages_per_week: 50}
+  - {id: summer-8, label: 8-week summer term, weeks: 8, fixed_start: 0, fixed_end: 1, pages_per_week: 60}
+  - {id: summer-5, label: 5-week summer term, weeks: 5, fixed_start: 0, fixed_end: 0, pages_per_week: 75}

@@ -1,0 +1,26 @@
+id: oc-engl102
+institution: Olympic College
+course: "ENGL& 102"
+title: "Composition II"
+credits: 5
+catalog_description: "A continuation of ENGL& 101 with emphasis on argumentation, research, and documentation."
+catalog_prerequisite: "Successful completion of ENGL& 101 with a 2.0 or better or its equivalent."
+source_urls:
+  - "https://catalog.olympic.edu/preview_course_nopop.php?catoid=25&coid=53138"
+retrieved: 2026-10-17
+outcomes_status: not-found-publicly
+notes: >-
+  No official OC course outcomes for ENGL& 102 are published on the open web.
+  The 2026-27 OC catalog entry gives only the description, prerequisite,
+  credits, "5 hours Lecture," and "Formerly ENGL 102." The olympic.edu
+  English page and site search turned up nothing, and no statewide
+  recommended outcome set exists for ENGL& 102 (the 2019 (de)Composing
+  ENGL&101 work covered 101 only). Washington common course numbering
+  standardizes number and title, not content. Per Justin's English
+  Coordinator handbook (local: English Coordinator - Handbook/source/
+  50_governance.md), the official outcomes are in OC's Curriculog and on the
+  English Adjunct Resources Canvas shell (course 2530513); the department is
+  mapping 101, 102, and 235 outcomes to the updated Core Abilities this year,
+  so the Curriculog text may change during 2026-27. Paste the current
+  Curriculog outcomes to fill `outcomes`.
+outcomes: []

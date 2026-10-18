@@ -1,0 +1,189 @@
+id: tc-social-justice-and-accessibility
+focus: TECHCOMM
+title: Social Justice and Accessibility
+tagline: >-
+  Students study how technical documents shape who gets access, audit real content for accessibility,
+  rewrite a public document in plain language, and propose a change with the community it affects.
+rationale: >-
+  This arc builds a tech comm course around the field's social justice work. The first unit asks whose
+  needs a document serves and whose it leaves out, and the later units apply that question to real
+  material. Students audit a website or document set against WCAG and Section 508,
+  rewrite a public-facing document in plain language and score it with the CDC Clear Communication
+  Index, and finish with a proposal developed with the people it's meant to help. Readings pair
+  scholarship from Keywords in Technical and Professional Communication, Technical Communication and
+  Social Justice, and Technical Writing Spaces with practical guidance from Section508.gov, the W3C Web
+  Accessibility Initiative, Digital.gov's plain language guides, and the Toronto Metropolitan University
+  accessibility books. The W3C tutorials are under the W3C Document License, so the reader can include
+  them only whole and unchanged.
+course_level: mixed
+fits_courses: [oc-engl235, wwu-eng302]
+frameworks: [tc]
+units:
+  - id: ethics-and-power
+    title: Ethics, Power, and Technical Communication
+    summary: >-
+      Students read social justice scholarship from tech comm and use it to analyze workplace cases of
+      miscommunication and exclusion, including bias in AI-generated text.
+    goals:
+      - Students will explain social justice concepts from tech comm scholarship in their own words.
+      - Students will analyze a workplace document or case for whose needs it serves and whose it ignores.
+      - Students will identify biased language in workplace writing, including text produced by AI tools.
+    outcomes: [tc:ethics-accessibility, tc:audience-purpose]
+    topics: [ethics, social justice, intercultural communication, ai and writing]
+    weeks: {min: 1, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - wac-keywords-tpc-chapter-32-social-justice
+        - howdy-or-hello-ch03-ethics
+        - technical-writing-essentials-2e-1-6-case-studies-poor-communication
+        - wac-keywords-design-thinking-chapter-13-design-ethics
+      optional:
+        - wac-keywords-tpc-chapter-12-ethics
+        - wac-keywords-design-thinking-chapter-25-social-justice
+        - wac-keywords-design-thinking-chapter-17-equity
+        - open-technical-communication-ch03-ethics
+        - technical-writing-open-oregon-ch09-ethics
+        - tcsj-2025-mavridou-hernandez-minks-seo-conversion
+        - present-tense-2018-trice-potts-dark-patterns
+        - wac-keywords-tpc-afterword-afterword-diversity-equity-and-inclusion-through-citational
+    assignments:
+      major: [prompt-social-equity-and-intercultural-communication-in-the-workpla]
+      short_term_variant: null
+      activities:
+        - prompt-social-justice-and-corporate-mission-statements-analyzing-va
+        - textgened-probing-large-language-models-for-social-bias
+    notes: >-
+      Assign Jones and Walton's Social Justice entry first; the other readings apply it. In Dunn and
+      Craig's case assignment, students analyze published cases of intercultural miscommunication before
+      writing one of their own. Pollak designed the LLM bias activity for the last unit of an intro tech
+      comm course, while teams were drafting local change proposals, so it also fits the proposal unit.
+
+  - id: accessibility-audit
+    title: Accessibility Audit
+    summary: >-
+      Students learn how people with disabilities use digital content, then audit a website or
+      document set with automated checkers and manual tests and write up their findings and fixes for
+      the people who maintain it.
+    goals:
+      - Students will explain how people with different disabilities use digital content and assistive technology.
+      - Students will check content against selected WCAG success criteria with automated and manual tests.
+      - Students will report audit findings with fixes a content owner can act on.
+    outcomes: [tc:ethics-accessibility, tc:design-visual, tc:research-usability, tc:technology-tools]
+    topics: [accessibility, disability, document design, writing for the web]
+    weeks: {min: 2, ideal: 4}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - ws6-basic-approaches-creating-accessible-documentation-projects-accessibility
+        - w3c-wai-tutorials-intro-web-accessibility
+        - understanding-document-accessibility-about-accessibility
+        - section508-gov-create-documents
+      optional:
+        - wac-keywords-tpc-chapter-1-accessibility
+        - professional-web-accessibility-auditing
+        - accessibility-toolkit-2e-universal-design
+        - section508-gov-create-alternative-text
+        - w3c-wai-tutorials-page-structure
+        - w3c-wai-tutorials-images
+        - digital-gov-accessibility-for-teams
+        - wac-bad-ideas-ai-writing-chapter-21-we-can-simply-rely-on-ai-for-alt-text-ai-should-support
+    assignments:
+      major: [galileo-ksu-digital-accessibility-renewable-assignments-2020]
+      short_term_variant: null
+      activities:
+        - google-developers-tech-writing-for-accessibility
+    notes: >-
+      Professional Web Accessibility Auditing Made Easy, from Toronto Metropolitan University's Chang
+      School, walks through a full WCAG audit and report; assign its chapters on manual testing and
+      report writing if students are auditing websites. Arnett and Reardon's Kennesaw State assignment
+      set is CC BY, so you can adapt it freely. To audit a physical space instead, Pruitt's Documenting
+      Campus Spaces assignment has groups write an accessibility guide for a campus building.
+
+  - id: plain-language-rewrite
+    title: Plain Language Rewrite
+    summary: >-
+      Students rewrite a public-facing document that real people struggle with (a benefits notice, a
+      lease, a campus policy) in plain language, score the original and the rewrite with the CDC Clear
+      Communication Index, and test the rewrite with readers.
+    goals:
+      - Students will apply federal plain language guidelines to a document written for the public.
+      - Students will score a document with the CDC Clear Communication Index and explain the results.
+      - Students will test a rewrite with readers and revise it.
+    outcomes: [tc:editing-style, tc:audience-purpose, tc:research-usability]
+    topics: [plain language, health communication, style, usability testing]
+    weeks: {min: 1, ideal: 3}
+    priority: optional
+    merge_with: next
+    readings:
+      core:
+        - wac-keywords-tpc-chapter-23-plain-language
+        - digital-gov-plain-language-guide-principles
+        - digital-gov-plain-language-guide-writing
+        - cdc-clear-communication-index
+      optional:
+        - digital-gov-plain-language-guide-design
+        - digital-gov-plain-language-guide-test
+        - plainlanguage-gov-archive
+        - cdc-clear-communication-index-everyday-words
+        - govuk-writing-standards-clear-language
+        - w3c-wai-tutorials-writing-tips
+        - ws6-write-global-audiences
+        - nngroup-articles-plain-language-experts
+    assignments:
+      major: [textgened-translating-a-policy-document-into-plain-english]
+      short_term_variant: null
+      activities:
+        - prompt-abstract-analysis-and-revision-assignment-using-ms-word-read
+        - textgened-discover-your-own-voice-and-centralize-inclusion-with-ai
+    notes: >-
+      Federal plain language guidance moved from PlainLanguage.gov to Digital.gov; the old site's source
+      files are in the catalog as a CC0 collection. The Clear Communication Index was built for public
+      health materials, so a few items (risk, numbers) won't apply to every document, and students can
+      say so in their scoring. Laquintano's assignment has students compare their rewrite with an LLM's.
+      Ford's readability activity pairs well with the Index, since students can see what a readability
+      score measures and what it misses. In a short term, fold this unit into the proposal: students
+      write the proposal in plain language and score it with the Index.
+
+  - id: community-centered-proposal
+    title: Community-Centered Proposal
+    summary: >-
+      Teams identify an access or safety problem on campus or in their community, consult the people it
+      affects, and write a proposal for a change those people would support.
+    goals:
+      - Students will identify and map the stakeholders for a local problem.
+      - Students will gather input from affected people before proposing a solution.
+      - Students will write a proposal to a decision-maker that credits what the community contributed.
+      - Students will reflect on their own position relative to the community they're working with.
+    outcomes: [tc:genres-documents, tc:collaboration, tc:ethics-accessibility, tc:research-usability]
+    topics: [proposals, participatory design, civic engagement, social justice]
+    weeks: {min: 1, ideal: 4}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - tcsj-2023-lane-moore-iterative-design-injustices
+        - technical-writing-essentials-2e-5-6-public-engagement-consultation
+        - wac-keywords-design-thinking-chapter-23-participatory-design
+        - howdy-or-hello-ch18-proposals
+      optional:
+        - inclusive-design-guide
+        - wac-keywords-tpc-chapter-27-public
+        - ws4-public-writing-social-change
+        - programmatic-perspectives-2023-rivera-online-design-thinking-indigenous
+        - wac-community-is-the-way
+        - wac-keywords-design-thinking-chapter-24-social-design
+        - wac-keywords-tpc-chapter-26-proposal
+        - technical-writing-essentials-2e-7-4-proposals
+    assignments:
+      major: [wsaaa-safety-accessibility-problem-statement]
+      short_term_variant: null
+      activities:
+        - wsaaa-avoiding-savior-complex-community-engaged-writing
+    notes: >-
+      Scarff's assignment asks teams for a solution from their own discipline, so mixed-major classes
+      can use it as published. Run Iglesias's savior-complex sequence (three class days) before teams
+      contact anyone outside the class. If you have a nonprofit partner lined up, Grobman's Policy Brief
+      assignment is an alternative major.

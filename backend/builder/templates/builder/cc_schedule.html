@@ -1,0 +1,15 @@
+<h2>{{ title }}</h2>
+{% if instructor or term_label %}<p>{{ instructor }}{% if instructor and term_label %} · {% endif %}{{ term_label }}</p>{% endif %}
+<table style="border-collapse: collapse; width: 100%;" border="1" cellpadding="6">
+<thead><tr><th scope="col">When</th><th scope="col">Unit</th><th scope="col">Readings</th><th scope="col">Assignments</th></tr></thead>
+<tbody>
+{% for u in units %}
+<tr>
+<td>{{ u.weeks_label }}</td>
+<td><strong>{{ u.title }}</strong></td>
+<td>{% for r in u.readings %}{{ r.title }}{% if not forloop.last %}<br>{% endif %}{% endfor %}</td>
+<td>{% for a in u.assignments %}{{ a.title }}{% if not forloop.last %}<br>{% endif %}{% endfor %}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>

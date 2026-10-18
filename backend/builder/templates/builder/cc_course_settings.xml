@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<course identifier="{{ ident }}" {{ ns|safe }}>
+  <title>{{ title }}</title>
+  <course_code>{{ title|truncatechars:40 }}</course_code>
+  <default_view>modules</default_view>
+  <license>private</license>
+  <is_public>false</is_public>
+</course>

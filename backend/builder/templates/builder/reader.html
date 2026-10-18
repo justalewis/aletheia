@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<style>
+  :root { --ink: #1d1d1f; --muted: #5b5b66; --rule: #d9d9e0; --accent: #2b5d8a; --chip: #eef2f7; }
+  * { box-sizing: border-box; }
+  body { margin: 0; color: var(--ink); background: #fff; font: 17px/1.55 Georgia, "Iowan Old Style", "Times New Roman", serif; }
+  main { max-width: 46rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+  h1, h2, h3 { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.2; }
+  h1 { font-size: 2.2rem; margin: 0 0 .5rem; }
+  h2 { font-size: 1.45rem; margin: 2.5rem 0 .25rem; padding-top: 1rem; border-top: 2px solid var(--ink); }
+  h3 { font-size: 1rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 1.5rem 0 .5rem; }
+  a { color: var(--accent); }
+  .cover { padding: 3rem 0 2rem; border-bottom: 1px solid var(--rule); }
+  .cover p { margin: .2rem 0; color: var(--muted); font-family: system-ui, sans-serif; }
+  .weeks { font-family: system-ui, sans-serif; color: var(--muted); font-size: .9rem; margin: 0 0 1rem; }
+  ol.toc { padding-left: 1.2rem; font-family: system-ui, sans-serif; }
+  ol.toc li { margin: .3rem 0; }
+  ul.goals { margin: .25rem 0 1rem; }
+  .item { padding: .9rem 0; border-bottom: 1px solid var(--rule); }
+  .item:last-child { border-bottom: 0; }
+  .item .t { font-weight: bold; }
+  .item .meta { font-family: system-ui, sans-serif; font-size: .85rem; color: var(--muted); margin: .25rem 0; }
+  .item .summary { margin: .35rem 0; }
+  .credit { font-size: .85rem; color: var(--muted); }
+  .chip { display: inline-block; font-family: system-ui, sans-serif; font-size: .72rem; padding: .1rem .45rem; border-radius: 999px; background: var(--chip); color: var(--ink); margin-right: .3rem; }
+  .links a { font-family: system-ui, sans-serif; font-size: .9rem; margin-right: 1rem; }
+  footer { margin-top: 3rem; font-family: system-ui, sans-serif; font-size: .8rem; color: var(--muted); }
+  @media print {
+    body { font-size: 11pt; }
+    main { max-width: none; padding: 0; }
+    h2 { break-before: page; }
+    .item { break-inside: avoid; }
+    a { color: var(--ink); text-decoration: none; }
+    .links a::after { content: " <" attr(href) ">"; font-size: 8pt; word-break: break-all; }
+  }
+  @page { size: letter; margin: 0.9in 0.85in; @bottom-center { content: counter(page); font: 9pt system-ui, sans-serif; color: #5b5b66; } }
+</style>
+</head>
+<body>
+<main>
+  <section class="cover">
+    <h1>{{ title }}</h1>
+    {% if instructor %}<p>{{ instructor }}</p>{% endif %}
+    {% if institution or term_label %}<p>{{ institution }}{% if institution and term_label %} · {% endif %}{{ term_label }}</p>{% endif %}
+    <p>Course reader · {{ readings|length }} reading{{ readings|length|pluralize }}, {{ assignments|length }} assignment{{ assignments|length|pluralize }}</p>
+  </section>
+
+  <h2 id="contents">Contents</h2>
+  <ol class="toc">
+    {% for u in units %}<li><a href="#unit-{{ forloop.counter }}">{{ u.title }}</a>{% if u.weeks_label %} <span class="weeks">({{ u.weeks_label }})</span>{% endif %}</li>{% endfor %}
+    <li><a href="#licenses">Licenses and credits</a></li>
+  </ol>
+
+  {% for u in units %}
+  <h2 id="unit-{{ forloop.counter }}">{{ u.title }}</h2>
+  {% if u.weeks_label %}<p class="weeks">{{ u.weeks_label }}</p>{% endif %}
+  {% if u.goals %}<ul class="goals">{% for g in u.goals %}<li>{{ g }}</li>{% endfor %}</ul>{% endif %}
+
+  {% if u.readings %}
+  <h3>Readings</h3>
+  {% for r in u.readings %}
+  <div class="item">
+    <div class="t">{{ r.title }}</div>
+    <div class="meta">{% if r.authors %}{{ r.authors }}{% endif %}{% if r.parent_title %} · {{ r.parent_title }}{% endif %}{% if r.pages %} · {{ r.pages }} pp.{% endif %}</div>
+    {% if r.summary %}<p class="summary">{{ r.summary }}</p>{% endif %}
+    <div class="links">
+      {% if r.html_url %}<a href="{{ r.html_url }}">Read online</a>{% elif r.landing_url %}<a href="{{ r.landing_url }}">Read online</a>{% endif %}
+      {% if r.pdf_url and r.redistributable %}<a href="{{ r.pdf_url }}">PDF</a>{% endif %}
+    </div>
+    <p class="credit"><span class="chip">{{ r.get_reuse_tier_display }}</span>{{ r.credit }}</p>
+  </div>
+  {% endfor %}
+  {% endif %}
+
+  {% if u.assignments %}
+  <h3>Assignments and activities</h3>
+  {% for a in u.assignments %}
+  <div class="item">
+    <div class="t">{{ a.title }}</div>
+    <div class="meta">{{ a.kind|capfirst }}{% if a.assignment_type %} · {{ a.assignment_type }}{% endif %}{% if a.source_repository %} · {{ a.source_repository }}{% endif %}</div>
+    {% if a.summary %}<p class="summary">{{ a.summary }}</p>{% endif %}
+    <div class="links">{% if a.best_url %}<a href="{{ a.best_url }}">Assignment</a>{% endif %}</div>
+    <p class="credit">{{ a.credit }}</p>
+  </div>
+  {% endfor %}
+  {% endif %}
+  {% endfor %}
+
+  <h2 id="licenses">Licenses and credits</h2>
+  {% for s in report.statements %}<p>{{ s }}</p>{% endfor %}
+  <h3>Credits</h3>
+  <ol>
+    {% for r in readings %}<li class="credit">{{ r.credit }}{% if r.license_url %} <a href="{{ r.license_url }}">License</a>{% endif %}</li>{% endfor %}
+    {% for a in assignments %}<li class="credit">{{ a.credit }}{% if a.license_url %} <a href="{{ a.license_url }}">License</a>{% endif %}</li>{% endfor %}
+  </ol>
+
+  <footer>Built with Aletheia on {{ generated }}. The selection and arrangement of this reader may be shared under CC BY 4.0; each item keeps its own license, listed above.</footer>
+</main>
+</body>
+</html>

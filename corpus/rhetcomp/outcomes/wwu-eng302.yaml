@@ -1,0 +1,31 @@
+id: wwu-eng302
+institution: Western Washington University
+course: "ENG 302"
+title: "Technical Writing"
+credits: 5
+catalog_description: "Technical writing is strategic. Technical writers create meaningful communication that helps others get things done. The course moves from traditional technical writing such as reports and instructions to generative artificial intelligence and social media. Students will produce a range of written documents suited to their fields of study and professional interests."
+catalog_description_previous: "The course covers a variety of technical genres and focuses on the ethical and social implications of a technical writer’s choices. Students engage with rhetorical and technical practices to create meaningful communication that both advocates for change and helps others get things done."
+catalog_prerequisite: "ENG 101, or ENG 201, or ENG 203; junior status; or instructor permission."
+wp_points: 3
+source_urls:
+  - "https://catalog.wwu.edu/preview_course_nopop.php?catoid=23&coid=163605"
+  - "https://catalog.wwu.edu/preview_course_nopop.php?catoid=22&coid=155339"
+retrieved: 2026-10-17
+outcomes_status: not-found-publicly
+notes: >-
+  Exact title confirmed: ENG 302 "Technical Writing" (5 credits, WP points 3).
+  catalog_description is from the 2026-27 catalog; catalog_description_previous
+  is the 2025-26 (archived) catalog text, so the description changed this
+  year. No official course outcomes were found in the WWU catalog, on the
+  English department's quarterly course-description pages (e.g.,
+  https://chss.wwu.edu/english/spring-2026-course-descriptions, where each
+  section has its own instructor-written blurb), or elsewhere on wwu.edu. The
+  university-wide WP guidelines (https://library.wwu.edu/writing-requirements)
+  are course-design requirements (feedback, revision expectations, share of
+  grade from writing), not learning outcomes. Older "Learning Outcomes for
+  Writing Proficiency" cited on 2000s-2016 WWU teaching-showcase pages were
+  not used: they are secondary and dated. To fill `outcomes`, ask the English
+  department or WWU Writing Instruction Support
+  (WritingInstructionSupport@wwu.edu), or take them from a current ENG 302
+  syllabus.
+outcomes: []

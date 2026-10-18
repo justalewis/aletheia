@@ -1,0 +1,88 @@
+id: wwu-eng101
+institution: Western Washington University
+course: "ENG 101"
+title: "Writing Your Way Through WWU"
+credits: 5
+catalog_description: "A writing course designed to prepare students for college-level creative, critical, and reflective writing. Because writing looks and works differently in different contexts, this course teaches the rhetorical competencies that students need to write across multiple disciplines. The course introduces students both to the processes of building and analyzing ideas, and to ways of communicating those ideas in context-specific genres for targeted audiences. This course has the immediate goal of preparing students to succeed in their writing at Western, but it will also serve them personally and professionally. Students needing to satisfy Block A of the communications section of the General University Requirements, which ENG 101 does, are required to do so prior to completion of 45 credits. Students with a 4 or 5 AP score are encouraged to take this class so they can learn to adapt their test-taking skills to college coursework."
+catalog_prerequisite: "May not be taken concurrently with ENG 100."
+gur: ACOM
+source_urls:
+  - "https://catalog.wwu.edu/preview_course_nopop.php?catoid=23&coid=163591"
+  - "https://firstyearwriting.wwu.edu/about"
+  - "https://firstyearwriting.wwu.edu/english-101-writing-your-way-through-western"
+retrieved: 2026-10-17
+outcomes_status: official-program-level
+outcomes_scope: >-
+  Program-level "Student Learning Goals" of WWU's First-Year Writing program,
+  which covers both ENG 100 and ENG 101. No ENG 101-specific outcome list is
+  published.
+outcomes_stem: "By the end of First Year Writing at Western, students should…"
+notes: >-
+  Title check: the 2026-27 catalog title is "Writing Your Way Through WWU"
+  (same in the 2019-20 catalog); the FYW site spells it "Writing Your Way
+  Through Western." "Writing and Critical Inquiry" is an older title that
+  still appears on the WWU Libraries writing-requirements page
+  (https://library.wwu.edu/writing-requirements). ENG 101 is the only course
+  that satisfies the ACOM GUR. The FYW About page states the goals were
+  designed "to align with the standards of the Council of Writing Program
+  Administrators’ WPA Outcomes Statement for First-Year Composition." They are
+  in fact WPA OS 3.0 bullets: goals 1 and 2 match WPA OS 3.0 word for word
+  (Processes; Critical Thinking, Reading, and Composing); goal 3 is the WPA
+  Rhetorical Knowledge bullet with "and/or use of technology" added; goal 4 is
+  the WPA Knowledge of Conventions bullet with "citation" added. The FYW
+  course page says all sections use a common syllabus designed by the
+  Director of Composition; that syllabus is not public. Trailing semicolons
+  and the leading "And" in goal 4 are as published.
+outcomes:
+  - id: wwu-eng101-1
+    text: "Develop flexible strategies for reading, drafting, reviewing, collaborating, revising, rewriting, rereading, and editing;"
+    frameworks: [wpa:processes]
+    topics: [writing process, revision, peer review, collaboration]
+  - id: wwu-eng101-2
+    text: "Read a diverse range of texts, attending especially to relationships between assertion and evidence, to patterns of organization, to the interplay between verbal and nonverbal elements, and to how these features function for different audiences and situations;"
+    frameworks: [wpa:critical-thinking-reading-composing]
+    topics: [reading strategies, evidence, rhetorical analysis, multimodal, audience]
+  - id: wwu-eng101-3
+    text: "Develop facility in responding to a variety of situations and contexts calling for purposeful shifts in voice, tone, level of formality, design, medium, structure, and/or use of technology;"
+    frameworks: [wpa:rhetorical-knowledge]
+    topics: [rhetorical situation, style, document design, multimodal]
+  - id: wwu-eng101-4
+    text: "And understand why genre conventions for structure, paragraphing, tone, citation, and mechanics vary."
+    frameworks: [wpa:knowledge-of-conventions]
+    topics: [genre, citation, grammar, style]
+related_outcome_sets:
+  - id: wwu-cue-acom-assessment-2022-23
+    name: "CUE learning objectives for assessing the ACOM GUR (ENG 101), AY 2022-23"
+    status: >-
+      Assessment objectives written by the Faculty Senate's Committee on
+      Undergraduate Education, "with input from a variety of stakeholders
+      across campus," to assess ENG 101. Source is a draft committee report
+      (Nov 28, 2023). These are not the FYW program's published goals and are
+      not confirmed as adopted course outcomes.
+    source_urls:
+      - "https://facultysenate.wwu.edu/files/2023-11/draft_CUE_ACOM%20recommendations%20-%20Nov%2028%202023.pdf"
+    outcomes:
+      - id: wwu-cue-acom-1
+        text: "Students will demonstrate ability to engage in critical and reflective analysis of diverse perspectives and communication techniques"
+        frameworks: [wpa:critical-thinking-reading-composing]
+        topics: [rhetorical analysis, reflection, reading strategies]
+      - id: wwu-cue-acom-2
+        text: "Students will demonstrate ethical research and writing through locating, evaluating, and utilizing sources, to both develop and support their argument and discover what has been said and whose voice is missing"
+        frameworks: [wpa:critical-thinking-reading-composing, acrl:scholarship-conversation, acrl:searching-strategic]
+        topics: [source evaluation, information literacy, argument, evidence, ethics]
+      - id: wwu-cue-acom-3
+        text: "Students will demonstrate the ability to evaluate both scholarly and non-scholarly sources"
+        frameworks: [wpa:critical-thinking-reading-composing, acrl:authority]
+        topics: [source evaluation, information literacy]
+      - id: wwu-cue-acom-4
+        text: "Students will demonstrate understanding of how to craft comprehensible and effective arguments"
+        frameworks: [wpa:critical-thinking-reading-composing]
+        topics: [argument, evidence]
+      - id: wwu-cue-acom-5
+        text: "Students will be able to understand and navigate the stages of writing, from generating ideas to revising the final product"
+        frameworks: [wpa:processes]
+        topics: [writing process, revision]
+      - id: wwu-cue-acom-6
+        text: "Students will understand the need to adjust their writing or other communication based on their objective, audience, and other context"
+        frameworks: [wpa:rhetorical-knowledge]
+        topics: [rhetorical situation, audience]

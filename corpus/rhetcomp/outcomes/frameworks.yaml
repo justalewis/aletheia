@@ -1,0 +1,145 @@
+retrieved: 2026-10-17
+
+frameworks:
+
+  - id: wpa-os-3.0
+    prefix: "wpa:"
+    name: "WPA Outcomes Statement for First-Year Composition (3.0)"
+    publisher: "Council of Writing Program Administrators (CWPA)"
+    adopted: 2014-07-17
+    source_url: "https://www.wpacouncil.org/aws/CWPA/pt/sd/news_article/243055/_PARENT/layout_details/false"
+    pdf_url: "https://www.wpacouncil.org/aws/CWPA/asset_manager/get_file/350909?ver=3890"
+    license: >-
+      No open license stated. The statement page and PDF carry no license or
+      reuse terms; the site footer reads "©2026 by the Council of Writing
+      Program Administrators." Treat as all rights reserved: quote with
+      attribution and link out. Ask CWPA before republishing the full
+      statement (for example, as a selectable outcome set inside Aletheia).
+    excerpt_policy: >-
+      Each category below gives only the opening definitional sentence,
+      quoted verbatim. The full category paragraphs and the "By the end of
+      first-year composition, students should" bullets are at source_url and
+      were not copied in full because of the license status above.
+    categories:
+      - code: wpa:rhetorical-knowledge
+        name: "Rhetorical Knowledge"
+        definition: "Rhetorical knowledge is the ability to analyze contexts and audiences and then to act on that analysis in comprehending and creating texts."
+      - code: wpa:critical-thinking-reading-composing
+        name: "Critical Thinking, Reading, and Composing"
+        definition: "Critical thinking is the ability to analyze, synthesize, interpret, and evaluate ideas, information, situations, and texts."
+      - code: wpa:processes
+        name: "Processes"
+        definition: "Writers use multiple strategies, or composing processes, to conceptualize, develop, and finalize projects."
+        definition_source: "PDF wording; the web page drops the space after the comma (\"processes,to\")."
+      - code: wpa:knowledge-of-conventions
+        name: "Knowledge of Conventions"
+        definition: "Conventions are the formal rules and informal guidelines that define genres, and in so doing, shape readers’ and writers’ perceptions of correctness or appropriateness."
+    superseded_by:
+      id: wpa-5kd-4.0
+      name: "WPA Statement on the Five Knowledge Domains of First-Year Composition (4.0)"
+      approved: 2026-03-04
+      source_url: "https://www.wpacouncil.org/aws/CWPA/pt/sd/news_article/617348/_PARENT/layout_details/false"
+      domains: ["Rhetorical Knowledge", "Conventions and Language", "Critical Reading and Thinking", "Material Conditions and Technologies", "Composing Processes"]
+      cross_category_domains: ["Accessibility and Disability", "Generative Artificial Intelligence", "Genre"]
+      note: >-
+        CWPA's statements page now lists 4.0 first, with 3.0 below it. The
+        wpa: codes in this corpus still follow 3.0, which is what WWU and the
+        2019 Washington ENGL&101 outcomes were built on. Consider adding
+        wpa4: codes; Material Conditions and Technologies and the three
+        cross-category domains have no 3.0 equivalent.
+
+  - id: acrl-framework
+    prefix: "acrl:"
+    name: "Framework for Information Literacy for Higher Education"
+    publisher: "Association of College and Research Libraries (ACRL), American Library Association"
+    version: >-
+      Filed by the ACRL Board of Directors, February 2, 2015. Adopted by the
+      ACRL Board of Directors, January 11, 2016. Revisions approved by the
+      ACRL Board of Directors, September 2, 2026.
+    source_url: "https://www.ala.org/acrl/standards/ilframework"
+    pdf_url: "https://www.ala.org/sites/default/files/2026-10/Framework_ILHE_2026.pdf"
+    license: "CC BY-NC-SA 4.0 (verified 2026-10-17: the page states \"This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\")"
+    license_url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    note: >-
+      The frame names are unchanged in the 2026 revision, but the summary
+      text under each frame was rewritten (for example, the Authority and
+      Searching frames now say more about context, lived experience, and
+      generative AI). Descriptions below are the 2026 text: the first
+      paragraph under each frame heading, verbatim. Anything cited to the
+      2016 wording should be checked against this version.
+    frames:
+      - code: acrl:authority
+        name: "Authority Is Constructed and Contextual"
+        description: "Information resources reflect their creators’ expertise, credibility, and the context in which the information is created. Resources are evaluated based on the information need and the context in which the information will be used. Authority is constructed: various communities create and recognize different types of authority when seeking or encountering information. It is also contextual: the information need of the individual or community may help to determine the form of authority required to fulfill that need."
+      - code: acrl:creation-process
+        name: "Information Creation as a Process"
+        description: "Information is produced to convey a message and shared via selected delivery methods. Information formats can be dynamic and evolving, or static and complete. The iterative processes of researching, creating, revising, and disseminating information vary, and the resulting product reflects these differences. The information creation process refers to examining ways in which a piece of information came to be as well as the way the researcher/learner will be using the information."
+      - code: acrl:information-value
+        name: "Information Has Value"
+        description: "Information is situated within a larger knowledge system and is valuable in how learners negotiate and understand the world. Information possesses several dimensions of value including as a means of education, as a means to influence, and as a commodity. Legal and socioeconomic interests influence information production and dissemination."
+      - code: acrl:research-inquiry
+        name: "Research as Inquiry"
+        description: "Research is iterative and depends upon asking increasingly complex or new questions resulting in answers that, in turn, develop additional questions or lines of inquiry in any context."
+      - code: acrl:scholarship-conversation
+        name: "Scholarship as Conversation"
+        description: "Communities of scholars, researchers, specialists or professionals engage in sustained discourse with new insights and discoveries occurring over time as a result of varied perspectives and interpretations."
+      - code: acrl:searching-strategic
+        name: "Searching as Strategic Exploration"
+        description: "Searching for information is often a nonlinear and iterative process, requiring the use and evaluation of a range of information sources as well as the mental flexibility to pursue alternate avenues as new understanding develops throughout the lifecycle of the project."
+
+  - id: aletheia-tc
+    prefix: "tc:"
+    name: "Aletheia technical and professional communication categories (working set)"
+    status: >-
+      Not an official framework. Neither CPTSC nor ATTW publishes an official
+      outcomes statement for technical and professional communication (TPC)
+      courses. The closest published reference is the CPTSC Assessment
+      Committee's list of recommended program student learning outcome
+      (PSLO) categories for undergraduate TPC programs, drawn from a study of
+      376 program outcomes at 47 institutions. That report says its intent
+      "is not to create a prescriptive 'outcomes statement'" and that it "may
+      not represent the views of all members of CPTSC or the executive
+      committee." It is program-level, not course-level. The tc: codes are
+      Aletheia's own working categories, cross-walked to the CPTSC list below.
+    reference:
+      name: "Recommended Program Student Learning Outcomes for Undergraduate Technical and Professional Communication Programs (CPTSC Assessment Committee, 2020; Clegg, Lauer, Phelps, and Melonçon)"
+      source_url: "https://cptsc.org/committees/assessment/"
+      document_url: "https://cptsc.org/wp-content/uploads/2020/03/CPTSC_summary_3-2020.docx"
+      data_url: "https://cptsc.org/wp-content/uploads/2020/03/aggregated_outcomes_final.xlsx"
+      recommended_pslo_categories: ["Rhetoric", "Writing", "Design", "Technology", "Ethics", "Research", "Collaboration", "Professionalization"]
+      license: "No license stated on the CPTSC page or document."
+    see_also:
+      - "Clegg, Lauer, Phelps, and Melonçon, \"Programmatic Outcomes in Undergraduate Technical and Professional Communication Programs,\" Technical Communication Quarterly (author copy: https://prowriting.web.illinois.edu/wp-content/uploads/2024/12/Programmatic-Outcomes-in-Undergraduate-Technical-and-Professional-Communication-Programs.pdf)"
+      - "Griffith, Zarlengo, and Melonçon, \"A Field Wide Snapshot of Student Learning Outcomes in the Technical and Professional Communication Service Course,\" Journal of Technical Writing and Communication (2024), https://journals.sagepub.com/doi/10.1177/00472816221134535 (service-course SLOs; closer to ENGL& 235 and ENG 302 than the program-level CPTSC list)"
+    categories:
+      - code: tc:audience-purpose
+        name: "Audience and purpose"
+        cptsc_crosswalk: ["Rhetoric"]
+      - code: tc:genres-documents
+        name: "Genres and documents"
+        cptsc_crosswalk: ["Writing"]
+        note: "Genre was a separate code in the CPTSC data set but not one of the eight recommended categories."
+      - code: tc:design-visual
+        name: "Document and visual design"
+        cptsc_crosswalk: ["Design"]
+      - code: tc:research-usability
+        name: "Research and usability"
+        cptsc_crosswalk: ["Research"]
+      - code: tc:collaboration
+        name: "Collaboration"
+        cptsc_crosswalk: ["Collaboration"]
+      - code: tc:ethics-accessibility
+        name: "Ethics and accessibility"
+        cptsc_crosswalk: ["Ethics"]
+        note: "Accessibility is not a CPTSC category; WPA 4.0 lists Accessibility and Disability as a cross-category domain."
+      - code: tc:technology-tools
+        name: "Technology and tools"
+        cptsc_crosswalk: ["Technology"]
+      - code: tc:editing-style
+        name: "Editing and style"
+        cptsc_crosswalk: []
+        note: "Editing was a code in the CPTSC data set but not one of the eight recommended categories."
+    gaps: >-
+      CPTSC's "Professionalization" has no tc: code. Add one (for example,
+      tc:professionalization for portfolios, job materials, and workplace
+      norms) if ENGL& 235 or ENG 302 outcomes call for it.

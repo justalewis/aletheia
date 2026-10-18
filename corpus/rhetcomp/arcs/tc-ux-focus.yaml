@@ -1,0 +1,187 @@
+id: tc-ux-focus
+focus: TECHCOMM
+title: User Experience for Technical Writers
+tagline: >-
+  Students research real users, write and test instructions, and turn the findings into a UX report
+  and redesign proposal.
+rationale: >-
+  This arc treats audience analysis as the first step of user research. Students start by asking who
+  uses a document or site and what those people are trying to get done. Then they plan a small study
+  and build a persona from their interviews. In the third unit they write a set of
+  instructions and run a usability test on them, and in the last unit they report their findings and
+  propose a redesign to someone who could approve it. There's no open UX textbook, so the readings
+  come from several places: the UX part of Technical Writing Essentials 2e, the user research chapters
+  in Technical Writing Spaces, the 18F and Digital.gov method guides, and short entries from Keywords
+  in Design Thinking and Keywords in Technical and Professional Communication. The federal guides are
+  written for working design teams, so pair each one with a textbook chapter that explains the concept
+  behind the method.
+course_level: mixed
+fits_courses: [oc-engl235, wwu-eng302]
+frameworks: [tc]
+units:
+  - id: audience-and-user-analysis
+    title: Audience and User Analysis
+    summary: >-
+      Students move from classic audience analysis to asking what users are trying to do and where a
+      document or interface gets in their way. The app casebook gives the class a shared set of
+      products to analyze before anyone researches users of their own.
+    goals:
+      - Students will describe a document's users in terms of their goals and the context they work in.
+      - Students will explain how audience and purpose carry over into UX work.
+      - Students will analyze how well an existing app serves a specific group of users.
+    outcomes: [tc:audience-purpose, tc:research-usability]
+    topics: [audience, ux, user research, rhetorical situation]
+    weeks: {min: 1, ideal: 3}
+    priority: optional
+    merge_with: next
+    readings:
+      core:
+        - technical-writing-essentials-2e-6-1-what-is-ux-design
+        - technical-writing-essentials-2e-6-2-rhetorical-foundations-ux
+        - ws6-who-user-researching-audiences-technical-documents
+        - ws6-not-so-fast-centering-users-design-right
+      optional:
+        - wac-keywords-tpc-chapter-4-audience
+        - wac-keywords-tpc-chapter-38-user-experience-ux
+        - wac-keywords-design-thinking-introduction-introduction-to-design-thinking-and-keywords
+        - wac-keywords-design-thinking-chapter-2-problem-definition
+        - online-technical-writing-mcmurrey-audience-analysis
+        - govuk-writing-standards-meet-user-needs
+        - uswds-design-principles
+        - nngroup-articles-ten-usability-heuristics
+    assignments:
+      major: [wsaaa-rhetorical-analysis-creating-app-casebook]
+      short_term_variant: null
+      activities:
+        - wsaaa-establishing-who-professional-writing-power-dynamics-improv
+    notes: >-
+      Beavers's App Casebook is CC BY-NC-ND, so hand it out as published. If this unit drops in a short
+      term, move Technical Writing Essentials 6.1 and 6.2 into the user research unit; students need
+      that vocabulary before they plan a study. The Nielsen heuristics article is link-only.
+
+  - id: user-research-and-personas
+    title: User Research and Personas
+    summary: >-
+      Students write a research plan, interview or observe a few users, and build a persona from what
+      they learn. Hitt's (Disability) Persona assignment puts accessibility into the research from the
+      first week.
+    goals:
+      - Students will write a research plan with questions, methods, and a way to recruit participants.
+      - Students will conduct a short user interview with informed consent.
+      - Students will build a persona from research data and say where the evidence is thin.
+    outcomes: [tc:research-usability, tc:audience-purpose, tc:ethics-accessibility]
+    topics: [user research, personas, interviews, accessibility]
+    weeks: {min: 1, ideal: 3}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - technical-writing-essentials-2e-6-4-ux-research-methods
+        - ws6-beyond-audience-analysis-three-stages-user-experience
+        - digital-gov-usability-topic-conduct-interview
+        - programmatic-perspectives-2024-mogull-audience-personas
+      optional:
+        - digital-gov-usability-topic-research-plan
+        - 18f-methods
+        - accessibility-toolkit-2e-using-personas
+        - section508-gov-create-sample-personas
+        - wac-keywords-design-thinking-chapter-10-contextual-inquiry
+        - wac-keywords-design-thinking-chapter-1-empathy
+        - howdy-or-hello-appendix-b-qualitative-interview-design
+        - technical-writing-essentials-2e-5-7-human-research-ethics
+    assignments:
+      major: [kcworks-disability-persona-hitt]
+      short_term_variant: null
+      activities:
+        - digitalgov-how-to-write-research-plan
+        - digitalgov-user-testing-participant-agreements
+    notes: >-
+      Mogull's article is about ten pages and includes a persona template students can fill in from
+      their interview notes. The 18F Methods site is gone, but the method cards are CC0 and live in the
+      18F guides repository on GitHub; link students to the two or three methods you want them to use.
+      Check your campus policy on classroom research before students interview anyone outside the class.
+
+  - id: instructions-and-usability-testing
+    title: Instructions and Usability Testing
+    summary: >-
+      Students write instructions for a real task, then test them with users, following a short
+      script and a think-aloud protocol. Von Bergen's assignment asks them to make accessible design choices as
+      they write and to analyze a classmate's instructions from a user's point of view.
+    goals:
+      - Students will write numbered instructions for a task they have broken down step by step.
+      - Students will plan and run a small usability test from a written script.
+      - Students will revise their instructions based on what users did during the test.
+    outcomes: [tc:genres-documents, tc:research-usability, tc:design-visual]
+    topics: [instructions, usability testing, usability, accessibility]
+    weeks: {min: 2, ideal: 4}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - technical-writing-essentials-2e-7-8-instructions
+        - ws6-introduction-usability-usability-testing
+        - digital-gov-usability-topic-usability-test
+        - open-technical-communication-ch06-usability-testing
+      optional:
+        - online-technical-writing-mcmurrey-task-analysis
+        - google-developer-documentation-style-guide-procedures
+        - howdy-or-hello-ch17-instructions
+        - wac-keywords-design-thinking-chapter-27-usability
+        - wac-keywords-design-thinking-chapter-5-testing
+        - ws6-designing-multimodal-technical-instructions-cross-cultural-resonance
+        - nngroup-articles-thinking-aloud
+        - nngroup-articles-test-with-5-users
+    assignments:
+      major: [wsaaa-who-this-space-designed-exclude-instructions-usability-accessibility]
+      short_term_variant: null
+      activities:
+        - digitalgov-how-to-conduct-usability-test
+        - merlot-brown-technical-writing-exercise
+    notes: >-
+      Four or five participants per test is enough for a class project; the Nielsen article on testing
+      with five users explains the reasoning (both NN/g articles are link-only, as is the MERLOT
+      exercise). For a short term, skip writing new instructions and have students test an existing
+      set, such as a campus form or a software help page.
+
+  - id: ux-report-and-redesign
+    title: UX Report and Redesign Proposal
+    summary: >-
+      Students sort their interview and test data into findings, write them up for someone who can act
+      on them, and propose a redesign backed by a rough prototype.
+    goals:
+      - Students will turn interview and test notes into findings ranked by severity.
+      - Students will write a UX report that ties each recommendation to evidence.
+      - Students will sketch a low-fidelity redesign and explain the choices behind it.
+      - Students will ask who the redesign might still leave out.
+    outcomes: [tc:genres-documents, tc:research-usability, tc:design-visual, tc:collaboration]
+    topics: [ux, recommendation reports, prototyping, design thinking]
+    weeks: {min: 1, ideal: 4}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - technical-writing-essentials-2e-6-3-five-planes-of-ux
+        - howdy-or-hello-ch20-recommendation-reports
+        - wac-keywords-design-thinking-chapter-4-rapid-prototyping
+        - wac-keywords-design-thinking-chapter-6-iteration
+      optional:
+        - inclusive-design-guide
+        - wac-keywords-design-thinking-chapter-15-edge-cases
+        - wac-keywords-design-thinking-chapter-28-user-centered-design
+        - wac-keywords-design-thinking-chapter-23-participatory-design
+        - tcsj-2023-lane-moore-iterative-design-injustices
+        - ws6-last-be-written-first-be-read-writing
+        - govuk-service-manual-ux-writing-for-user-interfaces
+        - write-the-docs-guide-ux-writing
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - textgened-translinguo-critically-making-chatbot-prototypes-by-learning
+    notes: >-
+      The catalog has no openly licensed UX report or redesign assignment, so this unit's major is
+      open; plan to write one around the class's own test data. Two catalog items come close.
+      Sano-Franchini's Feminisms and Interaction Design project has groups prototype a design that
+      addresses gender inequity, and Swofford's Proposal for Change on Campus works if the redesign
+      targets a campus site or service. Gupta's Translinguo activity can run as a two-week prototyping
+      exercise.

@@ -1,0 +1,188 @@
+id: tc-documentation
+focus: TECHCOMM
+title: Technical Documentation
+tagline: >-
+  A documentation course that moves from procedures to reference pages and API docs, and ends with
+  the class writing its own style guide.
+rationale: >-
+  This arc suits sections heavy with computer science, IT, and engineering majors, or anyone who wants
+  a tech comm course built around the documentation people use on the job. Its organizing idea is the
+  Diátaxis framework, which sorts documentation into tutorials, how-to guides, reference, and
+  explanation. Students start with procedures, a genre most of them have already used, then write
+  reference and explanation pages, then document an API with a getting-started tutorial. In the last
+  unit the class compares public style guides, agrees on one of its own, and edits each other's work
+  against it. Practitioner sources (Diátaxis, the Google developer documentation style guide, Write
+  the Docs) carry much of the reading, alongside chapters from Technical Writing Essentials, McMurrey's
+  Online Technical Writing, Technical Writing Spaces, and Keywords in Technical and Professional
+  Communication. The catalog has very few openly licensed documentation assignments, so expect to write
+  the reference and API projects yourself.
+course_level: "300-400"
+fits_courses: [wwu-eng302, oc-engl235]
+frameworks: [tc]
+units:
+  - id: procedures
+    title: Procedures and How-To Guides
+    summary: >-
+      Students analyze a task, write a numbered procedure for it, and test it with someone who hasn't
+      done the task before. Unger's Instructional Video Project adds a community partner and a video
+      version if you want a larger project.
+    goals:
+      - Students will break a task into steps through task analysis.
+      - Students will write a procedure that follows a professional style guide's conventions.
+      - Students will test a procedure with a new user and revise it.
+    outcomes: [tc:genres-documents, tc:audience-purpose, tc:research-usability]
+    topics: [procedures, instructions, documentation, usability testing]
+    weeks: {min: 1, ideal: 4}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - online-technical-writing-mcmurrey-task-analysis
+        - technical-writing-essentials-2e-7-8-instructions
+        - google-developer-documentation-style-guide-procedures
+        - diataxis-how-to-guides
+      optional:
+        - online-technical-writing-mcmurrey-instructions
+        - online-technical-writing-mcmurrey-sops
+        - online-technical-writing-mcmurrey-special-notices
+        - howdy-or-hello-ch17-instructions
+        - technical-professional-writing-genres-ch08-technical-instructions
+        - wac-keywords-tpc-chapter-10-documentation
+        - ws6-designing-multimodal-technical-instructions-cross-cultural-resonance
+        - open-technical-communication-ch06-usability-testing
+    assignments:
+      major: [kcworks-instructional-video-project-unger]
+      short_term_variant: null
+      activities:
+        - google-developers-technical-writing-one
+        - digitalgov-how-to-conduct-usability-test
+    notes: >-
+      Google's Technical Writing One can open the unit: students do the self-paced lessons before class,
+      and you run the in-class session from Google's facilitator guide. If a community partner isn't
+      practical, Kelly's Writing for Players assignment (students document a Minecraft learning
+      environment) is another option for the major project.
+
+  - id: reference-documentation
+    title: Reference and Explanation
+    summary: >-
+      Students write the parts of a documentation set that users look things up in: reference entries,
+      technical definitions, and a short explanation page. The Diátaxis readings give the class shared
+      terms for which kind of page they're writing and what it's for.
+    goals:
+      - Students will tell tutorials, how-to guides, reference, and explanation apart and say what each is for.
+      - Students will write reference entries that are accurate and easy to scan.
+      - Students will write an expanded technical definition for a specific audience.
+    outcomes: [tc:genres-documents, tc:design-visual, tc:editing-style]
+    topics: [information architecture, definitions and descriptions, structured authoring, documentation]
+    weeks: {min: 1, ideal: 3}
+    priority: optional
+    merge_with: next
+    readings:
+      core:
+        - diataxis-start-here
+        - diataxis-reference
+        - diataxis-explanation
+        - ws6-drafting-technical-definitions-descriptions
+      optional:
+        - technical-writing-essentials-2e-7-3-technical-descriptions
+        - online-technical-writing-mcmurrey-specifications
+        - online-technical-writing-mcmurrey-definition
+        - wac-keywords-tpc-chapter-34-structure
+        - write-the-docs-guide-docs-principles
+        - wac-keywords-design-thinking-chapter-22-modularity
+        - mailchimp-content-style-guide-creating-structured-content
+        - discipline-of-organizing-4p
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - google-developers-technical-writing-two
+    notes: >-
+      The catalog has no reference documentation assignment, so this unit has no major of its own. Have
+      students draft the reference pages for the tool or API they'll document in the next unit. In a
+      short term the two units merge, and the reference pages become part of the API project. Glushko's
+      Discipline of Organizing is a whole book; point students who want more on information architecture
+      to it.
+
+  - id: api-documentation
+    title: API Documentation and Docs as Code
+    summary: >-
+      Students document a public API or small software tool with a getting-started tutorial, reference
+      pages for a few endpoints, and a README, written in plain-text markup and kept under version
+      control.
+    goals:
+      - Students will use an API the way a developer would before they document it.
+      - Students will write a tutorial that gets a new user to a first working result.
+      - Students will draft and revise documentation in Markdown or HTML using version control.
+    outcomes: [tc:technology-tools, tc:genres-documents, tc:audience-purpose]
+    topics: [api documentation, docs-as-code, structured authoring, instructions]
+    weeks: {min: 2, ideal: 4}
+    priority: core
+    merge_with: null
+    readings:
+      core:
+        - write-the-docs-guide-beginners-guide
+        - diataxis-tutorials
+        - write-the-docs-guide-docs-as-code
+        - open-technical-communication-ch09-intro-html
+      optional:
+        - idratherbewriting-api-doc-course
+        - google-developer-documentation-style-guide
+        - online-technical-writing-mcmurrey-release-notes
+        - online-technical-writing-mcmurrey-user-guides
+        - google-developer-documentation-style-guide-global-audience
+        - wac-keywords-tpc-chapter-6-content-management
+        - wac-keywords-tpc-chapter-36-technology
+        - ws6-writing-technical-content-online-spaces
+    assignments:
+      major: []
+      short_term_variant: null
+      activities:
+        - idratherbewriting-johnson-documenting-apis-course
+    notes: >-
+      There's no openly licensed API documentation assignment in the catalog. Tom Johnson's Documenting
+      APIs course is free to read but all rights reserved, so link to it and keep it out of the reader.
+      Its weather-API scenario gives students a guided run before they pick an API of their own. Students
+      without coding experience can document a no-code tool or a public dataset.
+
+  - id: team-style-guide
+    title: Team Style Guide
+    summary: >-
+      The class compares public style guides, settles its own decisions on voice, terminology,
+      procedure format, and accessibility, writes them down, and edits each other's documentation
+      against the result.
+    goals:
+      - Students will compare how published style guides handle voice, terminology, and accessibility.
+      - Students will negotiate style decisions as a team and record them.
+      - Students will edit a peer's documentation for consistency with the team guide.
+    outcomes: [tc:editing-style, tc:collaboration, tc:ethics-accessibility]
+    topics: [style, technical editing, collaboration, accessibility]
+    weeks: {min: 1, ideal: 3}
+    priority: core
+    merge_with: previous
+    readings:
+      core:
+        - google-developer-documentation-style-guide-highlights
+        - write-the-docs-guide-style-guides
+        - open-professional-technical-editing-ch12-style-guides-collaboration
+        - google-developer-documentation-style-guide-inclusive-documentation
+      optional:
+        - google-developer-documentation-style-guide-voice-and-tone
+        - google-developer-documentation-style-guide-accessibility
+        - mailchimp-content-style-guide-voice-and-tone
+        - mailchimp-content-style-guide-writing-about-people
+        - 18f-content-guide
+        - govuk-writing-standards-a-to-z-style-guide
+        - wac-keywords-tpc-chapter-35-style
+        - microsoft-writing-style-guide
+    assignments:
+      major: [wsaaa-brand-style-guide-assignment]
+      short_term_variant: null
+      activities:
+        - google-developers-tech-writing-for-accessibility
+        - textgened-ai-for-editing
+    notes: >-
+      Sorapure's Brand Style Guide assignment is written for a personal visual brand. Point it at the
+      team's documentation instead and ask for voice, terminology, and procedure format along with the
+      visual choices. It's CC BY-NC-ND, so write your own assignment sheet and cite the original. The
+      Microsoft Writing Style Guide is link-only.

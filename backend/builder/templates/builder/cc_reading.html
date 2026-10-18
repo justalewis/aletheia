@@ -1,0 +1,7 @@
+<p><strong>{{ r.title }}</strong>{% if r.authors %}<br>{{ r.authors }}{% endif %}{% if r.parent_title %}<br><em>{{ r.parent_title }}</em>{% endif %}</p>
+{% if r.summary %}<p>{{ r.summary }}</p>{% endif %}
+<p>
+{% if r.html_url %}<a href="{{ r.html_url }}" target="_blank" rel="noopener">Read online</a>{% elif r.landing_url %}<a href="{{ r.landing_url }}" target="_blank" rel="noopener">Read online</a>{% endif %}
+{% if r.pdf_url and r.redistributable %} | <a href="{{ r.pdf_url }}" target="_blank" rel="noopener">PDF</a>{% endif %}
+</p>
+<p style="font-size: 0.85em; color: #555;">{{ r.credit }}{% if r.license_url %} <a href="{{ r.license_url }}" target="_blank" rel="noopener">License</a>{% endif %}</p>
