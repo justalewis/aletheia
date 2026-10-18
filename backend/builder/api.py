@@ -3,7 +3,7 @@ from django.shortcuts import get_object_or_404
 from ninja import Router, Schema
 from ninja.errors import HttpError
 
-from builder import exports, reader_accessible
+from builder import autobuild, exports, reader_accessible
 from builder import ics, schedule, syllabus  # dated schedules: preview, calendar, syllabus skeleton
 from builder.licensing import license_report
 from builder.models import Build
@@ -60,6 +60,35 @@ def make_plan(request, body: PlanIn):
         raise HttpError(400, "weeks must be between 1 and 30")
     term = Term(body.weeks, max(body.fixed_start, 0), max(body.fixed_end, 0), max(body.pages_per_week, 5))
     return _plan_payload(arc, term)
+
+
+class AutoBuildIn(Schema):
+    theme: str = ""
+    outcomes_text: str = ""
+    outcome_set_ids: list[str] = []
+    course_name: str = ""
+    focus: str = ""
+    arc_id: str = ""      # use this sample course instead of choosing one
+    weeks: int = 16
+    fixed_start: int = 1
+    fixed_end: int = 1
+    pages_per_week: int = 40
+
+
+@router.post("/auto-build")
+def auto_build(request, body: AutoBuildIn):
+    """A course from a theme and/or outcomes: see builder/autobuild.py. Nothing is saved."""
+    if not 1 <= body.weeks <= 30:
+        raise HttpError(400, "weeks must be between 1 and 30")
+    if body.focus and not Arc.objects.filter(focus=body.focus).exists():
+        raise HttpError(400, "There are no sample courses for that focus yet.")
+    term = Term(body.weeks, max(body.fixed_start, 0), max(body.fixed_end, 0), max(body.pages_per_week, 5))
+    req = autobuild.Request(body.theme, body.outcomes_text, body.outcome_set_ids[:5], body.course_name, body.focus,
+                            body.arc_id, term)
+    try:
+        return autobuild.build(_pack(None), req)
+    except autobuild.NothingToGoOn as e:
+        raise HttpError(400, str(e))
 
 
 @router.post("/license-report")

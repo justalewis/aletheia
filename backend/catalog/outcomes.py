@@ -633,7 +633,8 @@ def best_unit(spec: OutcomeSpec, units: list[StateUnit], items: dict[str, Item],
     return best, frozenset(best.topics) if best.topics else frozenset(item_topic_set(best))
 
 
-def coverage(pack: Pack, state: dict, set_ids: Iterable[str]) -> dict:
+def coverage(pack: Pack, state: dict, set_ids: Iterable[str], extra_specs: Iterable[OutcomeSpec] = ()) -> dict:
+    """`extra_specs`: outcomes that aren't in a stored set (typed in by the instructor)."""
     crosswalk = pack.crosswalk or {}
     ctx = Context(weights=weights_of(crosswalk))
     threshold = ctx.weights["map_threshold"]
@@ -643,6 +644,7 @@ def coverage(pack: Pack, state: dict, set_ids: Iterable[str]) -> dict:
     items: dict[str, Item] = {r.id: r for r in Reading.objects.filter(pack=pack, id__in=r_ids)}
     items.update({a.id: a for a in Assignment.objects.filter(pack=pack, id__in=a_ids)})
     sets, specs, unknown = specs_for_sets(pack, set_ids)
+    specs = specs + list(extra_specs)
 
     rows = []
     for spec in specs:

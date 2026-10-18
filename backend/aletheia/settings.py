@@ -130,6 +130,7 @@ RATE_LIMITS = {rule: int(os.environ.get("ALETHEIA_RATE_" + rule.upper().replace(
     "export-pdf": 20,      # POST /api/export/pdf
     "export": 60,          # other POST /api/export/*
     "plan": 300,           # POST /api/plan
+    "auto-build": 60,      # POST /api/auto-build (scores the whole catalog; heavier than a plan)
     "programs": 20,        # writes under /api/programs
     "write": 600,          # every other POST/PUT/PATCH/DELETE under /api/
     "read": 2000,          # GET/HEAD under /api/

@@ -42,7 +42,10 @@ export default function Home() {
           </p>
         )}
         <div className="actions">
-          <Link className="btn btn-primary" to="/catalog">
+          <Link className="btn btn-primary" to="/start">
+            Start from your course
+          </Link>
+          <Link className="btn" to="/catalog">
             Browse the catalog
           </Link>
           <Link className="btn" to="/build/new">

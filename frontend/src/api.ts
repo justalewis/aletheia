@@ -157,6 +157,38 @@ export interface Term {
   pages_per_week: number;
 }
 
+export interface AutoBuildQuery extends Partial<Term> {
+  theme?: string;
+  outcomes_text?: string;
+  outcome_set_ids?: string[];
+  course_name?: string;
+  focus?: string;
+  /** Use this sample course instead of choosing one. */
+  arc_id?: string;
+  weeks?: number;
+}
+
+export interface AutoBuildOutcome {
+  id: string;
+  set_id: string;
+  label: string;
+  text: string;
+  status: "ok" | "weak" | "none";
+  had: number;
+  added: { id: string; title: string; type: "reading" | "assignment"; unit: string }[];
+  matched_topics: string[];
+  unmatched: boolean;
+}
+
+export interface AutoBuildResult {
+  state: BuildState;
+  arc: { id: string; title: string; focus: string; tagline: string };
+  alternatives: { id: string; title: string; focus: string }[];
+  why: string[];
+  theme_added: { id: string; title: string; unit: string }[];
+  outcomes: AutoBuildOutcome[];
+}
+
 export type AssignmentRole = "major" | "short_term" | "activity";
 export type ReadingRole = "core" | "optional";
 
@@ -543,6 +575,9 @@ export const api = {
     remember(plan.readings, plan.assignments);
     return plan;
   },
+
+  autoBuild: (body: AutoBuildQuery, signal?: AbortSignal) =>
+    json<AutoBuildResult>("/auto-build", { method: "POST", body, signal }),
 
   licenseReport: (state: BuildState, signal?: AbortSignal) =>
     json<LicenseReport>("/license-report", { method: "POST", body: { state }, signal }),
