@@ -20,6 +20,8 @@ __pycache__/
 **/.venv/
 backend/db.sqlite3
 backend/staticfiles/
+# Reading full text fetched by `manage.py warm_content` (publisher content, rebuilt on demand)
+backend/content_cache/
 frontend/node_modules/
 frontend/dist/
 .claude/

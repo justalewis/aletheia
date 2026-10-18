@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{ title }}</title>
+<style>
+{% include "builder/reader.css" %}
+  body { font-size: 10.5pt; }
+  main { max-width: none; padding: 0; }
+  a { color: var(--ink); text-decoration: none; }
+  h1, h2, h3, h4, h5, h6 { bookmark-level: none; }
+  h2.unit-title { bookmark-level: 1; border-top: 0; margin: 0 0 .5rem; padding-top: 0; font-size: 1.9rem; }
+  h4.reading-title { bookmark-level: 2; font-size: 1.5rem; margin: 0 0 .3rem; }
+  h2.section-title { bookmark-level: 1; border-top: 0; margin-top: 0; padding-top: 0; }
+  [data-break] { break-before: page; }
+  .slot { break-after: page; }
+  .item { break-inside: avoid; }
+  .links a::after { content: " <" attr(href) ">"; font-size: 8pt; word-break: break-all; }
+  .fulltext a { color: var(--accent); }
+  .fulltext img, .fulltext figure, .fulltext tr { break-inside: avoid; }
+  .cover { border: 0; padding-top: 2.5in; }
+  .cover h1 { font-size: 2.6rem; }
+  ol.toc { list-style: none; padding: 0; }
+  ol.toc > li { margin: .7rem 0 .2rem; font-weight: bold; }
+  ul.toc-items { list-style: none; padding-left: 1.2rem; margin: .2rem 0; font-weight: normal; }
+  ul.toc-items li { margin: .15rem 0; }
+  .pg { float: right; padding-left: 1rem; font-weight: normal; }
+  .follows { font-family: system-ui, sans-serif; font-size: .8rem; color: var(--accent); }
+  @page { size: letter; margin: 0.9in 0.85in; }
+</style>
+</head>
+<body>
+<main>
+{% if part == "front" %}
+  <section class="cover">
+    <h1>{{ title }}</h1>
+    {% if instructor %}<p>{{ instructor }}</p>{% endif %}
+    {% if institution or term_label %}<p>{{ institution }}{% if institution and term_label %} · {% endif %}{{ term_label }}</p>{% endif %}
+    <p>Course reader · {{ readings|length }} reading{{ readings|length|pluralize }}, {{ assignments|length }} assignment{{ assignments|length|pluralize }}</p>
+  </section>
+
+  <section id="contents" data-break>
+    <h2 class="section-title">Contents</h2>
+    <ol class="toc">
+      {% for t in toc %}
+      <li><span class="pg">{{ t.page|default_if_none:"" }}</span>{{ t.title }}{% if t.weeks %} <span class="weeks">({{ t.weeks }})</span>{% endif %}
+        {% if t.items %}<ul class="toc-items">{% for it in t.items %}<li><span class="pg">{{ it.page|default_if_none:"" }}</span>{{ it.title }}</li>{% endfor %}</ul>{% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+{% else %}
+  {% for pu in print_units %}
+  <section class="unit" id="{{ pu.anchor }}" data-break>
+    <h2 class="unit-title">{{ pu.unit.title }}</h2>
+    {% if pu.unit.weeks_label %}<p class="weeks">{{ pu.unit.weeks_label }}</p>{% endif %}
+    {% if pu.unit.goals %}<ul class="goals">{% for g in pu.unit.goals %}<li>{{ g }}</li>{% endfor %}</ul>{% endif %}
+
+    {% if pu.readings %}
+    <h3>Readings</h3>
+    {% for it in pu.readings %}
+    <div class="item">
+      <div class="t">{{ it.r.title }}</div>
+      <div class="meta">{% if it.r.authors %}{{ it.r.authors }}{% endif %}{% if it.r.parent_title %} · {{ it.r.parent_title }}{% endif %}</div>
+      {% if it.mode %}<div class="follows">Full text follows{% if it.page %}, page {{ it.page }}{% endif %}</div>
+      {% else %}<div class="links">{% if it.r.html_url %}<a href="{{ it.r.html_url }}">Read online</a>{% elif it.r.landing_url %}<a href="{{ it.r.landing_url }}">Read online</a>{% elif it.r.pdf_url %}<a href="{{ it.r.pdf_url }}">Read online</a>{% endif %}</div>
+      {% endif %}
+      <p class="credit">{{ it.r.credit }}</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    {% if pu.unit.assignments %}
+    <h3>Assignments and activities</h3>
+    {% for a in pu.unit.assignments %}
+    <div class="item">
+      <div class="t">{{ a.title }}</div>
+      <div class="meta">{{ a.kind|capfirst }}{% if a.assignment_type %} · {{ a.assignment_type }}{% endif %}{% if a.source_repository %} · {{ a.source_repository }}{% endif %}</div>
+      <div class="links">{% if a.best_url %}<a href="{{ a.best_url }}">Assignment</a>{% endif %}</div>
+      <p class="credit">{{ a.credit }}</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+  </section>
+
+  {% for it in pu.readings %}{% if it.mode %}
+  <article class="reading{% if it.mode == 'pdf' %} slot{% endif %}" id="{{ it.anchor }}" data-break>
+    <h4 class="reading-title">{{ it.r.title }}</h4>
+    <div class="meta">{% if it.r.authors %}{{ it.r.authors }}{% endif %}{% if it.r.parent_title %} · {{ it.r.parent_title }}{% endif %}</div>
+    <p class="credit"><span class="chip">{{ it.r.get_reuse_tier_display }}</span>{{ it.r.credit }}{% if it.r.license_url %} License: <a href="{{ it.r.license_url }}">{{ it.r.license_url }}</a>{% endif %}</p>
+    {% if it.mode == "html" %}
+    <div class="fulltext">
+{{ it.r.fulltext.html|safe }}
+    </div>
+    <p class="source">Text from {{ it.r.fulltext.source_page }}, copied {{ it.r.fulltext.fetched }}.{% if it.r.fulltext.note %} {{ it.r.fulltext.note }}{% endif %}</p>
+    {% else %}
+    <p class="note">The next {{ it.pages }} page{{ it.pages|pluralize }} reproduce the publisher's PDF exactly as published{% if it.r.fulltext.source_page %} ({{ it.r.fulltext.source_page }}){% endif %}, copied {{ it.r.fulltext.fetched }}. They keep their own page numbers; this reader's page numbers resume after them.</p>
+    {% endif %}
+  </article>
+  {% endif %}{% endfor %}
+  {% endfor %}
+
+  <section id="licenses" data-break>
+    <h2 class="section-title">Licenses and credits</h2>
+    {% for s in report.statements %}<p>{{ s }}</p>{% endfor %}
+    <h3>Credits</h3>
+    <ol>
+      {% for r in readings %}<li class="credit">{{ r.credit }}{% if r.license_url %} {{ r.license_url }}{% endif %}</li>{% endfor %}
+      {% for a in assignments %}<li class="credit">{{ a.credit }}{% if a.license_url %} {{ a.license_url }}{% endif %}</li>{% endfor %}
+    </ol>
+    <footer>Built with Aletheia on {{ generated }}. The selection and arrangement of this reader may be shared under CC BY 4.0; each item keeps its own license, listed above. Readings reproduced in full were copied from their publishers on the dates shown and changed only as needed to fit this format, unless a note under the reading says otherwise. Publisher PDFs are included page for page, with nothing added to them.</footer>
+  </section>
+{% endif %}
+</main>
+</body>
+</html>
