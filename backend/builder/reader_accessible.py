@@ -26,7 +26,7 @@ class TaggedRenderer(WeasyRenderer):
             from weasyprint import HTML
         except (ImportError, OSError) as e:  # pragma: no cover - depends on system libraries
             raise RuntimeError("PDF export needs WeasyPrint and its system libraries (Pango).") from e
-        doc = HTML(string=html, url_fetcher=self._fetch).render()
+        doc = HTML(string=html, url_fetcher=self.fetcher()).render()
         return Rendered(doc.write_pdf(pdf_tags=True), {}, len(doc.pages))
 
 

@@ -39,22 +39,31 @@ class WeasyRenderer:
     def __init__(self, images: dict | None = None):
         self.images = images or {}  # url -> (Entry, cached file name)
 
-    def _fetch(self, url: str):
-        from weasyprint import default_url_fetcher
+    def fetcher(self):
+        """A WeasyPrint URLFetcher (WeasyPrint 66+ takes an object, not a function) that decodes
+        data: URIs, serves images from the content cache, and refuses everything else."""
+        from weasyprint.urls import URLFetcher, URLFetcherResponse
 
-        if url.startswith("data:"):
-            return default_url_fetcher(url)
-        if url in self.images:
-            entry, name = self.images[url]
-            return {"string": entry.image_bytes(name), "mime_type": mimetypes.guess_type(name)[0] or "image/png"}
-        raise ValueError(f"not in the content cache: {url}")
+        images = self.images
+
+        class CacheOnlyFetcher(URLFetcher):
+            def fetch(self, url, headers=None):
+                if url.startswith("data:"):
+                    return super().fetch(url, headers)
+                if url in images:
+                    entry, name = images[url]
+                    mime = mimetypes.guess_type(name)[0] or "image/png"
+                    return URLFetcherResponse(url, entry.image_bytes(name), {"Content-Type": mime})
+                raise ValueError(f"not in the content cache: {url}")
+
+        return CacheOnlyFetcher()
 
     def render(self, html: str) -> Rendered:
         try:
             from weasyprint import HTML
         except (ImportError, OSError) as e:  # pragma: no cover - depends on system libraries
             raise RuntimeError("PDF export needs WeasyPrint and its system libraries (Pango).") from e
-        doc = HTML(string=html, url_fetcher=self._fetch).render()
+        doc = HTML(string=html, url_fetcher=self.fetcher()).render()
         anchors: dict[str, int] = {}
         for i, page in enumerate(doc.pages):
             for name in page.anchors:
