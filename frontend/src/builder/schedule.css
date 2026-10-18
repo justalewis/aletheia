@@ -1,0 +1,121 @@
+/* Class dates editor (ScheduleEditor.tsx) and the dates it adds to the week grid and unit cards. */
+
+.schedule-form {
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+.schedule-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.25rem;
+  align-items: flex-start;
+}
+
+.schedule-row .field {
+  flex: 0 1 15rem;
+}
+
+.schedule-form select {
+  max-width: 100%;
+}
+
+.day-toggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.day-toggle {
+  min-width: 3.4rem;
+  min-height: 2.5rem;
+  padding: 0.35rem 0.6rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.day-toggle:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+
+.day-toggle[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+  font-weight: 600;
+}
+
+.day-toggle:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+.noclass-list,
+.due-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.5rem;
+}
+
+.noclass-row,
+.due-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0 0.9rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.noclass-row .field,
+.due-row .field {
+  flex: 1 1 10rem;
+  margin-bottom: 0.4rem;
+}
+
+.noclass-row .btn,
+.due-row .btn {
+  margin-bottom: 0.4rem;
+}
+
+.due-unit {
+  font-weight: normal;
+  color: var(--muted);
+}
+
+.schedule-summary {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  margin: 0.75rem 0;
+}
+
+.schedule-messages {
+  margin: 0 0 0.75rem;
+  padding-left: 1.6rem;
+}
+
+.schedule-messages li {
+  margin: 0.15rem 0;
+}
+
+.schedule-dates {
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.schedule-break {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.due-on {
+  font-weight: 600;
+  color: var(--text);
+}

@@ -197,7 +197,7 @@ def test_start_date_midweek():
     assert w1["start"] == "2027-01-06" and w1["label"] == "Jan 6–8"
     assert [m["date"] for m in w1["meetings"]] == ["2027-01-06"]
     assert r["weeks"][1]["start"] == "2027-01-11"
-    assert any("is a Wed" in n for n in r["notes"])
+    assert r["notes"] == ["The start date is a Wednesday, so week 1 starts Wed, Jan 6. There's no Monday class that week."]
 
 
 def test_start_date_after_the_weeks_class_days():

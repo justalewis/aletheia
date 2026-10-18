@@ -36,6 +36,8 @@ import {
   toggleAssignment,
   toggleReading,
 } from "./model";
+import { ScheduleEditor } from "./ScheduleEditor";
+import { useScheduleDates } from "./schedule";
 import { SearchDrawer, type SearchTarget } from "./SearchDrawer";
 import { SidePanel } from "./SidePanel";
 import { TermBar } from "./TermBar";
@@ -112,6 +114,7 @@ export default function Builder() {
   const readOnly = Boolean(buildId) && !token;
   const blank = Boolean(state && !state.arc_id);
   useDocumentTitle(state ? state.title || "Untitled course" : "Course builder");
+  const dates = useScheduleDates(state);
 
   /* ---------------------------------------------------------------- loading */
 
@@ -617,12 +620,19 @@ export default function Builder() {
                 )}
               </details>
             )}
+            <ScheduleEditor
+              schedule={state.schedule}
+              dates={dates}
+              readOnly={readOnly}
+              unitTitles={Object.fromEntries(state.units.map((u) => [u.key, u.title]))}
+              onChange={(schedule) => edit((s) => ({ ...s, schedule }))}
+            />
             {replanError && <ErrorMessage title="The course couldn't be refit." error={replanError} />}
             <p className="term-summary">
               {state.term.weeks} weeks
               {state.term_label ? ` · ${state.term_label}` : ""} · about {state.term.pages_per_week} pages of reading a week
             </p>
-            <TermBar state={state} arcTitles={arcTitles} />
+            <TermBar state={state} arcTitles={arcTitles} dates={dates} />
           </section>
 
           <section aria-labelledby={`${formId}-units`} className="units">
@@ -640,6 +650,7 @@ export default function Builder() {
                 readOnly={readOnly}
                 blank={blank}
                 actions={actionsFor(u, i)}
+                dates={dates?.units?.[u.key]}
               />
             ))}
             {blank && !readOnly && (

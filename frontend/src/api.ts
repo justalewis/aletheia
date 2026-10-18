@@ -2,6 +2,7 @@
  * Typed client for the Aletheia JSON API (Django + django-ninja).
  * Shapes mirror backend/catalog/serializers.py and backend/builder/api.py.
  */
+import type { CourseSchedule } from "./builder/schedule";
 
 export type Tier = "adapt" | "adapt-nc" | "verbatim" | "link-only";
 export const TIERS: Tier[] = ["adapt", "adapt-nc", "verbatim", "link-only"];
@@ -265,6 +266,8 @@ export interface BuildState {
   units: StateUnit[];
   /** UI only: which arc units the planner dropped or merged for this term. */
   plan_note?: PlanNote | null;
+  /** Class dates (start date, meeting days, no-class days); see builder/schedule.ts. */
+  schedule?: CourseSchedule | null;
 }
 
 export interface SavedBuild {
@@ -450,13 +453,11 @@ export const api = {
     }),
 
   /** POST the state to an export endpoint and return the file. */
-  exportFile: async (kind: "html" | "pdf" | "imscc-canvas" | "imscc-standard", state: BuildState) => {
+  exportFile: async (kind: "html" | "pdf" | "imscc-canvas" | "imscc-standard" | "ics" | "docx", state: BuildState) => {
     const path =
-      kind === "html"
-        ? "/export/html"
-        : kind === "pdf"
-          ? "/export/pdf"
-          : `/export/imscc?flavor=${kind === "imscc-standard" ? "standard" : "canvas"}`;
+      kind === "html" || kind === "pdf" || kind === "ics" || kind === "docx"
+        ? `/export/${kind}`
+        : `/export/imscc?flavor=${kind === "imscc-standard" ? "standard" : "canvas"}`;
     const res = await send(path, { method: "POST", body: { state }, headers: { Accept: "*/*" } });
     const blob = await res.blob();
     return { blob, filename: filenameFrom(res.headers.get("Content-Disposition")) ?? fallbackName(kind) };
@@ -474,6 +475,8 @@ function filenameFrom(disposition: string | null): string | null {
 function fallbackName(kind: string): string {
   if (kind === "html") return "course-reader.html";
   if (kind === "pdf") return "course-reader.pdf";
+  if (kind === "ics") return "course-calendar.ics";
+  if (kind === "docx") return "course-syllabus.docx";
   return kind === "imscc-standard" ? "course-reader-standard.imscc" : "course-reader.imscc";
 }
 

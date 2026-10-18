@@ -13,6 +13,7 @@ import {
   type StateUnit,
   type Term,
 } from "../api";
+import { normalizeSchedule } from "./schedule";
 
 export function teachingWeeks(t: Term): number {
   return Math.max(t.weeks - t.fixed_start - t.fixed_end, 1);
@@ -115,6 +116,7 @@ export function normalizeState(raw: Partial<BuildState> | null | undefined): Bui
     arc_id: s.arc_id ?? null,
     term,
     plan_note: s.plan_note ?? null,
+    schedule: normalizeSchedule(s.schedule),
     units: (s.units ?? []).map((u, i) => ({
       key: u.key || newUnitKey(),
       title: u.title ?? `Unit ${i + 1}`,

@@ -3,6 +3,7 @@ import { briefCache, type AssignmentRole, type StateAssignment, type StateReadin
 import { TierBadge } from "../components/TierBadge";
 import { assignmentByline, kindLabel, readingByline, ROLE_LABELS } from "../components/meta";
 import { unitBudget, unitPages, weeksLabel } from "./model";
+import { formatDay, type UnitDates } from "./schedule";
 
 export interface UnitActions {
   toggleReading: (id: string) => void;
@@ -26,6 +27,8 @@ interface Props {
   readOnly: boolean;
   blank: boolean;
   actions: UnitActions;
+  /** Calendar dates and due dates, once the course has a start date. */
+  dates?: UnitDates;
 }
 
 const ROLES: AssignmentRole[] = ["major", "short_term", "activity"];
@@ -33,7 +36,7 @@ const ROLE_HINTS: Partial<Record<AssignmentRole, string>> = {
   short_term: "A lighter version of the major project. Aletheia checks it instead for terms of 8 weeks or fewer.",
 };
 
-export function UnitCard({ unit, index, count, term, readOnly, blank, actions }: Props) {
+export function UnitCard({ unit, index, count, term, readOnly, blank, actions, dates }: Props) {
   const headingId = useId();
   const pages = unitPages(unit);
   const budget = unitBudget(unit, term);
@@ -45,6 +48,7 @@ export function UnitCard({ unit, index, count, term, readOnly, blank, actions }:
       <header className="unit-head">
         <p className="unit-weeks">
           Unit {index + 1} · {weeksLabel(unit)}
+          {dates ? ` · ${dates.label}` : ""}
         </p>
         <UnitTitle unit={unit} headingId={headingId} readOnly={readOnly} onRename={actions.rename} />
         {blank && !readOnly && (
@@ -154,6 +158,7 @@ export function UnitCard({ unit, index, count, term, readOnly, blank, actions }:
                   <AssignmentRow
                     key={a.id}
                     item={a}
+                    due={dates?.due[a.id]}
                     readOnly={readOnly}
                     onToggle={() => actions.toggleAssignment(a.id)}
                     onRemove={() => actions.removeAssignment(a.id)}
@@ -417,11 +422,14 @@ function ReadingRow({
 
 function AssignmentRow({
   item,
+  due,
   readOnly,
   onToggle,
   onRemove,
 }: {
   item: StateAssignment;
+  /** ISO due date, for checked major assignments in a dated course. */
+  due?: string;
   readOnly: boolean;
   onToggle: () => void;
   onRemove: () => void;
@@ -445,6 +453,7 @@ function AssignmentRow({
               {assignmentByline(a)}
               {a.kind ? `${assignmentByline(a) ? " · " : ""}${kindLabel(a.kind)}` : ""}
               {item.added ? " · Added" : ""}
+              {due && <span className="due-on"> · Due {formatDay(due)}</span>}
             </p>
           ) : (
             <p className="meta">This item isn't in the catalog anymore. You can remove it.</p>

@@ -245,15 +245,20 @@ def _teaching_days(monday: date, meeting_days: tuple[int, ...], first_day: date)
     return [monday + timedelta(days=i) for i in sorted(days) if monday + timedelta(days=i) >= first_day]
 
 
+_FULL_DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
+
 def _first_monday(p: Parsed, notes: list[str]) -> date:
-    monday = p.start - timedelta(days=p.start.weekday())
-    if p.start.weekday() >= 5 and not any(d >= p.start.weekday() for d in p.meeting_days):
+    weekday = p.start.weekday()
+    monday = p.start - timedelta(days=weekday)
+    if weekday >= 5 and not any(d >= weekday for d in p.meeting_days):
         nxt = monday + timedelta(days=7)
-        notes.append(f"The start date is a {DAYS[p.start.weekday()]}, so week 1 starts {day_label(nxt)}.")
+        notes.append(f"The start date is a {_FULL_DAYS[weekday]}, so week 1 starts {day_label(nxt)}.")
         return nxt
-    if p.start.weekday() != 0:
-        notes.append(f"The start date is a {DAYS[p.start.weekday()]}. Week 1 starts {day_label(p.start)}; "
-                     "meetings earlier that week are left off.")
+    if weekday != 0:
+        skipped = [_FULL_DAYS[d] for d in p.meeting_days if d < weekday]
+        extra = f" There's no {' or '.join(skipped)} class that week." if skipped else ""
+        notes.append(f"The start date is a {_FULL_DAYS[weekday]}, so week 1 starts {day_label(p.start)}.{extra}")
     return monday
 
 
