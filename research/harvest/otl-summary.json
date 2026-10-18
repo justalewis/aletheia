@@ -1,0 +1,215 @@
+{
+ "run": "2026-10-17",
+ "requests_total": 26,
+ "plan": [
+  "Literature, Rhetoric, and Poetry (124)",
+  "Journalism, Media Studies & Communications (57)",
+  "Library Science and Museum Studies (25)",
+  "Student Success (65)",
+  "Business q=communication",
+  "Business q=writing",
+  "Engineering & Technology q=writing",
+  "Engineering & Technology q=communication",
+  "Languages q=writing",
+  "Education q=writing",
+  "Natural Sciences q=writing",
+  "Social Sciences q=writing"
+ ],
+ "pages_done": 24,
+ "pages_queued": 9,
+ "books_collected": 220,
+ "books_kept": 108,
+ "books_dropped_by_filter": 112,
+ "on_pressbooks": 55,
+ "license_mix": {
+  "CC BY-NC-SA": 46,
+  "CC BY": 22,
+  "CC BY-NC-ND": 19,
+  "CC BY-NC": 16,
+  "CC BY-SA": 5
+ },
+ "dropped_examples": [
+  {
+   "title": "BC Reads: Adult Literacy Fundamental English",
+   "score": 2,
+   "reasons": [
+    "title: literacy",
+    "OTL subject: Literature, Rhetoric, and Poetry"
+   ]
+  },
+  {
+   "title": "BC Reads: Adult Literacy Fundamental English",
+   "score": 2,
+   "reasons": [
+    "title: literacy",
+    "OTL subject: Literature, Rhetoric, and Poetry"
+   ]
+  },
+  {
+   "title": "Steps to Success: Crossing the Bridge Between Literacy Research and Practice",
+   "score": 2,
+   "reasons": [
+    "title: literacy",
+    "OTL subject: Literature, Rhetoric, and Poetry"
+   ]
+  },
+  {
+   "title": "Technology, Media Literacy, and the Human Subject: A Posthuman Approach",
+   "score": 2,
+   "reasons": [
+    "title: literacy",
+    "OTL subject: Journalism, Media Studies & Communications"
+   ]
+  },
+  {
+   "title": "Introduction to the Pedagogy of New Literacies and Applied Critical Thinking",
+   "score": 2,
+   "reasons": [
+    "title: literacy",
+    "OTL subject: Library Science and Museum Studies"
+   ]
+  },
+  {
+   "title": "Exploring Perspectives: A Concise Guide to Analysis",
+   "score": 1,
+   "reasons": [
+    "OTL subject: Literature, Rhetoric, and Poetry"
+   ]
+  },
+  {
+   "title": "Literature, the Humanities, and Humanity",
+   "score": 1,
+   "reasons": [
+    "OTL subject: Literature, Rhetoric, and Poetry"
+   ]
+  },
+  {
+   "title": "The Changing Story: digital stories that participate in transforming teaching & learning",
+   "score": 1,
+   "reasons": [
+    "OTL subject: Literature, Rhetoric, and Poetry"
+   ]
+  },
+  {
+   "title": "The Ideologies of Lived Space in Literary Texts, Ancient and Modern",
+   "score": 1,
+   "reasons": [
+    "OTL subject: Literature, Rhetoric, and Poetry"
+   ]
+  },
+  {
+   "title": "Writing the Nation: A Concise Introduction to American Literature 1865 to Present",
+   "score": 1,
+   "reasons": [
+    "title: writing",
+    "not in scope: literature survey or anthology",
+    "OTL subject: Literature, Rhetoric, and Poetry"
+   ]
+  },
+  {
+   "title": "Ovid, Amores (Book 1)",
+   "score": 1,
+   "reasons": [
+    "OTL subject: Literature, Rhetoric, and Poetry"
+   ]
+  },
+  {
+   "title": "Interpreting Love Narratives in East Asian Literature and Film",
+   "score": 1,
+   "reasons": [
+    "OTL subject: Literature, Rhetoric, and Poetry"
+   ]
+  },
+  {
+   "title": "The Western World: Daily Readings on Geography",
+   "score": 1,
+   "reasons": [
+    "OTL subject: Literature, Rhetoric, and Poetry"
+   ]
+  },
+  {
+   "title": "Arguing Using Critical Thinking",
+   "score": 1,
+   "reasons": [
+    "OTL subject: Literature, Rhetoric, and Poetry"
+   ]
+  },
+  {
+   "title": "A Guide to Good Reasoning: Cultivating Intellectual Virtues",
+   "score": 1,
+   "reasons": [
+    "OTL subject: Literature, Rhetoric, and Poetry"
+   ]
+  },
+  {
+   "title": "Romeo and Juliet",
+   "score": 1,
+   "reasons": [
+    "OTL subject: Literature, Rhetoric, and Poetry"
+   ]
+  },
+  {
+   "title": "A Christmas Carol",
+   "score": 1,
+   "reasons": [
+    "OTL subject: Literature, Rhetoric, and Poetry"
+   ]
+  },
+  {
+   "title": "It’s All Greek to Me! Using Authentic Readings to Improve Knowledge of the English Language and Western Culture",
+   "score": 1,
+   "reasons": [
+    "OTL subject: Literature, Rhetoric, and Poetry"
+   ]
+  },
+  {
+   "title": "Reading the Bible as Literature: A Journey",
+   "score": 1,
+   "reasons": [
+    "OTL subject: Literature, Rhetoric, and Poetry"
+   ]
+  },
+  {
+   "title": "Para vivir con salud",
+   "score": 1,
+   "reasons": [
+    "OTL subject: Literature, Rhetoric, and Poetry"
+   ]
+  },
+  {
+   "title": "American Literatures Prior to 1865",
+   "score": 1,
+   "reasons": [
+    "OTL subject: Literature, Rhetoric, and Poetry"
+   ]
+  },
+  {
+   "title": "American Literatures After 1865",
+   "score": 1,
+   "reasons": [
+    "OTL subject: Literature, Rhetoric, and Poetry"
+   ]
+  },
+  {
+   "title": "Symbiotic Posthumanist Ecologies in Western Literature, Philosophy and Art: Towards Theory and Practice",
+   "score": 1,
+   "reasons": [
+    "OTL subject: Literature, Rhetoric, and Poetry"
+   ]
+  },
+  {
+   "title": "Introduction to Literature: Fairy Tales, Folk Tales, and How They Shape Us",
+   "score": 1,
+   "reasons": [
+    "OTL subject: Literature, Rhetoric, and Poetry"
+   ]
+  },
+  {
+   "title": "Literary Studies for a Sustainable Future: An Introductory Course with Social Justice and Ecocriticism Intersections",
+   "score": 1,
+   "reasons": [
+    "OTL subject: Literature, Rhetoric, and Poetry"
+   ]
+  }
+ ]
+}
