@@ -7,7 +7,7 @@ Aletheia builds open course readers for writing classes. An instructor picks a f
 
 Aletheia only redistributes what licenses allow. Every item carries one of four reuse tiers (adapt, adapt noncommercial, use whole and unchanged, link only), and items whose licenses haven't been verified are treated as link-only.
 
-**Status:** early development (October 2026). The catalog holds about 2,200 openly licensed readings and 620 assignments in rhetoric and composition. Reader export currently links to each reading with full attribution; including full text in the reader is next.
+**Status:** early development (October 2026). The catalog holds about 2,200 openly licensed readings and 620 assignments in rhetoric and composition. The reader includes the full text of each redistributable reading in the content cache (see below) and links to the rest, with full attribution for both.
 
 ## Layout
 
@@ -29,6 +29,7 @@ python -m venv .venv
 .venv\Scripts\pip install -r requirements.txt      # macOS/Linux: .venv/bin/pip
 .venv\Scripts\python manage.py migrate
 .venv\Scripts\python manage.py load_pack rhetcomp
+.venv\Scripts\python manage.py warm_content          # optional: full text for the reader, about an hour
 .venv\Scripts\python manage.py runserver 8000
 ```
 
@@ -43,6 +44,16 @@ npm run dev
 Tests: `cd backend && .venv\Scripts\python -m pytest`.
 
 PDF export uses WeasyPrint, which needs Pango; it works in the Docker image and on Linux/macOS with Pango installed.
+
+## Full text
+
+Exports take full text from a content cache in `backend/content_cache/`, which git ignores and the Docker image leaves out (set `ALETHEIA_CONTENT_CACHE` to move it). `manage.py warm_content` fills it for every reading the sample arcs use:
+
+- Web chapters come through the publisher's API (Pressbooks, WordPress) or LibreTexts' own page markup, then get sanitized: scripts, styles, navigation and forms go; headings, lists, tables, figures and alt text stay.
+- PDFs are copied from `corpus/files/` or any folder passed with `--pdf-dir`, or downloaded.
+- The command follows robots.txt and stops at any bot check. WAC Clearinghouse PDFs sit behind one, so they have to come from a folder: `needs_pdf.csv` in the cache lists each one with the file name to save it under.
+
+Link-only readings are never copied. NoDerivatives readings go in whole or not at all, and their PDFs are merged into the PDF reader page for page, with nothing added to them. `_report.json` in the cache says what was cached and why the rest wasn't.
 
 ## Deploy
 

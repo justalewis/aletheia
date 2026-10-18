@@ -6,8 +6,9 @@ Build state (what the frontend holds and posts):
      "units": [{"key", "title", "start_week", "end_week", "weeks", "goals", "outcomes",
                 "readings": [{"id", "selected"}], "assignments": [{"id", "role", "selected"}]}]}
 
-Only selected items are exported. Reader v0 links to each reading with its full attribution;
-including full text is the next step (it needs the content pipeline).
+Only selected items are exported. The reader carries the full text of each redistributable
+reading the content cache holds (see content/embed.py for the rules), under its attribution;
+everything else is linked.
 """
 from __future__ import annotations
 
@@ -22,7 +23,9 @@ from xml.sax.saxutils import escape
 from django.template.loader import render_to_string
 
 from builder.licensing import attribution, license_report
+from builder.reader_pdf import build as build_reader_pdf
 from catalog.models import Assignment, Reading
+from content.embed import attach
 
 
 @dataclass
@@ -85,18 +88,18 @@ def resolve(state: dict) -> dict:
 
 # ---------------------------------------------------------------- reader
 
-def reader_html(ctx: dict) -> str:
+def reader_html(ctx: dict, store=None) -> str:
+    attach(ctx["readings"], "html", store)
     return render_to_string("builder/reader.html", ctx)
 
 
-def reader_pdf(ctx: dict) -> bytes:
-    """Render the reader to PDF with WeasyPrint (installed in the Docker image, not required locally)."""
-    try:
-        from weasyprint import HTML
-    except ImportError as e:  # pragma: no cover - depends on system libraries
-        raise RuntimeError("PDF export needs WeasyPrint and its system libraries (Pango).") from e
-    return HTML(string=render_to_string("builder/reader.html", {**ctx, "for_print": True})).write_pdf(
-        pdf_tags=True)
+def reader_pdf(ctx: dict, renderer=None, store=None) -> bytes:
+    """WeasyPrint for Aletheia's pages plus the publishers' PDFs, merged with pypdf (see reader_pdf.py).
+
+    WeasyPrint is installed in the Docker image, not required locally; without it this raises
+    RuntimeError, which the API turns into a 501.
+    """
+    return build_reader_pdf(ctx, renderer, store)
 
 
 # ---------------------------------------------------------------- common cartridge

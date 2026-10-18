@@ -12,6 +12,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 REPO_ROOT = BASE_DIR.parent
 CORPUS_DIR = Path(os.environ.get("ALETHEIA_CORPUS_DIR", REPO_ROOT / "corpus"))
 FRONTEND_DIST = Path(os.environ.get("ALETHEIA_FRONTEND_DIST", REPO_ROOT / "frontend" / "dist"))
+# Full text of readings (sanitized HTML and source PDFs), filled by `manage.py warm_content`.
+# Kept out of git and out of the Docker image; see content/store.py.
+CONTENT_CACHE_DIR = Path(os.environ.get("ALETHEIA_CONTENT_CACHE", BASE_DIR / "content_cache"))
+# Folders of openly licensed PDFs the warm command copies from: each has a manifest.json written by
+# tools/import_corpus.py or tools/mirror_pdfs.py, or files named <reading-id>.pdf. Separate with os.pathsep.
+CONTENT_PDF_DIRS = [Path(p) for p in os.environ.get("ALETHEIA_PDF_DIRS", "").split(os.pathsep) if p] or [
+    CORPUS_DIR / "files" / "drive", CORPUS_DIR / "files" / "web"]
 
 DEBUG = os.environ.get("DJANGO_DEBUG", "1") == "1"
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "dev-only-not-secret" if DEBUG else "")
@@ -30,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "catalog",
     "builder",
+    "content",
 ]
 
 MIDDLEWARE = [
@@ -88,6 +96,9 @@ WHITENOISE_ROOT = FRONTEND_DIST if FRONTEND_DIST.exists() else None
 STORAGES = {
     "default": {"BACKEND": "django.core.files.storage.FileSystemStorage"},
     "staticfiles": {"BACKEND": "whitenoise.storage.CompressedStaticFilesStorage"},
+    # Swap for object storage (django-storages) in production; content/store.py only uses the Storage API.
+    "content": {"BACKEND": "django.core.files.storage.FileSystemStorage",
+                "OPTIONS": {"location": CONTENT_CACHE_DIR, "allow_overwrite": True}},
 }
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"

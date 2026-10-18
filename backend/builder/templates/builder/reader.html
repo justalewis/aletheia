@@ -5,39 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ title }}</title>
 <style>
-  :root { --ink: #1d1d1f; --muted: #5b5b66; --rule: #d9d9e0; --accent: #2b5d8a; --chip: #eef2f7; }
-  * { box-sizing: border-box; }
-  body { margin: 0; color: var(--ink); background: #fff; font: 17px/1.55 Georgia, "Iowan Old Style", "Times New Roman", serif; }
-  main { max-width: 46rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
-  h1, h2, h3 { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.2; }
-  h1 { font-size: 2.2rem; margin: 0 0 .5rem; }
-  h2 { font-size: 1.45rem; margin: 2.5rem 0 .25rem; padding-top: 1rem; border-top: 2px solid var(--ink); }
-  h3 { font-size: 1rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 1.5rem 0 .5rem; }
-  a { color: var(--accent); }
-  .cover { padding: 3rem 0 2rem; border-bottom: 1px solid var(--rule); }
-  .cover p { margin: .2rem 0; color: var(--muted); font-family: system-ui, sans-serif; }
-  .weeks { font-family: system-ui, sans-serif; color: var(--muted); font-size: .9rem; margin: 0 0 1rem; }
-  ol.toc { padding-left: 1.2rem; font-family: system-ui, sans-serif; }
-  ol.toc li { margin: .3rem 0; }
-  ul.goals { margin: .25rem 0 1rem; }
-  .item { padding: .9rem 0; border-bottom: 1px solid var(--rule); }
-  .item:last-child { border-bottom: 0; }
-  .item .t { font-weight: bold; }
-  .item .meta { font-family: system-ui, sans-serif; font-size: .85rem; color: var(--muted); margin: .25rem 0; }
-  .item .summary { margin: .35rem 0; }
-  .credit { font-size: .85rem; color: var(--muted); }
-  .chip { display: inline-block; font-family: system-ui, sans-serif; font-size: .72rem; padding: .1rem .45rem; border-radius: 999px; background: var(--chip); color: var(--ink); margin-right: .3rem; }
-  .links a { font-family: system-ui, sans-serif; font-size: .9rem; margin-right: 1rem; }
-  footer { margin-top: 3rem; font-family: system-ui, sans-serif; font-size: .8rem; color: var(--muted); }
+{% include "builder/reader.css" %}
   @media print {
     body { font-size: 11pt; }
     main { max-width: none; padding: 0; }
     h2 { break-before: page; }
     .item { break-inside: avoid; }
+    .item.full { break-inside: auto; }
     a { color: var(--ink); text-decoration: none; }
     .links a::after { content: " <" attr(href) ">"; font-size: 8pt; word-break: break-all; }
   }
-  @page { size: letter; margin: 0.9in 0.85in; @bottom-center { content: counter(page); font: 9pt system-ui, sans-serif; color: #5b5b66; } }
+  @page { size: letter; margin: 0.9in 0.85in; }
 </style>
 </head>
 <body>
@@ -63,16 +41,24 @@
   {% if u.readings %}
   <h3>Readings</h3>
   {% for r in u.readings %}
-  <div class="item">
-    <div class="t">{{ r.title }}</div>
+  <article class="item{% if r.fulltext.mode == 'html' %} full{% endif %}" id="u{{ forloop.parentloop.counter }}-r{{ forloop.counter }}">
+    <h4 class="t">{{ r.title }}</h4>
     <div class="meta">{% if r.authors %}{{ r.authors }}{% endif %}{% if r.parent_title %} · {{ r.parent_title }}{% endif %}{% if r.pages %} · {{ r.pages }} pp.{% endif %}</div>
     {% if r.summary %}<p class="summary">{{ r.summary }}</p>{% endif %}
+    <p class="credit"><span class="chip">{{ r.get_reuse_tier_display }}</span>{{ r.credit }}{% if r.fulltext and r.license_url %} <a href="{{ r.license_url }}">License</a>{% endif %}</p>
+    {% if r.fulltext.mode == "html" %}
+    <div class="fulltext">
+{{ r.fulltext.html|safe }}
+    </div>
+    <p class="source">Text from <a href="{{ r.fulltext.source_page }}">{{ r.fulltext.source_host }}</a>, copied {{ r.fulltext.fetched }}.{% if r.fulltext.note %} {{ r.fulltext.note }}{% endif %}</p>
+    {% else %}
     <div class="links">
       {% if r.html_url %}<a href="{{ r.html_url }}">Read online</a>{% elif r.landing_url %}<a href="{{ r.landing_url }}">Read online</a>{% endif %}
       {% if r.pdf_url and r.redistributable %}<a href="{{ r.pdf_url }}">PDF</a>{% endif %}
     </div>
-    <p class="credit"><span class="chip">{{ r.get_reuse_tier_display }}</span>{{ r.credit }}</p>
-  </div>
+    {% if r.fulltext.mode == "pdf" %}<p class="note">The full text{% if r.fulltext.pages %} ({{ r.fulltext.pages }} page{{ r.fulltext.pages|pluralize }}){% endif %} is in the PDF edition of this reader, reproduced as published.</p>{% endif %}
+    {% endif %}
+  </article>
   {% endfor %}
   {% endif %}
 
@@ -98,7 +84,7 @@
     {% for a in assignments %}<li class="credit">{{ a.credit }}{% if a.license_url %} <a href="{{ a.license_url }}">License</a>{% endif %}</li>{% endfor %}
   </ol>
 
-  <footer>Built with Aletheia on {{ generated }}. The selection and arrangement of this reader may be shared under CC BY 4.0; each item keeps its own license, listed above.</footer>
+  <footer>Built with Aletheia on {{ generated }}. The selection and arrangement of this reader may be shared under CC BY 4.0; each item keeps its own license, listed above. Readings reproduced in full were copied from their publishers on the dates shown and changed only as needed to fit this format, unless a note under the reading says otherwise.</footer>
 </main>
 </body>
 </html>
