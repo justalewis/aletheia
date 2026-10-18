@@ -3,7 +3,7 @@ from django.shortcuts import get_object_or_404
 from ninja import Router, Schema
 from ninja.errors import HttpError
 
-from builder import exports
+from builder import exports, reader_accessible
 from builder.licensing import license_report
 from builder.models import Build
 from builder.planning import Term, plan_course
@@ -106,13 +106,20 @@ def export_html(request, body: ExportIn):
 
 
 @router.post("/export/pdf")
-def export_pdf(request, body: ExportIn):
+def export_pdf(request, body: ExportIn, variant: str = "accessible"):
+    """`accessible`: one tagged document, PDF-only readings linked. `print`: publisher PDFs merged in."""
+    builders = {"accessible": reader_accessible.build, "print": exports.reader_pdf}
+    if variant not in builders:
+        raise HttpError(400, "variant must be accessible or print")
     try:
-        pdf = exports.reader_pdf(exports.resolve(body.state))
+        pdf = builders[variant](exports.resolve(body.state))
     except RuntimeError as e:
         raise HttpError(501, str(e))
     resp = HttpResponse(pdf, content_type="application/pdf")
-    resp["Content-Disposition"] = f'attachment; filename="{_filename(body.state, "pdf")}"'
+    name = _filename(body.state, "pdf")
+    if variant == "print":
+        name = name.removesuffix(".pdf") + "-print.pdf"
+    resp["Content-Disposition"] = f'attachment; filename="{name}"'
     return resp
 
 

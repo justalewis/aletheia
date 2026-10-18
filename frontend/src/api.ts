@@ -450,12 +450,12 @@ export const api = {
     }),
 
   /** POST the state to an export endpoint and return the file. */
-  exportFile: async (kind: "html" | "pdf" | "imscc-canvas" | "imscc-standard", state: BuildState) => {
+  exportFile: async (kind: "html" | "pdf" | "pdf-print" | "imscc-canvas" | "imscc-standard", state: BuildState) => {
     const path =
       kind === "html"
         ? "/export/html"
-        : kind === "pdf"
-          ? "/export/pdf"
+        : kind === "pdf" || kind === "pdf-print"
+          ? `/export/pdf?variant=${kind === "pdf" ? "accessible" : "print"}`
           : `/export/imscc?flavor=${kind === "imscc-standard" ? "standard" : "canvas"}`;
     const res = await send(path, { method: "POST", body: { state }, headers: { Accept: "*/*" } });
     const blob = await res.blob();
@@ -474,6 +474,7 @@ function filenameFrom(disposition: string | null): string | null {
 function fallbackName(kind: string): string {
   if (kind === "html") return "course-reader.html";
   if (kind === "pdf") return "course-reader.pdf";
+  if (kind === "pdf-print") return "course-reader-print.pdf";
   return kind === "imscc-standard" ? "course-reader-standard.imscc" : "course-reader.imscc";
 }
 
