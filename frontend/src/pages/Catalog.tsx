@@ -4,6 +4,7 @@ import { api, TIERS, type AssignmentBrief, type Paged, type ReadingBrief } from 
 import { Drawer } from "../components/Drawer";
 import { ItemDetail, type DetailRef } from "../components/ItemDetail";
 import { Empty, ErrorMessage, Loading } from "../components/Status";
+import { Icon, kindIcon, levelIcon } from "../components/Icon";
 import { TierBadge, TIER_LABELS } from "../components/TierBadge";
 import { TopicChips } from "../components/TopicChips";
 import {
@@ -345,7 +346,9 @@ export default function Catalog() {
 
 function ReadingResult({ r, onOpen }: { r: ReadingBrief; onOpen: () => void }) {
   return (
-    <li className="result">
+    <li className="result result-icon-row">
+      <Icon name={levelIcon(r.level)} size={24} label={levelLabel(r.level)} />
+      <div className="result-body">
       <h3 className="result-title">
         <button type="button" className="link-button" onClick={onOpen}>
           {r.title}
@@ -364,13 +367,16 @@ function ReadingResult({ r, onOpen }: { r: ReadingBrief; onOpen: () => void }) {
         {r.license && <span className="meta">{r.license}</span>}
       </p>
       {r.summary && <p className="result-summary">{r.summary}</p>}
+      </div>
     </li>
   );
 }
 
 function AssignmentResult({ a, onOpen }: { a: AssignmentBrief; onOpen: () => void }) {
   return (
-    <li className="result">
+    <li className="result result-icon-row">
+      <Icon name={kindIcon(a.kind)} size={24} label={a.kind ? kindLabel(a.kind) : "Assignment"} />
+      <div className="result-body">
       <h3 className="result-title">
         <button type="button" className="link-button" onClick={onOpen}>
           {a.title}
@@ -385,6 +391,7 @@ function AssignmentResult({ a, onOpen }: { a: AssignmentBrief; onOpen: () => voi
         {a.license && <span className="meta">{a.license}</span>}
       </p>
       {a.summary && <p className="result-summary">{a.summary}</p>}
+      </div>
     </li>
   );
 }

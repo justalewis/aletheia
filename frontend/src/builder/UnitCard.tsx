@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef, useState, type MouseEvent } from "react";
+import { Icon } from "../components/Icon";
 import { briefCache, type AssignmentRole, type StateAssignment, type StateReading, type StateUnit, type Term } from "../api";
 import { TierBadge } from "../components/TierBadge";
 import { assignmentByline, kindLabel, readingByline, ROLE_LABELS } from "../components/meta";
@@ -42,13 +43,27 @@ export function UnitCard({ unit, index, count, term, readOnly, blank, actions, d
   const budget = unitBudget(unit, term);
   const over = pages > budget;
   const pct = Math.min(100, Math.round((pages / budget) * 100));
+  const [open, setOpen] = useState(true);
+  const bodyId = useId();
 
   return (
     <section className="unit-card" id={`unit-${unit.key}`} aria-labelledby={headingId}>
       <header className="unit-head">
         <p className="unit-weeks">
+          <Icon name="unit" size={16} />
           Unit {index + 1} · {weeksLabel(unit)}
           {dates ? ` · ${dates.label}` : ""}
+          <button
+            type="button"
+            className={`unit-toggle${open ? " is-open" : ""}`}
+            aria-expanded={open}
+            aria-controls={bodyId}
+            onClick={() => setOpen((o) => !o)}
+          >
+            {open ? "Collapse" : "Expand"}
+            <span className="visually-hidden"> unit {unit.title}</span>
+            <Icon name="chevron" size={16} />
+          </button>
         </p>
         <UnitTitle unit={unit} headingId={headingId} readOnly={readOnly} onRename={actions.rename} />
         {blank && !readOnly && (
@@ -79,6 +94,7 @@ export function UnitCard({ unit, index, count, term, readOnly, blank, actions, d
         )}
       </header>
 
+      <div className="unit-body" id={bodyId} hidden={!open}>
       {unit.summary && <p className="prose unit-summary">{unit.summary}</p>}
       {unit.goals.length > 0 && (
         <div className="unit-goals">
@@ -181,6 +197,7 @@ export function UnitCard({ unit, index, count, term, readOnly, blank, actions, d
           <p className="prose">{unit.notes}</p>
         </details>
       )}
+      </div>
     </section>
   );
 }

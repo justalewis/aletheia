@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Icon } from "../components/Icon";
 import { api } from "../api";
 import { ErrorMessage, Loading } from "../components/Status";
 import { focusesOf, PRIMARY_FOCUSES, useAsync, useDocumentTitle, usePack } from "../hooks";
@@ -71,18 +72,18 @@ export default function Home() {
           a summer term and change anything in it.
         </p>
         {pack.data && (
-          <ul className="card-grid card-grid-2">
+          <ul className="index-list">
             {primary.map((f) => (
-              <li key={f.code} className="card">
-                <h3 className="card-title">
-                  <Link to={`/focus/${f.code}`}>{f.label}</Link>
-                </h3>
-                <p className="meta">
-                  {arcs.loading ? "Counting sample courses…" : arcs.error ? "" : plural(arcCount(f.code), "sample course")}
-                </p>
-                <p className="card-links">
-                  <Link to={`/focus/${f.code}`}>See sample courses</Link>
-                  <Link to={`/catalog?focus=${f.code}`}>Browse readings</Link>
+              <li key={f.code}>
+                <Link className="index-row" to={`/focus/${f.code}`}>
+                  <span className="index-title">{f.label}</span>
+                  <span className="index-meta">
+                    {arcs.loading ? "Counting…" : arcs.error ? "" : plural(arcCount(f.code), "sample course")}
+                  </span>
+                  <Icon name="arrow" size={24} />
+                </Link>
+                <p className="index-sub">
+                  <Link to={`/catalog?focus=${f.code}`}>Browse {f.label} readings</Link>
                 </p>
               </li>
             ))}
