@@ -3,8 +3,9 @@
 For each redistributable reading (adapt, adapt-nc, or verbatim with a verified license):
   1. a web page we can read through an API (Pressbooks, WordPress, LibreTexts) is fetched,
      sanitized, and stored with its images;
-  2. otherwise its PDF is copied from a local folder (see library.py) or downloaded, unless the
-     link is bot-gated;
+  2. otherwise its PDF is copied from a local folder (see library.py), fetched from the repo
+     when a corpus manifest lists it but the disk doesn't have it (repo_pdfs.py), or downloaded
+     from the publisher, unless the link is bot-gated;
   3. otherwise it stays a link, and the report says why.
 Link-only readings are never fetched. Whole books and collections aren't cached either: a
 reader assigns their chapters, and a 300-page book doesn't belong inside one.
@@ -26,6 +27,7 @@ from content.fetch import (
     is_libretexts, pressbooks_api_url,
 )
 from content.library import LocalPdf, PdfLibrary, url_tail
+from content.repo_pdfs import RepoPdf, RepoPdfs
 from content.sanitize import sanitize
 from content.store import ContentStore
 
@@ -40,7 +42,7 @@ class Outcome:
     id: str
     status: str        # cached | kept | link-only | an error code from FetchError
     kind: str = ""     # html | pdf
-    via: str = ""      # pressbooks | wordpress | libretexts | local-pdf | download
+    via: str = ""      # pressbooks | wordpress | libretexts | local-pdf | repo-pdf | download
     detail: str = ""
     title: str = ""
     pdf_url: str = ""
@@ -73,10 +75,11 @@ def pdf_pages(data: bytes) -> int:
 
 class Warmer:
     def __init__(self, store: ContentStore, client: Client | None = None, library: PdfLibrary | None = None,
-                 offline: bool = False, images: bool = True, log=None):
+                 offline: bool = False, images: bool = True, log=None, repo: RepoPdfs | None = None):
         self.store = store
         self.client = client or Client()
         self.library = library or PdfLibrary([])
+        self.repo = repo
         self.offline = offline
         self.images = images
         self.log = log or (lambda msg: None)
@@ -123,6 +126,21 @@ class Warmer:
                     errors.append(e)
             elif reading.id in self.library.shared:
                 errors.append(FetchError("whole-book-pdf", f"only the whole book is on disk ({self.library.shared[reading.id]})"))
+            # A corpus file that's listed but not on disk (the server): fetch it from the repo.
+            if not local and not self.offline and self.repo is not None:
+                listed = self.repo.find(reading.id, reading.pdf_url, self.ambiguous_names)
+                if listed:
+                    try:
+                        data = self.repo.fetch(self.client, listed)
+                    except FetchError as e:
+                        errors.append(e)  # the publisher's copy may still come through
+                    else:
+                        local = listed  # got the file; if it's refused, the publisher's would be too
+                        try:
+                            return self._save_pdf(reading, data, out, "repo-pdf",
+                                                  listed.source_url or reading.pdf_url, listed)
+                        except FetchError as e:
+                            errors.append(e)
             if reading.pdf_url and not self.offline and not local:
                 try:
                     return self._save_pdf(reading, fetch_pdf(self.client, reading.pdf_url), out, "download",
@@ -172,7 +190,7 @@ class Warmer:
         return out
 
     def _save_pdf(self, reading, data: bytes, out: Outcome, via: str, source_url: str,
-                  local: LocalPdf | None = None) -> Outcome:
+                  local: LocalPdf | RepoPdf | None = None) -> Outcome:
         pages = pdf_pages(data)
         if reading.level in PART_LEVELS and pages > 90 and (not reading.pages or pages > 2 * reading.pages + 10):
             raise FetchError("whole-book-pdf", f"{pages} pages for a {reading.level}")
@@ -183,8 +201,10 @@ class Warmer:
             "bytes": len(data), "pages": pages,
         }
         if local:
-            meta["local_file"] = local.label
+            meta["repo_file" if via == "repo-pdf" else "local_file"] = local.label
             meta["matched_by"] = local.matched_by
+            if via == "repo-pdf":
+                meta["repo_url"] = self.repo.url(local)
         self.store.save_pdf(reading.id, data, meta)
         out.status, out.kind, out.via, out.detail = "cached", "pdf", via, f"{pages} pages"
         if local:

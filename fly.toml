@@ -14,6 +14,16 @@ primary_region = "sjc"
   DJANGO_DEBUG = "0"
   DJANGO_ALLOWED_HOSTS = "aletheia-oer.fly.dev"
   DJANGO_CSRF_ORIGINS = "https://aletheia-oer.fly.dev"
+  # Full text of readings lives on the volume below, so it survives deploys and restarts.
+  ALETHEIA_CONTENT_CACHE = "/data/content_cache"
+  # warm_content fetches corpus/files PDFs (left out of the image) from the public repo.
+  ALETHEIA_PDF_BASE_URL = "https://raw.githubusercontent.com/justalewis/aletheia/main/corpus/files/"
+
+# One volume per machine. Create it before the first deploy with this section:
+#   flyctl volumes create aletheia_cache --region sjc --size 1 -a aletheia-oer
+[mounts]
+  source = "aletheia_cache"
+  destination = "/data"
 
 [http_service]
   internal_port = 8000

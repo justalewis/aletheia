@@ -21,6 +21,10 @@ CONTENT_PDF_DIRS = [Path(p) for p in os.environ.get("ALETHEIA_PDF_DIRS", "").spl
     CORPUS_DIR / "files" / "drive", CORPUS_DIR / "files" / "web"]
 
 DEBUG = os.environ.get("DJANGO_DEBUG", "1") == "1"
+# The Docker image has the corpus/files manifests but not the PDFs; warm_content fetches a listed
+# PDF the disk lacks from here, by its path under corpus/files (content/repo_pdfs.py). Empty: off.
+CONTENT_PDF_BASE_URL = os.environ.get(
+    "ALETHEIA_PDF_BASE_URL", "" if DEBUG else "https://raw.githubusercontent.com/justalewis/aletheia/main/corpus/files/")
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "dev-only-not-secret" if DEBUG else "")
 if not SECRET_KEY:
     raise RuntimeError("DJANGO_SECRET_KEY must be set when DJANGO_DEBUG is off")
