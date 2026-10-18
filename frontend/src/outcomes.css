@@ -1,0 +1,303 @@
+/* Outcomes page and the builder's coverage panel. Uses the theme tokens from styles.css. */
+
+/* ------------------------------------------------------------------ outcome set picker */
+
+.outcome-set-picker [role="group"] + [role="group"] {
+  margin-top: 0.9rem;
+}
+
+.outcome-set-picker .h-tiny {
+  margin: 0.4rem 0 0.4rem;
+}
+
+.set-option {
+  align-items: flex-start;
+}
+
+.set-option input {
+  margin-top: 0.2rem;
+}
+
+.set-name {
+  display: block;
+  font-weight: 600;
+}
+
+.set-hint {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.check .set-hint {
+  display: inline;
+}
+
+.radio-card.is-disabled {
+  cursor: not-allowed;
+  background: var(--surface-2);
+  color: var(--muted);
+}
+
+.check.is-disabled {
+  cursor: not-allowed;
+  color: var(--muted);
+}
+
+.outcome-filters {
+  margin-top: 0.75rem;
+  align-items: start;
+}
+
+.draft-note {
+  margin: 0 0 1.25rem;
+}
+
+/* ------------------------------------------------------------------ results */
+
+.outcome-block .outcome-label {
+  font-size: 1.3rem;
+  margin-bottom: 0.35rem;
+}
+
+.outcome-text {
+  max-width: 46rem;
+  margin: 0 0 0.5rem;
+}
+
+.match-why {
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  color: var(--text);
+  background: var(--surface-2);
+  border-radius: var(--radius);
+  padding: 0.3rem 0.55rem;
+  margin: 0.35rem 0 0.5rem;
+  max-width: 46rem;
+  overflow-wrap: anywhere;
+}
+
+.outcome-assignments > summary,
+.gap > summary {
+  font-family: var(--sans);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.4rem 0;
+}
+
+.add-to-course,
+.match-card .add-form {
+  margin-top: 0.35rem;
+}
+
+.add-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.5rem;
+  margin-top: 0.5rem;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+}
+
+.add-form label {
+  font-weight: 600;
+}
+
+.add-form select {
+  max-width: 100%;
+  min-width: 0;
+  flex: 0 1 16rem;
+}
+
+.add-status {
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  margin: 0.35rem 0 0;
+}
+
+.add-status:empty {
+  margin: 0;
+}
+
+/* ------------------------------------------------------------------ coverage panel */
+
+.outcomes-panel .is-stale {
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.outcome-set-checks .check {
+  align-items: flex-start;
+}
+
+.outcome-set-checks .check input {
+  margin-top: 0.2rem;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  margin: 0.5rem 0 1rem;
+}
+
+.coverage-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: var(--sans);
+  font-size: 0.875rem;
+}
+
+.coverage-table th,
+.coverage-table td {
+  border: 1px solid var(--border);
+  padding: 0.4rem 0.5rem;
+  vertical-align: middle;
+}
+
+.coverage-table thead th {
+  background: var(--surface-2);
+  text-align: left;
+  font-weight: 600;
+  vertical-align: bottom;
+}
+
+/* Table cells ignore min-width, so the block children set each column's floor; the region scrolls
+   sideways when the units don't fit. */
+.cov-unit-num {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.cov-unit-title {
+  display: block;
+  min-width: 6rem;
+  max-width: 10rem;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.cov-outcome {
+  text-align: left;
+  font-weight: 600;
+}
+
+.cov-outcome > span:first-child {
+  display: block;
+  min-width: 9rem;
+}
+
+.cov-set {
+  display: block;
+  font-weight: 400;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.cov-cell {
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.cov-0 {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.cov-1 {
+  background: var(--accent-soft);
+}
+
+.cov-2 {
+  background: var(--seg-0);
+  color: var(--seg-text);
+}
+
+.cov-3 {
+  background: var(--seg-2);
+  color: var(--seg-text);
+}
+
+.cov-total {
+  white-space: nowrap;
+}
+
+.cov-status {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.28rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid;
+  white-space: nowrap;
+}
+
+.cov-status-ok {
+  background: var(--ok-bg);
+  color: var(--ok-text);
+  border-color: var(--ok-border);
+}
+
+.cov-status-weak {
+  background: var(--warn-bg);
+  color: var(--warn-text);
+  border-color: var(--warn-border);
+}
+
+.cov-status-none {
+  background: var(--error-bg);
+  color: var(--error-text);
+  border-color: var(--error-border);
+}
+
+.coverage-narrow {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 1rem;
+  display: none;
+}
+
+.coverage-narrow > li {
+  border-top: 1px solid var(--border);
+  padding: 0.6rem 0;
+}
+
+.cov-narrow-head {
+  margin: 0 0 0.25rem;
+  font-family: var(--sans);
+}
+
+.cov-narrow-units {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+}
+
+/* Phones get a list per outcome instead of the table. */
+@media (max-width: 640px) {
+  .coverage-wide {
+    display: none;
+  }
+
+  .coverage-narrow {
+    display: block;
+  }
+}
+
+.gaps {
+  margin-top: 0.5rem;
+}
+
+.gap {
+  border-top: 1px solid var(--border);
+  padding: 0.2rem 0;
+}
+
+.gap-label {
+  color: var(--text);
+}
