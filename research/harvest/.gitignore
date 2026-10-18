@@ -2,4 +2,6 @@
 raw/
 # Local resumable state for otl.py (last request time, collected books)
 otl-state.json
+# Intermediate harvester output; the review queue (queue-*.jsonl) carries every new candidate
+*-candidates.jsonl
 *.tmp

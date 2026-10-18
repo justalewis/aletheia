@@ -391,16 +391,26 @@ def main(argv=None) -> None:
     write_json(HOSTS, dict(sorted(hosts.items())))
 
     # Pass 1: screen on what discovery gave us. Books from OTL already passed otl.py's filter.
-    seen, screened = set(), []
+    seen: dict[str, dict] = {}
+    screened = []
     for e in entries:
         k = candidate_key("pb", e["url"])
-        if not e["url"] or k in seen:
+        if not e["url"]:
             continue
-        seen.add(k)
+        if k in seen:
+            if e.get("otl_key"):  # the Directory already listed this OTL book; remember the link
+                seen[k]["otl_key"] = e["otl_key"]
+            continue
+        seen[k] = e
+
+    def from_otl(e: dict) -> bool:  # otl.py's filter already kept it
+        return e["via"] == "otl" or bool(e.get("otl_key"))
+
+    for e in seen.values():
         score, reasons = subject_score(e["title"], e["description"], e["subject_names"], e["subject_codes"], e["language"])
-        if e["via"] == "otl" or keep_book(score, prescreen=True):
+        if from_otl(e) or keep_book(score, prescreen=True):
             screened.append((score, reasons, e))
-    screened.sort(key=lambda t: (t[2]["via"] != "otl", -t[0], t[2]["title"].lower()))
+    screened.sort(key=lambda t: (not from_otl(t[2]), -t[0], t[2]["title"].lower()))
     log(f"{len(seen)} distinct books discovered; {len(screened)} pass the first screen")
 
     records: list[dict] = []
@@ -415,7 +425,7 @@ def main(argv=None) -> None:
             host = urlsplit(e["url"]).netloc.lower()
             if reason := session.is_blocked(host):
                 stats["host blocked"] += 1
-                if keep_book(score) or e["via"] == "otl":
+                if keep_book(score) or from_otl(e):
                     blocked_books.append(directory_only_record(e, score, reasons, reason))
                 continue
             fetched += 1
@@ -424,7 +434,7 @@ def main(argv=None) -> None:
             except Blocked as err:
                 log(str(err))
                 stats["host blocked"] += 1
-                if keep_book(score) or e["via"] == "otl":
+                if keep_book(score) or from_otl(e):
                     blocked_books.append(directory_only_record(e, score, reasons, session.is_blocked(host) or str(err)))
                 continue
             except FetchError as err:
@@ -438,7 +448,7 @@ def main(argv=None) -> None:
             score2, reasons2 = subject_score(clean_html(meta.get("name") or e["title"]), desc,
                                              about_names(meta) or e["subject_names"], about_codes(meta),
                                              meta.get("inLanguage") or e["language"])
-            if not (keep_book(score2) or (e["via"] == "otl" and score2 > -99)):
+            if not (keep_book(score2) or (from_otl(e) and score2 > -99)):
                 stats["dropped by full filter"] += 1
                 continue
             try:

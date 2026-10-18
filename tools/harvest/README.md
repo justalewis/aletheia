@@ -49,7 +49,7 @@ python tools/harvest/merge.py
 
 Writes `research/harvest/queue-YYYYMMDD.jsonl` and `queue-YYYYMMDD.md`.
 
-- The same book from Pressbooks and the Library becomes one record (the Pressbooks one, which has chapters and the book's own license). If the sources disagree about the license, the most restrictive is recorded and the note says so.
+- The same book from Pressbooks and the Library becomes one record (the Pressbooks one, which has chapters and the book's own license). Books match on a normalized URL, the Library record's Pressbooks link, or the same title and first author; copies of one book on several Pressbooks networks collapse the same way, keeping one copy's chapters. If the sources disagree about the license, the most restrictive is recorded and the note says so.
 - Exact duplicates of pack records (same normalized URL, or same normalized title and parent) are left out of the queue and listed at the end of the .md file. New chapters of a book already in the pack stay in the queue, pointing at the existing book's id.
 - Near duplicates (same title once numbering, subtitles, and edition words are stripped, such as a new edition) stay in the queue with `queue.status: "near-duplicate"` and `queue.match` naming the pack records.
 - Every queued record has a proposed permanent id that collides with nothing in the pack, `needs_review: true`, and a `harvest` block (source, keys, filter score and reasons) that is dropped on approval.

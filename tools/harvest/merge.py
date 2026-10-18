@@ -39,8 +39,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from common import (  # noqa: E402
-    HARVEST_DIR, PACK_FIELDS, PACK_READINGS, ROOT, license_family, norm_text, norm_url, read_jsonl, reuse_tier,
-    slug, suggested_focus, write_jsonl,
+    HARVEST_DIR, PACK_FIELDS, PACK_READINGS, ROOT, license_family, norm_text, norm_url, read_json, read_jsonl,
+    reuse_tier, slug, suggested_focus, write_jsonl,
 )
 from build_catalog import WHOLE_WORK_LEVELS, strictest  # noqa: E402
 
@@ -164,10 +164,13 @@ def merge_sources(candidates: list[dict]) -> list[dict]:
     groups: list[list[dict]] = []
     index: dict[str, int] = {}
     for b in books:
-        keys = [f"u:{u}" for u in url_keys(b)] + [f"t:{norm_text(b['title'])}|{first_surname(b.get('authors', ''))}",
-                                                  f"k:{b['harvest']['key']}"]
+        keys = [f"u:{u}" for u in url_keys(b)] + [f"k:{b['harvest']['key']}"]
+        if surname := first_surname(b.get("authors", "")):  # no author, no title match: too many generic titles
+            keys.append(f"t:{norm_text(b['title'])}|{surname}")
         if otl := b["harvest"].get("otl_key"):
             keys.append(f"k:{otl}")
+        if pb := b["harvest"].get("pressbooks_url"):  # an OTL book's Pressbooks home
+            keys.append(f"u:{norm_url(pb)}")
         hit = next((index[k] for k in keys if k in index), None)
         if hit is None:
             hit = len(groups)
@@ -349,13 +352,33 @@ FOCUS_LABELS = {
 }
 
 
-def queue_markdown(queue: list[dict], dupes: list[dict], stats: dict, day: str, queue_name: str) -> str:
+def source_lines(pb: dict | None, otl: dict | None) -> list[str]:
+    """One line per harvester, from its summary file, so the reader knows what was searched."""
+    out = []
+    if pb:
+        out.append(
+            f"- Pressbooks: {pb.get('distinct_books', 0):,} books discovered ({pb.get('directory_books', 0):,} in the "
+            f"Directory feed, {pb.get('network_books', 0):,} in network lists); {pb.get('passed_first_screen', 0)} passed the "
+            f"first screen; {pb.get('books_kept_with_metadata', 0)} kept with license and chapters from the book's own API; "
+            f"{pb.get('books_kept_directory_only (host blocked)', 0)} kept from Directory data only, because "
+            f"{len(pb.get('blocked_hosts', {}))} hosts refused the harvester (CloudFront 403).")
+    if otl:
+        out.append(
+            f"- Open Textbook Library: {otl.get('books_collected', 0)} books collected in {otl.get('pages_done', 0)} pages "
+            f"({otl.get('pages_queued', 0)} queries still queued; the site allows one request every 120 s); "
+            f"{otl.get('books_kept', 0)} passed the filter.")
+    return out + ([""] if out else [])
+
+
+def queue_markdown(queue: list[dict], dupes: list[dict], stats: dict, day: str, queue_name: str,
+                   summaries: tuple[dict | None, dict | None] = (None, None)) -> str:
     books = [r for r in queue if r["level"] == "book"]
     chapters_by_book: dict[str, list[dict]] = defaultdict(list)
     for r in queue:
         if r["level"] != "book":
             chapters_by_book[r["harvest"].get("parent_key", "")].append(r)
     lines = [f"# Harvest review queue, {day}", ""]
+    lines += source_lines(*summaries)
     lines += [
         f"{stats['books']} candidate books after the subject filter and cross-source merge: "
         f"{stats['books_new']} new, {stats['books_near_duplicate']} near duplicates of pack records, "
@@ -556,6 +579,8 @@ def main(argv=None) -> None:
     ap.add_argument("--queue", type=Path, help="queue file to approve from")
     ap.add_argument("--book-only", action="store_true", help="approve books without their chapters")
     ap.add_argument("--dry-run", action="store_true", help="show what --approve would add; change nothing")
+    ap.add_argument("--pack", type=Path, default=PACK_READINGS,
+                    help="readings.jsonl to approve into (default: the rhetcomp pack; point at a copy to try things)")
     ap.add_argument("--candidates", type=Path, action="append", help="candidate files (default: research/harvest/*-candidates.jsonl)")
     ap.add_argument("--date", default=date.today().strftime("%Y%m%d"), help="queue file date stamp (default today)")
     args = ap.parse_args(argv)
@@ -563,7 +588,7 @@ def main(argv=None) -> None:
     if args.approve:
         if not args.queue:
             raise SystemExit("--approve needs --queue <file>")
-        approve(args.queue, args.approve, book_only=args.book_only, dry_run=args.dry_run)
+        approve(args.queue, args.approve, pack_path=args.pack, book_only=args.book_only, dry_run=args.dry_run)
         return
 
     files = args.candidates or [HARVEST_DIR / f for f in CANDIDATE_FILES]
@@ -572,12 +597,13 @@ def main(argv=None) -> None:
         rows = read_jsonl(f)
         print(f"{f.name}: {len(rows)} records")
         candidates += rows
-    pack = read_jsonl(PACK_READINGS)
+    pack = read_jsonl(args.pack)
     queue, dupes, stats = build_queue(candidates, pack)
     name = f"queue-{args.date}"
     write_jsonl(HARVEST_DIR / f"{name}.jsonl", queue)
     day = f"{args.date[:4]}-{args.date[4:6]}-{args.date[6:]}"
-    (HARVEST_DIR / f"{name}.md").write_text(queue_markdown(queue, dupes, stats, day, name), encoding="utf-8")
+    summaries = (read_json(HARVEST_DIR / "pressbooks-summary.json"), read_json(HARVEST_DIR / "otl-summary.json"))
+    (HARVEST_DIR / f"{name}.md").write_text(queue_markdown(queue, dupes, stats, day, name, summaries), encoding="utf-8")
     for k, v in stats.items():
         print(f"{k}: {v}")
     print(f"wrote research/harvest/{name}.jsonl and .md")

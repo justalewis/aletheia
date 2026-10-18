@@ -341,7 +341,8 @@ def candidates():
 
 
 def test_merge_sources_combines_otl_and_pressbooks(candidates):
-    candidates[-2]["html_url"] = "https://pb.example.org/newguide/"  # OTL's online link points at the Pressbooks book
+    # Different author strings, so only harvest.pressbooks_url (the OTL book's Pressbooks home) links them.
+    candidates[-2]["authors"] = "Doe, Jane"
     merged = merge.merge_sources(candidates)
     books = [r for r in merged if r["level"] == "book" and r["title"] == "New Writing Guide"]
     assert len(books) == 1
@@ -349,6 +350,24 @@ def test_merge_sources_combines_otl_and_pressbooks(candidates):
     assert b["harvest"]["source"] == "pressbooks" and b["harvest"]["also_from"][0]["source"] == "otl"
     # The sources disagree, so the stricter license is recorded (and it came from OTL, unverified).
     assert b["license"] == "CC BY-NC" and b["license_verified"] is False and "most restrictive" in b["notes"]
+
+
+def test_merge_keeps_one_copy_of_chapters_and_separates_same_title_different_author():
+    a, b = "https://one.example.org/tw/", "https://two.example.org/tw/"
+    cands = [
+        _cand("pressbooks", "book", "Technical Writing", a, chapter_count=1),
+        _cand("pressbooks", "chapter", "Memos", a + "chapter/memos/", parent_key=f"pressbooks:{a}", parent_title="Technical Writing"),
+        _cand("pressbooks", "book", "Technical Writing", b, chapter_count=1),
+        _cand("pressbooks", "chapter", "Memos", b + "chapter/memos/", parent_key=f"pressbooks:{b}", parent_title="Technical Writing"),
+    ]
+    # Same generic title and no authors: kept apart.
+    assert len([r for r in merge.merge_sources(cands) if r["level"] == "book"]) == 2
+    # Same title and first author: one book, and only one copy's chapters.
+    cands[0]["authors"] = cands[2]["authors"] = "Last, Suzan"
+    merged = merge.merge_sources(cands)
+    assert [r["level"] for r in merged] == ["book", "chapter"]
+    cands[2]["authors"] = "Someone, Else"
+    assert len([r for r in merge.merge_sources(cands) if r["level"] == "book"]) == 2
 
 
 def test_build_queue_dedupes_against_pack_and_assigns_unique_ids(candidates, pack):
