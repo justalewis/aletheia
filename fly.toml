@@ -1,6 +1,6 @@
 # Fly.io config for Aletheia. The app name must be unique on Fly; change it if taken.
 app = "aletheia-oer"
-primary_region = "sea"
+primary_region = "sjc"
 
 [build]
   dockerfile = "Dockerfile"

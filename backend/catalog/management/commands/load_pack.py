@@ -68,6 +68,16 @@ def parse_pages(value, level: str) -> int | None:
     return n or None
 
 
+def fit_lengths(obj, problems: list[str]) -> None:
+    """Clip text that won't fit its column. SQLite ignores max_length; Postgres rejects the row."""
+    for field in obj._meta.concrete_fields:
+        limit = getattr(field, "max_length", None)
+        value = getattr(obj, field.attname, None)
+        if limit and isinstance(value, str) and len(value) > limit:
+            problems.append(f"{obj._meta.model_name} {obj.pk}: {field.name} clipped from {len(value)} to {limit} chars")
+            setattr(obj, field.attname, value[:limit])
+
+
 def clean(rec: dict, fields: set[str]) -> dict:
     out = {}
     for k in fields:
@@ -105,10 +115,12 @@ class Command(BaseCommand):
 
         readings = jsonl(root / files.get("readings", "readings.jsonl"))
         Reading.objects.filter(pack=p).delete()
+        clipped: list[str] = []
         rows = [Reading(id=r["id"], pack=p, pages=parse_pages(r.get("pages"), r.get("level", "")), **clean(r, READING_FIELDS))
                 for r in readings]
         for row in rows:
             row.fill_index_fields()
+            fit_lengths(row, clipped)
         Reading.objects.bulk_create(rows, batch_size=500)
         parents = {r["id"]: r.get("parent_id") for r in readings if r.get("parent_id")}
         known = set(Reading.objects.filter(pack=p).values_list("id", flat=True))
@@ -121,6 +133,7 @@ class Command(BaseCommand):
         rows = [Assignment(id=a["id"], pack=p, **clean(a, ASSIGNMENT_FIELDS)) for a in assignments]
         for row in rows:
             row.fill_index_fields()
+            fit_lengths(row, clipped)
         Assignment.objects.bulk_create(rows, batch_size=500)
 
         Source.objects.filter(pack=p).delete()
@@ -134,7 +147,7 @@ class Command(BaseCommand):
         self.stdout.write(self.style.SUCCESS(
             f"{p.id}: {len(readings)} readings, {len(assignments)} assignments, "
             f"{n_out} outcome sets, {n_arcs} arcs"))
-        for msg in problems:
+        for msg in clipped + problems:
             self.stdout.write(self.style.WARNING(msg))
 
     def load_outcomes(self, p: Pack, folder: Path) -> int:

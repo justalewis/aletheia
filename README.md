@@ -7,6 +7,8 @@ Aletheia builds open course readers for writing classes. An instructor picks a f
 
 Aletheia only redistributes what licenses allow. Every item carries one of four reuse tiers (adapt, adapt noncommercial, use whole and unchanged, link only), and items whose licenses haven't been verified are treated as link-only.
 
+**Live:** https://aletheia-oer.fly.dev
+
 **Status:** early development (October 2026). The catalog holds about 2,200 openly licensed readings and 620 assignments in rhetoric and composition. Reader export currently links to each reading with full attribution; including full text in the reader is next.
 
 ## Layout
@@ -47,7 +49,7 @@ PDF export uses WeasyPrint, which needs Pango; it works in the Docker image and 
 
 ## Deploy
 
-The `Dockerfile` builds the React app and serves it from Django. `fly.toml` deploys to Fly.io; each deploy runs migrations and reloads the corpus pack. Set `DJANGO_SECRET_KEY` and `DATABASE_URL` as Fly secrets.
+The `Dockerfile` builds the React app and serves it from Django. `fly.toml` deploys to Fly.io (app `aletheia-oer`, region `sjc`); each deploy runs migrations and reloads the corpus pack. The database is a small Fly Postgres cluster (`aletheia-oer-db`) attached to the app, which sets `DATABASE_URL`; `DJANGO_SECRET_KEY` is a Fly secret. Deploy with `flyctl deploy --remote-only`.
 
 ## Licenses
 

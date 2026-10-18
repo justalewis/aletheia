@@ -43,7 +43,7 @@ class LicensedRecord(models.Model):
     pack = models.ForeignKey(Pack, on_delete=models.CASCADE)
     title = models.TextField()
     authors = models.TextField(blank=True)
-    year = models.CharField(max_length=20, blank=True)
+    year = models.CharField(max_length=40, blank=True)
     license = models.CharField(max_length=300, blank=True)
     license_family = models.CharField(max_length=60, blank=True)
     license_url = models.URLField(max_length=1000, blank=True)
@@ -51,7 +51,7 @@ class LicensedRecord(models.Model):
     reuse_tier = models.CharField(max_length=12, choices=REUSE_TIERS, default="link-only")
     skins = models.JSONField(default=list)
     topics = models.JSONField(default=list)
-    course_level = models.CharField(max_length=20, blank=True)
+    course_level = models.CharField(max_length=40, blank=True)
     summary = models.TextField(blank=True)
     notes = models.TextField(blank=True)
     withdrawn = models.BooleanField(default=False)
@@ -94,7 +94,7 @@ class Reading(LicensedRecord):
     pdf_url = models.URLField(max_length=1000, blank=True)
     epub_url = models.URLField(max_length=1000, blank=True)
     pages = models.PositiveIntegerField(null=True, blank=True)
-    audience = models.CharField(max_length=20, blank=True)
+    audience = models.CharField(max_length=40, blank=True)
 
     @property
     def best_url(self) -> str:
@@ -106,8 +106,8 @@ class Assignment(LicensedRecord):
     url = models.URLField(max_length=1000, blank=True)
     file_url = models.URLField(max_length=1000, blank=True)
     assignment_type = models.CharField(max_length=200, blank=True)
-    kind = models.CharField(max_length=40, blank=True, db_index=True)
-    estimated_weeks = models.CharField(max_length=20, blank=True)
+    kind = models.CharField(max_length=60, blank=True, db_index=True)
+    estimated_weeks = models.CharField(max_length=100, blank=True)
     pairs_with_readings = models.JSONField(default=list)
 
     @property
@@ -149,7 +149,7 @@ class Arc(models.Model):
     title = models.CharField(max_length=200)
     tagline = models.TextField(blank=True)
     rationale = models.TextField(blank=True)
-    course_level = models.CharField(max_length=20, blank=True)
+    course_level = models.CharField(max_length=40, blank=True)
     frameworks = models.JSONField(default=list)
     fits_courses = models.JSONField(default=list)
 
