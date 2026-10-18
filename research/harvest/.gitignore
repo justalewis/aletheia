@@ -1,0 +1,5 @@
+# Raw API responses (several MB, rebuilt by rerunning the harvesters)
+raw/
+# Local resumable state for otl.py (last request time, collected books)
+otl-state.json
+*.tmp
