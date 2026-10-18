@@ -7,7 +7,8 @@ Any PDF can also be matched by name: <reading-id>.pdf anywhere in the folder, or
 last folders and name match the end of the reading's pdf_url (books/bad/chapter11.pdf). A bare
 file name counts only when no other reading being warmed has a pdf_url ending in that name.
 
-A file listed for several catalog ids is a whole-book PDF; it is never used for one chapter.
+A file listed for several catalog ids is a whole-book PDF; it is never used whole for one
+chapter, but `book_for` hands it (or the book record's own file) to the chapter splitter.
 """
 from __future__ import annotations
 
@@ -39,6 +40,7 @@ class PdfLibrary:
         self.folders = [Path(f) for f in folders if Path(f).is_dir()]
         self.by_id: dict[str, LocalPdf] = {}
         self.shared: dict[str, str] = {}  # reading id -> whole-book file that lists it
+        self.shared_files: dict[str, LocalPdf] = {}
         self.shared_paths: set[Path] = set()
         self.by_tail: dict[str, LocalPdf] = {}
         self.by_name: dict[str, list[LocalPdf]] = {}
@@ -78,6 +80,7 @@ class PdfLibrary:
                 self.shared_paths.add(p)
                 for i in ids:
                     self.shared.setdefault(i, path)
+                    self.shared_files.setdefault(i, LocalPdf(p, root, source, "manifest (whole book)"))
 
     def find(self, reading_id: str, pdf_url: str = "", ambiguous_names: frozenset = frozenset()) -> LocalPdf | None:
         if reading_id in self.by_id:
@@ -89,4 +92,17 @@ class PdfLibrary:
         name = url_tail(pdf_url, 1)
         if name and name not in ambiguous_names and len(self.by_name.get(name, [])) == 1:
             return self.by_name[name][0]
+        return None
+
+    def book_for(self, reading_id: str, parent_id: str = "", pdf_url: str = "") -> LocalPdf | None:
+        """The whole book a chapter sits in: its parent record's file, a whole-book file that
+        lists the chapter, or a file matching the chapter's (book-wide) pdf_url."""
+        if parent_id and parent_id in self.by_id:
+            return self.by_id[parent_id]
+        if reading_id in self.shared_files:
+            return self.shared_files[reading_id]
+        for n in (3, 2):
+            tail = url_tail(pdf_url, n)
+            if tail and tail in self.by_tail:
+                return self.by_tail[tail]
         return None

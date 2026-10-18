@@ -46,6 +46,11 @@ class FullText:
     def pages(self) -> int | None:
         return self.entry.pages
 
+    @property
+    def printed_pages(self) -> str:
+        """For a chapter cut from a whole-book PDF, its printed page range in the book."""
+        return self.entry.meta.get("printed_pages", "")
+
 
 def full_text_for(reading, entry: Entry | None, medium: str) -> FullText | None:
     """`medium` is "html" or "pdf"."""

@@ -1,10 +1,11 @@
 """Fill the content cache for a set of readings.
 
 For each redistributable reading (adapt, adapt-nc, or verbatim with a verified license):
-  1. a web page we can read through an API (Pressbooks, WordPress, LibreTexts) is fetched,
+  1. a web page we can read (Pressbooks, WordPress, LibreTexts, Manifold, OpenStax) is fetched,
      sanitized, and stored with its images;
   2. otherwise its PDF is copied from a local folder (see library.py) or downloaded, unless the
-     link is bot-gated;
+     link is bot-gated. A chapter whose only PDF is the whole book gets its own pages, cut from
+     the book unchanged (see bookpdf.py);
   3. otherwise it stays a link, and the report says why.
 Link-only readings are never fetched. Whole books and collections aren't cached either: a
 reader assigns their chapters, and a 300-page book doesn't belong inside one.
@@ -13,17 +14,20 @@ from __future__ import annotations
 
 import hashlib
 import io
+import re
 from collections import Counter
 from dataclasses import asdict, dataclass
 from datetime import date
 from pathlib import Path
+from urllib.parse import urldefrag
 
 from pypdf import PdfReader
 from pypdf.errors import PdfReadError
 
+from content.bookpdf import BookPdf
 from content.fetch import (
-    Client, FetchError, Fetched, fetch_image, fetch_libretexts, fetch_pdf, fetch_pressbooks, fetch_wordpress,
-    is_libretexts, pressbooks_api_url,
+    Client, FetchError, Fetched, fetch_image, fetch_libretexts, fetch_manifold, fetch_openstax, fetch_pdf,
+    fetch_pressbooks, fetch_wordpress, is_libretexts, is_manifold, is_openstax, pressbooks_api_url,
 )
 from content.library import LocalPdf, PdfLibrary, url_tail
 from content.sanitize import sanitize
@@ -55,6 +59,10 @@ def html_fetcher(url: str):
         return None
     if pressbooks_api_url(url):
         return fetch_pressbooks
+    if is_openstax(url):
+        return fetch_openstax
+    if is_manifold(url):
+        return fetch_manifold
     if is_libretexts(url):
         return fetch_libretexts
     return fetch_wordpress
@@ -82,10 +90,13 @@ class Warmer:
         self.log = log or (lambda msg: None)
         self.shared_pdf_urls: set[str] = set()
         self.ambiguous_names: frozenset = frozenset()
+        self._books: dict[str, BookPdf] = {}            # sha256 -> parsed whole-book PDF
+        self._downloads: dict[str, bytes | FetchError] = {}
 
     def prepare(self, readings: list, catalog_pdf_urls: list[str]) -> None:
-        """`catalog_pdf_urls`: every pdf_url in the catalog, to spot whole-book PDFs shared by chapters."""
-        seen = Counter(u for u in catalog_pdf_urls if u)
+        """`catalog_pdf_urls`: every pdf_url in the catalog, to spot whole-book PDFs shared by chapters
+        (book.pdf#page=41 and book.pdf#page=82 are the same file)."""
+        seen = Counter(urldefrag(u)[0] for u in catalog_pdf_urls if u)
         self.shared_pdf_urls = {u for u, n in seen.items() if n > 1}
         names = Counter(url_tail(r.pdf_url, 1) for r in readings if r.pdf_url)
         self.ambiguous_names = frozenset(n for n, c in names.items() if c > 1)
@@ -111,24 +122,28 @@ class Warmer:
             except FetchError as e:
                 errors.append(e)
 
-        if reading.pdf_url in self.shared_pdf_urls and reading.level in PART_LEVELS:
-            errors.append(FetchError("whole-book-pdf", "its pdf_url is the whole book, shared with other chapters"))
-        else:
+        # A chapter whose PDF is the whole book (a pdf_url shared with other chapters, a file
+        # listed for several readings, or a download far longer than a chapter) gets its pages cut out.
+        whole_book = reading.level in PART_LEVELS and (
+            urldefrag(reading.pdf_url)[0] in self.shared_pdf_urls or reading.id in self.library.shared)
+        found = None  # (bytes, source url, LocalPdf) of a PDF that turned out to be the whole book
+        if not whole_book:
             local = self.library.find(reading.id, reading.pdf_url, self.ambiguous_names)
-            if local:
-                try:
-                    return self._save_pdf(reading, local.path.read_bytes(), out, "local-pdf",
-                                          local.source_url or reading.pdf_url, local)
-                except FetchError as e:
-                    errors.append(e)
-            elif reading.id in self.library.shared:
-                errors.append(FetchError("whole-book-pdf", f"only the whole book is on disk ({self.library.shared[reading.id]})"))
-            if reading.pdf_url and not self.offline and not local:
-                try:
-                    return self._save_pdf(reading, fetch_pdf(self.client, reading.pdf_url), out, "download",
-                                          reading.pdf_url)
-                except FetchError as e:
-                    errors.append(e)
+            try:
+                if local:
+                    found = (local.path.read_bytes(), local.source_url or reading.pdf_url, local)
+                    return self._save_pdf(reading, found[0], out, "local-pdf", found[1], local)
+                if reading.pdf_url and not self.offline:
+                    found = (fetch_pdf(self.client, reading.pdf_url), reading.pdf_url, None)
+                    return self._save_pdf(reading, found[0], out, "download", found[1])
+            except FetchError as e:
+                errors.append(e)
+                whole_book = e.status == "whole-book-pdf"
+        if whole_book:
+            try:
+                return self._save_chapter_pages(reading, out, found)
+            except FetchError as e:
+                errors.append(e)
 
         if not errors:
             errors.append(FetchError("offline" if self.offline else "no-source",
@@ -171,8 +186,42 @@ class Warmer:
             f"dropped {', '.join(s.dropped)}" if s.dropped else ""]))
         return out
 
+    def _save_chapter_pages(self, reading, out: Outcome, found=None) -> Outcome:
+        """Cache a chapter as its own pages of the whole-book PDF, copied unchanged."""
+        data, source_url, local = found or self._book_source(reading)
+        key = hashlib.sha256(data).hexdigest()
+        if key not in self._books:
+            self._books[key] = BookPdf(data)
+        book = self._books[key]
+        hint = re.search(r"\bpage=(\d+)", urldefrag(reading.pdf_url)[1])
+        ch = book.chapter(reading.title, int(hint.group(1)) - 1 if hint else None, reading.pages)
+        self._save_pdf(reading, book.extract(ch), out, "book-pages", urldefrag(source_url)[0], local, {
+            "book_sha256": key, "book_pages": f"{ch.first + 1}-{ch.last + 1}",
+            "printed_pages": f"{ch.printed_first}-{ch.printed_last}"})
+        out.detail = f"{ch.pages} pages (printed {ch.printed_first}-{ch.printed_last})"
+        if local:
+            out.detail += f" from {local.label}"
+        return out
+
+    def _book_source(self, reading) -> tuple[bytes, str, LocalPdf | None]:
+        """The whole book a chapter is in: on disk if possible, else downloaded once per run."""
+        local = self.library.book_for(reading.id, reading.parent_id or "", reading.pdf_url)
+        if local:
+            return local.path.read_bytes(), local.source_url or reading.pdf_url, local
+        url = urldefrag(reading.pdf_url)[0]
+        if not url or self.offline:
+            raise FetchError("whole-book-pdf", "only the whole book has this chapter, and it isn't on disk")
+        if url not in self._downloads:
+            try:
+                self._downloads[url] = fetch_pdf(self.client, url)
+            except FetchError as e:
+                self._downloads[url] = e
+        if isinstance(self._downloads[url], FetchError):
+            raise self._downloads[url]
+        return self._downloads[url], url, None
+
     def _save_pdf(self, reading, data: bytes, out: Outcome, via: str, source_url: str,
-                  local: LocalPdf | None = None) -> Outcome:
+                  local: LocalPdf | None = None, extra: dict | None = None) -> Outcome:
         pages = pdf_pages(data)
         if reading.level in PART_LEVELS and pages > 90 and (not reading.pages or pages > 2 * reading.pages + 10):
             raise FetchError("whole-book-pdf", f"{pages} pages for a {reading.level}")
@@ -180,7 +229,7 @@ class Warmer:
             "fetcher": via, "source_url": source_url, "page_url": reading.landing_url or reading.html_url,
             "fetched": date.today().isoformat(), "license_at_fetch": reading.license,
             "tier_at_fetch": reading.effective_tier, "sha256": hashlib.sha256(data).hexdigest(),
-            "bytes": len(data), "pages": pages,
+            "bytes": len(data), "pages": pages, **(extra or {}),
         }
         if local:
             meta["local_file"] = local.label

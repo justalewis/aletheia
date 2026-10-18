@@ -141,7 +141,9 @@ def sanitize(html: str, base_url: str = "", id_prefix: str = "") -> Sanitized:
         if el.decomposed:
             continue
         name = el.name.lower()
-        if name in REMOVE or el.has_attr("hidden"):
+        if name == "button" and el.find("img") and not el.has_attr("hidden"):
+            el.unwrap()  # a click-to-enlarge wrapper (OpenStax figures): the image is the work's
+        elif name in REMOVE or el.has_attr("hidden"):
             el.decompose()
         elif name in LOSSY:
             dropped.add(name)
