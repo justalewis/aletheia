@@ -245,8 +245,10 @@ def fetch_libretexts(client: Client, page_url: str, max_sections: int = 40) -> F
         listing.decompose()
     for el in body.select(".noindex"):
         el.decompose()
+    if len(section_urls) > max_sections:
+        raise FetchError("too-large", f"{len(section_urls)} sections; this is a book, not a chapter")
     parts = [body.decode_contents()]
-    for url in section_urls[:max_sections]:
+    for url in section_urls:
         page = BeautifulSoup(client.get(url, accept="text/html").text, "html.parser")
         sec = page.select_one("section.mt-content-container")
         if sec is None:
@@ -255,13 +257,11 @@ def fetch_libretexts(client: Client, page_url: str, max_sections: int = 40) -> F
             el.decompose()
         title = page.select_one("#title") or page.find("h1")
         heading = f"<h2>{_escape(title.get_text(' ', strip=True))}</h2>" if title else ""
-        parts.append(f"<div>{heading}{_rebase(sec, url, page_url)}</div>")
-    if len(section_urls) > max_sections:
-        raise FetchError("too-large", f"{len(section_urls)} sections; this is a book, not a chapter")
+        parts.append(f"<div>{heading}{_rebase(sec, url)}</div>")
     return Fetched("\n".join(parts), page_url, page_url, "libretexts")
 
 
-def _rebase(el, url: str, base: str) -> str:
+def _rebase(el, url: str) -> str:
     """Make a section's relative links absolute before it joins the chapter page."""
     for tag in el.select("[href], [src]"):
         for attr in ("href", "src"):
