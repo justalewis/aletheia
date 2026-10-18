@@ -1,6 +1,6 @@
 from collections import Counter
 
-from django.db.models import Q
+from django.db.models import Case, F, IntegerField, Q, When
 from django.shortcuts import get_object_or_404
 from ninja import Router
 
@@ -37,6 +37,32 @@ def _filter(qs, focus, topic, tier, q):
     return qs
 
 
+PARTS = ("chapter", "article", "primary-text")
+STUDENTISH = ("student", "both")
+INTRO = ("100", "200", "mixed")
+
+# Browse order: readings from open textbooks first, scholarly monographs last.
+BROWSE_TIER = Case(
+    # Chapters written for students in lower-division courses: the open textbooks.
+    When(level="chapter", audience="student", course_level__in=INTRO, then=0),
+    # Essays and primary texts for the same students (readers such as 88 Open Essays).
+    When(level__in=PARTS, audience="student", course_level__in=INTRO, then=1),
+    # Other short readings and web pages for lower-division students or general readers.
+    When(level__in=PARTS + ("website",), audience__in=STUDENTISH, course_level__in=INTRO, then=2),
+    # Whole open textbooks and collections.
+    When(level__in=("book", "collection"), audience__in=STUDENTISH, course_level__in=INTRO, then=3),
+    # Upper-division readings and books.
+    When(audience__in=STUDENTISH, course_level="300-400", then=4),
+    # Short readings for instructors or graduate courses, and whole journals.
+    When(level__in=PARTS + ("website", "journal"), then=5),
+    # Monographs and edited collections for instructors and graduate courses.
+    default=6,
+    output_field=IntegerField(),
+)
+# Chapters sort under their book's title, so a book's chapters stay together; standalone pieces under their own.
+SHELF = Case(When(parent_title="", then=F("title")), default=F("parent_title"))
+
+
 @router.get("/pack")
 def pack_info(request, pack: str | None = None):
     p = _pack(pack)
@@ -61,7 +87,8 @@ def list_readings(request, focus: str = "", topic: str = "", tier: str = "", lev
     if parent:
         qs = qs.filter(parent_id=parent)
     total = qs.count()
-    rows = qs.order_by("parent_title", "title")[offset: offset + min(limit, 200)]
+    rows = qs.annotate(tier_rank=BROWSE_TIER, shelf=SHELF).order_by("tier_rank", "shelf", "title")
+    rows = rows[offset: offset + min(limit, 200)]
     return {"total": total, "items": [reading_brief(r) for r in rows]}
 
 

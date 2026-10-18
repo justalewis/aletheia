@@ -128,6 +128,11 @@ export default function Catalog() {
         Openly licensed readings and assignments for writing courses. Filter by focus, topic, or how you're allowed to
         reuse them.
       </p>
+      {tab === "readings" && (
+        <p className="hint">
+          Chapters from open textbooks come first. Scholarly books for advanced and graduate courses come last.
+        </p>
+      )}
 
       <div className="tabs" role="tablist" aria-label="What to browse">
         {tabs.map((t, i) => (
