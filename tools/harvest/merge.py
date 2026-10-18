@@ -356,12 +356,15 @@ def source_lines(pb: dict | None, otl: dict | None) -> list[str]:
     """One line per harvester, from its summary file, so the reader knows what was searched."""
     out = []
     if pb:
+        blocked = pb.get("blocked_hosts", {})
+        n403 = sum(1 for v in blocked.values() if "403" in v)
+        why = f"{n403} hosts answered with a CloudFront 403" + (
+            f" and {len(blocked) - n403} couldn't be reached" if len(blocked) > n403 else "")
         out.append(
             f"- Pressbooks: {pb.get('distinct_books', 0):,} books discovered ({pb.get('directory_books', 0):,} in the "
             f"Directory feed, {pb.get('network_books', 0):,} in network lists); {pb.get('passed_first_screen', 0)} passed the "
             f"first screen; {pb.get('books_kept_with_metadata', 0)} kept with license and chapters from the book's own API; "
-            f"{pb.get('books_kept_directory_only (host blocked)', 0)} kept from Directory data only, because "
-            f"{len(pb.get('blocked_hosts', {}))} hosts refused the harvester (CloudFront 403).")
+            f"{pb.get('books_kept_directory_only (host blocked)', 0)} kept from Directory data only, because {why}.")
     if otl:
         out.append(
             f"- Open Textbook Library: {otl.get('books_collected', 0)} books collected in {otl.get('pages_done', 0)} pages "
