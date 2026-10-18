@@ -239,8 +239,10 @@ def spec_for(o: Outcome, s: OutcomeSet) -> OutcomeSpec:
 
 
 def set_brief(s: OutcomeSet, count: int) -> dict:
+    urls = s.data.get("source_urls") or []
+    source = s.data.get("source_url") or (urls[0] if urls else "")
     return {"id": s.id, "kind": s.kind, "title": s.title, "institution": s.institution, "course": s.course,
-            "count": count}
+            "count": count, "source_url": source}
 
 
 def specs_for_sets(pack: Pack, set_ids: Iterable[str]) -> tuple[list[dict], list[OutcomeSpec], list[str]]:
@@ -292,7 +294,7 @@ class Evidence:
         if self.topics:
             parts.append("Topics: " + ", ".join(self.topics[:3]))
         if self.fit_topics:
-            parts.append(f"Fits {self.fit_unit}: " + ", ".join(self.fit_topics[:2]))
+            parts.append(f"Fits the {self.fit_unit} unit: " + ", ".join(self.fit_topics[:2]))
         return ". ".join(parts)
 
 
@@ -424,7 +426,7 @@ class Scored:
     ctx: Context = field(repr=False, compare=False)
 
     @property
-    def kind(self) -> str:
+    def item_type(self) -> str:
         return "reading" if isinstance(self.item, Reading) else "assignment"
 
     @property
@@ -479,11 +481,12 @@ def rank(items: Iterable[Item], spec: OutcomeSpec, ctx: Context | None = None,
     return out
 
 
-VOLUME_SUFFIX = re.compile(r",?\s*\b(?:volume|vol\.?)\s*\d+\b.*$", re.IGNORECASE)
+VOLUME_SUFFIX = re.compile(r",?\s*\b(?:volume|vol\.|issue|no\.|number)\s*\d+\b.*$", re.IGNORECASE)
 
 
 def series_title(title: str) -> str:
-    """"Writing Spaces: Readings on Writing, Volume 4" -> "writing spaces: readings on writing"."""
+    """"Writing Spaces: Readings on Writing, Volume 4" -> "writing spaces: readings on writing";
+    journal issues ("..., Issue 4") collapse the same way."""
     return VOLUME_SUFFIX.sub("", (title or "").strip()).strip().lower()
 
 
@@ -550,7 +553,8 @@ def candidates(pack: Pack, specs: list[OutcomeSpec], *, focus: str = "", tiers: 
 
 def scored_dict(s: Scored) -> dict:
     d =reading_brief(s.item) if isinstance(s.item, Reading) else assignment_brief(s.item)
-    d.update({"kind": s.kind, "score": s.score, "why": s.evidence.why()})
+    # item_type, not kind: assignment briefs already use "kind" for the assignment's kind.
+    d.update({"item_type": s.item_type, "score": s.score, "why": s.evidence.why()})
     return d
 
 

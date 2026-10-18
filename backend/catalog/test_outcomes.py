@@ -260,6 +260,9 @@ def test_diversity_cap_per_book_and_series(pack):
     assert {"other-1", "other-2"} <= {s.item.id for s in picked}
     # With nothing else to choose from, the list fills up from the capped book.
     assert len(outcomes.diversify(ranked, 9, cap=2)) == 9
+    assert outcomes.series_title("constellations: a cultural rhetorics publishing space, Issue 4") == \
+        "constellations: a cultural rhetorics publishing space"
+    assert outcomes.series_title("Bad Ideas About Writing") == "bad ideas about writing"
 
 
 # ---------------------------------------------------------------------------- /api/recommend
@@ -282,6 +285,7 @@ def test_recommend_by_outcome_set(pack):
     assert first["readings"][0]["why"] == "Topics: peer review, revision"
     assert first["readings"][0]["est_pages"] and first["readings"][0]["reuse_tier"] == "adapt"
     assert [a["id"] for a in first["assignments"]] == ["peer"]
+    assert first["assignments"][0]["kind"] == "major assignment" and first["assignments"][0]["item_type"] == "assignment"
     assert first["total"] == {"readings": 1, "assignments": 1}
     assert [r["id"] for r in second["readings"]] == ["aud", "rev"]   # revision is a strong topic for RK
 
@@ -364,8 +368,8 @@ def test_coverage_matrix_totals_and_gaps(course):
     assert [s["id"] for s in gaps["wpa:processes"]["suggestions"]][:2] == ["rev", "rev2"]
     assert gaps["acrl:authority"]["unit_key"] == "u3"
     sugg = gaps["acrl:authority"]["suggestions"]
-    assert {s["id"] for s in sugg} == {"src", "src2"} and all(s["kind"] == "reading" for s in sugg)
-    assert "Fits Sources: source evaluation" in sugg[0]["why"]
+    assert {s["id"] for s in sugg} == {"src", "src2"} and all(s["item_type"] == "reading" for s in sugg)
+    assert "Fits the Sources unit: source evaluation" in sugg[0]["why"]
     selected = {"aud", "aud2", "peer"}
     assert not any(s["id"] in selected for g in data["gaps"] for s in g["suggestions"])
 
@@ -373,7 +377,7 @@ def test_coverage_matrix_totals_and_gaps(course):
 def test_coverage_empty_and_unknown_sets(course):
     data = post("/api/coverage", {"state": coverage_state(), "outcome_set_ids": ["empty", "nope"]}).json()
     assert data["sets"] == [{"id": "empty", "kind": "course", "title": "No outcomes", "institution": "OC",
-                             "course": "ENGL 9", "count": 0}]
+                             "course": "ENGL 9", "count": 0, "source_url": ""}]
     assert data["unknown_set_ids"] == ["nope"]
     assert data["outcomes"] == [] and data["gaps"] == []
     none = post("/api/coverage", {"state": coverage_state()}).json()
