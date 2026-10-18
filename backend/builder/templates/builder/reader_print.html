@@ -53,7 +53,7 @@
   {% for pu in print_units %}
   <section class="unit" id="{{ pu.anchor }}" data-break>
     <h2 class="unit-title">{{ pu.unit.title }}</h2>
-    {% if pu.unit.weeks_label %}<p class="weeks">{{ pu.unit.weeks_label }}</p>{% endif %}
+    {% if pu.unit.weeks_label %}<p class="weeks">{{ pu.unit.when_label }}</p>{% endif %}
     {% if pu.unit.goals %}<ul class="goals">{% for g in pu.unit.goals %}<li>{{ g }}</li>{% endfor %}</ul>{% endif %}
 
     {% if pu.readings %}
@@ -75,7 +75,7 @@
     {% for a in pu.unit.assignments %}
     <div class="item">
       <div class="t">{{ a.title }}</div>
-      <div class="meta">{{ a.kind|capfirst }}{% if a.assignment_type %} · {{ a.assignment_type }}{% endif %}{% if a.source_repository %} · {{ a.source_repository }}{% endif %}</div>
+      <div class="meta">{{ a.kind|capfirst }}{% if a.assignment_type %} · {{ a.assignment_type }}{% endif %}{% if a.source_repository %} · {{ a.source_repository }}{% endif %}{% if a.due_label %} · Due {{ a.due_label }}{% endif %}</div>
       <div class="links">{% if a.best_url %}<a href="{{ a.best_url }}">Assignment</a>{% endif %}</div>
       <p class="credit">{{ a.credit }}</p>
     </div>

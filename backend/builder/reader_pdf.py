@@ -140,7 +140,7 @@ def build(ctx: dict, renderer=None, store: ContentStore | None = None) -> bytes:
     for _ in range(4):
         def num(anchor: str) -> int | None:
             return final_index(body.anchors[anchor], front_pages) + 1 if anchor in body.anchors else None
-        toc = [{"title": u["unit"].title, "weeks": u["unit"].weeks_label, "page": num(u["anchor"]),
+        toc = [{"title": u["unit"].title, "weeks": u["unit"].when_label, "page": num(u["anchor"]),
                 "items": [{"title": it["r"].title, "page": num(it["anchor"])} for it in u["readings"] if it["mode"]]}
                for u in units]
         toc.append({"title": "Licenses and credits", "weeks": "", "page": num("licenses"), "items": []})

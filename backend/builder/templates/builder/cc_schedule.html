@@ -1,6 +1,21 @@
 <h2>{{ title }}</h2>
 {% if instructor or term_label %}<p>{{ instructor }}{% if instructor and term_label %} · {% endif %}{{ term_label }}</p>{% endif %}
+{% if schedule_rows %}<p>{{ schedule.label }}{% if schedule.meeting_days %} · Class meets {{ schedule.meeting_days|join:", " }}{% endif %}</p>
 <table style="border-collapse: collapse; width: 100%;" border="1" cellpadding="6">
+<thead><tr><th scope="col">Week</th><th scope="col">Dates</th><th scope="col">Unit</th><th scope="col">Readings</th><th scope="col">Due</th></tr></thead>
+<tbody>
+{% for row in schedule_rows %}{% if row.kind == "break" %}<tr><td></td><td>{{ row.dates }}</td><td colspan="3"><em>No class: {{ row.unit }}</em></td></tr>
+{% else %}<tr>
+<td>{{ row.week }}</td>
+<td>{{ row.dates }}{% for n in row.notes %}<br><em>{{ n }}</em>{% endfor %}</td>
+<td>{% if row.first %}<strong>{{ row.unit }}</strong>{% else %}{{ row.unit }}{% endif %}</td>
+<td>{% for r in row.readings %}{{ r.title }}{% if not forloop.last %}<br>{% endif %}{% endfor %}</td>
+<td>{% for a in row.due %}{{ a.title }}{% if a.due_label %} ({{ a.due_label }}){% endif %}{% if not forloop.last %}<br>{% endif %}{% endfor %}</td>
+</tr>
+{% endif %}{% endfor %}
+</tbody>
+</table>
+{% else %}<table style="border-collapse: collapse; width: 100%;" border="1" cellpadding="6">
 <thead><tr><th scope="col">When</th><th scope="col">Unit</th><th scope="col">Readings</th><th scope="col">Assignments</th></tr></thead>
 <tbody>
 {% for u in units %}
@@ -12,4 +27,4 @@
 </tr>
 {% endfor %}
 </tbody>
-</table>
+</table>{% endif %}

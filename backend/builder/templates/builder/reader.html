@@ -29,13 +29,13 @@
 
   <h2 id="contents">Contents</h2>
   <ol class="toc">
-    {% for u in units %}<li><a href="#unit-{{ forloop.counter }}">{{ u.title }}</a>{% if u.weeks_label %} <span class="weeks">({{ u.weeks_label }})</span>{% endif %}</li>{% endfor %}
+    {% for u in units %}<li><a href="#unit-{{ forloop.counter }}">{{ u.title }}</a>{% if u.weeks_label %} <span class="weeks">({{ u.when_label }})</span>{% endif %}</li>{% endfor %}
     <li><a href="#licenses">Licenses and credits</a></li>
   </ol>
 
   {% for u in units %}
   <h2 id="unit-{{ forloop.counter }}">{{ u.title }}</h2>
-  {% if u.weeks_label %}<p class="weeks">{{ u.weeks_label }}</p>{% endif %}
+  {% if u.weeks_label %}<p class="weeks">{{ u.when_label }}</p>{% endif %}
   {% if u.goals %}<ul class="goals">{% for g in u.goals %}<li>{{ g }}</li>{% endfor %}</ul>{% endif %}
 
   {% if u.readings %}
@@ -67,7 +67,7 @@
   {% for a in u.assignments %}
   <div class="item">
     <div class="t">{{ a.title }}</div>
-    <div class="meta">{{ a.kind|capfirst }}{% if a.assignment_type %} · {{ a.assignment_type }}{% endif %}{% if a.source_repository %} · {{ a.source_repository }}{% endif %}</div>
+    <div class="meta">{{ a.kind|capfirst }}{% if a.assignment_type %} · {{ a.assignment_type }}{% endif %}{% if a.source_repository %} · {{ a.source_repository }}{% endif %}{% if a.due_label %} · Due {{ a.due_label }}{% endif %}</div>
     {% if a.summary %}<p class="summary">{{ a.summary }}</p>{% endif %}
     <div class="links">{% if a.best_url %}<a href="{{ a.best_url }}">Assignment</a>{% endif %}</div>
     <p class="credit">{{ a.credit }}</p>

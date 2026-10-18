@@ -4,7 +4,7 @@ import { ErrorMessage, Loading } from "../components/Status";
 import { TierBadge } from "../components/TierBadge";
 import { selectedIds, unitBudget, unitPages } from "./model";
 
-type ExportKind = "html" | "pdf" | "imscc-canvas" | "imscc-standard";
+type ExportKind = "html" | "pdf" | "imscc-canvas" | "imscc-standard" | "ics" | "docx";
 
 const EXPORTS: { kind: ExportKind; label: string; help: string }[] = [
   { kind: "html", label: "Reader (HTML)", help: "One web page with every reading and its credit line." },
@@ -19,7 +19,18 @@ const EXPORTS: { kind: ExportKind; label: string; help: string }[] = [
     label: "Other LMS package (.imscc)",
     help: "Plain Common Cartridge for Moodle, Brightspace, Blackboard, and others.",
   },
+  {
+    kind: "ics",
+    label: "Calendar (.ics)",
+    help: "Each class with its readings, plus due dates. Opens in Google Calendar, Outlook, or Apple Calendar.",
+  },
+  {
+    kind: "docx",
+    label: "Syllabus skeleton (.docx)",
+    help: "A Word file with the schedule, assignments, and credits filled in, and placeholders for the rest.",
+  },
 ];
+const NEEDS_DATES = "Add class dates under Term and schedule first.";
 
 function download(blob: Blob, filename: string) {
   const url = URL.createObjectURL(blob);
@@ -79,6 +90,7 @@ export function SidePanel({ state, briefVersion }: { state: BuildState; briefVer
   const [busy, setBusy] = useState<ExportKind | null>(null);
   const [exportMsg, setExportMsg] = useState<Partial<Record<ExportKind, { text: string; tone: "ok" | "warn" | "error" }>>>({});
   const nothing = sel.readings.length + sel.assignments.length === 0;
+  const needsDates = (kind: ExportKind) => kind === "ics" && !state.schedule?.start_date;
 
   const runExport = async (kind: ExportKind) => {
     setBusy(kind);
@@ -172,7 +184,7 @@ export function SidePanel({ state, briefVersion }: { state: BuildState; briefVer
               <button
                 type="button"
                 className="btn btn-block"
-                disabled={nothing || busy !== null}
+                disabled={nothing || busy !== null || needsDates(x.kind)}
                 aria-describedby={`export-help-${x.kind}`}
                 onClick={() => runExport(x.kind)}
               >
@@ -180,6 +192,7 @@ export function SidePanel({ state, briefVersion }: { state: BuildState; briefVer
               </button>
               <p id={`export-help-${x.kind}`} className="hint">
                 {x.help}
+                {needsDates(x.kind) ? ` ${NEEDS_DATES}` : ""}
               </p>
               <div role="status" aria-live="polite">
                 {exportMsg[x.kind] && (

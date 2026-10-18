@@ -4,7 +4,8 @@ Build state (what the frontend holds and posts):
     {"title", "instructor", "institution", "term_label", "focus", "arc_id",
      "term": {"weeks", "fixed_start", "fixed_end", "pages_per_week"},
      "units": [{"key", "title", "start_week", "end_week", "weeks", "goals", "outcomes",
-                "readings": [{"id", "selected"}], "assignments": [{"id", "role", "selected"}]}]}
+                "readings": [{"id", "selected"}], "assignments": [{"id", "role", "selected"}]}],
+     "schedule": optional; see schedule.py}
 
 Only selected items are exported. The reader carries the full text of each redistributable
 reading the content cache holds (see content/embed.py for the rules), under its attribution;
@@ -22,6 +23,7 @@ from xml.sax.saxutils import escape
 
 from django.template.loader import render_to_string
 
+from builder import dated
 from builder.licensing import attribution, license_report
 from builder.reader_pdf import build as build_reader_pdf
 from catalog.models import Assignment, Reading
@@ -38,6 +40,7 @@ class ResolvedUnit:
     outcomes: list
     readings: list = field(default_factory=list)
     assignments: list = field(default_factory=list)
+    dates_label: str = ""  # set by dated.annotate when the build has a schedule
 
     @property
     def weeks_label(self) -> str:
@@ -46,6 +49,11 @@ class ResolvedUnit:
         if self.start_week == self.end_week:
             return f"Week {self.start_week}"
         return f"Weeks {self.start_week}–{self.end_week}"
+
+    @property
+    def when_label(self) -> str:
+        """Like "Weeks 2–4, Jan 11–29" with a schedule; the same as weeks_label without one."""
+        return ", ".join(x for x in (self.weeks_label, self.dates_label) if x)
 
 
 def resolve(state: dict) -> dict:
@@ -72,7 +80,7 @@ def resolve(state: dict) -> dict:
         resolved.append(ru)
     all_r = [r for u in resolved for r in u.readings]
     all_a = [a for u in resolved for a in u.assignments]
-    return {
+    ctx = {
         "title": state.get("title") or "Course Reader",
         "instructor": state.get("instructor", ""),
         "institution": state.get("institution", ""),
@@ -84,6 +92,7 @@ def resolve(state: dict) -> dict:
         "report": license_report(all_r, all_a),
         "generated": date.today().isoformat(),
     }
+    return dated.annotate(ctx, state)
 
 
 # ---------------------------------------------------------------- reader
@@ -164,7 +173,8 @@ def build_imscc(ctx: dict, flavor: str = "canvas") -> bytes:
             '<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">'
             f"<title>Assignment: {escape(a.title)}</title></head><body>{body}</body></html>")
         files[f"{ident}/assignment_settings.xml"] = render_to_string(
-            "builder/cc_assignment_settings.xml", {"ident": ident, "title": a.title, "position": position, "ns": CANVAS_NS})
+            "builder/cc_assignment_settings.xml", {"ident": ident, "title": a.title, "position": position, "ns": CANVAS_NS,
+                                                   "due_at": getattr(a, "due_at", "")})
         resources.append(
             f'<resource identifier="{ident}" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" '
             f'href="{ident}/{slug}.html"><file href="{ident}/{slug}.html"/>'
@@ -193,7 +203,7 @@ def build_imscc(ctx: dict, flavor: str = "canvas") -> bytes:
                 position += 1
                 kind = "Assignment" if canvas else "WikiPage"
                 items.append((kind, a.title, add_assignment(a, f"{u.key}:{a.id}", position)))
-        title = f"{u.weeks_label}: {u.title}" if u.weeks_label else u.title
+        title = f"{u.when_label}: {u.title}" if u.when_label else u.title
         modules.append({"title": title, "items": items})
 
     # Organizations (standard layer: every LMS reads this) and Canvas module_meta share item ids.

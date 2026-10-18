@@ -4,6 +4,7 @@ from ninja import Router, Schema
 from ninja.errors import HttpError
 
 from builder import exports
+from builder import ics, schedule, syllabus  # dated schedules: preview, calendar, syllabus skeleton
 from builder.licensing import license_report
 from builder.models import Build
 from builder.planning import Term, plan_course
@@ -130,4 +131,29 @@ def export_imscc(request, body: ExportIn, flavor: str = "canvas"):
     resp = HttpResponse(data, content_type="application/zip")
     suffix = "" if flavor != "standard" else "-standard"
     resp["Content-Disposition"] = f'attachment; filename="{_filename(body.state, "imscc").replace(".imscc", suffix + ".imscc")}"'
+    return resp
+
+
+@router.post("/schedule")
+def schedule_preview(request, body: ExportIn):
+    """The dates Aletheia would use for this build (see schedule.py); ok is false without a start date."""
+    return schedule.for_state(body.state) or {"ok": False, "warnings": [], "notes": []}
+
+
+@router.post("/export/ics")
+def export_ics(request, body: ExportIn):
+    try:
+        data = ics.build_ics(exports.resolve(body.state))
+    except ValueError as e:
+        raise HttpError(400, str(e))
+    resp = HttpResponse(data, content_type="text/calendar; charset=utf-8")
+    resp["Content-Disposition"] = f'attachment; filename="{_filename(body.state, "ics")}"'
+    return resp
+
+
+@router.post("/export/docx")
+def export_docx(request, body: ExportIn):
+    data = syllabus.build_docx(exports.resolve(body.state), body.state)
+    resp = HttpResponse(data, content_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+    resp["Content-Disposition"] = f'attachment; filename="{_filename(body.state, "docx").replace(".docx", "-syllabus.docx")}"'
     return resp

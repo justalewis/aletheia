@@ -1,10 +1,24 @@
+import { Fragment } from "react";
 import type { BuildState } from "../api";
 import { teachingWeeks } from "./model";
+import type { ScheduleResult } from "./schedule";
 
 interface Props {
   state: BuildState;
   /** Arc unit titles by key, for naming units the planner dropped. */
   arcTitles: Record<string, string>;
+  /** Class dates from the server, once the course has a start date. */
+  dates?: ScheduleResult | null;
+}
+
+/** Calendar dates for a segment of the grid, and any break inside it. */
+function segmentDates(dates: ScheduleResult | null | undefined, s: Segment): string {
+  if (!dates?.ok) return "";
+  if (s.kind === "unit" && s.key && dates.units?.[s.key]) {
+    const u = dates.units[s.key];
+    return u.breaks.length ? `${u.label}, with ${u.breaks.join(" and ")}` : u.label;
+  }
+  return dates.weeks?.find((w) => w.n === s.start)?.label ?? "";
 }
 
 interface Segment {
@@ -22,7 +36,7 @@ function range(start: number, end: number): string {
 }
 
 /** The week grid: fixed weeks plus units laid across the term, with a readable schedule list. */
-export function TermBar({ state, arcTitles }: Props) {
+export function TermBar({ state, arcTitles, dates }: Props) {
   const { term, units } = state;
   const lastTeaching = term.weeks - term.fixed_end;
   const segments: Segment[] = [];
@@ -70,17 +84,26 @@ export function TermBar({ state, arcTitles }: Props) {
       </div>
 
       <ol className="schedule">
+        {dates?.breaks?.filter((b) => b.after_week === 0).map((b) => (
+          <li key={b.start} className="schedule-break">No class: {b.label}, {b.dates}</li>
+        ))}
         {segments.map((s, i) => (
-          <li key={i} className={s.over ? "is-over" : undefined}>
-            <span className="schedule-weeks">{range(s.start, s.end)}</span>{" "}
-            {s.kind === "unit" ? (
-              <a href={`#unit-${s.key}`}>
-                <span className="schedule-num">Unit {s.n}:</span> {s.label}
-              </a>
-            ) : (
-              <span className="schedule-fixed">{s.label}</span>
-            )}
-          </li>
+          <Fragment key={i}>
+            <li className={s.over ? "is-over" : undefined}>
+              <span className="schedule-weeks">{range(s.start, s.end)}</span>{" "}
+              {s.kind === "unit" ? (
+                <a href={`#unit-${s.key}`}>
+                  <span className="schedule-num">Unit {s.n}:</span> {s.label}
+                </a>
+              ) : (
+                <span className="schedule-fixed">{s.label}</span>
+              )}
+              {segmentDates(dates, s) && <span className="schedule-dates"> · {segmentDates(dates, s)}</span>}
+            </li>
+            {dates?.breaks?.filter((b) => b.after_week === s.end && b.after_week > 0).map((b) => (
+              <li key={b.start} className="schedule-break">No class: {b.label}, {b.dates}</li>
+            ))}
+          </Fragment>
         ))}
       </ol>
 
