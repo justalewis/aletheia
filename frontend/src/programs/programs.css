@@ -1,0 +1,221 @@
+/* Program pages and the builder's program bar. Uses the tokens from styles.css. */
+
+.program-page textarea,
+.program-bar textarea {
+  width: 100%;
+  padding: 0.45rem 0.6rem;
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  resize: vertical;
+  min-width: 0;
+}
+
+.program-description {
+  white-space: pre-line;
+}
+
+.program-arcs {
+  list-style: none;
+  padding: 0;
+}
+
+.program-arcs .btn {
+  margin-top: 0.25rem;
+}
+
+/* ---------------------------------------------------------------- builder bar */
+
+.program-bar h2 {
+  margin-bottom: 0.35rem;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 0 1rem;
+  border: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+  min-width: 0;
+}
+
+.section-grid .field {
+  margin-bottom: 0.75rem;
+}
+
+/* ---------------------------------------------------------------- admin */
+
+.admin-links .field:last-of-type {
+  margin-bottom: 0.5rem;
+}
+
+.arc-admin-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+}
+
+.arc-admin-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.85rem 1rem;
+  margin-bottom: 0.75rem;
+  background: var(--surface);
+}
+
+.arc-admin-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.25rem 0.75rem;
+}
+
+.arc-admin-title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.arc-admin-summary {
+  margin: 0.35rem 0 0;
+}
+
+.status-tag {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--t-link-bd);
+  background: var(--t-link-bg);
+  color: var(--t-link-fg);
+  white-space: nowrap;
+}
+
+.status-tag.is-published {
+  border-color: var(--ok-border);
+  background: var(--ok-bg);
+  color: var(--ok-text);
+}
+
+.row-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+
+.add-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem;
+}
+
+.add-box {
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius);
+  padding: 0.85rem 1rem;
+  min-width: 0;
+}
+
+.add-box h3 {
+  margin-top: 0;
+}
+
+/* ---------------------------------------------------------------- tables and report */
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 0.5rem 0 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.table-wrap:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+}
+
+.data-table th,
+.data-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.5rem 0.65rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.data-table thead th {
+  background: var(--surface-2);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table .num {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.cell-sub {
+  display: block;
+  color: var(--muted);
+  font-size: 0.82rem;
+  max-width: 22rem;
+}
+
+.report-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0 1rem;
+}
+
+.report-tools .field {
+  min-width: 12rem;
+}
+
+.report-tools .btn {
+  margin-bottom: 1rem;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 0.75rem;
+  margin: 0 0 1rem;
+}
+
+.stat-grid > div {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.8rem;
+  background: var(--surface-2);
+}
+
+.stat-grid dt {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.stat-grid dd {
+  margin: 0.15rem 0 0;
+  font-family: var(--sans);
+  font-size: 1.35rem;
+  font-weight: 600;
+}

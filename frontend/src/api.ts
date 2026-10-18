@@ -265,6 +265,33 @@ export interface BuildState {
   units: StateUnit[];
   /** UI only: which arc units the planner dropped or merged for this term. */
   plan_note?: PlanNote | null;
+  /** Set when the course belongs to a writing program (see src/programs). */
+  program?: ProgramLink | null;
+  section?: SectionInfo | null;
+}
+
+export interface ProgramLink {
+  id: string;
+  name: string;
+  /** The program course this one started from. */
+  course?: string | null;
+  /** "section": an instructor's course, linked on save. "template": a WPA drafting a program course. */
+  mode?: "section" | "template";
+}
+
+export interface SectionInfo {
+  course_code: string;
+  section: string;
+  term: string;
+  enrollment: number | null;
+  instructor?: string;
+}
+
+/** Program link and section info travel beside the state so the server can report on them. */
+function programFields(state: BuildState) {
+  const p = state.program;
+  if (!p || p.mode === "template") return { program_id: null, section: null };
+  return { program_id: p.id, section: { ...state.section, instructor: state.section?.instructor || state.instructor } };
 }
 
 export interface SavedBuild {
@@ -437,7 +464,7 @@ export const api = {
   createBuild: (state: BuildState, forked_from?: string) =>
     json<{ id: string; edit_token: string }>("/builds", {
       method: "POST",
-      body: forked_from ? { state, forked_from } : { state },
+      body: forked_from ? { state, forked_from, ...programFields(state) } : { state, ...programFields(state) },
     }),
 
   getBuild: (id: string, signal?: AbortSignal) => json<SavedBuild>(`/builds/${encodeURIComponent(id)}`, { signal }),
@@ -445,7 +472,7 @@ export const api = {
   updateBuild: (id: string, state: BuildState, token: string) =>
     json<{ id: string; updated: string }>(`/builds/${encodeURIComponent(id)}`, {
       method: "PUT",
-      body: { state },
+      body: { state, ...programFields(state) },
       headers: { "X-Edit-Token": token },
     }),
 
