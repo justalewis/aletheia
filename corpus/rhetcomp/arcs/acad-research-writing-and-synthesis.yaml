@@ -50,13 +50,13 @@ units:
         - wvu-bad-ideas-about-writing-research-starts-with-answers
       optional:
         - cus-3-related-and-alternative-terms
-        - cus-3-google-scholar
-        - cus-1-the-purpose-of-research-questions
+        - slr2e-google-scholar-features
+        - slr2e-searching-as-strategic-exploration
         - wwm-search-tools
-        - krause-tprw-02-understanding-and-using-the-library-and-the-i
+        - isu160-using-citations
         - wac-bad-ideas-ai-writing-chapter-11-generative-ai-can-do-my-research-for-me-researchers-should
         - present-tense-2018-gruwell-constructing-research-platform
-        - gz2e-9-4-using-effective-keywords-in-your-research
+        - isu160-search-techniques
     assignments:
       major: []
       short_term_variant: null
@@ -73,7 +73,7 @@ units:
       sample topic. "Research Starts with Answers" is a short Bad Ideas chapter that helps with
       students who arrive with a thesis and want sources to back it up. If students are using AI
       tools to find sources, run the hallucinated-references experiment before they start
-      collecting. Gruwell's Present Tense article on how platforms and algorithms shape research was
+      collecting. "Searching as Strategic Exploration" is the UCF chapter built on the ACRL frame of the same name, and the Iowa State chapter on using citations covers citation chasing and interlibrary loan. Gruwell's Present Tense article on how platforms and algorithms shape research was
       written for scholars; assign it if your class wants to talk about how algorithms decide what a
       search turns up.
 
