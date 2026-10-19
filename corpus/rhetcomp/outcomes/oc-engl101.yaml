@@ -37,31 +37,31 @@ outcomes:
   - id: oc-engl101-1
     text: "Analyze a variety of texts using critical thinking and rhetorical knowledge (audience, purpose, genre, etc.)."
     frameworks: [wpa:rhetorical-knowledge, wpa:critical-thinking-reading-composing]
-    topics: [rhetorical analysis, rhetorical situation, audience, genre, critical thinking]
+    topics: [rhetorical analysis, rhetorical situation, rhetorical appeals, genre analysis, audience analysis, critical thinking, genre]
   - id: oc-engl101-2
     text: "Compose responses that demonstrate critical reading (comprehension, engagement, and connection of ideas) of source materials."
     frameworks: [wpa:critical-thinking-reading-composing]
-    topics: [critical reading, reading response, summary and response, reading strategies]
+    topics: [critical reading, reading response, close reading, reading academic texts, summary and response, reading strategies, annotation]
   - id: oc-engl101-3
     text: "Compose essays using rhetorical choices (thesis, purpose, audience, genre, etc.) to communicate an argument."
     frameworks: [wpa:rhetorical-knowledge]
-    topics: [thesis, argument, audience, genre, essay]
+    topics: [thesis writing, thesis, counterargument, argument, rhetorical appeals, genre, audience]
   - id: oc-engl101-4
     text: "Use conventional and emerging standards of grammar and punctuation to improve communication using a handbook or other resources when necessary."
     frameworks: [wpa:knowledge-of-conventions]
-    topics: [grammar, punctuation, editing, style]
+    topics: [grammar, punctuation, editing, sentence-level editing, self-editing]
   - id: oc-engl101-5
     text: "Identify information needs as well as location and credibility of sources."
     frameworks: [wpa:critical-thinking-reading-composing, acrl:searching-strategic, acrl:authority]
-    topics: [information literacy, source evaluation, source credibility]
+    topics: [source evaluation, source credibility, lateral reading, news evaluation, search strategies, scholarly sources, source types, information literacy]
   - id: oc-engl101-6
     text: "Demonstrate a recursive writing process, individually and collectively (planning, peer review, reflection, etc.)"
     frameworks: [wpa:processes]
-    topics: [writing process, peer review, revision, reflection, collaboration]
+    topics: [drafting, revision, peer review, peer critique, reflection, writing process, brainstorming, invention]
   - id: oc-engl101-7
     text: "Use sources effectively when summarizing, paraphrasing, and quoting with an appropriate academic citation style (e.g., APA or MLA)."
     frameworks: [wpa:knowledge-of-conventions, acrl:information-value]
-    topics: [quoting and paraphrasing, summary, citation, mla, apa, source integration]
+    topics: [quoting and paraphrasing, source integration, summary, citation, mla, apa, plagiarism, academic integrity]
 related_outcome_sets:
   - id: wa-decomposing-engl101-2019
     name: "ENGL&101 Learning Outcomes ((de)Composing ENGL&101, Approved Spring, 2019)"

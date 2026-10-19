@@ -239,8 +239,9 @@ def test_course_outcome_uses_its_own_topics(pack):
     rescore(pack)
     spec = outcomes.specs_for_ids(pack, ["course-1"])[0][0]
     ranked = outcomes.rank(Reading.objects.filter(pack=pack), spec)
-    # reflect and collab-only tie at the threshold; the title breaks the tie.
-    assert [s.item.id for s in ranked] == ["peers", "collab-only", "reflect"]
+    # "reflect" matches only through the outcome's broad framework code, which counts for less once the
+    # outcome names its own topics, so it falls below the threshold; naming a topic is enough.
+    assert [s.item.id for s in ranked] == ["peers", "collab-only"]
     assert ranked[0].evidence.why().startswith("Topics: peer review, collaboration")
 
 

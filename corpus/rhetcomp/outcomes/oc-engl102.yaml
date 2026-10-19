@@ -33,20 +33,20 @@ outcomes:
   - id: oc-engl102-1
     text: "Use an inquiry-based process to generate topics and questions for the development of an original research project."
     frameworks: [acrl:research-inquiry, wpa:processes]
-    topics: [research as inquiry, research question, inquiry, research process]
+    topics: [research as inquiry, inquiry, research question, research questions, topic development, research topic selection, research process, brainstorming]
   - id: oc-engl102-2
     text: "Evaluate, analyze, and manage primary and secondary sources —may include peer-reviewed articles, books, literature, news, and contemporary reports, etc."
     frameworks: [acrl:authority, acrl:searching-strategic, wpa:critical-thinking-reading-composing]
-    topics: [primary sources, scholarly sources, source evaluation, source types, information literacy]
+    topics: [source evaluation, source types, scholarly sources, primary sources, lateral reading, search strategies, databases, library research, library resources, annotated bibliography, information literacy]
   - id: oc-engl102-3
     text: "Apply a process-based approach to the planning and writing of a major research-based argumentative paper, which includes peer review, revision, and editing with attention to academic writing conventions."
     frameworks: [wpa:processes, wpa:knowledge-of-conventions]
-    topics: [research writing, research essay, argument, peer review, revision, editing, academic writing]
+    topics: [research writing, research essay, research proposal, drafting, peer review, revision, editing, academic writing, counterargument]
   - id: oc-engl102-4
     text: "Demonstrate the ability to effectively use research in support of a thesis."
     frameworks: [acrl:scholarship-conversation, wpa:critical-thinking-reading-composing]
-    topics: [thesis, argument, evidence, source integration, synthesis]
+    topics: [thesis, thesis writing, evidence, synthesis, source integration, counterargument, argument]
   - id: oc-engl102-5
     text: "Attribute sources using appropriate academic citations and conventions."
     frameworks: [acrl:information-value, wpa:knowledge-of-conventions]
-    topics: [citation, plagiarism, academic integrity, mla, apa]
+    topics: [citation, plagiarism, academic integrity, mla, apa, quoting and paraphrasing, citation management]

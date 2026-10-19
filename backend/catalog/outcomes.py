@@ -52,7 +52,10 @@ MAX_EXTRA_UNITS = 2
 
 # Ranking constants.
 SECONDARY_CODE_SHARE = 0.3   # an outcome with several codes: the best code counts fully, others at 30%
-COURSE_TOPIC_STEP = 0.5      # course-outcome topic overlap: 1 - 0.5^matches
+COURSE_TOPIC_STEP = 0.5      # course-outcome topic overlap: each match worth 0.5 x its rarity weight
+TOPIC_RARE = 20              # a topic on this many items or fewer has full weight
+TOPIC_FLOOR = 0.3            # ...and no topic weighs less than this
+TOPIC_SPEC_FRAMEWORK_SHARE = 0.4  # framework score kept for outcomes that carry their own topics
 READING_GROUP_CAP = 2        # readings from one book per outcome list
 ASSIGNMENT_GROUP_CAP = 3     # assignments from one repository per outcome list
 SUGGESTION_GROUP_CAP = 2
@@ -302,6 +305,7 @@ class Evidence:
 class Context:
     """Request-level settings the signals and factors can read."""
     weights: dict = field(default_factory=lambda: dict(DEFAULT_WEIGHTS))
+    topic_w: dict = field(default_factory=dict)        # topic -> rarity weight (topic_weights); missing = 1
     focus: str = ""                                    # soft focus boost (coverage); hard filter elsewhere
     fit_unit: str = ""
     fit_topics: frozenset[str] = frozenset()
@@ -340,7 +344,10 @@ def framework_score(item: Item, spec: OutcomeSpec, ctx: Context) -> float:
     if not vals:
         return 0.0
     best = max(vals)
-    return best + SECONDARY_CODE_SHARE * (sum(vals) - best)
+    score = best + SECONDARY_CODE_SHARE * (sum(vals) - best)
+    # A course outcome that lists its own topics is matched mostly on them; its broad framework
+    # codes (every item in a "conventions" arc unit) only back that up.
+    return score * TOPIC_SPEC_FRAMEWORK_SHARE if spec.topics else score
 
 
 def framework_evidence(item: Item, spec: OutcomeSpec, ctx: Context) -> Evidence:
@@ -358,10 +365,28 @@ def course_topic_matches(item: Item, spec: OutcomeSpec) -> list[str]:
     return [t for t in item_topics(item) if t in spec.topics]
 
 
+def topic_weights(pack: Pack) -> dict[str, float]:
+    """How much a topic says about an item: 1 for a topic on 20 or fewer items, falling as it gets
+    common (a topic on 250 of 2,800 items, like "argument", weighs about half). Matching a specific
+    topic then counts for more than matching a generic one."""
+    counts: dict[str, int] = defaultdict(int)
+    total = 0
+    for model in (Reading, Assignment):
+        for topics in model.objects.filter(pack=pack, withdrawn=False).values_list("topics", flat=True):
+            total += 1
+            for t in {str(t).strip().lower() for t in topics or []}:
+                counts[t] += 1
+    if total <= TOPIC_RARE:
+        return {}
+    scale = math.log(total / TOPIC_RARE)
+    return {t: min(1.0, max(TOPIC_FLOOR, math.log(total / n) / scale)) for t, n in counts.items()}
+
+
 def course_topic_score(item: Item, spec: OutcomeSpec, ctx: Context) -> float:
-    """Overlap between the item's topics and a course outcome's own topic list."""
-    n = len(course_topic_matches(item, spec))
-    return 1.0 - COURSE_TOPIC_STEP ** n if n else 0.0
+    """Overlap between the item's topics and a course outcome's own topic list. Each matched topic is
+    worth COURSE_TOPIC_STEP times its rarity weight; matches combine so extra ones add less."""
+    hits = course_topic_matches(item, spec)
+    return noisy_or(COURSE_TOPIC_STEP * ctx.topic_w.get(t, 1.0) for t in hits) if hits else 0.0
 
 
 def course_topic_evidence(item: Item, spec: OutcomeSpec, ctx: Context) -> Evidence:
@@ -562,7 +587,7 @@ def scored_dict(s: Scored) -> dict:
 
 def recommend(pack: Pack, specs: list[OutcomeSpec], *, focus: str = "", tiers: Iterable[str] = (),
               levels: Iterable[str] = (), per_outcome: int = 8, exclude_ids: Iterable[str] = ()) -> list[dict]:
-    ctx = Context(weights=weights_of(pack.crosswalk))
+    ctx = Context(weights=weights_of(pack.crosswalk), topic_w=topic_weights(pack))
     readings, assignments = candidates(pack, specs, focus=focus, tiers=tiers, levels=levels)
     exclude = set(exclude_ids)
     out = []
@@ -636,7 +661,7 @@ def best_unit(spec: OutcomeSpec, units: list[StateUnit], items: dict[str, Item],
 def coverage(pack: Pack, state: dict, set_ids: Iterable[str], extra_specs: Iterable[OutcomeSpec] = ()) -> dict:
     """`extra_specs`: outcomes that aren't in a stored set (typed in by the instructor)."""
     crosswalk = pack.crosswalk or {}
-    ctx = Context(weights=weights_of(crosswalk))
+    ctx = Context(weights=weights_of(crosswalk), topic_w=topic_weights(pack))
     threshold = ctx.weights["map_threshold"]
     units = state_units(state)
     r_ids = {i for u in units for i in u.readings}
@@ -674,7 +699,7 @@ def coverage(pack: Pack, state: dict, set_ids: Iterable[str], extra_specs: Itera
         for spec in gap_specs:
             row = next(r for r in rows if r["id"] == spec.id and r["set_id"] == spec.set_id)
             unit, fit = best_unit(spec, units, items, crosswalk)
-            gctx = Context(weights=ctx.weights, focus=state.get("focus") or "",
+            gctx = Context(weights=ctx.weights, topic_w=ctx.topic_w, focus=state.get("focus") or "",
                            fit_unit=unit.title if unit else "", fit_topics=fit)
             ranked = rank(readings, spec, gctx, selected) + rank(assignments, spec, gctx, selected)
             ranked.sort(key=sort_key)

@@ -30,16 +30,16 @@ outcomes:
   - id: oc-engl235-1
     text: "Analyze the rhetorical situation and determine the appropriate audience or users of written and visual communications."
     frameworks: [wpa:rhetorical-knowledge, tc:audience-purpose]
-    topics: [rhetorical situation, audience analysis, audience, visual rhetoric, document design]
+    topics: [audience analysis, audience, rhetorical situation, visual rhetoric, document design, plain language, visual design]
   - id: oc-engl235-2
     text: "Create documents using the appropriate style, genre, and expository methods for effective communication in business, technical, and professional cultures and contexts."
     frameworks: [tc:genres-documents, tc:editing-style, wpa:knowledge-of-conventions]
-    topics: [genre, business writing, technical writing, workplace writing, style, expository writing]
+    topics: [workplace writing, technical writing, business writing, genre, reports, proposals, memos, email, instructions, expository writing]
   - id: oc-engl235-3
     text: "Conduct research relevant to workplace problem solving using appropriate methods and documentation."
     frameworks: [tc:research-usability, acrl:research-inquiry, acrl:searching-strategic]
-    topics: [research process, primary research, source evaluation, citation, problem-solution]
+    topics: [research process, primary research, research methods, interviews, surveys, usability testing, source evaluation, citation, problem-solution, wicked problems]
   - id: oc-engl235-4
     text: "Demonstrate a cooperative work ethic and peer support in planning, researching, writing, revising, and presenting information."
     frameworks: [tc:collaboration, wpa:processes]
-    topics: [collaboration, teamwork, peer review, revision, team project]
+    topics: [collaboration, collaborative writing, teamwork, team project, peer review, project management, revision]
