@@ -16,6 +16,7 @@ import { addAssignment, addReading, blankState, mapUnit, normalizeState } from "
 import { loadDraft, saveDraft, type Draft } from "./storage";
 
 const SHORT_NAMES: Record<string, string> = {
+  "wpa-5kd-4.0": "WPA Five Knowledge Domains 4.0",
   "wpa-os-3.0": "WPA Outcomes Statement 3.0",
   "acrl-framework": "ACRL Framework for Information Literacy",
   "aletheia-tc": "Technical communication categories",

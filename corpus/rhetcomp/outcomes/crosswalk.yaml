@@ -115,6 +115,124 @@ codes:
       inclusive language, language ideology, critical language awareness, plain language,
       narrative, description, informative writing, definition, op-ed, thesis writing, multimodal]
 
+  # ---------------------------------------------------------------- WPA Five Knowledge Domains 4.0
+  # Four of the five domains continue 3.0 categories, so their topic lists start from the wpa: lists
+  # and add what 4.0 puts in front (language diversity, technologies, AI, accessibility).
+
+  "wpa4:rhetorical-knowledge":
+    core: [audience, audience analysis, rhetorical situation, rhetorical analysis, rhetorical appeals,
+      kairos, ethos, pathos, logos, ethos pathos logos, discourse community, purpose, rhetorical canons,
+      stasis theory, rhetorical vocabulary, assignment analysis, genre, genre analysis, genre awareness,
+      rhetorical genre studies]
+    strong: [genre conventions, persuasion, persuasive writing, multimodal argument, proposal argument,
+      op-ed, multimodal, visual rhetoric, digital rhetoric, rhetoric, rhetorical theory, classical rhetoric,
+      sophists, public writing, civic engagement, civic rhetoric, delivery, style, voice, stance,
+      intercultural communication, global audiences, cultural rhetorics, cultural rhetoric, speeches,
+      public speaking, enthymeme, context, audience agency, non-expert audiences, reader-centered writing]
+    related: [argument, digital writing, social media, writing for the web, web writing,
+      document design, podcasting, podcast, video, sound, audio, remix, remediation,
+      science communication, health communication, risk communication, public memory,
+      protest rhetoric, environmental rhetoric, feminist rhetorics, african american rhetorics,
+      african american rhetoric, indigenous rhetorics, chicanx and latinx rhetorics,
+      asian american rhetorics, queer rhetorics, decolonial, relationality, counterstory,
+      storytelling, narrative, personal narrative, literacy narrative, description,
+      informative writing, writing in the disciplines, presentations, presentation,
+      oral presentation, deliberation, listening, spatial rhetoric, procedural rhetoric,
+      visual storytelling, circulation, comics, photo essay, accessibility, community engagement,
+      writing about writing]
+
+  "wpa4:conventions-language":
+    core: [language diversity, translingualism, translanguaging, "students' right to their own language",
+      code meshing, multilingual writers, world englishes, linguistic justice, language and identity,
+      language and power, critical language awareness, language ideology, genre conventions, citation,
+      citation practices, grammar, punctuation, mla, apa, chicago, plagiarism, academic integrity,
+      quoting and paraphrasing, copyright, copyright and fair use, fair use, intellectual property,
+      style guides]
+    strong: [english language learners, language and culture, language politics, inclusive language,
+      academic style, style, paragraphs, organization, introductions and conclusions, document design,
+      clear sentences, active voice, academic writing, academic genres, disciplinary genres,
+      writing in the disciplines, attribution, creative commons, bibliography, paraphrase, quotation,
+      source integration, editing, sentence-level editing, technical editing]
+    related: [plain language, readability, language revitalization, genre, genre analysis, memos, email,
+      letters, reports, resumes, cover letters, abstracts, lab reports, imrad, citation management,
+      citation generators, remix, typography, visual design]
+
+  "wpa4:critical-reading-thinking":
+    core: [reading strategies, critical thinking, critical reading, close reading, rhetorical reading,
+      reading academic texts, reading scientific literature, reading comprehension,
+      reading-writing connection, reading, annotation, synthesis, source evaluation, evidence,
+      evaluating claims, summary, summary and response, summarization, critical review,
+      textual analysis, critical analysis, analysis, logical fallacies, source integration,
+      writing from sources]
+    strong: [argument, counterargument, thesis, rhetorical analysis, research, primary research,
+      annotated bibliography, literature review, information literacy, research question,
+      misinformation, media literacy, quoting and paraphrasing, paraphrase, quotation,
+      causal analysis, cause and effect, comparison, comparison and contrast, literary analysis,
+      article analysis, film analysis, style analysis, reading response, response papers,
+      lateral reading, fact checking, cognitive bias, confirmation bias, evaluation, visual literacy,
+      data literacy, argument mapping, critical literacy, critical ai literacy]
+    related: [multimodal, visual rhetoric, rhetorical appeals, interviews, observation,
+      data visualization, research essay, scholarly sources, popular sources, definition, inquiry,
+      exploratory essay, investigative essay, analytical essay, proposal argument]
+
+  "wpa4:material-conditions-technologies":
+    core: [materiality, technology, writing technologies, text technology, technology writing,
+      digital writing, digital rhetoric, digital publishing, publishing tools, writing for the web,
+      web writing, platforms, digital literacy, digital media literacy]
+    strong: [multimodal, social media, podcasting, podcast, video, sound, audio, remix, remediation,
+      document design, visual design, typography, circulation, spatial rhetoric, procedural rhetoric,
+      ai and writing, text generation, tool evaluation, web design, digital storytelling,
+      digital archives, digital preservation, digital capital, labor logs, educational technology]
+    related: [accessibility, copyright, intellectual property, data visualization, makerspace,
+      digital fabrication, critical making, virtual reality, comics, photo essay, transcription,
+      localization, algorithms, attention economy, citation management, zotero, google colab]
+
+  "wpa4:composing-processes":
+    core: [writing process, process, revision, drafting, invention, brainstorming, freewriting,
+      peer review, peer critique, feedback, reflection, metacognition, editing, self-editing,
+      collaboration, collaborative writing, writing habits, reverse outline, outline]
+    strong: [transfer, research process, low-stakes writing, writing to learn, write to learn,
+      portfolio, eportfolio, online portfolio, self-assessment, self-evaluation, response to writing,
+      tutoring, peer tutoring, writing centers, writing center, iteration, mind mapping,
+      concept mapping, topic development, research log, labor logs, productive failure, failure,
+      sentence-level editing, writing advice, self-regulated learning, prompt iteration]
+    related: [writing identity, literacy narrative, ai and writing, design thinking,
+      project management, technical editing, team project, threshold concepts,
+      writing about writing, research question, dispositions, self-efficacy, writing life]
+
+  "wpa4:accessibility-disability":
+    core: [accessibility, accessible visuals, disability, disability studies, universal design,
+      universal design for learning, neurodiversity, inclusion, alt text, color contrast]
+    strong: [inclusive communication, inclusive language, plain language, readability,
+      access-oriented institutions, ethics, social justice, health equity, antiracism,
+      linguistic justice, language diversity]
+    related: [document design, visual design, typography, color, multimodal, audio, sound, transcription,
+      video, writing for the web, web design, intercultural communication, health communication,
+      labor-based grading, social bias]
+
+  "wpa4:generative-ai":
+    core: [ai and writing, ai literacy, critical ai literacy, ai disclosure, ai hype, responsible ai,
+      chatgpt, chatbots, bots, text generation, text generators, image generation, how llms work,
+      llm mechanics, language models, prompt engineering, prompt design, prompting, prompt iteration,
+      prompt experiments, natural language processing, markov chains]
+    strong: [algorithmic bias, algorithms, algorithmic accountability, algorithmic auditing, hallucination,
+      notebooklm, text technology, writing technologies, authorship, academic integrity, plagiarism,
+      copyright, intellectual property, misinformation, digital literacy, tool evaluation]
+    related: [technology, platforms, surveillance, privacy, information appropriation, attribution,
+      citational justice, writing identity, creative commons, source evaluation, data literacy,
+      critical making]
+
+  "wpa4:genre":
+    core: [genre, genre analysis, genre awareness, genre conventions, genre guide,
+      rhetorical genre studies, academic genres, disciplinary genres]
+    strong: [rhetorical situation, discourse community, audience, purpose, writing in the disciplines,
+      reports, memos, email, letters, proposals, resumes, cover letters, lab reports, imrad,
+      research articles, abstracts, op-ed, presentations, instructions, technical writing,
+      documentation, white paper, policy brief, case study]
+    related: [rhetorical analysis, writing about writing, transfer, style, organization, document design,
+      multimodal, digital writing, remix, remediation, social media, narrative, personal narrative,
+      literacy narrative, definition, description, classification]
+
   # ---------------------------------------------------------------- ACRL Framework
 
   "acrl:authority":

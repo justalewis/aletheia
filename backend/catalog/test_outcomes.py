@@ -84,8 +84,8 @@ def test_real_crosswalk_covers_every_framework_code_with_catalog_topics():
                 topics |= {t.lower() for t in json.loads(line).get("topics") or []}
     cw, problems = outcomes.load_crosswalk(root / "outcomes" / "crosswalk.yaml", codes, topics)
     assert problems == []
-    assert codes == set(cw["codes"]), "every wpa:, acrl:, and tc: code needs crosswalk entries"
-    assert len(codes) == 4 + 6 + 8
+    assert codes == set(cw["codes"]), "every wpa:, wpa4:, acrl:, and tc: code needs crosswalk entries"
+    assert len(codes) == 4 + 8 + 6 + 8
     assert all(len(tmap) >= 10 for tmap in cw["codes"].values())
 
 

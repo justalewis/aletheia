@@ -2,6 +2,57 @@ retrieved: 2026-10-17
 
 frameworks:
 
+  - id: wpa-5kd-4.0
+    prefix: "wpa4:"
+    name: "WPA Statement on the Five Knowledge Domains of First-Year Composition (4.0)"
+    publisher: "Council of Writing Program Administrators (CWPA)"
+    adopted: 2026-03-04
+    source_url: "https://www.wpacouncil.org/aws/CWPA/pt/sd/news_article/617348/_PARENT/layout_details/false"
+    pdf_url: "https://www.wpacouncil.org/aws/CWPA/asset_manager/get_file/948056?ver=0"
+    license: >-
+      No open license stated. The statement page carries no license or reuse
+      terms; the site footer reads "©2026 by the Council of Writing Program
+      Administrators." Treat as all rights reserved: link out and ask CWPA
+      before republishing the statement's text.
+    excerpt_policy: >-
+      Domain names are CWPA's own. The one-line descriptions below are
+      Aletheia's paraphrase of each domain's opening statement, not CWPA's
+      wording, and they leave out the outcome statements and sample learning
+      outcomes. The full text is at source_url and pdf_url.
+    note: >-
+      CWPA's statements page lists 4.0 first, with 3.0 (wpa-os-3.0) below it.
+      The sample arcs and the WWU and Olympic College course outcomes still
+      cite the 3.0 codes (wpa:), so both sets stay. 4.0 adds Material
+      Conditions and Technologies and three cross-category domains that have no
+      3.0 equivalent: Accessibility and Disability, Generative Artificial
+      Intelligence, and Genre. Genre is also a theme in the Rhetorical
+      Knowledge domain.
+    categories:
+      - code: wpa4:rhetorical-knowledge
+        name: "Rhetorical Knowledge"
+        definition: "Analyzing contexts, genres, and audiences in order to set purposes and goals for writing."
+      - code: wpa4:conventions-language
+        name: "Conventions and Language"
+        definition: "Recognizing that writers bring diverse linguistic histories and practices to every context, and learning the conventions those contexts expect."
+      - code: wpa4:critical-reading-thinking
+        name: "Critical Reading and Thinking"
+        definition: "Developing strategies to comprehend, interpret, evaluate, and analyze texts."
+      - code: wpa4:material-conditions-technologies
+        name: "Material Conditions and Technologies"
+        definition: "Understanding that composing is shaped by the material conditions of the rhetorical context, including the technologies available."
+      - code: wpa4:composing-processes
+        name: "Composing Processes"
+        definition: "Developing a variety of strategies for creating a wide range of texts."
+      - code: wpa4:accessibility-disability
+        name: "Accessibility and Disability (cross-category)"
+        definition: "Learning about and reflecting on the diverse ways writers and audiences engage with texts."
+      - code: wpa4:generative-ai
+        name: "Generative Artificial Intelligence (cross-category)"
+        definition: "Understanding generative AI as a class of systems that produce new content, and what that means for writing."
+      - code: wpa4:genre
+        name: "Genre (cross-category)"
+        definition: "Understanding genre as social action."
+
   - id: wpa-os-3.0
     prefix: "wpa:"
     name: "WPA Outcomes Statement for First-Year Composition (3.0)"
@@ -44,9 +95,8 @@ frameworks:
       note: >-
         CWPA's statements page now lists 4.0 first, with 3.0 below it. The
         wpa: codes in this corpus still follow 3.0, which is what WWU and the
-        2019 Washington ENGL&101 outcomes were built on. Consider adding
-        wpa4: codes; Material Conditions and Technologies and the three
-        cross-category domains have no 3.0 equivalent.
+        2019 Washington ENGL&101 outcomes were built on. The 4.0 domains are
+        loaded as the wpa4: codes (framework wpa-5kd-4.0, above).
 
   - id: acrl-framework
     prefix: "acrl:"
