@@ -20,7 +20,9 @@
 # its topic score plus its arc score.
 #
 # The builder's coverage view counts an item toward an outcome once its score reaches
-# map_threshold, so a lone related topic (0.25) is not enough and a lone strong topic (0.5) is.
+# map_threshold, so a lone related topic (0.25) is not enough and a lone strong topic (0.5) is. An item in an arc unit
+# that claims a code, with no topic for that code, scores arc_unconfirmed (0.25) x the unit weight
+# (about 0.4), which is also not enough: membership in a unit alone doesn't make a reading match.
 #
 # Topics must match the catalog vocabulary exactly, in lowercase. load_pack warns about topics that
 # no reading or assignment uses and about codes that frameworks.yaml doesn't define.
@@ -33,7 +35,7 @@ weights:
   arc_optional: 1.2
   arc_focus: 3
   arc_extra: 0.15
-  arc_unconfirmed: 0.5
+  arc_unconfirmed: 0.25
   map_threshold: 0.5
 
 codes:
@@ -83,17 +85,17 @@ codes:
       proposal argument]
 
   "wpa:processes":
-    core: [writing process, process, revision, drafting, invention, brainstorming, freewriting,
+    core: [writing process, process, revision, drafting, brainstorming, freewriting,
       peer review, peer critique, feedback, reflection, metacognition, editing, self-editing,
       collaboration, collaborative writing, writing habits, reverse outline, outline]
-    strong: [transfer, research process, low-stakes writing, writing to learn, write to learn,
+    strong: [invention, transfer, research process, low-stakes writing, writing to learn, write to learn,
       portfolio, eportfolio, online portfolio, self-assessment, self-evaluation, response to writing,
       tutoring, peer tutoring, writing centers, writing center, iteration, mind mapping,
       concept mapping, topic development, research log, labor logs, productive failure, failure,
       sentence-level editing, writing advice, self-regulated learning]
     related: [writing identity, literacy narrative, ai and writing, design thinking,
       project management, technical editing, team project, threshold concepts,
-      writing about writing, research question, prompt iteration, dispositions, self-efficacy,
+      writing about writing, prompt iteration, dispositions, self-efficacy,
       writing life]
 
   "wpa:knowledge-of-conventions":
@@ -188,10 +190,10 @@ codes:
       localization, algorithms, attention economy, citation management, zotero, google colab]
 
   "wpa4:composing-processes":
-    core: [writing process, process, revision, drafting, invention, brainstorming, freewriting,
+    core: [writing process, process, revision, drafting, brainstorming, freewriting,
       peer review, peer critique, feedback, reflection, metacognition, editing, self-editing,
       collaboration, collaborative writing, writing habits, reverse outline, outline]
-    strong: [transfer, research process, low-stakes writing, writing to learn, write to learn,
+    strong: [invention, transfer, research process, low-stakes writing, writing to learn, write to learn,
       portfolio, eportfolio, online portfolio, self-assessment, self-evaluation, response to writing,
       tutoring, peer tutoring, writing centers, writing center, iteration, mind mapping,
       concept mapping, topic development, research log, labor logs, productive failure, failure,
@@ -241,11 +243,11 @@ codes:
       post-truth, pseudoscience, craap, four moves, source tracing, source investigation, bias,
       expertise, scholarly sources, popular sources]
     strong: [information literacy, critical information literacy, cognitive bias, confirmation bias,
-      propaganda, wikipedia, wikipedia editing, neutral point of view, critical ai literacy,
+      wikipedia, wikipedia editing, neutral point of view, critical ai literacy,
       ai literacy, hallucination, news, journalistic standards, positionality,
       peer review (scientific), algorithmic bias, health information, online information,
       source types, media coverage, multiple perspectives]
-    related: [evidence, ethos, science communication, popular science, health communication,
+    related: [propaganda, evidence, ethos, science communication, popular science, health communication,
       critical thinking, research, social media, ai and writing, digital literacy,
       digital media literacy, perspective]
 
