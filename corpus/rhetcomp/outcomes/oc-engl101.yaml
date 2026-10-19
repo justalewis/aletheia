@@ -8,9 +8,15 @@ catalog_prerequisite: "Appropriate placement test score, or IE 045/046/047 (leve
 source_urls:
   - "https://catalog.olympic.edu/preview_course_nopop.php?catoid=25&coid=53136"
 retrieved: 2026-10-17
-outcomes_status: not-found-publicly
+outcomes_status: supplied-by-instructor
+outcomes_stem: "Students will"
+outcomes_provided: >-
+  Seven outcomes supplied by Justin Lewis on 2026-10-18 for use in Aletheia. They were not
+  found on the open web; the official text lives in OC's Curriculog (see notes), so check
+  wording there before citing them as the official list. Topic and framework tags are
+  Aletheia's, not OC's.
 notes: >-
-  No official OC course outcomes for ENGL& 101 are published on the open web.
+  Before the outcomes above were supplied, none were published on the open web for OC ENGL& 101.
   The 2026-27 OC catalog (Modern Campus) entry gives only the description,
   prerequisite, credits, and "5 hours Lecture"; the archived 2020-21 entry
   (https://catalog.olympic.edu/preview_course_nopop.php?catoid=5&coid=7375) is
@@ -27,7 +33,35 @@ notes: >-
   the Curriculog outcomes. Neither is public. Paste them from there to fill
   `outcomes`. The statewide recommended set below is NOT OC's official list
   and is kept separate for that reason.
-outcomes: []
+outcomes:
+  - id: oc-engl101-1
+    text: "Analyze a variety of texts using critical thinking and rhetorical knowledge (audience, purpose, genre, etc.)."
+    frameworks: [wpa:rhetorical-knowledge, wpa:critical-thinking-reading-composing]
+    topics: [rhetorical analysis, rhetorical situation, audience, genre, critical thinking]
+  - id: oc-engl101-2
+    text: "Compose responses that demonstrate critical reading (comprehension, engagement, and connection of ideas) of source materials."
+    frameworks: [wpa:critical-thinking-reading-composing]
+    topics: [critical reading, reading response, summary and response, reading strategies]
+  - id: oc-engl101-3
+    text: "Compose essays using rhetorical choices (thesis, purpose, audience, genre, etc.) to communicate an argument."
+    frameworks: [wpa:rhetorical-knowledge]
+    topics: [thesis, argument, audience, genre, essay]
+  - id: oc-engl101-4
+    text: "Use conventional and emerging standards of grammar and punctuation to improve communication using a handbook or other resources when necessary."
+    frameworks: [wpa:knowledge-of-conventions]
+    topics: [grammar, punctuation, editing, style]
+  - id: oc-engl101-5
+    text: "Identify information needs as well as location and credibility of sources."
+    frameworks: [wpa:critical-thinking-reading-composing, acrl:searching-strategic, acrl:authority]
+    topics: [information literacy, source evaluation, source credibility]
+  - id: oc-engl101-6
+    text: "Demonstrate a recursive writing process, individually and collectively (planning, peer review, reflection, etc.)"
+    frameworks: [wpa:processes]
+    topics: [writing process, peer review, revision, reflection, collaboration]
+  - id: oc-engl101-7
+    text: "Use sources effectively when summarizing, paraphrasing, and quoting with an appropriate academic citation style (e.g., APA or MLA)."
+    frameworks: [wpa:knowledge-of-conventions, acrl:information-value]
+    topics: [quoting and paraphrasing, summary, citation, mla, apa, source integration]
 related_outcome_sets:
   - id: wa-decomposing-engl101-2019
     name: "ENGL&101 Learning Outcomes ((de)Composing ENGL&101, Approved Spring, 2019)"

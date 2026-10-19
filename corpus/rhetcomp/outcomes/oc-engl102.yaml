@@ -8,9 +8,15 @@ catalog_prerequisite: "Successful completion of ENGL& 101 with a 2.0 or better o
 source_urls:
   - "https://catalog.olympic.edu/preview_course_nopop.php?catoid=25&coid=53138"
 retrieved: 2026-10-17
-outcomes_status: not-found-publicly
+outcomes_status: supplied-by-instructor
+outcomes_stem: "Students will"
+outcomes_provided: >-
+  Five outcomes supplied by Justin Lewis on 2026-10-18 for use in Aletheia. They were not
+  found on the open web; the official text lives in OC's Curriculog (see notes), so check
+  wording there before citing them as the official list. Topic and framework tags are
+  Aletheia's, not OC's.
 notes: >-
-  No official OC course outcomes for ENGL& 102 are published on the open web.
+  Before the outcomes above were supplied, none were published on the open web for OC ENGL& 102.
   The 2026-27 OC catalog entry gives only the description, prerequisite,
   credits, "5 hours Lecture," and "Formerly ENGL 102." The olympic.edu
   English page and site search turned up nothing, and no statewide
@@ -23,4 +29,24 @@ notes: >-
   mapping 101, 102, and 235 outcomes to the updated Core Abilities this year,
   so the Curriculog text may change during 2026-27. Paste the current
   Curriculog outcomes to fill `outcomes`.
-outcomes: []
+outcomes:
+  - id: oc-engl102-1
+    text: "Use an inquiry-based process to generate topics and questions for the development of an original research project."
+    frameworks: [acrl:research-inquiry, wpa:processes]
+    topics: [research as inquiry, research question, inquiry, research process]
+  - id: oc-engl102-2
+    text: "Evaluate, analyze, and manage primary and secondary sources —may include peer-reviewed articles, books, literature, news, and contemporary reports, etc."
+    frameworks: [acrl:authority, acrl:searching-strategic, wpa:critical-thinking-reading-composing]
+    topics: [primary sources, scholarly sources, source evaluation, source types, information literacy]
+  - id: oc-engl102-3
+    text: "Apply a process-based approach to the planning and writing of a major research-based argumentative paper, which includes peer review, revision, and editing with attention to academic writing conventions."
+    frameworks: [wpa:processes, wpa:knowledge-of-conventions]
+    topics: [research writing, research essay, argument, peer review, revision, editing, academic writing]
+  - id: oc-engl102-4
+    text: "Demonstrate the ability to effectively use research in support of a thesis."
+    frameworks: [acrl:scholarship-conversation, wpa:critical-thinking-reading-composing]
+    topics: [thesis, argument, evidence, source integration, synthesis]
+  - id: oc-engl102-5
+    text: "Attribute sources using appropriate academic citations and conventions."
+    frameworks: [acrl:information-value, wpa:knowledge-of-conventions]
+    topics: [citation, plagiarism, academic integrity, mla, apa]
