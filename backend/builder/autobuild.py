@@ -169,7 +169,8 @@ def arc_words(arc: Arc, units: list[dict], focus_label: str) -> tuple[set[str], 
 
 
 def arc_score(units: list[dict], words: tuple[set[str], list[set[str]]], weights: dict[str, float], idf: dict[str, float],
-              spec_codes: set[str], spec_topics: set[str], reading_scores: dict[str, float]) -> float:
+              spec_codes: set[str], spec_topics: set[str], reading_scores: dict[str, float],
+              topic_w: dict[str, float] | None = None) -> float:
     """Query words count for what they distinguish: a word in every arc's text (analyze, project) is worth
     little, one in a few arcs' (usability, labor) is worth a lot."""
     head, per_unit = words
@@ -177,7 +178,8 @@ def arc_score(units: list[dict], words: tuple[set[str], list[set[str]]], weights
     for u, uw in zip(units, per_unit):
         score += 1.5 * sum(w * idf.get(t, 0.0) for t, w in weights.items() if t in uw)
         score += 1.5 * len(spec_codes & set(u["outcomes"]))
-        score += 1.5 * len(spec_topics & {t.lower() for t in u["topics"]})
+        # A shared specific topic ("usability testing") says more than a generic one ("argument").
+        score += 1.5 * sum((topic_w or {}).get(t, 1.0) for t in spec_topics & {t.lower() for t in u["topics"]})
         for role, factor in (("core", 1.0), ("optional", 0.5)):
             score += factor * sum(reading_scores.get(rid, 0.0) for rid in u["readings"].get(role, []))
     return score
@@ -245,7 +247,8 @@ def build(pack: Pack, req: Request) -> dict:
     arc_text = {a.id: arc_words(a, arc_units[a.id], labels.get(a.focus, "")) for a in arcs}
     df = Counter(t for head, per in arc_text.values() for t in head | set().union(*per))
     idf = {t: math.log(1 + len(arcs) / n) for t, n in df.items()}
-    ranked = [(arc_score(arc_units[a.id], arc_text[a.id], weights, idf, spec_codes, spec_topics, scores), a.id, a)
+    topic_w = oc.topic_weights(pack)
+    ranked = [(arc_score(arc_units[a.id], arc_text[a.id], weights, idf, spec_codes, spec_topics, scores, topic_w), a.id, a)
               for a in arcs]
     ranked.sort(key=lambda x: (-x[0], x[1]))
     if req.arc_id:  # the instructor picked one of the alternatives

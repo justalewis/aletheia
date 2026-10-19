@@ -56,6 +56,7 @@ COURSE_TOPIC_STEP = 0.5      # course-outcome topic overlap: each match worth 0.
 TOPIC_RARE = 20              # a topic on this many items or fewer has full weight
 TOPIC_FLOOR = 0.3            # ...and no topic weighs less than this
 TOPIC_SPEC_FRAMEWORK_SHARE = 0.4  # framework score kept for outcomes that carry their own topics
+FRAMEWORK_RARITY_SHARE = 0.4      # how far a common topic's crosswalk weight can be cut (0.4 = by up to 40%)
 READING_GROUP_CAP = 2        # readings from one book per outcome list
 ASSIGNMENT_GROUP_CAP = 3     # assignments from one repository per outcome list
 SUGGESTION_GROUP_CAP = 2
@@ -154,12 +155,18 @@ def arc_evidence(pack: Pack, weights: dict) -> dict[tuple[str, str], dict[str, l
     return out
 
 
-def item_scores(topics: Iterable[str], arc_units: dict[str, list[dict]], idx: dict, weights: dict) -> tuple[dict, dict]:
-    """Per-code scores and evidence for one item: topic score + arc score."""
+def item_scores(topics: Iterable[str], arc_units: dict[str, list[dict]], idx: dict, weights: dict,
+                topic_w: dict[str, float] | None = None) -> tuple[dict, dict]:
+    """Per-code scores and evidence for one item: topic score + arc score.
+
+    `topic_w` (see topic_weights) trims a crosswalk topic's weight by how common the topic is, by up
+    to FRAMEWORK_RARITY_SHARE: a tag on 250 items is weaker evidence for a code than one on 10.
+    """
     hits: dict[str, list[tuple[float, str]]] = defaultdict(list)
     for t in {str(t).strip().lower() for t in topics or []}:
+        scale = 1.0 - FRAMEWORK_RARITY_SHARE * (1.0 - (topic_w or {}).get(t, 1.0))
         for code, w in idx.get(t, ()):
-            hits[code].append((w, t))
+            hits[code].append((w * scale, t))
     scores: dict[str, float] = {}
     evidence: dict[str, dict] = {}
     for code in sorted(set(hits) | set(arc_units)):
@@ -198,12 +205,14 @@ def score_items(pack: Pack, crosswalk: dict) -> int:
     weights = weights_of(crosswalk)
     idx = topic_index(crosswalk)
     arcs = arc_evidence(pack, weights)
+    topic_w = topic_weights(pack)
     fields = ["outcome_scores", "outcome_evidence", "outcomes_text"]
     count = 0
     for model, kind in ((Reading, "r"), (Assignment, "a")):
         rows = list(model.objects.filter(pack=pack).only("id", "topics"))
         for row in rows:
-            row.outcome_scores, row.outcome_evidence = item_scores(row.topics, arcs.get((kind, row.id), {}), idx, weights)
+            row.outcome_scores, row.outcome_evidence = item_scores(
+                row.topics, arcs.get((kind, row.id), {}), idx, weights, topic_w)
             row.outcomes_text = outcomes_text(row.outcome_scores)
         model.objects.bulk_update(rows, fields, batch_size=500)
         count += len(rows)

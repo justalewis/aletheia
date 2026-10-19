@@ -37,19 +37,19 @@ outcomes:
   - id: wwu-eng101-1
     text: "Develop flexible strategies for reading, drafting, reviewing, collaborating, revising, rewriting, rereading, and editing;"
     frameworks: [wpa:processes]
-    topics: [writing process, revision, peer review, collaboration]
+    topics: [drafting, revision, peer review, peer critique, reflection, writing process, brainstorming, collaborative writing]
   - id: wwu-eng101-2
     text: "Read a diverse range of texts, attending especially to relationships between assertion and evidence, to patterns of organization, to the interplay between verbal and nonverbal elements, and to how these features function for different audiences and situations;"
     frameworks: [wpa:critical-thinking-reading-composing]
-    topics: [reading strategies, evidence, rhetorical analysis, multimodal, audience]
+    topics: [close reading, reading academic texts, critical reading, rhetorical analysis, visual rhetoric, rhetorical appeals]
   - id: wwu-eng101-3
     text: "Develop facility in responding to a variety of situations and contexts calling for purposeful shifts in voice, tone, level of formality, design, medium, structure, and/or use of technology;"
     frameworks: [wpa:rhetorical-knowledge]
-    topics: [rhetorical situation, style, document design, multimodal]
+    topics: [rhetorical situation, genre analysis, audience analysis, document design, multimodal, style analysis, academic style]
   - id: wwu-eng101-4
     text: "And understand why genre conventions for structure, paragraphing, tone, citation, and mechanics vary."
     frameworks: [wpa:knowledge-of-conventions]
-    topics: [genre, citation, grammar, style]
+    topics: [genre conventions, genre awareness, genre analysis, grammar, punctuation, citation]
 related_outcome_sets:
   - id: wwu-cue-acom-assessment-2022-23
     name: "CUE learning objectives for assessing the ACOM GUR (ENG 101), AY 2022-23"
