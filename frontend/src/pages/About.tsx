@@ -15,7 +15,7 @@ export default function About() {
 
       <p className="prose">
         Aletheia was built and is maintained by Justin Lewis, Instructor of English at Olympic College (
-        <a href="https://github.com/justalewis">GitHub</a>). I vibe-coded this web application based on my years of teaching in the field, keying the work of the assembler to
+        <a href="https://justalewis.github.io/the-receptaculum/">The Receptaculum</a>). I vibe-coded this web application based on my years of teaching in the field, keying the work of the assembler to
         my knowledge of the shapes writing classes often take (e.g., FYC, technical communication, research writing,
         etc.). The corpus that composes the catalogue favors open textbooks and collections that instructors in Writing
         Studies already use but haven't been collated into a single location (afaik). No company, publisher, or vendor
