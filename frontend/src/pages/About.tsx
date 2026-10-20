@@ -8,13 +8,14 @@ export default function About() {
     <div className="container page narrow">
       <h1>About Aletheia</h1>
       <p className="prose">
-        Aletheia helps writing instructors put together a course reader from openly licensed readings and assignments.
-        You pick a sample course or start blank, fit it to your term, and export a reader and an LMS package. The reader
+        Welcome to Aletheia! This tool helps writing instructors put together a course reader from openly licensed
+        readings and assignments. You pick a sample course or start blank, fit it to your term, and export a reader and an LMS package. The reader
         credits every item with its title, author, source, and license.
       </p>
 
       <p className="prose">
-        I vibe-coded this web application based on my years of teaching in the field, keying the work of the assembler to
+        Aletheia was built and is maintained by Justin Lewis, Instructor of English at Olympic College (
+        <a href="https://github.com/justalewis">GitHub</a>). I vibe-coded this web application based on my years of teaching in the field, keying the work of the assembler to
         my knowledge of the shapes writing classes often take (e.g., FYC, technical communication, research writing,
         etc.). The corpus that composes the catalogue favors open textbooks and collections that instructors in Writing
         Studies already use but haven't been collated into a single location (afaik). No company, publisher, or vendor
@@ -82,7 +83,7 @@ export default function About() {
       <p className="prose">
         Aletheia will never be in the business of selling course readers and it hopes you won't either. Obviously, a
         campus copy center can print a reader and charge for the price of production, which noncommercial licenses allow.
-        But any charging above that printing cost is a breach of the open licensing the readings and assignments included
+        But any charging above that printing cost is often a breach of the open licensing the readings and assignments included
         herein were given by their authors. Your own selection and arrangement can be shared under CC BY 4.0. The code
         is released under the MIT license and the catalog records under CC BY 4.0, and both are on GitHub. Corrections,
         questions, and reports of broken links are welcome through the <Link to="/feedback">feedback form</Link>.
